@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
-# Standalone replacement for CachyOS/Linux; run from bash or fish.
+# Standalone replacement and Workshop preparation for CachyOS/Linux.
 # Close Sea Power, then run: bash replace-f111n-with-v7.sh
 # Optional: bash replace-f111n-with-v7.sh "/full/path/to/Sea Power"
+# Optional SteamCMD upload: append --upload (Steam handles login itself).
 set -euo pipefail
 if ! command -v python3 >/dev/null 2>&1; then
     printf '%s\n' "Python 3 is required. On CachyOS: sudo pacman -S python"
@@ -17,8 +18,10 @@ import json
 import os
 from pathlib import Path, PurePosixPath
 import re
+import shlex
 import shutil
 import stat
+import subprocess
 import sys
 import tempfile
 import types
@@ -26,7 +29,7 @@ import urllib.error
 import urllib.request
 import zipfile
 
-RELEASE_COMMIT = "e481e8a6b887212502d4fe68bfe2921c1aea016d"
+RELEASE_COMMIT = "11e2c6d9a4aa451bf4b6c9bf81540b9bcabed7d3"
 DOWNLOAD = "https://codeload.github.com/gobertron/Seapower-F111N/zip/" + RELEASE_COMMIT
 MOD_NAME = "RAN-F111N-Naval-Wing"
 MANIFEST_SHA256 = "5e8fed244755d2abc7b43a0de98eeb9817f259d280f5783b1cb787925840583b"
@@ -34,6 +37,18 @@ CARRIER_SHA256 = "7ab5f7acffbae0c6a1b7abf73d6673ce0c4ca70f9db91bbfdc214b12badd7c
 AIRCRAFT_IDS = ("ran_f-111n", "ran_fb-111n", "ran_rf-111n", "ran_ef-111n")
 MAX_ARCHIVE_BYTES = 220 * 1024 * 1024
 MAX_EXTRACTED_BYTES = 400 * 1024 * 1024
+WORKSHOP_ID = "3810606011"
+APP_ID = "1286220"
+WORKSHOP_ASSETS = {
+    "RAN-F111N-preview.png": "79db9bfc5e027024b402e8fa7e6e71f296fef64079b22dc7e2ef90d687cdbee0",
+    "WORKSHOP_DESCRIPTION.txt": "29db66fa881dc53df30975d06c9c5cd14d6ceb18e62fd094ac09042311fb4002",
+    "WORKSHOP_UPDATE_NOTES_V7.txt": "412b5b5b7c7a6f7811bf5f0a2f695e284e81a93ac23e78ad52d86423cda08002",
+}
+UPLOAD_NOTE = (
+    "V7: 16 aircraft across 1980, 1985, 1995 and 2003; 167 loadouts; "
+    "progressive systems upgrades and late tactical-grey liveries. "
+    "Corrected weapon names, zero-reload chaff and repaired carrier lift routes."
+)
 
 
 def digest(path):
@@ -244,6 +259,187 @@ def read_source_text(path):
             return raw.decode("latin-1")
 
 
+def verify_workshop_assets(package):
+    for name, checksum in WORKSHOP_ASSETS.items():
+        path = package / name
+        if not path.is_file() or path.is_symlink() or digest(path) != checksum:
+            raise RuntimeError("Workshop asset checksum failed: " + name + ". Run without --package for the complete release.")
+    preview = package / "RAN-F111N-preview.png"
+    if preview.stat().st_size >= 1024 * 1024 or not preview.read_bytes().startswith(b"\x89PNG\r\n\x1a\n"):
+        raise RuntimeError("Workshop preview must be a PNG smaller than 1 MiB.")
+
+
+def vdf_quote(value):
+    value = str(value)
+    if any(ord(char) < 32 for char in value):
+        raise RuntimeError("Workshop configuration contains a control character.")
+    return '"' + value.replace("\\", "\\\\").replace('"', '\\"') + '"'
+
+
+def workshop_vdf(bundle):
+    # Omit title, description and visibility so an upload retains existing metadata.
+    fields = [
+        ("appid", APP_ID), ("publishedfileid", WORKSHOP_ID),
+        ("contentfolder", bundle / "content"), ("previewfile", bundle / "preview.png"),
+        ("changenote", UPLOAD_NOTE),
+    ]
+    return '"workshopitem"\n{\n' + "".join(
+        "    " + vdf_quote(key) + " " + vdf_quote(value) + "\n" for key, value in fields
+    ) + "}\n"
+
+
+def prepare_workshop(package, mod, staged_bundle, final_bundle, report):
+    """Create a flat native payload and metadata outside the game's mod scan."""
+    verify_workshop_assets(package)
+    portable = json.loads(json.dumps(report))
+    for item in portable.get("carriers", []):
+        source = item.pop("source", "")
+        if source:
+            item["source_label"] = "/".join(Path(source).parts[-3:])
+        item.pop("other_source_candidates", None)
+    # Keep personal absolute paths only in the local bundle, outside contentfolder.
+    (mod / "CARRIER_COMPATIBILITY.json").write_text(json.dumps(portable, indent=2) + "\n", encoding="utf-8")
+    shutil.copy2(package / "RAN-F111N-preview.png", mod / "preview.png")
+    staged_bundle.mkdir()
+    shutil.copytree(mod, staged_bundle / "content")
+    for source in mod.rglob("*"):
+        if source.is_file() and digest(source) != digest(staged_bundle / "content" / source.relative_to(mod)):
+            raise RuntimeError("Workshop payload copy failed verification: " + source.relative_to(mod).as_posix())
+    for source, destination in [
+        ("RAN-F111N-preview.png", "preview.png"),
+        ("WORKSHOP_DESCRIPTION.txt", "description.txt"),
+        ("WORKSHOP_UPDATE_NOTES_V7.txt", "update-notes.txt"),
+    ]:
+        shutil.copy2(package / source, staged_bundle / destination)
+    (staged_bundle / "carrier-report.local.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
+    (staged_bundle / "upload.vdf").write_text(workshop_vdf(final_bundle), encoding="utf-8")
+    paths = list((staged_bundle / "content").rglob("*")) + [
+        staged_bundle / name for name in ("preview.png", "description.txt", "update-notes.txt", "upload.vdf")
+    ]
+    manifest = {
+        "appid": APP_ID, "publishedfileid": WORKSHOP_ID, "release_commit": RELEASE_COMMIT,
+        "files": {p.relative_to(staged_bundle).as_posix(): digest(p) for p in sorted(paths) if p.is_file()},
+    }
+    (staged_bundle / "workshop-sha256.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+    instructions = (
+        "V7 is installed and this Workshop payload is ready. It has not been uploaded.\n\n"
+        "IN-GAME UPLOAD\n"
+        "Launch Sea Power with Steam. Mod Manager > Upload Mod > Update Existing.\n"
+        "Select your existing item " + WORKSHOP_ID + " (RAN / RAAF F-111N Series).\n"
+        "Pick Folder: \\user\\RAN-F111N-Naval-Wing\n"
+        "Pick Image: \\user\\RAN-F111N-Naval-Wing\\preview.png\n"
+        "Paste description.txt into Mod Description and update-notes.txt into Change Log.\n"
+        "Submit the update while signed into the Steam account that owns the item.\n\n"
+        "OPTIONAL TERMINAL UPLOAD\n"
+        "With SteamCMD installed, run:\n"
+        "bash ~/Downloads/replace-f111n-with-v7.sh --upload-prepared " + shlex.quote(str(final_bundle)) + "\n"
+        "Enter your Steam account name when prompted. SteamCMD handles password and Steam Guard.\n"
+        "No password or API key is stored by this script.\n"
+        "SteamCMD sends only content/ and preview.png. Existing title, description and visibility are preserved.\n"
+        "The complete description and notes above are supplied for the in-game uploader.\n\n"
+        "Enable V7, disable older Naval Wing copies, give V7 priority over carrier mods,\n"
+        "and retain carrier/source mods and Anchor Chain. Restart after mod-list changes.\n"
+        "Carrier overrides still rely on their original carrier mods for those models/assets.\n"
+        "Flight behaviour and landings remain untested in Sea Power.\n"
+    )
+    (staged_bundle / "UPLOAD_INSTRUCTIONS.txt").write_text(instructions, encoding="utf-8")
+    verify_workshop_bundle(staged_bundle, expected_location=final_bundle)
+    return manifest
+
+
+def verify_workshop_bundle(bundle, expected_location=None):
+    bundle = Path(bundle).expanduser().resolve()
+    marker = bundle / "workshop-sha256.json"
+    if not marker.is_file() or marker.is_symlink():
+        raise RuntimeError("Not a prepared V7 Workshop bundle: " + str(bundle))
+    manifest = json.loads(marker.read_text(encoding="utf-8"))
+    if (manifest.get("appid"), manifest.get("publishedfileid"), manifest.get("release_commit")) != (APP_ID, WORKSHOP_ID, RELEASE_COMMIT):
+        raise RuntimeError("This bundle does not target the existing Sea Power Workshop item " + WORKSHOP_ID)
+    expected = manifest.get("files", {})
+    actual = set()
+    for path in (bundle / "content").rglob("*"):
+        if path.is_symlink():
+            raise RuntimeError("Workshop content contains a symlink: " + str(path))
+        if path.is_file():
+            actual.add(path.relative_to(bundle).as_posix())
+    if actual != {name for name in expected if name.startswith("content/")} or "content/_info.ini" not in actual:
+        raise RuntimeError("Prepared Workshop content has changed; run the replacement script again.")
+    for name, checksum in expected.items():
+        relative = PurePosixPath(name)
+        if relative.is_absolute() or ".." in relative.parts or "\\" in name:
+            raise RuntimeError("Unsafe Workshop manifest path: " + name)
+        path = bundle / name
+        if path.is_symlink() or not path.is_file() or digest(path) != checksum:
+            raise RuntimeError("Prepared Workshop checksum failed: " + name)
+    if (bundle / "upload.vdf").read_text(encoding="utf-8") != workshop_vdf(expected_location or bundle):
+        raise RuntimeError("Workshop upload configuration was changed or moved; prepare it again.")
+    return bundle
+
+
+def find_steamcmd(supplied=None):
+    if supplied:
+        path = Path(supplied).expanduser().resolve()
+        if not path.is_file() or not os.access(path, os.X_OK):
+            raise RuntimeError("SteamCMD executable was not found: " + str(path))
+        return str(path)
+    found = shutil.which("steamcmd") or shutil.which("steamcmd.sh")
+    if found:
+        return found
+    for path in (Path.home() / "steamcmd/steamcmd.sh", Path.home() / ".local/share/SteamCMD/steamcmd.sh"):
+        if path.is_file() and os.access(path, os.X_OK):
+            return str(path)
+    raise RuntimeError(
+        "SteamCMD is not installed or not on PATH. Your prepared folder can be uploaded "
+        "with Sea Power's Mod Manager; see UPLOAD_INSTRUCTIONS.txt. "
+        "Or install Valve's SteamCMD and use --steamcmd /path/to/steamcmd.sh."
+    )
+
+
+def upload_workshop(bundle, username=None, executable=None):
+    bundle = verify_workshop_bundle(bundle)
+    executable = find_steamcmd(executable)
+    if username is None:
+        if not sys.stdin.isatty():
+            raise RuntimeError("Run from a terminal or supply --steam-user with the item owner's Steam account name.")
+        username = input("Steam account name that owns item " + WORKSHOP_ID + ": ").strip()
+    if not re.fullmatch(r"[A-Za-z0-9_][A-Za-z0-9_.@-]{0,63}", username):
+        raise RuntimeError("Invalid Steam account name. Supply the login name, without a password.")
+    print("Uploading V7 to existing Workshop item " + WORKSHOP_ID + ".", flush=True)
+    print("SteamCMD will handle password and Steam Guard prompts directly.", flush=True)
+    command = [executable, "+login", username, "+workshop_build_item", vdf_quote(bundle / "upload.vdf"), "+quit"]
+    output = bytearray()
+    # Keep stdin attached to the user's terminal. Do not save a login transcript.
+    with subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT) as process:
+        try:
+            while True:
+                chunk = os.read(process.stdout.fileno(), 4096)
+                if not chunk:
+                    break
+                sys.stdout.write(chunk.decode("utf-8", errors="replace"))
+                sys.stdout.flush()
+                output.extend(chunk)
+                if len(output) > 4 * 1024 * 1024:
+                    del output[:-4 * 1024 * 1024]
+            status = process.wait()
+        except BaseException:
+            process.terminate()
+            try:
+                process.wait(timeout=5)
+            except subprocess.TimeoutExpired:
+                process.kill()
+                process.wait()
+            raise
+    text = output.decode("utf-8", errors="replace")
+    success = re.search(r"Success\.\s+Published item\s+" + WORKSHOP_ID + r"\b", text, re.I)
+    if status != 0 or not success:
+        raise RuntimeError(
+            "SteamCMD did not confirm a successful update of item " + WORKSHOP_ID
+            + ". The installed V7 and prepared payload remain available at " + str(bundle)
+            + ". Retry with the owning account or use Sea Power's in-game uploader."
+        )
+    print("STEAM WORKSHOP UPDATED: https://steamcommunity.com/sharedfiles/filedetails/?id=" + WORKSHOP_ID)
+
+
 def carrier_overrides(package, game, staged, sources):
     helper = package / "carrier_compatibility.py"
     checksum = digest(helper)
@@ -261,10 +457,12 @@ def carrier_overrides(package, game, staged, sources):
     return report
 
 
-def install(package, game, sources=(), dry_run=False):
+def install(package, game, sources=(), dry_run=False, prepare_upload=False):
     streaming = game / "Sea Power_Data/StreamingAssets"
     target, existing = check_target(streaming)
     entries = verify_package(package)
+    if prepare_upload:
+        verify_workshop_assets(package)
     source = package / MOD_NAME
     if source.resolve() == target.resolve() or any(source.is_relative_to(p.resolve()) for p in existing):
         raise RuntimeError("Use a downloaded package outside the installed mod folders.")
@@ -277,12 +475,14 @@ def install(package, game, sources=(), dry_run=False):
             staged = Path(temporary) / MOD_NAME
             shutil.copytree(source, staged)
             report = carrier_overrides(package, game, staged, sources)
+            if prepare_upload:
+                prepare_workshop(package, staged, Path(temporary) / "workshop", game / "RAN-F111N-workshop" / WORKSHOP_ID / "dry-run", report)
         print("DRY RUN OK:", len(report["carriers"]), "carrier definitions prepared.")
         print("No installed game or mod files were changed.")
         return None
     if game_is_running():
         raise RuntimeError("Close Sea Power before replacing the mod.")
-    required = sum((source / name).stat().st_size for _, name in entries) + 10 * 1024 * 1024
+    required = sum((source / name).stat().st_size for _, name in entries) * (2 if prepare_upload else 1) + 20 * 1024 * 1024
     if shutil.disk_usage(game).free < required:
         raise RuntimeError("Not enough free space to stage V7 before replacing the old mod.")
     backup_parent = game / "RAN-F111N-backups"
@@ -304,9 +504,13 @@ def install(package, game, sources=(), dry_run=False):
                 if digest(staged / name) != checksum:
                     raise RuntimeError("Staged V7 checksum failed: " + name)
             report = carrier_overrides(package, game, staged, sources)
+            stamp = datetime.datetime.now().strftime("%Y%m%d-%H%M%S-%f")
+            workshop_bundle = game / "RAN-F111N-workshop" / WORKSHOP_ID / stamp if prepare_upload else None
+            if prepare_upload:
+                prepare_workshop(package, staged, Path(temporary) / "workshop", workshop_bundle, report)
+                workshop_bundle.parent.mkdir(parents=True, exist_ok=True)
             if game_is_running():
                 raise RuntimeError("Sea Power started during preparation. Close it and run again.")
-            stamp = datetime.datetime.now().strftime("%Y%m%d-%H%M%S-%f")
             backup = backup_parent / stamp
             backup.mkdir()
             record = {
@@ -316,10 +520,13 @@ def install(package, game, sources=(), dry_run=False):
                     for p in existing
                 ],
             }
+            if prepare_upload:
+                record["workshop_bundle"] = str(workshop_bundle)
             record_path = backup / "replacement.json"
             record_path.write_text(json.dumps(record, indent=2) + "\n")
             moved = []
             installed = False
+            workshop_saved = False
             try:
                 for old in existing:
                     saved = backup / old.relative_to(streaming)
@@ -328,10 +535,18 @@ def install(package, game, sources=(), dry_run=False):
                     moved.append((old, saved))
                 staged.rename(target)
                 installed = True
+                if prepare_upload:
+                    (Path(temporary) / "workshop").rename(workshop_bundle)
+                    workshop_saved = True
                 record["status"] = "installed"
                 record_path.write_text(json.dumps(record, indent=2) + "\n")
             except BaseException as failure:
                 recovery_errors = []
+                if workshop_saved:
+                    try:
+                        shutil.rmtree(workshop_bundle)
+                    except OSError as error:
+                        recovery_errors.append(str(error))
                 if installed:
                     try:
                         shutil.rmtree(target)
@@ -367,21 +582,42 @@ def install(package, game, sources=(), dry_run=False):
     print("Restart Sea Power after changing the mod list.")
     print("\nFor your existing Workshop item 3810606011, use Update Existing,")
     print("then Pick Folder: \\user\\RAN-F111N-Naval-Wing")
-    print("Local folder update is complete; submit the Workshop update separately.")
+    if prepare_upload:
+        verify_workshop_bundle(workshop_bundle)
+        print("Pick Image: \\user\\RAN-F111N-Naval-Wing\\preview.png")
+        print("WORKSHOP PAYLOAD READY:", workshop_bundle)
+        print("Description:", workshop_bundle / "description.txt")
+        print("Change log:", workshop_bundle / "update-notes.txt")
+        print("Upload instructions:", workshop_bundle / "UPLOAD_INSTRUCTIONS.txt")
+        print("Optional terminal upload: bash ~/Downloads/replace-f111n-with-v7.sh --upload-prepared", shlex.quote(str(workshop_bundle)))
+    print("Local preparation is complete. Steam has not been updated yet.")
     return backup
 
 
 def main(argv=None):
     parser = argparse.ArgumentParser(
-        description="Replace older local RAN F-111N folders with verified V7, keeping dated backups."
+        description="Replace older local RAN F-111N folders with verified V7, keep backups and prepare an update for Steam Workshop item 3810606011."
     )
     parser.add_argument("game", nargs="?", help="Sea Power installation folder (auto-detected if omitted)")
     parser.add_argument("--package", type=Path, help="complete local V7 ZIP or extracted folder instead of downloading")
     parser.add_argument("--carrier-source", action="append", default=[], help="preferred carrier-mod folder; may be repeated")
     parser.add_argument("--dry-run", action="store_true", help="verify and preview without changing installed mod files")
+    parser.add_argument("--upload", action="store_true", help="after replacement, upload to existing item 3810606011 through SteamCMD")
+    parser.add_argument("--upload-prepared", type=Path, help="upload an already prepared bundle without downloading or replacing again")
+    parser.add_argument("--steam-user", help="Steam login name that owns item 3810606011; password is handled only by SteamCMD")
+    parser.add_argument("--steamcmd", type=Path, help="path to an installed SteamCMD executable")
     args = parser.parse_args(argv)
     if hasattr(os, "geteuid") and os.geteuid() == 0:
         raise RuntimeError("Run this as your normal Steam user, without sudo.")
+    if args.upload_prepared:
+        if args.game or args.package or args.carrier_source or args.dry_run or args.upload:
+            parser.error("--upload-prepared cannot be combined with installation options")
+        upload_workshop(args.upload_prepared, args.steam_user, args.steamcmd)
+        return 0
+    if args.dry_run and args.upload:
+        parser.error("--dry-run cannot upload to Steam")
+    if not args.upload and (args.steam_user or args.steamcmd):
+        parser.error("use --upload or --upload-prepared with SteamCMD options")
     if game_is_running() and not args.dry_run:
         raise RuntimeError("Close Sea Power, then run this script again.")
     games = [Path(args.game).expanduser().resolve()] if args.game else discover_games()
@@ -419,7 +655,10 @@ def main(argv=None):
             unpacked = temporary / "extracted"
             extract_archive(archive, unpacked)
             package = package_root(unpacked)
-        install(package, game, sources, args.dry_run)
+        backup = install(package, game, sources, args.dry_run, prepare_upload=True)
+        if args.upload:
+            record = json.loads((backup / "replacement.json").read_text())
+            upload_workshop(Path(record["workshop_bundle"]), args.steam_user, args.steamcmd)
     return 0
 
 

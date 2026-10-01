@@ -3,7 +3,7 @@
 **Complete V7 release, remade from the verified V6 base.** Four aircraft families in 1980, 1985, 1995 and 2003 editions; 16 aircraft and 167 selectable presets.
 
 - [Download the complete V7 mod and source ZIP](https://github.com/gobertron/Seapower-F111N/archive/refs/heads/main.zip)
-- [Standalone script to replace older local F-111N versions](replace-f111n-with-v7.sh) · [Replacement instructions](docs/REPLACE_WITH_V7.md)
+- [Standalone replacement and Workshop preparation script](replace-f111n-with-v7.sh) · [Replacement instructions](docs/REPLACE_WITH_V7.md) · [Steam upload instructions](docs/STEAM_WORKSHOP_UPLOAD.md)
 - [Checksums for every game file](MOD_SHA256.txt)
 - [Complete breakdown: all aircraft, presets, weights and references](docs/V7-Complete-Breakdown.md)
 - [Sortable list of every loadout](ALL_LOADOUTS_V7.csv)

@@ -1,5 +1,13 @@
 # V7 changes from V6
 
+## V7 Workshop preparation — 1 October 2026
+
+- Extended the standalone replacement script to prepare a native Workshop payload matching the installed V7 folder, with a verified preview and the full description/update text.
+- Added a fixed existing-item SteamCMD configuration for Sea Power 1286220 / Workshop item 3810606011; title, description and visibility remain unchanged during terminal upload.
+- Added optional `--upload` and `--upload-prepared` paths. SteamCMD handles authentication; publication is reported only for a confirmed success on the expected item ID.
+- Staged Workshop preparation before the old-folder swap, with rollback when saving the payload fails. Personal absolute carrier paths stay outside published content.
+- Added publication/recovery tests and step-by-step in-game/terminal upload documentation. Live Steam publication remains untested.
+
 ## V7 naming and installer correction — 1 October 2026
 
 - Corrected all 61 custom ammunition/store names to the game's flat AmmunitionNames table. Missile names now have the native display-name, nickname, category and description fields used by loadout tooltips, weapon references and launched-weapon labels.

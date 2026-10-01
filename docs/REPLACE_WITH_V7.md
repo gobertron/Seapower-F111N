@@ -43,6 +43,6 @@ Append **--carrier-source "/full/path/to/carrier/mod"** to prefer a particular c
 
 After installation, enable **RAN F-111N Naval Wing V7**, disable older Naval Wing copies and give V7 priority over carrier mods. Keep carrier/source asset mods and your existing Anchor Chain setup enabled. Restart Sea Power.
 
-For the Workshop item shown in your screenshot, select **Update Existing → RAN / RAAF F-111N Series (3810606011)**, then **Pick Folder → \user\RAN-F111N-Naval-Wing**. Submit the Workshop update separately using the included description and update notes.
+The current replacement script also prepares the Workshop payload, preview and publication text. For item **3810606011**, select **Update Existing → RAN / RAAF F-111N Series**, then **Pick Folder → \user\RAN-F111N-Naval-Wing** and **Pick Image → \user\RAN-F111N-Naval-Wing\preview.png**. Paste the generated description and change notes, then submit. If SteamCMD is installed, `--upload` can submit the prepared content directly; SteamCMD handles authentication. See [complete Workshop upload instructions](STEAM_WORKSHOP_UPLOAD.md).
 
 The script passed 18 replacement/recovery tests and six lift-repair tests. The Majestic cases reproduce the reported missing references on representative native layouts; the user's exact RAN definitions are not available here. The script replaces local files and prepares carrier configuration. Flight performance and carrier landings still require in-game testing.
