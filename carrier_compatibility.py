@@ -7,7 +7,7 @@ fictional arrested recovery point for the Naval Wing.
 """
 from pathlib import Path
 from collections import OrderedDict
-import re,json,sys
+import re,json,sys,math
 
 IDS=('ran_f-111n', 'ran_f-111n_1985', 'ran_f-111n_1995', 'ran_f-111n_2003', 'ran_fb-111n', 'ran_fb-111n_1985', 'ran_fb-111n_1995', 'ran_fb-111n_2003', 'ran_rf-111n', 'ran_rf-111n_1985', 'ran_rf-111n_1995', 'ran_rf-111n_2003', 'ran_ef-111n', 'ran_ef-111n_1985', 'ran_ef-111n_1995', 'ran_ef-111n_2003')
 CIRCUIT='0.5,800,-4.5|0.5,800,2.5|-0.75,800,3.2|-2,800,2.2|-2,500,-2.5|-0.75,500,-3.5|0.42,500,-3'
@@ -78,9 +78,139 @@ def is_carrier(data,name):
     return ('carrier' in role or 'carrier' in name.casefold() or
         bool(re.search(r'(?:^|_)(?:cv[nleha]?|takr|lha|lhd|pkr)(?:_|$)',name,re.I)))
 
+def coordinates(value):
+    try:
+        result=tuple(float(part.strip()) for part in value.split(','))
+        return result if len(result)==3 and all(math.isfinite(x) for x in result) else None
+    except (AttributeError,ValueError):return None
+
+def choose_elevator(data,name,section,direct=(),linked=()):
+    available={s:d for s,d in data.items() if re.fullmatch(r'Elevator\d+',s)
+        and d.get('Unused','False').casefold()!='true'
+        and coordinates(d.get('RidePosition') or d.get('SpawnPosition'))}
+    if not available:
+        raise ValueError(name+': '+section+' has no usable defined elevator; cannot infer deck geometry')
+    origin=coordinates(data[section].get('Position'))
+    def priority(elevator):
+        position=coordinates(available[elevator].get('RidePosition') or available[elevator].get('SpawnPosition'))
+        distance=sum((a-b)**2 for a,b in zip(origin,position)) if origin else 0
+        return (0 if elevator in direct else 1 if elevator in linked else 2,
+                distance,int(elevator[8:]))
+    return min(available,key=priority)
+
+def ensure_taxi_path(text,name,origin,dest,position):
+    data=parse(text)
+    paths={s:d for s,d in data.items() if re.fullmatch(r'TaxiPath\d+',s)}
+    number=int(data['FlightDeck'].get('NumberOfTaxiPaths','0'))
+    existing=[int(s[8:]) for s,d in paths.items() if d.get('From')==origin and d.get('To')==dest]
+    if existing:return put(text,'FlightDeck','NumberOfTaxiPaths',max([number]+existing))
+    if not coordinates(position):raise ValueError(name+': missing taxi coordinate '+dest)
+    number=max([number]+[int(s[8:]) for s in paths])+1
+    for key,value in [('From',origin),('To',dest),('Waypoints',position)]:
+        text=put(text,'TaxiPath'+str(number),key,value)
+    return put(text,'FlightDeck','NumberOfTaxiPaths',number)
+
+def repair_elevator_references(text,name):
+    """Repair stale lift associations in our copy, using defined deck geometry."""
+    data=parse(text);deck=data['FlightDeck']
+    elevators={s:d for s,d in data.items() if re.fullmatch(r'Elevator\d+',s)}
+    paths={s:d for s,d in data.items() if re.fullmatch(r'TaxiPath\d+',s)}
+    repairs=[]
+    for section,recovery in data.items():
+        if not re.fullmatch(r'RecoveryPoint\d+',section):continue
+        requested=[x.strip() for x in recovery.get('AssociatedElevators','').split(',') if x.strip()]
+        retained=[x for x in requested if 'Elevator'+x in elevators]
+        if requested and len(retained)==len(requested):continue
+        if not retained:
+            # First reuse a recovery-to-lift route. Otherwise prefer a lift
+            # already connected to a plane launch point, then deck proximity.
+            direct={p.get('To') for p in paths.values() if p.get('From')==section}
+            plane_launches={
+                s for s,d in data.items() if re.fullmatch(r'LaunchPoint\d+',s)
+                and types(d)&{'Plane','VTOL'}
+            }
+            linked={p.get('From') for p in paths.values() if p.get('To') in plane_launches}
+            for elevator,details in elevators.items():
+                if any('LaunchPoint'+x.strip() in plane_launches
+                       for x in details.get('AssociatedLaunchPoints','').split(',')):
+                    linked.add(elevator)
+            retained=[choose_elevator(data,name,section,direct,linked)[8:]]
+        value=','.join(dict.fromkeys(retained))
+        text=put(text,section,'AssociatedElevators',value)
+        repairs.append({'section':section,'previous':recovery.get('AssociatedElevators',''),
+                        'replacement':value,'uses_existing_elevator_geometry':True})
+    # Copied carrier definitions can retain taxi paths to lifts they removed.
+    # Disable those paths in the override and compact the surviving indices;
+    # preserve every surviving route's coordinates and original comments.
+    invalid=[s for s,d in paths.items() if any(
+        re.fullmatch(r'Elevator\d+',d.get(key,'')) and d[key] not in elevators
+        for key in ('From','To'))]
+    mapping={s:s for s in paths}
+    if invalid:
+        for section in invalid:
+            pattern=re.compile(r'(?m)^\['+re.escape(section)+r'\][^\r\n]*$')
+            match=pattern.search(text)
+            if not match:continue
+            nxt=re.search(r'(?m)^\[',text[match.end():])
+            end=match.end()+nxt.start() if nxt else len(text)
+            disabled=''.join('; RAN inactive taxi path: '+line+'\n'
+                             for line in text[match.start():end].splitlines())
+            text=text[:match.start()]+disabled+text[end:]
+        surviving=sorted((s for s in paths if s not in invalid),key=lambda s:int(s[8:]))
+        mapping={s:'TaxiPath'+str(index) for index,s in enumerate(surviving,1)}
+        for section,replacement in mapping.items():
+            text=re.sub(r'(?m)^\['+re.escape(section)+r'\]', '[RAN_TEMP_'+replacement+']',text,count=1)
+        text=re.sub(r'(?m)^\[RAN_TEMP_(TaxiPath\d+)\]',r'[\1]',text)
+        text=put(text,'FlightDeck','NumberOfTaxiPaths',len(surviving))
+    # Native launch permissions identify routes by their endpoints, e.g.
+    # Elevator3LaunchPoint3. Also support explicit TaxiPathN references without
+    # letting a removed index accidentally select a different compacted route.
+    for section,details in data.items():
+        if not re.fullmatch(r'LaunchPoint\d+',section) or 'TaxiPath' not in details:continue
+        requested=[x.strip() for x in details['TaxiPath'].split(',') if x.strip()]
+        retained=[];removed=False
+        for route in requested:
+            elevator=re.fullmatch(r'(Elevator\d+)LaunchPoint\d+',route)
+            if route in invalid or (elevator and elevator[1] not in elevators):
+                removed=True;continue
+            retained.append(mapping.get(route,route))
+        if removed and not retained:
+            current=parse(text)
+            current_paths={s:d for s,d in current.items() if re.fullmatch(r'TaxiPath\d+',s)}
+            direct={p.get('From') for p in current_paths.values() if p.get('To')==section}
+            linked={e for e,d in elevators.items()
+                if section[11:] in [x.strip() for x in d.get('AssociatedLaunchPoints','').split(',')]}
+            elevator=choose_elevator(current,name,section,direct,linked)
+            position=details.get('Position')
+            text=ensure_taxi_path(text,name,elevator,section,position)
+            associated=[x.strip() for x in current[elevator].get('AssociatedLaunchPoints','').split(',') if x.strip()]
+            if section[11:] not in associated:
+                text=put(text,elevator,'AssociatedLaunchPoints',','.join(associated+[section[11:]]))
+            retained=[elevator+section]
+        value=','.join(retained)
+        if value!=details['TaxiPath']:
+            text=put(text,section,'TaxiPath',value)
+            if removed:repairs.append({'section':section,'previous':details['TaxiPath'],
+                'replacement':value,'uses_existing_elevator_geometry':True})
+    for repair in repairs:
+        if not repair['section'].startswith('RecoveryPoint'):continue
+        for number in repair['replacement'].split(','):
+            elevator='Elevator'+number
+            position=elevators[elevator].get('RidePosition') or elevators[elevator].get('SpawnPosition')
+            text=ensure_taxi_path(text,name,repair['section'],elevator,position)
+    # A two-lift conversion may still carry its donor's four-lift count.
+    numbers={int(s[8:]) for s in elevators}
+    declared=int(deck.get('NumberOfElevators','0'))
+    if numbers and numbers==set(range(1,max(numbers)+1)) and declared>max(numbers):
+        text=put(text,'FlightDeck','NumberOfElevators',max(numbers))
+    return text,repairs,invalid
+
 def compatible(text,name):
     data=parse(text)
     if not is_carrier(data,name):return None
+    text=deduplicate(text)
+    text,elevator_repairs,invalid_paths=repair_elevator_references(text,name)
+    data=parse(text)
     deck=data['FlightDeck'];nr=int(deck.get('NumberOfRecoveryPoints','0'))
     points=[(s,d) for s,d in data.items() if re.fullmatch(r'RecoveryPoint\d+',s)]
     launches=[(s,d) for s,d in data.items() if re.fullmatch(r'LaunchPoint\d+',s)]
@@ -124,32 +254,22 @@ def compatible(text,name):
     text=put(text,'FlightDeck','NumberOfLaunchPoints',max(nl,int(launch[11:])))
     if 'Plane' not in types(ld):text=put(text,launch,'AllowedType',ld.get('AllowedType','')+',Plane')
     # Preserve the selected carrier's native taxi routes and elevator geometry.
-    nt=int(deck.get('NumberOfTaxiPaths','0'))
-    paths={s:d for s,d in data.items() if re.fullmatch(r'TaxiPath\d+',s)}
     elevators=rd['AssociatedElevators'].split(',')
-    recovery_routes=[(s,d) for s,d in paths.items() if d.get('From')==recovery]
     for e in elevators:
         elev='Elevator'+e.strip()
         if elev not in data:raise ValueError(name+': missing '+elev)
-        for origin,dest,position in [(recovery,elev,data[elev].get('RidePosition',data[elev].get('SpawnPosition'))),
+        for origin,dest,position in [(recovery,elev,data[elev].get('RidePosition') or data[elev].get('SpawnPosition')),
                                       (elev,launch,ld.get('Position'))]:
-            existing=[s for s,d in paths.items() if d.get('From')==origin and d.get('To')==dest]
-            if existing:
-                nt=max(nt,max(int(s[8:]) for s in existing));continue
-            if not position:raise ValueError(name+': missing taxi coordinate '+dest)
-            number=max([nt]+[int(s[8:]) for s in paths])+1
-            s='TaxiPath'+str(number)
-            for k,v in [('From',origin),('To',dest),('Waypoints',position)]:text=put(text,s,k,v)
-            paths[s]={'From':origin,'To':dest};nt=number
+            text=ensure_taxi_path(text,name,origin,dest,position)
         associated=data[elev].get('AssociatedLaunchPoints','').split(',')
         li=str(int(launch[11:]))
         if li not in associated:text=put(text,elev,'AssociatedLaunchPoints',','.join(x for x in associated+[li] if x))
-    text=put(text,'FlightDeck','NumberOfTaxiPaths',nt)
     if 'AircraftSupported' in deck:
         supported=deck['AircraftSupported'].split(',')
         text=put(text,'FlightDeck','AircraftSupported',','.join(supported+[u for u in IDS if u not in supported]))
     return deduplicate(text),{'recovery':recovery,'source_recovery':source_recovery,'launch':launch,'converted_deck':converted,
-        'aircraft':list(IDS),'carrier_air_group_preserved':True}
+        'aircraft':list(IDS),'carrier_air_group_preserved':True,
+        'elevator_repairs':elevator_repairs,'disabled_invalid_taxi_paths':invalid_paths}
 
 def generate(game,mod,extra_sources=()):
     game=Path(game).resolve();mod=Path(mod).resolve()
@@ -184,7 +304,7 @@ def generate(game,mod,extra_sources=()):
             (dest/name).write_text(output,encoding='utf-8')
             report['carriers'].append({'file':name,'source':str(source),**detail,
                 'other_source_candidates':[p for p in duplicates[name] if p!=str(source)]})
-        except (ValueError,KeyError) as error:report['errors'].append({'file':name,'reason':str(error)})
+        except (ValueError,KeyError) as error:report['errors'].append({'file':name,'source':str(source),'reason':str(error)})
     (mod/'CARRIER_COMPATIBILITY.json').write_text(json.dumps(report,indent=2)+'\n')
     return report
 
