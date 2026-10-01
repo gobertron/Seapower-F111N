@@ -21,6 +21,13 @@ def main():
     names=read_ini(MOD/'language_en/aircraft_names.ini')
     systems=read_ini(MOD/'systems/sensors.ini')
     native_sensors=read_ini(ROOT/'authoring/reference_sensors.ini')
+    ammunition_names=read_ini(MOD/'language_en/ammunition_names.ini')
+    ammo_table=ammunition_names.get('AmmunitionNames',{})
+    check(set(ammunition_names)=={'AmmunitionNames'},'native flat ammunition language table')
+    check(set(ammo_table)==set(catalog),'all custom ammunition IDs have display names')
+    local_weapons=read_ini(MOD/'systems/weapons.ini')
+    chaff_system=local_weapons.get('RAN_NW_AIR_CHAFF_DISP',{})
+    check(chaff_system.get('ReloadTime')=='0','Naval Wing chaff reload is zero')
     check(len(manifest)==16 and set(manifest)==set(names),'exactly sixteen named aircraft')
     for p in MOD.rglob('*.ini'):
         sec='';seen=set()
@@ -32,6 +39,8 @@ def main():
                 ident=(sec,line.split('=',1)[0])
                 check(ident not in seen,str(p.relative_to(MOD))+': duplicate '+str(ident));seen.add(ident)
     for key,c in catalog.items():
+        label=ammo_table.get(key,'').split(',',3)
+        check(len(label)==4 and label[0]==c['name'] and bool(label[2]) and bool(label[3]),key+': native display name/category/description')
         p=MOD/'ammunition'/(key+'.ini');check(p.is_file(),'store file '+key)
         ammo=read_ini(p)
         check(abs(float(ammo['General']['Mass'])-c['mass_kg'])<1e-5,'store mass '+key)
@@ -83,6 +92,8 @@ def main():
         for sn in sensors:check(sn['SystemName'] in native_sensors or sn['SystemName'] in systems,uid+': unknown sensor '+sn['SystemName'])
         ws=[s for s in d if re.fullmatch(r'WeaponSystem\d+',s)]
         check(len(ws)==int(d['WeaponSystems']['NumberOfWeaponSystems']),uid+': weapon count')
+        chaff=[d[s] for s in ws if d[s].get('Type')=='Chaff']
+        check(len(chaff)==1 and chaff[0].get('SystemName')=='RAN_NW_AIR_CHAFF_DISP',uid+': local zero-reload chaff dispenser')
         for w in ws:
             wd=d[w]
             if wd['Type']!='Hardpoint':continue

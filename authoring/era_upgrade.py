@@ -454,7 +454,10 @@ def finish(manifest):
     (ROOT/'MOD_SHA256.txt').write_text('\n'.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+str(p.relative_to(MOD)) for p in sorted(MOD.rglob('*')) if p.is_file())+'\n')
 
 def main():
-    build_weapons();build_systems(MOD,ROOT,CATALOG,read_ini,write_ini);manifest=build_aircraft();finish(manifest)
+    build_weapons();build_systems(MOD,ROOT,CATALOG,read_ini,write_ini);manifest=build_aircraft()
+    from runtime_fixes import apply
+    apply(ROOT,MOD)
+    finish(manifest)
     print(json.dumps({'aircraft':len(manifest),'weapons_and_stores':len(CATALOG),'loadouts':sum(len(d['loadouts']) for d in manifest.values()),'largest_full_fuel_mass_kg':max(x['full_fuel_takeoff_mass_kg'] for d in manifest.values() for x in d['loadouts'].values())}))
 
 if __name__=='__main__':main()

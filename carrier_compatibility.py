@@ -13,6 +13,15 @@ IDS=('ran_f-111n', 'ran_f-111n_1985', 'ran_f-111n_1995', 'ran_f-111n_2003', 'ran
 CIRCUIT='0.5,800,-4.5|0.5,800,2.5|-0.75,800,3.2|-2,800,2.2|-2,500,-2.5|-0.75,500,-3.5|0.42,500,-3'
 HOLD='-2.7,2000,-6|-1.9,2000,-6.6|-1.1,2000,-6|-1.9,2000,-4.7'
 
+def read_source_text(path):
+    """Read native/mod INI files without changing their original bytes on disk."""
+    raw=Path(path).read_bytes()
+    if raw.startswith((b'\xff\xfe',b'\xfe\xff')):return raw.decode('utf-16')
+    try:return raw.decode('utf-8-sig')
+    except UnicodeDecodeError:
+        try:return raw.decode('cp1252')
+        except UnicodeDecodeError:return raw.decode('latin-1')
+
 def parse(text):
     data=OrderedDict();section=None
     for raw in text.splitlines():
@@ -159,7 +168,7 @@ def generate(game,mod,extra_sources=()):
         if not vessels.is_dir():continue
         for p in sorted(vessels.rglob('*.ini')):
             if p.name.endswith('_variants.ini'):continue
-            text=p.read_text(encoding='utf-8-sig')
+            text=read_source_text(p)
             if not is_carrier(parse(text),p.stem):continue
             duplicates.setdefault(p.name,[]).append(str(p))
             key=(priority,p.stat().st_mtime_ns)
