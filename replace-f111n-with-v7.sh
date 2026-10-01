@@ -26,12 +26,11 @@ import urllib.error
 import urllib.request
 import zipfile
 
-RELEASE_COMMIT = "3d00015b9d76788da746c32682e4c0cafa553479"
+RELEASE_COMMIT = "e481e8a6b887212502d4fe68bfe2921c1aea016d"
 DOWNLOAD = "https://codeload.github.com/gobertron/Seapower-F111N/zip/" + RELEASE_COMMIT
 MOD_NAME = "RAN-F111N-Naval-Wing"
 MANIFEST_SHA256 = "5e8fed244755d2abc7b43a0de98eeb9817f259d280f5783b1cb787925840583b"
-CARRIER_SHA256 = "aa8f4380a70d03929285ba8936ffae82c1cfc9c4a9f63a2995b07a8deb5b10ff"
-LEGACY_CARRIER_SHA256 = "b86a83271be0b717a4ef79b8a923146b4a2cbd1835c9cb9e29a7a9b4371ed15f"
+CARRIER_SHA256 = "7ab5f7acffbae0c6a1b7abf73d6673ce0c4ca70f9db91bbfdc214b12badd7c41"
 AIRCRAFT_IDS = ("ran_f-111n", "ran_fb-111n", "ran_rf-111n", "ran_ef-111n")
 MAX_ARCHIVE_BYTES = 220 * 1024 * 1024
 MAX_EXTRACTED_BYTES = 400 * 1024 * 1024
@@ -206,8 +205,8 @@ def verify_package(package):
     carrier = package / "carrier_compatibility.py"
     if not manifest.is_file() or digest(manifest) != MANIFEST_SHA256:
         raise RuntimeError("Package is not the corrected V7 release: manifest checksum failed. Use a current GitHub ZIP or run without --package.")
-    if not carrier.is_file() or digest(carrier) not in {CARRIER_SHA256, LEGACY_CARRIER_SHA256}:
-        raise RuntimeError("The package's carrier installer checksum failed.")
+    if not carrier.is_file() or digest(carrier) != CARRIER_SHA256:
+        raise RuntimeError("The package's carrier installer checksum failed. Run without --package to download V7 with the elevator repair.")
     entries = []
     for line in manifest.read_text().splitlines():
         checksum, name = line.split("  ", 1)
@@ -248,23 +247,16 @@ def read_source_text(path):
 def carrier_overrides(package, game, staged, sources):
     helper = package / "carrier_compatibility.py"
     checksum = digest(helper)
-    if checksum not in {CARRIER_SHA256, LEGACY_CARRIER_SHA256}:
+    if checksum != CARRIER_SHA256:
         raise RuntimeError("Carrier installer changed after verification.")
     code = helper.read_text(encoding="utf-8")
-    if checksum == LEGACY_CARRIER_SHA256:
-        # Apply the encoding fix in memory to the original, checksum-verified
-        # V7 helper. This also supports the user's already-downloaded V7 ZIP.
-        old_reader = "text=p.read_text(encoding='utf-8-sig')"
-        if code.count(old_reader) != 1:
-            raise RuntimeError("Cannot apply the verified V7 carrier encoding fix.")
-        code = code.replace(old_reader, "text=read_source_text(p)", 1)
     module = types.ModuleType("v7_carrier_compatibility")
     module.__file__ = str(helper)
     exec(compile(code, str(helper), "exec"), module.__dict__)
     module.read_source_text = read_source_text
     report = module.generate(game, staged, sources)
     if report["errors"]:
-        details = "; ".join(item["file"] + ": " + item["reason"] for item in report["errors"])
+        details = "; ".join(item.get("source", item["file"]) + ": " + item["reason"] for item in report["errors"])
         raise RuntimeError("Carrier preparation failed; old installation kept intact. " + details)
     return report
 
@@ -366,6 +358,9 @@ def install(package, game, sources=(), dry_run=False):
     print("\nV7 INSTALLED:", target)
     print("Dated backup and replacement record:", backup)
     print("Carrier definitions prepared:", len(report["carriers"]))
+    for carrier in report["carriers"]:
+        if carrier.get("elevator_repairs"):
+            print("Repaired existing lift routes:", carrier["file"])
     print("\nOpen Sea Power Mod Manager: enable RAN F-111N Naval Wing V7.")
     print("Disable older Naval Wing copies. Give V7 priority over carrier mods.")
     print("Keep carrier/source asset mods and your existing Anchor Chain setup enabled.")
@@ -434,8 +429,11 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         print("\nStopped by user.", file=sys.stderr)
         raise SystemExit(130)
-    except (OSError, RuntimeError, ValueError, zipfile.BadZipFile, urllib.error.URLError) as error:
+    except urllib.error.URLError as error:
+        print("Replacement stopped: GitHub download failed:", error, file=sys.stderr)
+        print("Use --package with the complete current V7 ZIP, or retry the download.", file=sys.stderr)
+        raise SystemExit(1)
+    except (OSError, RuntimeError, ValueError, zipfile.BadZipFile) as error:
         print("Replacement stopped:", error, file=sys.stderr)
-        print("For a download failure, use --package with the complete V7 ZIP.", file=sys.stderr)
         raise SystemExit(1)
 V7_REPLACEMENT_PY

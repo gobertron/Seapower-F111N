@@ -20,13 +20,20 @@ It finds standard and Flatpak Steam installations and reads Steam's library conf
 
 The carrier reader handles UTF-8, Windows-1252, Latin-1 and BOM-marked UTF-16 source files. This fixes the reported invalid UTF-8 byte 0xA0 error. Source game, Workshop and carrier-mod files remain unchanged. Overrides are written inside the new V7 folder. Carrier preparation must finish before old local copies are moved.
 
+The current helper also repairs recovery and taxi references to missing elevators, including the reported Elevator3/Elevator4 Majestic failures. It selects an existing usable lift, preferring a defined deck route, preserves existing coordinates, disables routes to absent lifts, and remaps surviving path indices. Repairs are recorded in CARRIER_COMPATIBILITY.json. If a carrier has no usable lift geometry, installation stops with its source path before moving the old mod.
+
+If you already downloaded an earlier replacement script, overwrite it before rerunning:
+
+    curl -fL 'https://raw.githubusercontent.com/gobertron/Seapower-F111N/main/replace-f111n-with-v7.sh' -o ~/Downloads/replace-f111n-with-v7.sh
+    bash ~/Downloads/replace-f111n-with-v7.sh "/full/path/to/steamapps/common/Sea Power"
+
 The corrected package includes all 61 native weapon/store display names and a Naval Wing chaff dispenser with ReloadTime=0 on all sixteen aircraft. The verified download is pinned to a specific corrected V7 commit; later repository changes do not silently alter the installed aircraft.
 
 To use a current corrected V7 ZIP from this repository:
 
     bash ~/Downloads/replace-f111n-with-v7.sh --package ~/Downloads/RAN-F111N-Naval-Wing-V7.zip
 
-A current GitHub source ZIP or clean extracted corrected package works. For an extracted package, supply the folder containing MOD_SHA256.txt, carrier_compatibility.py and RAN-F111N-Naval-Wing. The script does not modify the supplied package. An older ZIP, or a package modified by a previous carrier-generation run, fails the release checks. Running without --package downloads the corrected version automatically.
+A current GitHub source ZIP or clean extracted corrected package works. For an extracted package, supply the folder containing MOD_SHA256.txt, carrier_compatibility.py and RAN-F111N-Naval-Wing. The script does not modify the supplied package. An older ZIP, a package with an older carrier helper, or a package modified by a previous carrier-generation run fails the release checks. Running without --package downloads the corrected version automatically.
 
 To verify and preview replacement without changing installed mod files:
 
@@ -38,4 +45,4 @@ After installation, enable **RAN F-111N Naval Wing V7**, disable older Naval Win
 
 For the Workshop item shown in your screenshot, select **Update Existing → RAN / RAAF F-111N Series (3810606011)**, then **Pick Folder → \user\RAN-F111N-Naval-Wing**. Submit the Workshop update separately using the included description and update notes.
 
-The script replaces local files and prepares carrier configuration. Flight performance and carrier landings still require in-game testing.
+The script passed 18 replacement/recovery tests and six lift-repair tests. The Majestic cases reproduce the reported missing references on representative native layouts; the user's exact RAN definitions are not available here. The script replaces local files and prepares carrier configuration. Flight performance and carrier landings still require in-game testing.

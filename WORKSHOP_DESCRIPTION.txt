@@ -67,4 +67,4 @@ The naval conversion, three-Harpoon bay, relocated gun, F110 adaptations, Mach 3
 [h2]Credits[/h2]
 Source models and materials are credited to [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3587484531]Workshop item 3587484531[/url], [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3689650533]Workshop item 3689650533[/url] and earlier Naval Wing releases. Further sources and references are listed in THIRD_PARTY_CREDITS.md and HISTORICAL_REFERENCES.md. Original third-party asset rights remain with their owners.
 
-[b]V7 corrections:[/b] Native display names for all 61 custom weapons/stores; zero-reload chaff on all 16 aircraft; Windows-encoding support in the carrier installer and a standalone replacement script with dated backups.
+[b]V7 corrections:[/b] Native display names for all 61 custom weapons/stores; zero-reload chaff on all 16 aircraft; Windows-encoding support and stale elevator/taxi reference repairs in the carrier installer; a standalone replacement script with dated backups. Carrier repairs use existing geometry and leave original source files unchanged.

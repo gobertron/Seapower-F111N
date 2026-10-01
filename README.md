@@ -10,7 +10,7 @@
 - [Steam Workshop description](WORKSHOP_DESCRIPTION.txt) and [V7 update notes](WORKSHOP_UPDATE_NOTES_V7.txt)
 - [All sixteen aircraft compared](docs/AIRCRAFT_COMPARISON.md) and [investment/system upgrades](docs/INVESTMENT_PROGRAMME.md)
 
-**V7 corrections (1 October 2026):** all 61 custom weapon/store names use the native ammunition table; all 16 aircraft use zero-reload chaff; the carrier installer accepts Windows-encoded source INIs. The standalone replacement script keeps dated backups and passed 16 replacement/recovery tests.
+**V7 corrections (1 October 2026):** all 61 custom weapon/store names use the native ammunition table; all 16 aircraft use zero-reload chaff; the carrier installer accepts Windows-encoded source INIs and repairs stale lift/taxi references using existing carrier geometry. The standalone replacement script keeps dated backups. All 18 replacement/recovery tests and six lift-repair tests passed, including representative Majestic Elevator3/Elevator4 failures.
 
 The repository includes the complete aircraft assets, native configuration, installers, authoring source, previews and validation reports. The GitHub ZIP includes the complete mod tree, expanded publication breakdown and Workshop text. Game assets match the validated standalone V7 release.
 

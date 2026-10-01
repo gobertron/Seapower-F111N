@@ -3,6 +3,7 @@
 [*]Fixed all 61 custom missile, bomb, pod and tank display names in loadouts, weapon references and launched-weapon labels.
 [*]Set chaff reload time to zero on all 16 aircraft; existing chaff quantities and burst spacing remain.
 [*]Fixed Windows-encoded carrier source files causing the invalid UTF-8 byte 0xA0 installer error.
+[*]Repaired stale carrier elevator and taxi references in generated overrides, including the reported Majestic Elevator3/Elevator4 failures, using existing lift geometry. Original game/Workshop files remain unchanged.
 [*]Added a verified V7 replacement script with complete staging, dated backups and rollback checks.
 [/list]
 
@@ -32,6 +33,7 @@ V7 rebuilds the Naval Wing from the verified V6 base, retaining four aircraft fa
 
 [h2]Validation and installation[/h2]
 [b]Passed: 32,093 mod checks, 2,243 carrier/installer checks and eight late texture audits.[/b]
+Also passed: 18 replacement/recovery tests and six lift-repair tests. Majestic cases use representative native layouts; exact installed RAN source definitions were unavailable.
 
 Actual gun fire, guidance/release, Mach 3 flight, ECM display, dates and carrier landings still need Sea Power runtime testing. Native modern-weapon approximations and fictional naval engineering are documented.
 

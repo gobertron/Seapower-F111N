@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "date": "2026-10-01",
+  "runtime_tested": false,
+  "replacement_recovery_tests": 18,
+  "elevator_repair_tests": 6,
+  "total_tests": 24,
+  "carrier_helper_sha256": "7ab5f7acffbae0c6a1b7abf73d6673ce0c4ca70f9db91bbfdc214b12badd7c41",
+  "game_manifest_sha256": "5e8fed244755d2abc7b43a0de98eeb9817f259d280f5783b1cb787925840583b",
+  "verified_game_files": 174,
+  "commands": [
+    "python3 -m unittest authoring.test_carrier_elevators authoring.test_v7_replacement",
+    "python3 authoring/validate_carriers.py",
+    "bash -n replace-f111n-with-v7.sh"
+  ],
+  "scope": "Representative two-lift conversions reproduce ran_cv_majestic1968/Elevator3 and ran_majestic_59/Elevator4 failures. Checks cover existing geometry, recovery/launch route repair, explicit path index remapping, duplicate associations, idempotence, source preservation, complete staged installation, checksum rejection, backups and rollback. Native carrier checks separately pass 2243 assertions. The actual installed RAN source files were unavailable; Sea Power landings remain untested."
+}

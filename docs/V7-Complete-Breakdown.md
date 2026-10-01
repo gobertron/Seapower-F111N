@@ -1,6 +1,6 @@
 # RAN F-111N Naval Wing V7 — Complete Breakdown
 
-**1 October 2026 correction:** all 61 custom ammunition/store names now use the native AmmunitionNames table; all 16 aircraft select a local chaff dispenser with ReloadTime=0. The carrier reader accepts Windows-encoded source INIs. The standalone replacement script passed 16 replacement/recovery tests.
+**1 October 2026 correction:** all 61 custom ammunition/store names now use the native AmmunitionNames table; all 16 aircraft select a local chaff dispenser with ReloadTime=0. The carrier reader accepts Windows-encoded source INIs and repairs stale elevator/taxi references using existing lift geometry. The standalone script passed 18 replacement/recovery tests; six lift-repair tests cover representative Majestic Elevator3/Elevator4 failures, route remapping, idempotence and unavailable geometry.
 
 This describes the completed fresh V7 remake from the verified V6 ZIP. Values describe the shipped game configuration, not tested real-world performance. The downloadable release is 84,349,039 bytes (84.35 MB / 80.44 MiB).
 

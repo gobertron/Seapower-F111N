@@ -5,7 +5,9 @@
 - Corrected all 61 custom ammunition/store names to the game's flat AmmunitionNames table. Missile names now have the native display-name, nickname, category and description fields used by loadout tooltips, weapon references and launched-weapon labels.
 - Added a Naval Wing chaff dispenser with ReloadTime=0 and selected it on all sixteen aircraft. Existing chaff quantities and burst spacing are retained.
 - Fixed carrier-file reading for UTF-8, Windows-1252, Latin-1 and BOM-marked UTF-16, including the reported invalid byte 0xA0 failure.
+- Repaired stale recovery-elevator and launch/taxi references in generated overrides, using existing lifts and coordinates. Invalid paths are disabled and remaining path indices remapped. No replacement lift or carrier geometry is invented. Representative ran_cv_majestic1968/Elevator3 and ran_majestic_59/Elevator4 cases pass.
 - Added a standalone CachyOS/Linux replacement script with a verified download, complete staged copy, dated backups, dry run and rollback checks.
+- Pinned the replacement download and helper checksum to the lift repair; older helpers are rejected before replacement. Carrier failures now identify the source file and do not show an unrelated download warning. Eighteen replacement/recovery tests and six lift-repair tests passed.
 
 ## Original V7 remake
 

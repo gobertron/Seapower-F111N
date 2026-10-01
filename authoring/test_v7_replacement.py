@@ -7,6 +7,7 @@ import io
 import json
 from pathlib import Path
 import shutil
+import sys
 import tempfile
 import types
 import unittest
@@ -14,6 +15,9 @@ from unittest import mock
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from authoring.test_carrier_elevators import two_elevator_conversion
+from carrier_compatibility import parse
 script = (ROOT / "replace-f111n-with-v7.sh").read_text()
 python = script.split("<<'V7_REPLACEMENT_PY'\n", 1)[1].rsplit("\nV7_REPLACEMENT_PY", 1)[0]
 replacement = types.ModuleType("v7_replacement_test_module")
@@ -97,6 +101,33 @@ class ReplacementTests(unittest.TestCase):
         self.assertIsNone(self.install(dry_run=True))
         self.assertEqual(snapshot(self.game), before)
         self.assertFalse((self.game / "RAN-F111N-backups").exists())
+
+    def test_both_majestic_overrides_install_without_changing_sources(self):
+        vessels = self.workshop / "vessels"
+        vessels.mkdir()
+        for name, missing in [("ran_cv_majestic1968.ini", 3), ("ran_majestic_59.ini", 4)]:
+            (vessels / name).write_text(two_elevator_conversion(missing), encoding="utf-8")
+        before = snapshot(self.workshop)
+        backup = self.install()
+        self.assertEqual(snapshot(self.workshop), before)
+        self.assertTrue((backup / "replacement.json").is_file())
+        report = json.loads((self.target / "CARRIER_COMPATIBILITY.json").read_text())
+        self.assertEqual(report["errors"], [])
+        for name in ("ran_cv_majestic1968.ini", "ran_majestic_59.ini"):
+            data = parse((self.target / "vessels" / name).read_text())
+            self.assertEqual(data["RecoveryPoint1"]["AssociatedElevators"], "1")
+            self.assertNotIn("Elevator3", data)
+            self.assertNotIn("Elevator4", data)
+            details = next(c for c in report["carriers"] if c["file"] == name)
+            self.assertTrue(details["elevator_repairs"])
+            self.assertEqual(len(details["aircraft"]), 16)
+
+    def test_outdated_carrier_helper_keeps_old_installation_intact(self):
+        before = snapshot(self.streaming)
+        with mock.patch.object(replacement, "CARRIER_SHA256", "aa8f4380a70d03929285ba8936ffae82c1cfc9c4a9f63a2995b07a8deb5b10ff"):
+            with self.assertRaisesRegex(RuntimeError, "elevator repair"):
+                self.install()
+        self.assert_old_unchanged(before)
 
     def test_swap_failure_restores_every_predecessor(self):
         before = snapshot(self.streaming)
@@ -202,7 +233,6 @@ class ReplacementTests(unittest.TestCase):
         extracted = self.root / "legacy-zip"
         replacement.extract_archive(archive, extracted)
         package = replacement.package_root(extracted)
-        self.assertEqual(replacement.digest(package / "carrier_compatibility.py"), replacement.LEGACY_CARRIER_SHA256)
         before = snapshot(package)
         game_before = snapshot(self.streaming)
         with self.assertRaisesRegex(RuntimeError, "not the corrected V7 release"):
