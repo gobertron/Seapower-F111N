@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "checks": 21,
+  "runtime_tested": false,
+  "scope": "Carrier discovery from deck permissions with nonstandard unit names, lowercase helicopter-carrier role, exclusion of ordinary helicopter-only frigate deck, fixed-wing recovery permission, air-group preservation, conversion idempotence, installer detection of stock/RAN/other carrier fixtures, source files unchanged. Actual game recovery remains untested."
+}

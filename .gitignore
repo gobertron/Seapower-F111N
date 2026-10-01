@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.venv/
+authoring/sources/
+dist/
+*.zip
+*.tar.gz

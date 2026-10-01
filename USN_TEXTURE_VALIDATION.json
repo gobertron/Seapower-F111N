@@ -1,0 +1,141 @@
+{
+  "status": "PASS",
+  "maps": [
+    {
+      "aircraft": "ran_f-111n_1995",
+      "year": 1995,
+      "texture": "assets/textures/ran_f111n/ran_f-111n_1995_usn_tps.png",
+      "source": "assets/textures/ran_f111n/ran_f-111n_1990.png",
+      "dimensions": [
+        3072,
+        2048
+      ],
+      "alpha_preserved": true,
+      "cockpit_mechanical_preserved": true,
+      "changed_pixels": 2136411,
+      "sha256": "d384ddfbc1064e9f474fec7bb88d1f8a426a0ec4610b1db8bbeba7d0df14453c"
+    },
+    {
+      "aircraft": "ran_f-111n_2003",
+      "year": 2003,
+      "texture": "assets/textures/ran_f111n/ran_f-111n_2003_usn_tps.png",
+      "source": "assets/textures/ran_f111n/ran_f-111n_1990.png",
+      "dimensions": [
+        3072,
+        2048
+      ],
+      "alpha_preserved": true,
+      "cockpit_mechanical_preserved": true,
+      "changed_pixels": 2136411,
+      "sha256": "9780e6efc483b938de09bc5af80292f9931666f26384631ec53d034c0a353608"
+    },
+    {
+      "aircraft": "ran_fb-111n_1995",
+      "year": 1995,
+      "texture": "assets/textures/ran_f111n/ran_fb-111n_1995_usn_tps.png",
+      "source": "assets/textures/ran_f111n/ran_fb-111n_1990.png",
+      "dimensions": [
+        3072,
+        2048
+      ],
+      "alpha_preserved": true,
+      "cockpit_mechanical_preserved": true,
+      "changed_pixels": 2136411,
+      "sha256": "9bdc09976d08eff720bc8c3dbb02fbc302148d9bc0a796d9f5128301e39149ef"
+    },
+    {
+      "aircraft": "ran_fb-111n_2003",
+      "year": 2003,
+      "texture": "assets/textures/ran_f111n/ran_fb-111n_2003_usn_tps.png",
+      "source": "assets/textures/ran_f111n/ran_fb-111n_1990.png",
+      "dimensions": [
+        3072,
+        2048
+      ],
+      "alpha_preserved": true,
+      "cockpit_mechanical_preserved": true,
+      "changed_pixels": 2136411,
+      "sha256": "2f83cb030350bca91b18ae272bb070721299658c67e7718093343af43ecbd86f"
+    },
+    {
+      "aircraft": "ran_rf-111n_1995",
+      "year": 1995,
+      "texture": "assets/textures/ran_f111n/ran_rf-111n_1995_usn_tps.png",
+      "source": "assets/textures/ran_f111n/ran_rf-111n_1990.png",
+      "dimensions": [
+        3072,
+        2048
+      ],
+      "alpha_preserved": true,
+      "cockpit_mechanical_preserved": true,
+      "changed_pixels": 2135630,
+      "sha256": "6b36673797068f8576cf02329404324cbb3fb27d4ba9beddd81733c16ebf4e6c"
+    },
+    {
+      "aircraft": "ran_rf-111n_2003",
+      "year": 2003,
+      "texture": "assets/textures/ran_f111n/ran_rf-111n_2003_usn_tps.png",
+      "source": "assets/textures/ran_f111n/ran_rf-111n_1990.png",
+      "dimensions": [
+        3072,
+        2048
+      ],
+      "alpha_preserved": true,
+      "cockpit_mechanical_preserved": true,
+      "changed_pixels": 2135630,
+      "sha256": "cda712ca95d850580dc7a8b68522796df5db7d5b3ee1644d6020aae683c080a5"
+    },
+    {
+      "aircraft": "ran_ef-111n_1995",
+      "year": 1995,
+      "texture": "assets/textures/ran_f111n/ran_ef-111n_1995_usn_tps.png",
+      "source": "assets/textures/ran_f111n/ran_ef-111n_1990.png",
+      "dimensions": [
+        3072,
+        2048
+      ],
+      "alpha_preserved": true,
+      "cockpit_mechanical_preserved": true,
+      "changed_pixels": 2207003,
+      "sha256": "f6cb5d65ba47706f0a4581824059b6f49a82f78ae29d7965d983d8be9fd355f6"
+    },
+    {
+      "aircraft": "ran_ef-111n_2003",
+      "year": 2003,
+      "texture": "assets/textures/ran_f111n/ran_ef-111n_2003_usn_tps.png",
+      "source": "assets/textures/ran_f111n/ran_ef-111n_1990.png",
+      "dimensions": [
+        3072,
+        2048
+      ],
+      "alpha_preserved": true,
+      "cockpit_mechanical_preserved": true,
+      "changed_pixels": 2207003,
+      "sha256": "b036c79e4d62216c0556db46c764a57447737a5ad4c59ad55ddb88652a110ba8"
+    }
+  ],
+  "palette_rgb": {
+    "upper": [
+      136,
+      151,
+      163
+    ],
+    "sides": [
+      158,
+      169,
+      180
+    ],
+    "under": [
+      184,
+      194,
+      202
+    ],
+    "stencil": [
+      71,
+      85,
+      97
+    ]
+  },
+  "scope": "Exact 3072x2048 native UV maps; alpha and cockpit/mechanical regions preserved; no mesh, normal or specular changes.",
+  "runtime_tested": false
+}

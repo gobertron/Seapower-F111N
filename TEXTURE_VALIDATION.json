@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "runtime_tested": false,
+  "texture_convention": "Unity left-handed camera basis, calibrated to the supplied side-view screenshot.",
+  "texture_maps": [
+    {
+      "texture": "ran_ef-111n.png",
+      "changed_rgb_pixels": 1724,
+      "alpha_preserved": true
+    },
+    {
+      "texture": "ran_ef-111n_1990.png",
+      "changed_rgb_pixels": 1724,
+      "alpha_preserved": true
+    },
+    {
+      "texture": "ran_f-111n.png",
+      "changed_rgb_pixels": 1650,
+      "alpha_preserved": true
+    },
+    {
+      "texture": "ran_f-111n_1990.png",
+      "changed_rgb_pixels": 1650,
+      "alpha_preserved": true
+    },
+    {
+      "texture": "ran_fb-111n.png",
+      "changed_rgb_pixels": 1660,
+      "alpha_preserved": true
+    },
+    {
+      "texture": "ran_fb-111n_1990.png",
+      "changed_rgb_pixels": 1660,
+      "alpha_preserved": true
+    },
+    {
+      "texture": "ran_rf-111n.png",
+      "changed_rgb_pixels": 1629,
+      "alpha_preserved": true
+    },
+    {
+      "texture": "ran_rf-111n_1990.png",
+      "changed_rgb_pixels": 1629,
+      "alpha_preserved": true
+    }
+  ],
+  "geometry_normal_and_specular_maps_preserved": true
+}

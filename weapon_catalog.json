@@ -1,0 +1,440 @@
+{
+  "ran_nw_aim9l": {
+    "name": "AIM-9L Sidewinder",
+    "mass_kg": 86,
+    "earliest_edition": 1980,
+    "native_donor": "usn_aim-9l",
+    "model": "Native geometry",
+    "simulation": "Native guidance; rounded historical carried mass"
+  },
+  "ran_nw_aim9m": {
+    "name": "AIM-9M Sidewinder",
+    "mass_kg": 86,
+    "earliest_edition": 1985,
+    "native_donor": "usn_aim-9m",
+    "model": "Native geometry",
+    "simulation": "Native guidance; rounded historical carried mass"
+  },
+  "ran_nw_aim7f": {
+    "name": "AIM-7F Sparrow",
+    "mass_kg": 231,
+    "earliest_edition": 1980,
+    "native_donor": "usn_aim-7f",
+    "model": "Native geometry",
+    "simulation": "Native guidance; rounded historical carried mass"
+  },
+  "ran_nw_aim7m": {
+    "name": "AIM-7M Sparrow",
+    "mass_kg": 231,
+    "earliest_edition": 1985,
+    "native_donor": "usn_aim-7m",
+    "model": "Native geometry",
+    "simulation": "Native guidance; rounded historical carried mass"
+  },
+  "ran_nw_aim54a": {
+    "name": "AIM-54A Phoenix",
+    "mass_kg": 443,
+    "earliest_edition": 1980,
+    "native_donor": "usn_aim-54a",
+    "model": "Native geometry",
+    "simulation": "Native guidance; rounded historical carried mass"
+  },
+  "ran_nw_aim54c": {
+    "name": "AIM-54C Phoenix",
+    "mass_kg": 463,
+    "earliest_edition": 1985,
+    "native_donor": "usn_aim-54a",
+    "model": "Native geometry",
+    "simulation": "Native AIM-54A geometry and flight profile with C mass and estimated improved ECCM"
+  },
+  "ran_nw_aim120b": {
+    "name": "AIM-120B AMRAAM",
+    "mass_kg": 152,
+    "earliest_edition": 1995,
+    "native_donor": "usn_aim-54a",
+    "model": "Original simplified dimensional AMRAAM mesh",
+    "simulation": "Active radar homing; no simulated launch-platform midcourse datalink; engagement range is a game estimate, not a published missile limit"
+  },
+  "ran_nw_aim120c5": {
+    "name": "AIM-120C-5 AMRAAM",
+    "mass_kg": 152,
+    "earliest_edition": 2003,
+    "native_donor": "usn_aim-54a",
+    "model": "Original simplified dimensional AMRAAM mesh",
+    "simulation": "Active radar homing; no simulated launch-platform midcourse datalink; engagement range is a game estimate, not a published missile limit; C-5 ECCM is an estimated improvement over B"
+  },
+  "ran_nw_asraam": {
+    "name": "ASRAAM",
+    "mass_kg": 88,
+    "earliest_edition": 2003,
+    "native_donor": "usn_aim-9m",
+    "model": "Original simplified dimensional ASRAAM mesh",
+    "simulation": "Native IR homing approximation; no helmet sight or lock-on-after-launch simulation"
+  },
+  "ran_nw_harpoona": {
+    "name": "AGM-84A Harpoon",
+    "mass_kg": 526,
+    "earliest_edition": 1980,
+    "native_donor": "usn_agm-84a",
+    "model": "Native geometry",
+    "simulation": "Native guidance; rounded historical carried mass"
+  },
+  "ran_nw_harpoonc": {
+    "name": "AGM-84C Harpoon",
+    "mass_kg": 526,
+    "earliest_edition": 1985,
+    "native_donor": "usn_agm-84c",
+    "model": "Native geometry",
+    "simulation": "Native guidance; rounded historical carried mass"
+  },
+  "ran_nw_harpoond": {
+    "name": "AGM-84D Harpoon Block 1C",
+    "mass_kg": 526,
+    "earliest_edition": 1995,
+    "native_donor": "usn_agm-84d",
+    "model": "Native geometry",
+    "simulation": "Native guidance; rounded historical carried mass"
+  },
+  "ran_nw_harpoonl": {
+    "name": "AGM-84L Harpoon Block II",
+    "mass_kg": 526,
+    "earliest_edition": 2003,
+    "native_donor": "usn_agm-84d",
+    "model": "Native geometry",
+    "simulation": "Block II acquisition/integration assumed. Native radar-homing ship attack only; GPS route planning and coastal land-attack mode are not simulated"
+  },
+  "ran_nw_maverickb": {
+    "name": "AGM-65B Maverick",
+    "mass_kg": 208,
+    "earliest_edition": 1980,
+    "native_donor": "usn_agm-65b",
+    "model": "Native geometry",
+    "simulation": "Native guidance; rounded historical carried mass"
+  },
+  "ran_nw_maverickd": {
+    "name": "AGM-65D Maverick",
+    "mass_kg": 218,
+    "earliest_edition": 1985,
+    "native_donor": "usn_agm-65b",
+    "model": "Native geometry",
+    "simulation": "Native Maverick geometry with IIR homing and selected variant mass"
+  },
+  "ran_nw_maverickg": {
+    "name": "AGM-65G Maverick",
+    "mass_kg": 302,
+    "earliest_edition": 1995,
+    "native_donor": "usn_agm-65b",
+    "model": "Native geometry",
+    "simulation": "Native Maverick geometry with IIR homing and selected variant mass"
+  },
+  "ran_nw_standardarm": {
+    "name": "AGM-78 Standard ARM",
+    "mass_kg": 620,
+    "earliest_edition": 1980,
+    "native_donor": "usn_agm-78",
+    "model": "Native geometry",
+    "simulation": "Native guidance; rounded historical carried mass"
+  },
+  "ran_nw_shrike": {
+    "name": "AGM-45 Shrike",
+    "mass_kg": 178,
+    "earliest_edition": 1980,
+    "native_donor": "usn_agm-45",
+    "model": "Native geometry",
+    "simulation": "Native guidance; rounded historical carried mass"
+  },
+  "ran_nw_harma": {
+    "name": "AGM-88A HARM",
+    "mass_kg": 361,
+    "earliest_edition": 1985,
+    "native_donor": "usn_agm-88a",
+    "model": "Native geometry",
+    "simulation": "Native guidance; rounded historical carried mass"
+  },
+  "ran_nw_harmc": {
+    "name": "AGM-88C HARM",
+    "mass_kg": 361,
+    "earliest_edition": 1995,
+    "native_donor": "usn_agm-88a",
+    "model": "Native geometry",
+    "simulation": "Native HARM-A geometry/flight model with estimated C seeker resilience"
+  },
+  "ran_nw_mk82": {
+    "name": "Mk 82 500-lb GP bomb",
+    "mass_kg": 227,
+    "earliest_edition": 1980,
+    "native_donor": "usn_mk-82",
+    "model": "Native geometry",
+    "simulation": "Native guidance; rounded historical carried mass"
+  },
+  "ran_nw_mk83": {
+    "name": "Mk 83 1000-lb GP bomb",
+    "mass_kg": 454,
+    "earliest_edition": 1980,
+    "native_donor": "usn_mk-83",
+    "model": "Native geometry",
+    "simulation": "Native guidance; rounded historical carried mass"
+  },
+  "ran_nw_mk84": {
+    "name": "Mk 84 2000-lb GP bomb",
+    "mass_kg": 907,
+    "earliest_edition": 1980,
+    "native_donor": "usn_mk-84",
+    "model": "Native geometry",
+    "simulation": "Native guidance; rounded historical carried mass"
+  },
+  "ran_nw_gbu10": {
+    "name": "GBU-10 Paveway II",
+    "mass_kg": 934,
+    "earliest_edition": 1980,
+    "native_donor": "usn_gbu-10",
+    "model": "Native geometry",
+    "simulation": "Native guidance; rounded historical carried mass"
+  },
+  "ran_nw_gbu12": {
+    "name": "GBU-12 Paveway II",
+    "mass_kg": 277,
+    "earliest_edition": 1980,
+    "native_donor": "usn_gbu-12",
+    "model": "Native geometry",
+    "simulation": "Native guidance; rounded historical carried mass"
+  },
+  "ran_nw_gbu16": {
+    "name": "GBU-16 Paveway II",
+    "mass_kg": 495,
+    "earliest_edition": 1980,
+    "native_donor": "usn_gbu-16",
+    "model": "Native geometry",
+    "simulation": "Native guidance; rounded historical carried mass"
+  },
+  "ran_nw_gbu15": {
+    "name": "GBU-15 electro-optical glide bomb",
+    "mass_kg": 1130,
+    "earliest_edition": 1985,
+    "native_donor": "usaf_gbu-15",
+    "model": "Native geometry",
+    "simulation": "Native guidance; rounded historical carried mass"
+  },
+  "ran_nw_gbu24": {
+    "name": "GBU-24 Paveway III",
+    "mass_kg": 1084,
+    "earliest_edition": 1985,
+    "native_donor": "usn_gbu-24",
+    "model": "Native geometry",
+    "simulation": "Native guidance; rounded historical carried mass"
+  },
+  "ran_nw_popeye": {
+    "name": "AGM-142 Popeye / Have Nap",
+    "mass_kg": 1360,
+    "earliest_edition": 1995,
+    "native_donor": "usn_agm-65b",
+    "model": "Original simplified dimensional AGM-142 Popeye / Have Nap mesh",
+    "simulation": "Native EO/IIR homing approximation. Control pod is carried and weighted; manual man-in-the-loop control and in-flight retargeting are not simulated"
+  },
+  "ran_nw_slam": {
+    "name": "AGM-84E SLAM",
+    "mass_kg": 628,
+    "earliest_edition": 1995,
+    "native_donor": "usn_agm-65b",
+    "model": "Original simplified dimensional AGM-84E SLAM mesh",
+    "simulation": "Native EO/IIR homing approximation. Control pod is carried and weighted; manual man-in-the-loop control and in-flight retargeting are not simulated"
+  },
+  "ran_nw_slamer": {
+    "name": "AGM-84K SLAM-ER",
+    "mass_kg": 675,
+    "earliest_edition": 2003,
+    "native_donor": "usn_agm-65b",
+    "model": "Original simplified dimensional AGM-84K SLAM-ER mesh",
+    "simulation": "Native EO/IIR homing approximation. Control pod is carried and weighted; manual man-in-the-loop control and in-flight retargeting are not simulated"
+  },
+  "ran_nw_gbu31": {
+    "name": "GBU-31 JDAM Mk 84",
+    "mass_kg": 925,
+    "earliest_edition": 2003,
+    "native_donor": "usn_mk-84",
+    "model": "Original simplified dimensional GBU-31 JDAM Mk 84 mesh",
+    "simulation": "Native unguided/CEP approximation for fixed-coordinate INS/GPS attack; no GPS guidance type exists in the supplied schema. JSOW uses reduced gravity as a glide approximation"
+  },
+  "ran_nw_gbu32": {
+    "name": "GBU-32 JDAM Mk 83",
+    "mass_kg": 461,
+    "earliest_edition": 2003,
+    "native_donor": "usn_mk-83",
+    "model": "Original simplified dimensional GBU-32 JDAM Mk 83 mesh",
+    "simulation": "Native unguided/CEP approximation for fixed-coordinate INS/GPS attack; no GPS guidance type exists in the supplied schema. JSOW uses reduced gravity as a glide approximation"
+  },
+  "ran_nw_jsowa": {
+    "name": "AGM-154A JSOW",
+    "mass_kg": 483,
+    "earliest_edition": 2003,
+    "native_donor": "usn_mk-84",
+    "model": "Original simplified dimensional AGM-154A JSOW mesh",
+    "simulation": "Native unguided/CEP approximation for fixed-coordinate INS/GPS attack; no GPS guidance type exists in the supplied schema. JSOW uses reduced gravity as a glide approximation"
+  },
+  "ran_tank_600_f111n": {
+    "name": "600 US-gallon fuel tank",
+    "mass_kg": 150,
+    "fuel_kg": 1770,
+    "earliest_edition": 1980,
+    "simulation": "Fuel from flight-manual capacity table; dry shell mass is an engineering allowance"
+  },
+  "ran_tank_600_fb111n": {
+    "name": "600 US-gallon fuel tank",
+    "mass_kg": 150,
+    "fuel_kg": 1770,
+    "earliest_edition": 1980,
+    "simulation": "Fuel from flight-manual capacity table; dry shell mass is an engineering allowance"
+  },
+  "ran_tank_600_rf111n": {
+    "name": "600 US-gallon fuel tank",
+    "mass_kg": 150,
+    "fuel_kg": 1770,
+    "earliest_edition": 1980,
+    "simulation": "Fuel from flight-manual capacity table; dry shell mass is an engineering allowance"
+  },
+  "ran_tank_600_ef111n": {
+    "name": "600 US-gallon fuel tank",
+    "mass_kg": 150,
+    "fuel_kg": 1770,
+    "earliest_edition": 1980,
+    "simulation": "Fuel from flight-manual capacity table; dry shell mass is an engineering allowance"
+  },
+  "ran_alq-131n_1": {
+    "name": "Naval offensive ECM pod 1",
+    "mass_kg": 260,
+    "earliest_edition": 1980,
+    "simulation": "Existing fictional naval ECM in ALQ-131 geometry; not an exact historical ALQ-99 installation"
+  },
+  "ran_nw_ecmpod_1": {
+    "name": "MudPig removable offensive ECM pod 1",
+    "mass_kg": 260,
+    "earliest_edition": 1980,
+    "simulation": "Existing fictional naval ECM in ALQ-131 geometry; not an exact historical ALQ-99 installation"
+  },
+  "ran_alq-131n_2": {
+    "name": "Naval offensive ECM pod 2",
+    "mass_kg": 260,
+    "earliest_edition": 1980,
+    "simulation": "Existing fictional naval ECM in ALQ-131 geometry; not an exact historical ALQ-99 installation"
+  },
+  "ran_nw_ecmpod_2": {
+    "name": "MudPig removable offensive ECM pod 2",
+    "mass_kg": 260,
+    "earliest_edition": 1980,
+    "simulation": "Existing fictional naval ECM in ALQ-131 geometry; not an exact historical ALQ-99 installation"
+  },
+  "ran_nw_datalink": {
+    "name": "EO weapon control pod",
+    "mass_kg": 260,
+    "earliest_edition": 1985,
+    "simulation": "Estimated pod mass with existing pod geometry and native sensor; full historical pod shape is not reproduced"
+  },
+  "ran_nw_laserpod": {
+    "name": "External laser designation pod",
+    "mass_kg": 150,
+    "earliest_edition": 1980,
+    "simulation": "Estimated pod mass with existing pod geometry and native sensor; full historical pod shape is not reproduced"
+  },
+  "ran_nw_mk82_mer": {
+    "name": "Mk 82 on six-bomb rack",
+    "mass_kg": 243.66666666666666,
+    "earliest_edition": 1980,
+    "simulation": "227 kg nominal bomb plus one-sixth of an estimated 100 kg detachable MER; no separate unsupported hardpoint mass key"
+  },
+  "ran_alq-131n_1_1980": {
+    "name": "Naval offensive ECM pod 1 (1980)",
+    "mass_kg": 260,
+    "earliest_edition": 1980,
+    "simulation": "Two physical pods with dated native jammer power/channels; fictional programme ratings."
+  },
+  "ran_nw_ecmpod_1_1980": {
+    "name": "Naval offensive ECM pod 1 (1980)",
+    "mass_kg": 260,
+    "earliest_edition": 1980,
+    "simulation": "Two physical pods with dated native jammer power/channels; fictional programme ratings."
+  },
+  "ran_alq-131n_2_1980": {
+    "name": "Naval offensive ECM pod 2 (1980)",
+    "mass_kg": 260,
+    "earliest_edition": 1980,
+    "simulation": "Two physical pods with dated native jammer power/channels; fictional programme ratings."
+  },
+  "ran_nw_ecmpod_2_1980": {
+    "name": "Naval offensive ECM pod 2 (1980)",
+    "mass_kg": 260,
+    "earliest_edition": 1980,
+    "simulation": "Two physical pods with dated native jammer power/channels; fictional programme ratings."
+  },
+  "ran_alq-131n_1_1985": {
+    "name": "Naval offensive ECM pod 1 (1985)",
+    "mass_kg": 260,
+    "earliest_edition": 1985,
+    "simulation": "Two physical pods with dated native jammer power/channels; fictional programme ratings."
+  },
+  "ran_nw_ecmpod_1_1985": {
+    "name": "Naval offensive ECM pod 1 (1985)",
+    "mass_kg": 260,
+    "earliest_edition": 1985,
+    "simulation": "Two physical pods with dated native jammer power/channels; fictional programme ratings."
+  },
+  "ran_alq-131n_2_1985": {
+    "name": "Naval offensive ECM pod 2 (1985)",
+    "mass_kg": 260,
+    "earliest_edition": 1985,
+    "simulation": "Two physical pods with dated native jammer power/channels; fictional programme ratings."
+  },
+  "ran_nw_ecmpod_2_1985": {
+    "name": "Naval offensive ECM pod 2 (1985)",
+    "mass_kg": 260,
+    "earliest_edition": 1985,
+    "simulation": "Two physical pods with dated native jammer power/channels; fictional programme ratings."
+  },
+  "ran_alq-131n_1_1995": {
+    "name": "Naval offensive ECM pod 1 (1995)",
+    "mass_kg": 260,
+    "earliest_edition": 1995,
+    "simulation": "Two physical pods with dated native jammer power/channels; fictional programme ratings."
+  },
+  "ran_nw_ecmpod_1_1995": {
+    "name": "Naval offensive ECM pod 1 (1995)",
+    "mass_kg": 260,
+    "earliest_edition": 1995,
+    "simulation": "Two physical pods with dated native jammer power/channels; fictional programme ratings."
+  },
+  "ran_alq-131n_2_1995": {
+    "name": "Naval offensive ECM pod 2 (1995)",
+    "mass_kg": 260,
+    "earliest_edition": 1995,
+    "simulation": "Two physical pods with dated native jammer power/channels; fictional programme ratings."
+  },
+  "ran_nw_ecmpod_2_1995": {
+    "name": "Naval offensive ECM pod 2 (1995)",
+    "mass_kg": 260,
+    "earliest_edition": 1995,
+    "simulation": "Two physical pods with dated native jammer power/channels; fictional programme ratings."
+  },
+  "ran_alq-131n_1_2003": {
+    "name": "Naval offensive ECM pod 1 (2003)",
+    "mass_kg": 260,
+    "earliest_edition": 2003,
+    "simulation": "Two physical pods with dated native jammer power/channels; fictional programme ratings."
+  },
+  "ran_nw_ecmpod_1_2003": {
+    "name": "Naval offensive ECM pod 1 (2003)",
+    "mass_kg": 260,
+    "earliest_edition": 2003,
+    "simulation": "Two physical pods with dated native jammer power/channels; fictional programme ratings."
+  },
+  "ran_alq-131n_2_2003": {
+    "name": "Naval offensive ECM pod 2 (2003)",
+    "mass_kg": 260,
+    "earliest_edition": 2003,
+    "simulation": "Two physical pods with dated native jammer power/channels; fictional programme ratings."
+  },
+  "ran_nw_ecmpod_2_2003": {
+    "name": "Naval offensive ECM pod 2 (2003)",
+    "mass_kg": 260,
+    "earliest_edition": 2003,
+    "simulation": "Two physical pods with dated native jammer power/channels; fictional programme ratings."
+  }
+}

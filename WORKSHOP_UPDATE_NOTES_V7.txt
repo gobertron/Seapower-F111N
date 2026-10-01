@@ -1,0 +1,30 @@
+[h1]V7 — Fresh Remake from V6[/h1]
+
+V7 rebuilds the Naval Wing from the verified V6 base, retaining four aircraft families across 1980, 1985, 1995 and 2003: [b]16 aircraft and 167 selectable presets[/b], including compatibility aliases.
+
+[h2]New in V7[/h2]
+[list]
+[*]Dated engine output, velocity/thrust response, flight-control gains, climb and nominal cruise-range upgrades representing heavy Australian investment.
+[*]F/FB/EF afterburning thrust settings of 82.30 / 90.53 / 120 / 129 kN per engine. RF retains a separate fictional Mach 3 package with dated improvements.
+[*]Year-specific radar, FLIR, RWR/ELINT and offensive/defensive ECM settings, plus improved weapon readiness and estimated AIM-120C-5 ECCM.
+[*]Dated ECM-container definitions for EF and removable FB EW fits. Physical pod and offensive-system counts remain two.
+[*]Eight dedicated 1995/2003 USN-inspired grey liveries with Australian markings, matching fuel tanks and aircraft-selection profiles. Lettering checked on both sides.
+[*]Explicit systems/control, engine-retrofit and RF thermal mass allowances. The heaviest full-fuel preset is RF 2003 with four tanks: 50,897 kg, 948 kg below the reference takeoff budget.
+[*]Expanded all-aircraft and investment comparisons, every preset and mass budget, CSV/JSON, references, provenance, authoring sources and test reports.
+[/list]
+
+[h2]Retained from V6[/h2]
+[list]
+[*]The original WaterPig fighter, MudPig maritime-strike all-rounder, SprintPig recon/ELINT and ScreamPig EW/SEAD roles.
+[*]M61 Vulcan with 2,000 rounds on F/FB/RF; two pylon ECM pods and two offensive ECM systems on EF.
+[*]MudPig's original animated three-station bay and three maritime presets: 2 wing Harpoons/2 IR missiles; 4 wing plus 3 bay Harpoons; or 2 wing plus 3 bay Harpoons, 2 IR missiles and 2 tanks. Missile variants follow the edition.
+[*]RF Mach 2.52 cruise/Mach 3 maximum and three-times matching-year WaterPig velocity/thrust gains. This does not triple maximum airspeed.
+[*]Period weapon selections, original model/landing geometry, earlier liveries and source-preserving carrier compatibility for all sixteen IDs.
+[/list]
+
+[h2]Validation and installation[/h2]
+[b]Passed: 32,062 mod checks, 2,243 carrier/installer checks and eight late texture audits.[/b]
+
+Actual gun fire, guidance/release, Mach 3 flight, ECM display, dates and carrier landings still need Sea Power runtime testing. Native modern-weapon approximations and fictional naval engineering are documented.
+
+Enable V7, disable older Naval Wing copies and give V7 priority over carrier mods. Keep source carrier mods enabled, use the release installer to generate carrier overrides and restart the game. Existing missions using unsuffixed IDs select the 1980 aircraft; choose a later edition for newer equipment.

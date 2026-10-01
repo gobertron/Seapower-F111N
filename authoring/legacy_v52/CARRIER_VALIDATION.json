@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "checks": 2240,
+  "runtime_tested": false,
+  "scope": "Native carrier conversion, active Plane recovery/launch, existing systems and air-group preservation, VTOL/heli approach preservation, idempotence, RAN-named deck fixtures, installer staging and prior-version backup, source files unchanged. RAN fixtures are representative native layouts, not actual installed RAN source files."
+}

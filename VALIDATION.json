@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "checks": 32062,
+  "failures": [],
+  "aircraft": 16,
+  "loadouts": 167,
+  "runtime_tested": false,
+  "scope": "Dated weapon selection, increasing native investment, eight tactical atlases, all-rounder union, M61 magazines, exact retained bay/model/landing geometry, mass arithmetic, takeoff reference budget, store and sensor resolution, pod attachment, original assets and checksums"
+}

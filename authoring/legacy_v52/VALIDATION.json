@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "checks": 17255,
+  "failures": [],
+  "game_target": "0.8.x; V5 baseline targets 0.8.2",
+  "runtime_tested": false,
+  "scope": "Static file, mesh, animation, attachment, exact store and fuel validation; two independently mounted offensive ECM systems; configured Mach 2.52 cruise and Mach 3 maximum; fixed-wing carrier recovery, launch and elevator/taxi routes. Original texture/alpha comparison runs when source textures are available. Sea Power runtime testing is still required.",
+  "native_ammunition_references": [
+    "usn_agm-84c",
+    "usn_aim-54a",
+    "usn_aim-7m",
+    "usn_aim-9l",
+    "usn_gbu-10",
+    "usn_mk-82",
+    "usn_mk-84"
+  ]
+}
