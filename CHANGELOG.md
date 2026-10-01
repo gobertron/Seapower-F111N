@@ -1,5 +1,14 @@
 # V7 changes from V6
 
+## V7 naming and installer correction — 1 October 2026
+
+- Corrected all 61 custom ammunition/store names to the game's flat AmmunitionNames table. Missile names now have the native display-name, nickname, category and description fields used by loadout tooltips, weapon references and launched-weapon labels.
+- Added a Naval Wing chaff dispenser with ReloadTime=0 and selected it on all sixteen aircraft. Existing chaff quantities and burst spacing are retained.
+- Fixed carrier-file reading for UTF-8, Windows-1252, Latin-1 and BOM-marked UTF-16, including the reported invalid byte 0xA0 failure.
+- Added a standalone CachyOS/Linux replacement script with a verified download, complete staged copy, dated backups, dry run and rollback checks.
+
+## Original V7 remake
+
 This V7 is a fresh remake from the saved V6 package. Four families, sixteen dated aircraft and 167 presets are retained.
 
 - Added dated engine output, native velocity/thrust response, control gains, climb and nominal cruise-range improvements.

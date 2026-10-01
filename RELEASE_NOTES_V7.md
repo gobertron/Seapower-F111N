@@ -4,7 +4,7 @@ Fresh remake from the saved V6 base: sixteen aircraft, 167 selectable presets, d
 
 | Verification | Status | Checks/maps |
 |---|---|---|
-| VALIDATION.json | PASS | 32062 |
+| VALIDATION.json | PASS | 32093 |
 | CARRIER_VALIDATION.json | PASS | 2243 |
 | USN_TEXTURE_VALIDATION.json | PASS | 8 |
 

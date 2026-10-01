@@ -60,9 +60,11 @@ This is a fresh remake from V6. V7 adds dated propulsion, flight-control and sen
 
 The release includes all sixteen aircraft comparisons, every one of the 167 presets, mass budgets, sortable CSV/JSON, 61 local store definitions including compatibility entries, historical references, credits, authoring sources and validation reports.
 
-[b]Static validation: 32,062 mod checks and 2,243 carrier/installer checks passed; eight late texture audits passed.[/b] Sea Power runtime testing remains outstanding for gun fire, weapon guidance/release, Mach 3 flight, ECM display, date filtering and actual carrier landings.
+[b]Static validation: 32,093 mod checks and 2,243 carrier/installer checks passed; eight late texture audits passed.[/b] Sea Power runtime testing remains outstanding for gun fire, weapon guidance/release, Mach 3 flight, ECM display, date filtering and actual carrier landings.
 
 The naval conversion, three-Harpoon bay, relocated gun, F110 adaptations, Mach 3 RF package and small-deck recovery are fictional. Native modern-weapon approximations remain: JDAM/JSOW do not add full GPS/INS guidance; EO weapons do not add manual retargeting; Block II Harpoon models ship attack; AMRAAM has no platform midcourse correction and ASRAAM adds no helmet sight/LOAL. The original cockpit is retained.
 
 [h2]Credits[/h2]
 Source models and materials are credited to [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3587484531]Workshop item 3587484531[/url], [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3689650533]Workshop item 3689650533[/url] and earlier Naval Wing releases. Further sources and references are listed in THIRD_PARTY_CREDITS.md and HISTORICAL_REFERENCES.md. Original third-party asset rights remain with their owners.
+
+[b]V7 corrections:[/b] Native display names for all 61 custom weapons/stores; zero-reload chaff on all 16 aircraft; Windows-encoding support in the carrier installer and a standalone replacement script with dated backups.

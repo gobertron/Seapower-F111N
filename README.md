@@ -3,15 +3,18 @@
 **Complete V7 release, remade from the verified V6 base.** Four aircraft families in 1980, 1985, 1995 and 2003 editions; 16 aircraft and 167 selectable presets.
 
 - [Download the complete V7 mod and source ZIP](https://github.com/gobertron/Seapower-F111N/archive/refs/heads/main.zip)
+- [Standalone script to replace older local F-111N versions](replace-f111n-with-v7.sh) · [Replacement instructions](docs/REPLACE_WITH_V7.md)
 - [Checksums for every game file](MOD_SHA256.txt)
 - [Complete breakdown: all aircraft, presets, weights and references](docs/V7-Complete-Breakdown.md)
 - [Sortable list of every loadout](ALL_LOADOUTS_V7.csv)
 - [Steam Workshop description](WORKSHOP_DESCRIPTION.txt) and [V7 update notes](WORKSHOP_UPDATE_NOTES_V7.txt)
 - [All sixteen aircraft compared](docs/AIRCRAFT_COMPARISON.md) and [investment/system upgrades](docs/INVESTMENT_PROGRAMME.md)
 
+**V7 corrections (1 October 2026):** all 61 custom weapon/store names use the native ammunition table; all 16 aircraft use zero-reload chaff; the carrier installer accepts Windows-encoded source INIs. The standalone replacement script keeps dated backups and passed 16 replacement/recovery tests.
+
 The repository includes the complete aircraft assets, native configuration, installers, authoring source, previews and validation reports. The GitHub ZIP includes the complete mod tree, expanded publication breakdown and Workshop text. Game assets match the validated standalone V7 release.
 
-**Verification:** 32,062 mod checks, 2,243 carrier/installer checks and eight late texture audits passed. In-game gun fire, guidance/release, flight performance, ECM display, date filtering and carrier landings remain untested. This is an alternate-history programme with documented native simulation limits.
+**Verification:** 32,093 mod checks, 2,243 carrier/installer checks and eight late texture audits passed. In-game gun fire, guidance/release, flight performance, ECM display, date filtering and carrier landings remain untested. This is an alternate-history programme with documented native simulation limits.
 
 An alternate-history Australian carrier F-111 programme for **Sea Power**: four original roles in **1980, 1985, 1995 and 2003** editions. This fresh V7 is built from the saved V6 base and contains **16 aircraft and 167 loadout presets**, progressive propulsion/mission-system investment, period weapons and eight dedicated late-edition grey liveries.
 

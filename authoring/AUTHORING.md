@@ -10,6 +10,7 @@ python3 authoring/preview_v7.py
 python3 authoring/checksums.py
 python3 authoring/validate_mod.py
 python3 authoring/validate_carriers.py
+python3 authoring/test_v7_replacement.py
 python3 authoring/build_docs.py
 python3 authoring/package_release.py
 ```

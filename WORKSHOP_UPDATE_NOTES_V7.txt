@@ -1,3 +1,11 @@
+[h2]V7 corrections — 1 October 2026[/h2]
+[list]
+[*]Fixed all 61 custom missile, bomb, pod and tank display names in loadouts, weapon references and launched-weapon labels.
+[*]Set chaff reload time to zero on all 16 aircraft; existing chaff quantities and burst spacing remain.
+[*]Fixed Windows-encoded carrier source files causing the invalid UTF-8 byte 0xA0 installer error.
+[*]Added a verified V7 replacement script with complete staging, dated backups and rollback checks.
+[/list]
+
 [h1]V7 — Fresh Remake from V6[/h1]
 
 V7 rebuilds the Naval Wing from the verified V6 base, retaining four aircraft families across 1980, 1985, 1995 and 2003: [b]16 aircraft and 167 selectable presets[/b], including compatibility aliases.
@@ -23,7 +31,7 @@ V7 rebuilds the Naval Wing from the verified V6 base, retaining four aircraft fa
 [/list]
 
 [h2]Validation and installation[/h2]
-[b]Passed: 32,062 mod checks, 2,243 carrier/installer checks and eight late texture audits.[/b]
+[b]Passed: 32,093 mod checks, 2,243 carrier/installer checks and eight late texture audits.[/b]
 
 Actual gun fire, guidance/release, Mach 3 flight, ECM display, dates and carrier landings still need Sea Power runtime testing. Native modern-weapon approximations and fictional naval engineering are documented.
 
