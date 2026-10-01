@@ -18,10 +18,10 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from authoring.test_carrier_elevators import two_elevator_conversion
 from carrier_compatibility import parse
-script = (ROOT / "replace-f111n-with-v7.sh").read_text()
-python = script.split("<<'V7_REPLACEMENT_PY'\n", 1)[1].rsplit("\nV7_REPLACEMENT_PY", 1)[0]
-replacement = types.ModuleType("v7_replacement_test_module")
-exec(compile(python, "replace-f111n-with-v7.sh", "exec"), replacement.__dict__)
+script = (ROOT / "replace-f111n-with-v8.sh").read_text()
+python = script.split("<<'V8_REPLACEMENT_PY'\n", 1)[1].rsplit("\nV8_REPLACEMENT_PY", 1)[0]
+replacement = types.ModuleType("v8_replacement_test_module")
+exec(compile(python, "replace-f111n-with-v8.sh", "exec"), replacement.__dict__)
 
 
 def snapshot(folder):
@@ -40,7 +40,7 @@ def seed_old(folder, title):
 
 class ReplacementTests(unittest.TestCase):
     def setUp(self):
-        self.temporary = tempfile.TemporaryDirectory(prefix="test-v7-replacement-")
+        self.temporary = tempfile.TemporaryDirectory(prefix="test-v8-replacement-")
         self.addCleanup(self.temporary.cleanup)
         self.root = Path(self.temporary.name)
         self.game = self.root / "Steam library/steamapps/common/Sea Power"
@@ -70,14 +70,14 @@ class ReplacementTests(unittest.TestCase):
 
     def assert_old_unchanged(self, before):
         self.assertEqual(snapshot(self.streaming), before)
-        self.assertFalse(list(self.game.glob("ran-f111n-v7-stage-*")))
+        self.assertFalse(list(self.game.glob("ran-f111n-v8-stage-*")))
 
     def test_replaces_both_local_versions_and_keeps_full_backups(self):
         old = {p: snapshot(p) for p in (self.target, self.alias)}
         originals = snapshot(self.streaming / "original")
         workshop = snapshot(self.workshop)
         backup = self.install()
-        self.assertIn("V7", (self.target / "_info.ini").read_text())
+        self.assertIn("V8", (self.target / "_info.ini").read_text())
         self.assertFalse((self.target / "stale-old-file.txt").exists())
         self.assertFalse(self.alias.exists())
         for folder, files in old.items():
@@ -133,7 +133,7 @@ class ReplacementTests(unittest.TestCase):
         before = snapshot(self.streaming)
         real_rename = Path.rename
         def fail_swap(path, target):
-            if path.parent.name.startswith("ran-f111n-v7-stage-"):
+            if path.parent.name.startswith("ran-f111n-v8-stage-"):
                 raise OSError("Simulated final rename failure")
             return real_rename(path, target)
         with mock.patch.object(Path, "rename", fail_swap):
@@ -226,16 +226,16 @@ class ReplacementTests(unittest.TestCase):
         self.assert_old_unchanged(before)
 
     def test_old_zip_without_weapon_naming_fix_is_rejected(self):
-        archive = ROOT.parents[2] / "deliverables/RAN-F111N-Naval-Wing-V7.zip"
+        archive = ROOT.parents[2] / "deliverables/RAN-F111N-Naval-Wing-V8.zip"
         # Repository checkouts outside this workspace can run the other tests.
         if not archive.is_file():
-            self.skipTest("Original standalone V7 ZIP is not present.")
+            self.skipTest("Original standalone V8 ZIP is not present.")
         extracted = self.root / "legacy-zip"
         replacement.extract_archive(archive, extracted)
         package = replacement.package_root(extracted)
         before = snapshot(package)
         game_before = snapshot(self.streaming)
-        with self.assertRaisesRegex(RuntimeError, "not the corrected V7 release"):
+        with self.assertRaisesRegex(RuntimeError, "not the corrected V8 release"):
             self.install(package)
         self.assert_old_unchanged(game_before)
         self.assertEqual(snapshot(package), before)
@@ -243,7 +243,7 @@ class ReplacementTests(unittest.TestCase):
 
 class DiscoveryAndInputTests(unittest.TestCase):
     def setUp(self):
-        self.temporary = tempfile.TemporaryDirectory(prefix="test-v7-input-")
+        self.temporary = tempfile.TemporaryDirectory(prefix="test-v8-input-")
         self.addCleanup(self.temporary.cleanup)
         self.root = Path(self.temporary.name)
 

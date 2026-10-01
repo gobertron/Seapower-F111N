@@ -4,14 +4,20 @@
   "runtime_tested": false,
   "replacement_recovery_tests": 18,
   "elevator_repair_tests": 6,
-  "total_tests": 24,
+  "total_tests": 39,
   "carrier_helper_sha256": "7ab5f7acffbae0c6a1b7abf73d6673ce0c4ca70f9db91bbfdc214b12badd7c41",
-  "game_manifest_sha256": "5e8fed244755d2abc7b43a0de98eeb9817f259d280f5783b1cb787925840583b",
+  "game_manifest_sha256": "1585a6d503949c520a9662e90d74e4070a5e7cdc645d7d7a644d3c8e380923bd",
   "verified_game_files": 174,
   "commands": [
-    "python3 -m unittest authoring.test_carrier_elevators authoring.test_v7_replacement",
+    "python3 -m unittest authoring.test_carrier_elevators authoring.test_v8_replacement authoring.test_workshop_upload",
+    "python3 authoring/validate_mod.py",
     "python3 authoring/validate_carriers.py",
-    "bash -n replace-f111n-with-v7.sh"
+    "bash -n replace-f111n-with-v8.sh"
   ],
-  "scope": "Representative two-lift conversions reproduce ran_cv_majestic1968/Elevator3 and ran_majestic_59/Elevator4 failures. Checks cover existing geometry, recovery/launch route repair, explicit path index remapping, duplicate associations, idempotence, source preservation, complete staged installation, checksum rejection, backups and rollback. Native carrier checks separately pass 2243 assertions. The actual installed RAN source files were unavailable; Sea Power landings remain untested."
+  "scope": "Representative two-lift conversions reproduce ran_cv_majestic1968/Elevator3 and ran_majestic_59/Elevator4 failures. Checks cover existing geometry, recovery/launch route repair, explicit path index remapping, duplicate associations, idempotence, source preservation, complete staged installation, checksum rejection, backups and rollback. Native carrier checks separately pass 2243 assertions. The actual installed RAN source files were unavailable; Sea Power landings remain untested.",
+  "release_version": "V8",
+  "workshop_upload_boundary_tests": 15,
+  "tests_passed": 38,
+  "tests_skipped": 1,
+  "live_steam_upload_tested": false
 }

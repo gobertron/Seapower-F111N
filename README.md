@@ -1,22 +1,22 @@
-# RAN F-111N Naval Wing V7
+# RAN F-111N Naval Wing V8
 
-**Complete V7 release, remade from the verified V6 base.** Four aircraft families in 1980, 1985, 1995 and 2003 editions; 16 aircraft and 167 selectable presets.
+**Version 8.** All release labels, filenames, installer messages, previews and Workshop text now use V8. This release carries the existing verified aircraft and installation fixes: four aircraft families in 1980, 1985, 1995 and 2003 editions; 16 aircraft and 167 selectable presets.
 
-- [Download the complete V7 mod and source ZIP](https://github.com/gobertron/Seapower-F111N/archive/refs/heads/main.zip)
-- [Standalone replacement and Workshop preparation script](replace-f111n-with-v7.sh) · [Replacement instructions](docs/REPLACE_WITH_V7.md) · [Steam upload instructions](docs/STEAM_WORKSHOP_UPLOAD.md)
+- [Download the complete V8 mod and source ZIP](https://github.com/gobertron/Seapower-F111N/archive/refs/heads/main.zip)
+- [Standalone replacement and Workshop preparation script](replace-f111n-with-v8.sh) · [Replacement instructions](docs/REPLACE_WITH_V8.md) · [Steam upload instructions](docs/STEAM_WORKSHOP_UPLOAD.md)
 - [Checksums for every game file](MOD_SHA256.txt)
-- [Complete breakdown: all aircraft, presets, weights and references](docs/V7-Complete-Breakdown.md)
-- [Sortable list of every loadout](ALL_LOADOUTS_V7.csv)
-- [Steam Workshop description](WORKSHOP_DESCRIPTION.txt) and [V7 update notes](WORKSHOP_UPDATE_NOTES_V7.txt)
+- [Complete breakdown: all aircraft, presets, weights and references](docs/V8-Complete-Breakdown.md)
+- [Sortable list of every loadout](ALL_LOADOUTS_V8.csv)
+- [Steam Workshop description](WORKSHOP_DESCRIPTION.txt) and [V8 update notes](WORKSHOP_UPDATE_NOTES_V8.txt)
 - [All sixteen aircraft compared](docs/AIRCRAFT_COMPARISON.md) and [investment/system upgrades](docs/INVESTMENT_PROGRAMME.md)
 
-**V7 corrections (1 October 2026):** all 61 custom weapon/store names use the native ammunition table; all 16 aircraft use zero-reload chaff; the carrier installer accepts Windows-encoded source INIs and repairs stale lift/taxi references using existing carrier geometry. The standalone replacement script keeps dated backups. All 18 replacement/recovery tests and six lift-repair tests passed, including representative Majestic Elevator3/Elevator4 failures.
+**V8 corrections (1 October 2026):** all 61 custom weapon/store names use the native ammunition table; all 16 aircraft use zero-reload chaff; the carrier installer accepts Windows-encoded source INIs and repairs stale lift/taxi references using existing carrier geometry. The standalone replacement script keeps dated backups. All 18 replacement/recovery tests and six lift-repair tests passed, including representative Majestic Elevator3/Elevator4 failures.
 
-The repository includes the complete aircraft assets, native configuration, installers, authoring source, previews and validation reports. The GitHub ZIP includes the complete mod tree, expanded publication breakdown and Workshop text. Game assets match the validated standalone V7 release.
+The repository includes the complete aircraft assets, native configuration, installers, authoring source, previews and validation reports. The GitHub ZIP includes the complete mod tree, expanded publication breakdown and Workshop text. Game assets match the validated standalone V8 release.
 
 **Verification:** 32,093 mod checks, 2,243 carrier/installer checks and eight late texture audits passed. In-game gun fire, guidance/release, flight performance, ECM display, date filtering and carrier landings remain untested. This is an alternate-history programme with documented native simulation limits.
 
-An alternate-history Australian carrier F-111 programme for **Sea Power**: four original roles in **1980, 1985, 1995 and 2003** editions. This fresh V7 is built from the saved V6 base and contains **16 aircraft and 167 loadout presets**, progressive propulsion/mission-system investment, period weapons and eight dedicated late-edition grey liveries.
+An alternate-history Australian carrier F-111 programme for **Sea Power**: four original roles in **1980, 1985, 1995 and 2003** editions. This fresh V8 is built from the saved V6 base and contains **16 aircraft and 167 loadout presets**, progressive propulsion/mission-system investment, period weapons and eight dedicated late-edition grey liveries.
 
 ![1995 and 2003 comparison](RAN-F111N-USN-1995-2003-preview.png)
 
@@ -67,18 +67,18 @@ Missile variants follow the edition. The bay's three stations, concealment and d
 
 All aircraft use 14,897 kg internal fuel. Each 600-US-gallon tank adds 1,770 kg fuel and an estimated 150 kg shell; gun ammunition adds 544 kg. Naval, gun, role, systems, propulsion and RF thermal allowances are explicit estimates above the basic F-111C reference. The heaviest full-fuel fit is RF 2003 with four tanks at **50,897 kg**, 948 kg below the 51,845 kg takeoff reference. This mass budget does not certify carrier suitability.
 
-All eight 1995/2003 models have USN-inspired darker-upper/intermediate-side/light-under tactical greys approximating FS35237/36320/36375. Australian roundels, NAVY text, A8 serials, badges and subdued checks remain. Tanks and UI profiles match; 2003 has modest extra wear. Original UVs, alpha, protected cockpit/mechanical areas, normal/specular maps, earlier liveries, meshes and landing animations are preserved. See [texture notes](TEXTURE_AUTHORING_NOTES.md) and [both-side lettering](lettering_both_sides_V7.png).
+All eight 1995/2003 models have USN-inspired darker-upper/intermediate-side/light-under tactical greys approximating FS35237/36320/36375. Australian roundels, NAVY text, A8 serials, badges and subdued checks remain. Tanks and UI profiles match; 2003 has modest extra wear. Original UVs, alpha, protected cockpit/mechanical areas, normal/specular maps, earlier liveries, meshes and landing animations are preserved. See [texture notes](TEXTURE_AUTHORING_NOTES.md) and [both-side lettering](lettering_both_sides_V8.png).
 
 ## Install and use
 
 1. Close Sea Power and extract the complete ZIP.
 2. From the extracted folder containing the installer, run `bash install-ran-f111n.sh`.
-3. Enable **RAN F-111N Naval Wing V7**, disable older Naval Wing copies and give V7 priority over carrier mods. Keep source carrier mods enabled for assets.
+3. Enable **RAN F-111N Naval Wing V8**, disable older Naval Wing copies and give V8 priority over carrier mods. Keep source carrier mods enabled for assets.
 4. Restart and add your chosen dated aircraft to the carrier air group in the mission editor.
 
 For a specific Steam install: `bash install-ran-f111n.sh "/full/path/to/steamapps/common/Sea Power"`. An optional second argument selects a preferred carrier mod folder. The installer stages/verifies the update, backs up recognised earlier local versions outside StreamingAssets and creates carrier overrides without editing source/Workshop files. It works through bash from fish; an existing Anchor Chain setup can remain enabled. Rerun after carrier-mod updates.
 
-Windows/manual: run `python carrier_compatibility.py "C:\path\to\Sea Power"`, then copy `RAN-F111N-Naval-Wing` into `Sea Power_Data/StreamingAssets/user/` and enable V7 with carrier priority.
+Windows/manual: run `python carrier_compatibility.py "C:\path\to\Sea Power"`, then copy `RAN-F111N-Naval-Wing` into `Sea Power_Data/StreamingAssets/user/` and enable V8 with carrier priority.
 
 All 16 IDs retain carrier capability. Stock, RAN and custom decks are discovered, including nonstandard carrier names and the existing fictional helicopter-deck arrested recovery conversion. Existing air groups and helicopter/VTOL approaches are preserved. Actual installed landings still need checking in-game.
 
@@ -88,9 +88,9 @@ Unsuffixed IDs are 1980; later IDs end `_1985`, `_1995`, `_2003`. Service gates 
 
 - [All sixteen aircraft comparison](docs/AIRCRAFT_COMPARISON.md)
 - [Full investment/system settings](docs/INVESTMENT_PROGRAMME.md)
-- [Every loadout, store and mass budget](COMPLETE_BREAKDOWN_V7.md), plus [sortable CSV](ALL_LOADOUTS_V7.csv)
+- [Every loadout, store and mass budget](COMPLETE_BREAKDOWN_V8.md), plus [sortable CSV](ALL_LOADOUTS_V8.csv)
 - [Aircraft/loadout JSON](loadout_manifest.json), [investment JSON](investment_manifest.json), [61 local store definitions](weapon_catalog.json)
-- [Release notes/test results](RELEASE_NOTES_V7.md), [changelog](CHANGELOG.md), [Steam BBCode description](WORKSHOP_DESCRIPTION.txt)
+- [Release notes/test results](RELEASE_NOTES_V8.md), [changelog](CHANGELOG.md), [Steam BBCode description](WORKSHOP_DESCRIPTION.txt)
 - [Historical references](HISTORICAL_REFERENCES.md), [authoring commands](authoring/AUTHORING.md), [credits/rights](THIRD_PARTY_CREDITS.md), [V6 build provenance](BUILD_PROVENANCE.json)
 
 Native modern-weapon approximations remain: AMRAAM has no platform midcourse correction; ASRAAM adds no helmet sight/LOAL; EO weapons add no manual retargeting; Block II Harpoon models ship attack; **JDAM/JSOW use native CEP/ballistic/glide approximations, not full GPS/INS guidance**. AWG-9/APQ-161 donors represent the fictional radar programme; a digital radar label is not a new simulation engine.

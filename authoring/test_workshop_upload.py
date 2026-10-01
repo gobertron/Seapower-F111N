@@ -9,12 +9,12 @@ import tempfile
 import unittest
 from unittest import mock
 
-from authoring.test_v7_replacement import ROOT, replacement, seed_old, snapshot
+from authoring.test_v8_replacement import ROOT, replacement, seed_old, snapshot
 
 
 class WorkshopTests(unittest.TestCase):
     def setUp(self):
-        self.temporary = tempfile.TemporaryDirectory(prefix="test-v7-workshop-")
+        self.temporary = tempfile.TemporaryDirectory(prefix="test-v8-workshop-")
         self.addCleanup(self.temporary.cleanup)
         self.root = Path(self.temporary.name)
         self.game = self.root / "Steam library/steamapps/common/Sea Power"
@@ -57,7 +57,7 @@ class WorkshopTests(unittest.TestCase):
         self.assertEqual(snapshot(bundle / "content"), snapshot(self.target))
         self.assertTrue((bundle / "content/_info.ini").is_file())
         self.assertFalse((bundle / "content/RAN-F111N-Naval-Wing").exists())
-        self.assertFalse((bundle / "content/replace-f111n-with-v7.sh").exists())
+        self.assertFalse((bundle / "content/replace-f111n-with-v8.sh").exists())
         self.assertEqual(snapshot(self.backup / "user/RAN-F111N-Naval-Wing"), old)
         self.assertEqual(snapshot(self.streaming / "original"), sources)
         self.assertEqual((bundle / "preview.png").read_bytes(), (self.target / "preview.png").read_bytes())
@@ -69,7 +69,9 @@ class WorkshopTests(unittest.TestCase):
         self.assertIn('"appid" "1286220"', vdf)
         self.assertIn('"publishedfileid" "3810606011"', vdf)
         self.assertNotIn('"visibility"', vdf)
-        self.assertNotIn('"title"', vdf)
+        self.assertIn('"title" "RAN F-111N Naval Wing V8"', vdf)
+        self.assertIn('"description" "[h1]RAN F-111N Naval Wing — V8[/h1]', vdf)
+        self.assertEqual(json.loads((bundle / "workshop-sha256.json").read_text())["version"], "V8")
         self.assertEqual(replacement.verify_workshop_bundle(bundle), bundle)
 
     def test_dry_run_prepares_and_checks_without_writing_to_game(self):
@@ -98,7 +100,7 @@ class WorkshopTests(unittest.TestCase):
         before = snapshot(self.streaming)
         rename = Path.rename
         def fail_bundle(path, destination):
-            if path.name == "workshop" and path.parent.name.startswith("ran-f111n-v7-stage-"):
+            if path.name == "workshop" and path.parent.name.startswith("ran-f111n-v8-stage-"):
                 raise OSError("Simulated Workshop rename failure")
             return rename(path, destination)
         with mock.patch.object(Path, "rename", fail_bundle):

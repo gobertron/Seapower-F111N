@@ -1,4 +1,4 @@
-# V7 Australian investment programme
+# V8 Australian investment programme
 
 Every edition assumes heavy Australian funding for naval conversion, propulsion, flight controls, weapons integration, targeting and EW. Native settings improve by year. They are hypothetical programme ratings, not measured historical N-family performance.
 
@@ -46,4 +46,4 @@ RF keeps Mach 2.52 cruise and Mach 3 maximum throughout. VelocityGain and Thrust
 
 GE's historical status report supplies the 120 kN F110-GE-400 and 129 kN F110-GE-129 afterburning classes, available before the assigned editions. F-111 adaptation, installed dry thrust, TF30 uprating, mass allowances, thermal upgrades and control/sensor ratings are estimates. [GE reference](https://www.geaerospace.com/news/press-releases/defense-engines/ge-aircraft-engines-military-engine-status-report). The RF package is entirely fictional.
 
-[Aircraft comparison](AIRCRAFT_COMPARISON.md) · [Full mass/loadout breakdown](../COMPLETE_BREAKDOWN_V7.md)
+[Aircraft comparison](AIRCRAFT_COMPARISON.md) · [Full mass/loadout breakdown](../COMPLETE_BREAKDOWN_V8.md)

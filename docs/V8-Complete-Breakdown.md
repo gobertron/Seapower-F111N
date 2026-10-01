@@ -1,4 +1,138 @@
-# V7 complete aircraft, loadout and mass breakdown
+# RAN F-111N Naval Wing V8 — Complete Breakdown
+
+**1 October 2026 correction:** all 61 custom ammunition/store names now use the native AmmunitionNames table; all 16 aircraft select a local chaff dispenser with ReloadTime=0. The carrier reader accepts Windows-encoded source INIs and repairs stale elevator/taxi references using existing lift geometry. The standalone script passed 18 replacement/recovery tests; six lift-repair tests cover representative Majestic Elevator3/Elevator4 failures, route remapping, idempotence and unavailable geometry.
+
+This describes Version 8 of the completed naval programme built from the verified V6 base. Release naming, filenames, previews and Workshop metadata now use V8. Values describe the shipped game configuration, not tested real-world performance.
+
+## Scope and changes from V6
+
+Four families in 1980, 1985, 1995 and 2003 editions: **16 aircraft, 167 selectable presets and 61 local store definitions**. Compatibility aliases can repeat inventories; 61 definitions do not mean 61 different weapons. V6 already supplied these four dated families and presets.
+
+V8 adds dated engine output, flight response/controls, climb/range improvements, local dated radar/FLIR/RWR/ELINT/ECM ratings, weapon readiness, estimated AIM-120C-5 ECCM, sixteen dated ECM aliases, explicit upgrade mass allowances, eight late grey liveries and expanded documentation. V6 role, gun, bay, model/landing and carrier contracts are retained.
+
+| Family | Main role | Configured maximum Mach | Gun / offensive EW | Presets across all years |
+|---|---|---:|---|---:|
+| F-111N WaterPig | Fleet defence/interception | 2.5 | M61, 2,000 rounds | 16 |
+| FB-111N MudPig | Maritime/land strike; all-rounder | 2.6 | M61, 2,000 rounds | 103 |
+| RF-111N SprintPig | Fast reconnaissance/ELINT | 3.0 | M61, 2,000 rounds | 24 |
+| EF-111N ScreamPig | Electronic attack/SEAD | 2.2 | 2 pods / 2 offensive ECM systems; no gun | 24 |
+
+## All sixteen aircraft compared
+
+Maximum/cruise speeds, thrust, range and response are native game settings. Range is the configured nominal Miles field, not a combat radius. Empty weights include explicit estimates for the fictional naval programme.
+
+| Aircraft | Year | Role | Empty kg | Max Mach | Cruise Mach | Range miles | AB kN/engine | Gun / rounds | Presets | Suggested fit |
+|---|---|---|---|---|---|---|---|---|---|---|
+| F-111N WaterPig | 1980 | Fighter | 25,250 | 2.5 | 0.84 | 1,450 | 82.3 | M61 / 2,000 | 4 | FleetIntercept / AirToAirLongRange |
+| F-111N WaterPig | 1985 | Fighter | 25,500 | 2.5 | 0.88 | 1,537 | 90.53 | M61 / 2,000 | 4 | FleetIntercept / AirToAirLongRange |
+| F-111N WaterPig | 1995 | Fighter | 26,750 | 2.5 | 0.92 | 1,653 | 120 | M61 / 2,000 | 4 | FleetIntercept / AirToAirLongRange |
+| F-111N WaterPig | 2003 | Fighter | 27,250 | 2.5 | 0.96 | 1,769 | 129 | M61 / 2,000 | 4 | FleetIntercept / AirToAirLongRange |
+| FB-111N MudPig | 1980 | Bomber | 24,900 | 2.6 | 0.84 | 1,550 | 82.3 | M61 / 2,000 | 23 | AntiShip / AntiShipHeavy / AntiShipLongRange |
+| FB-111N MudPig | 1985 | Bomber | 25,150 | 2.6 | 0.88 | 1,643 | 90.53 | M61 / 2,000 | 24 | AntiShip / AntiShipHeavy / AntiShipLongRange |
+| FB-111N MudPig | 1995 | Bomber | 26,400 | 2.6 | 0.92 | 1,767 | 120 | M61 / 2,000 | 26 | AntiShip / AntiShipHeavy / AntiShipLongRange |
+| FB-111N MudPig | 2003 | Bomber | 26,900 | 2.6 | 0.96 | 1,891 | 129 | M61 / 2,000 | 30 | AntiShip / AntiShipHeavy / AntiShipLongRange |
+| RF-111N SprintPig | 1980 | Recon,ESM | 25,350 | 3.0 | 2.52 | 2,300 | 480 | M61 / 2,000 | 6 | ReconFast / ReconLongRange |
+| RF-111N SprintPig | 1985 | Recon,ESM | 25,650 | 3.0 | 2.52 | 2,438 | 528 | M61 / 2,000 | 6 | ReconFast / ReconLongRange |
+| RF-111N SprintPig | 1995 | Recon,ESM | 27,000 | 3.0 | 2.52 | 2,622 | 600 | M61 / 2,000 | 6 | ReconFast / ReconLongRange |
+| RF-111N SprintPig | 2003 | Recon,ESM | 27,600 | 3.0 | 2.52 | 2,806 | 672 | M61 / 2,000 | 6 | ReconFast / ReconLongRange |
+| EF-111N ScreamPig | 1980 | EW,ESM | 28,250 | 2.2 | 0.84 | 1,700 | 82.3 | None | 6 | EWLongRange / EscortSEAD |
+| EF-111N ScreamPig | 1985 | EW,ESM | 28,500 | 2.2 | 0.88 | 1,802 | 90.53 | None | 6 | EWLongRange / EscortSEAD |
+| EF-111N ScreamPig | 1995 | EW,ESM | 29,750 | 2.2 | 0.92 | 1,938 | 120 | None | 6 | EWLongRange / EscortSEAD |
+| EF-111N ScreamPig | 2003 | EW,ESM | 30,250 | 2.2 | 0.96 | 2,074 | 129 | None | 6 | EWLongRange / EscortSEAD |
+
+## Editions, service dates and weapons
+
+| Edition | Service gate | Presets | Air-to-air | Harpoon | Strike/SEAD additions |
+|---|---|---:|---|---|---|
+| 1980 | 1980–1984 | 39 | AIM-9L, AIM-7F, AIM-54A | AGM-84A | Mk 82/83/84, Paveway II, Maverick B, Shrike, Standard ARM |
+| 1985 | 1985–1994 | 40 | AIM-9M, AIM-7M, AIM-54C | AGM-84C | Maverick D, HARM A, GBU-15, Paveway III |
+| 1995 | 1995–2002 | 42 | AIM-9M, AIM-120B, AIM-54C | AGM-84D | Maverick G, HARM C, Popeye, SLAM |
+| 2003 | 2003–2050 | 46 | ASRAAM, AIM-120C-5, AIM-54C | AGM-84L Block II | SLAM-ER, GBU-31/32 JDAM, AGM-154A JSOW |
+
+Later MudPig editions retain earlier bombing options. These choices assume funded Australian procurement and integration, including accelerated early adoption. They do not assert actual historical Australian service, export approval or F-111 certification. The exact inventories of all presets follow below.
+
+Unsuffixed IDs are the 1980 aircraft. Later IDs end `_1985`, `_1995` or `_2003`. Saved missions using an old unsuffixed ID select 1980 equipment; choose a later edition to use its newer equipment.
+
+## Funded propulsion, flight and mission-system investment
+
+Every edition assumes heavy Australian funding for naval conversion, propulsion, flight controls, weapons integration, targeting and EW. Native settings improve by year. They are hypothetical programme ratings, not measured historical N-family performance.
+
+| Setting | 1980 | 1985 | 1995 | 2003 |
+|---|---|---|---|---|
+| Engine for F/FB/EF | TF30-P-109 reference | TF30 naval uprating (fictional) | F110-GE-400-class naval adaptation | F110-GE-129-class naval adaptation |
+| Dry thrust N/engine for F/FB/EF | 43600 | 47960 | 60000 | 65000 |
+| Afterburning thrust N/engine for F/FB/EF | 82300 | 90530 | 120000 | 129000 |
+| Velocity/thrust response multiplier | 1 | 1.1 | 1.25 | 1.4 |
+| Pitch/heading/bank gain multiplier | 1 | 1.05 | 1.1 | 1.15 |
+| Nominal cruise-range factor | 1 | 1.06 | 1.14 | 1.22 |
+| Cruise Mach for F/FB/EF | 0.84 | 0.88 | 0.92 | 0.96 |
+| Climb-setting multiplier | 1 | 1.05 | 1.15 | 1.25 |
+| Additional systems/control mass kg | 0 | 150 | 650 | 850 |
+| Propulsion-retrofit allowance kg | 0 | 0 | 600 | 750 |
+| RF thermal allowance kg | 0 | 50 | 150 | 250 |
+| Radar gain addition | 0 | 1 | 2.5 | 4 |
+| Radar range factor | 1 | 1.06 | 1.14 | 1.22 |
+| Main radar target channels | 1 | 2 | 4 | 6 |
+| Main radar weapon channels | 2 | 4 | 6 | 8 |
+| Radar look-down multiplier | 0.85 | 0.9 | 0.96 | 1 |
+| FLIR range multiplier | 2 | 2.1 | 2.4 | 2.7 |
+| RWR/ELINT gain | 5 | 5.5 | 6.5 | 7.5 |
+| RWR bearing-resolution setting | 25 | 22 | 17 | 12 |
+| ELINT bearing-resolution setting | 10 | 8 | 6 | 4 |
+| Defensive ECM JamChance | 0.4 | 0.48 | 0.6 | 0.72 |
+| Offensive ECM PeakPower field | 1000 | 1250 | 1700 | 2200 |
+| Offensive ECM MaxRange field | 240 | 260 | 300 | 340 |
+| Offensive ECM Gain | 6 | 6.5 | 7 | 7.5 |
+| Offensive ECM channels per system | 1 | 2 | 3 | 4 |
+| FB weapon ReadyUpTime | 30 | 25 | 20 | 15 |
+| Other weapon ReadyUpTime | 20 | 18 | 15 | 12 |
+| Weapon CoolDownTime | 60 | 55 | 45 | 40 |
+
+The main radar values above apply to the fleet/strike donor. Separate Phoenix targeting retains six target and six weapon channels. Radar RangeResolution is 30 / 25 / 18 / 12; HasDataLink is False / False / True / True. Offensive ECM has two separate systems, each with the dated channel setting; system count remains two. Native power/range fields are not independently calibrated engineering ratings.
+
+F uses AWG-9 donor geometry/settings, labelled as a hypothetical APG-71-class digital adaptation from 1995. The other roles use APQ-161 native settings to represent naval multimode radar. No new radar/flight simulation engine, interactive digital cockpit or MFD mesh is introduced. The nominal range factor does not guarantee an equivalent increase in combat radius.
+
+| RF propulsion setting | 1980 | 1985 | 1995 | 2003 |
+|---|---|---|---|---|
+| Dry N per engine | 320000 | 352000 | 400000 | 448000 |
+| Afterburning N per engine | 480000 | 528000 | 600000 | 672000 |
+
+RF keeps Mach 2.52 cruise and Mach 3 maximum throughout. VelocityGain and ThrustGain stay three times WaterPig's matching edition, with the same dated improvement factor. This is not triple maximum airspeed. Use ReconFast, independent orders and appropriate altitude for a sprint; actual AI flight needs runtime testing.
+
+These upgrades improve native settings and retain original cockpit/model geometry. No new interactive digital cockpit, custom flight DLL or independently calibrated sensor simulation is added.
+
+## Bay, guns and pylons
+
+The retained FB three-station bay, concealment and door animations are unchanged. AntiShip carries two wing Harpoons and two IR missiles with an empty bay. AntiShipHeavy carries four wing and three bay Harpoons. AntiShipLongRange carries two wing and three bay Harpoons, two IR missiles and two tanks. All variants follow the edition.
+
+F/FB/RF retain a forward M61 with 2,000 rounds. Its separate fictional installation does not use a bay or pylon station. EF has no gun and retains exactly two physical pylon ECM pods and two offensive ECM systems. FB receives two removable pods only in EW fits. External laser-designation and EO-control pods are counted in station and mass budgets.
+
+## Liveries
+
+Eight dedicated 1995/2003 3072 × 2048 maps use USN-inspired darker upper/intermediate side/light underside tactical greys with Australian roundels, NAVY lettering, A8 serials, flying-pig badges and subdued checks. Fuel tanks and selection profiles match; 2003 adds modest wear. Main lettering was checked on both sides of rendered aircraft. Original UVs, alpha, protected cockpit/mechanical pixels, normal/specular maps, earlier liveries, meshes and landing animations are retained. The colours are screen approximations, not certified paint standards.
+
+## Carrier installation and use
+
+All sixteen IDs retain carrier capability. The release installer creates source-preserving overrides for discovered installed stock, RAN and custom decks, including the retained fictional helicopter-deck arrested-recovery conversion. Existing air groups and helicopter/VTOL approaches are preserved. Select the dated aircraft in the carrier air group manually. This configuration does not prove successful recovery on every installed carrier.
+
+On CachyOS/Linux, close the game, extract the complete release ZIP and run `bash install-ran-f111n.sh` from its V8 folder. An optional first argument specifies the Sea Power install path. Enable V8, disable older Naval Wing copies, give V8 priority over carrier mods, keep source carrier mods enabled for assets and restart. Rerun after carrier-mod updates. For Windows/manual installation, use the included `carrier_compatibility.py` and the release README instructions.
+
+For RF sprint, use `ReconFast` and independent orders above 37,000 ft; a formation leader can limit speed. Mach settings do not force the AI to hold that airspeed.
+
+## Validation and limits
+
+| Check | Status | Count |
+|---|---|---:|
+| Mod data, mass, stores, sensors and retained design | PASS | 32,093 |
+| Carrier/installer fixtures | PASS | 2,243 |
+| New late-edition texture audits | PASS | 8 |
+| Runtime flight, weapons and landings | Not tested | — |
+
+Carrier tests use native and representative RAN/custom fixtures; they are not a test of every carrier in the user’s installation. Gun fire, guidance/release, Mach 3 flight, ECM display, date filtering and actual carrier landings still need Sea Power runtime testing.
+
+Native guidance limits: AMRAAM has no platform midcourse correction; ASRAAM adds no helmet sight/LOAL; EO weapons add no manual retargeting; Block II Harpoon models ship attack; JDAM/JSOW use native CEP/ballistic/glide approximations rather than full GPS/INS. Naval conversion, relocated gun, three-Harpoon bay, RF propulsion and small-deck recovery remain alternate history.
+
+## Every preset, store and mass budget
 
 Generated from the shipped INIs and manifests. All 16 aircraft, all 167 selectable presets and all 61 local store definitions are listed. Compatible aliases may carry identical stores. Values are rounded carried-mass budgets; fictional naval equipment and retrofit allowances are explicit.
 
@@ -388,4 +522,53 @@ EF retains two physical pylon ECM pods and two offensive sensors. FB only carrie
 
 Native modern-weapon approximations: AMRAAM lacks platform midcourse correction; ASRAAM lacks helmet sight/LOAL; EO weapons lack manual man-in-the-loop retargeting; Block II Harpoon models radar-homing ship attack; JDAM/JSOW use CEP/ballistic/glide settings instead of full GPS/INS. Period choices assume funded Australian integration, including accelerated early procurement.
 
-Static checks do not prove gun fire, release trajectories, AI Mach 3 behaviour, ECM display, date filtering or carrier landings. These still need Sea Power runtime testing. [References](HISTORICAL_REFERENCES.md) · [Aircraft comparison](docs/AIRCRAFT_COMPARISON.md) · [Investment](docs/INVESTMENT_PROGRAMME.md)
+Static checks do not prove gun fire, release trajectories, AI Mach 3 behaviour, ECM display, date filtering or carrier landings. These still need Sea Power runtime testing. References (`HISTORICAL_REFERENCES.md` in the release) · Aircraft comparison (`docs/AIRCRAFT_COMPARISON.md` in the release) · Investment (`docs/INVESTMENT_PROGRAMME.md` in the release)
+
+## Source references and credits
+
+The following reference list is supplied with the release. N-family performance and naval modifications remain explicitly hypothetical.
+
+V6 references checked 30 September 2026; V8 engine references checked 1 October 2026. All N-family procurement, integration and naval engineering are alternate-history assumptions. The historical reference baseline and estimated additions are separated in `loadout_manifest.json`.
+
+| Primary/reference source | Used for |
+|---|---|
+| [RAAF A8-142 technical sheet](https://www.airforce.gov.au/sites/default/files/2023-07/F111%20A8-142.pdf) | 51,845 kg loaded maximum; 43.6/82.3 kN engine thrust; historical F-111C weapon capability. Its 24,270 kg empty figure includes Pave Tack; V6's common budget uses the basic reference below with an external designator instead. |
+| [Queensland Air Museum specifications](https://www.qldairmuseum.au/qam-content/aircraft/specs/F-111-specs.htm) | 23,300 kg F-111C basic mass reference. |
+| [Queensland Air Museum flight-manual fuel table](https://qldairmuseum.au/qam-content/aircraft/f-111/F-111-deliveries.htm) | Internal 14,897 kg and external 600 US-gallon fuel 1,770 kg at SG .78. Uses this later manual-based table rather than the inconsistent older specification-page conversions. |
+| [USAF Museum EF-111A](https://www.nationalmuseum.af.mil/Visit/Museum-Exhibits/Fact-Sheets/Display/Article/195968/general-dynamics-ef-111a-raven/) | Approximately four tons of integrated EW equipment; rounded role allowance. External naval pods are additional stores. |
+| [USAF Sidewinder](https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104557/aim-9-sidewinder/) | M-model deliveries from 1983; approximately 86 kg launch mass. |
+| [NAVAIR Phoenix history](https://www.navair.navy.mil/node/12701) | A before 1980, C early fleet deployment in 1985. 1985 Australian purchase is assumed; later C-plus upgrades are not silently used. |
+| [USAF AMRAAM index](https://www.af.mil/About-Us/Fact-Sheets/Search/aim-120/) / [Air University 1998 review](https://www.airuniversity.af.mil/Portals/10/ASPJ/journals/Volume-12_Issue-1-4/1998_Vol12_No3.pdf) | 1991 operational introduction; appears in 1995/2003 only. Variant engagement ranges and ECCM are game estimates. |
+| [MBDA ASRAAM](https://www.mbda-systems.com/products/air-dominance/asraam) / [1999 UK programme evidence](https://publications.parliament.uk/pa/cm199899/cmselect/cmdfence/544/544w09.htm) | 88 kg; period weapon programme. 2003 N-family integration is assumed. |
+| [USAF Maverick](https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104577/agm-65-maverick/) | B/D/G seeker/mass differences; G deliveries from 1989. |
+| [NAVAIR Harpoon](https://www.navair.navy.mil/harpoon) / [Boeing first Block II export delivery, 2002](https://boeing.mediaroom.com/2002-04-26-Boeing-Delivers-First-Harpoon-Block-II-Kits-to-Denmark) | Period maritime choices; 2003 Block II. Air-launched mass without surface booster is rounded to 526 kg. Native guidance is retained as a ship-attack approximation. |
+| [US Navy HARM deployment history](https://www.history.navy.mil/about-us/leadership/director/directors-corner/in-memoriam/memoriam-newman.html) | Late-1985 HARM deployment; early Australian acquisition is fictional. |
+| [USAF Gulf War Air Power Survey](https://media.defense.gov/2010/Sep/27/2001329817/-1/-1/0/AFD-100927-066.pdf) | Period guided weapons including the 3,000-pound AGM-142. Popeye carried mass 1,360 kg; 1995 Australian integration is accelerated relative to actual history. |
+| [USAF TO 1-1M-34 hosted scan](https://www.scribd.com/document/793762586/TO-1-1M-34) | Guided bomb mass depends on kit/fuze. Catalogue uses rounded selected Paveway configurations: 934 / 277 / 495 / 1,084 kg for GBU-10/12/16/24. GP bombs retain nominal class mass. |
+| [USAF JDAM](https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104572/joint-direct-attack-munition-gbu-313238/joint-direct-attack-munition-gbu-313238/) / [Boeing production card](https://www.boeing.com/content/dam/boeing/boeingdotcom/defense/weapons-weapons/images/jdam_product_card.pdf) | 1998 production/1999 deployment; approximately 925/461 kg GBU-31/32. Only 2003 editions. Native CEP approximation, not full GPS simulation. |
+| [NAVAIR JSOW](https://www.navair.navy.mil/product/jsow) | January 1999 deployment; approximately 483 kg AGM-154A. No later C-1 maritime/datalink capability. |
+| [US Navy SLAM-ER](https://www.navy.mil/DesktopModules/ArticleCS/Print.aspx?Article=2168997&ModuleId=4201&PortalId=1) | June 2000 IOC; approximately 675 kg; 2003 fit. |
+| [Native Sea Power data](https://github.com/SEST-HOBBY/Seapower-mods/tree/feature/northern-front-iii-export/mods-source/_vanilla/original) | Supported schema, M61/20 mm ammunition, stock models, guidance and sensors. Native .272 kg round mass used for the gun budget. |
+
+Estimated additions, not measured historical values: naval conversion 950 kg; relocated M61 hardware/feed/housing 650 kg; fighter radar 350 kg; recon kit 450 kg; avionics growth 0/100/250/400 kg; dry tank shell 150 kg; rack 100 kg; designator 150 kg; EO control pod 260 kg. The early naval laser fit and later modern-weapon choices assume aircraft wiring, software, control interfaces, pylon engineering and trials.
+
+The preserved internal bay, relocated gun and SprintPig speed are explicit fictional design requirements. A historical mass reference is not proof of the aerodynamic, structural or carrier suitability of those changes.
+
+## V8 propulsion references and estimates
+
+[GE historical military engine status report](https://www.geaerospace.com/news/press-releases/defense-engines/ge-aircraft-engines-military-engine-status-report) gives the F110-GE-400 120 kN afterburning class in operational service from April 1988 and the F110-GE-129 129 kN class from April 1992. These support the chosen 1995/2003 supplier classes; they do not establish an actual F-111 retrofit. [GE F110 datasheet](https://www.geaerospace.com/sites/default/files/2022-02/F110-Datasheet.pdf) is additional family context; later engine upgrades are not silently assigned to early editions.
+
+V8 adds systems/control allowances 0/150/650/850 kg; propulsion-retrofit allowances 0/0/600/750 kg; RF thermal allowances 0/50/150/250 kg, alongside the existing edition-avionics allowance. These are explicit engineering estimates. Installed dry thrust, TF30 uprating, F-111 naval adaptation, control/sensor/readiness ratings, nominal range growth and RF Mach 3 propulsion are fictional. The TPS-inspired RGB palette is an uncalibrated screen approximation, not a certified paint standard or historical USN F-111 scheme.
+
+## Asset credits
+
+| Source | Contribution |
+|---|---|
+| [Workshop 3587484531](https://steamcommunity.com/sharedfiles/filedetails/?id=3587484531) | Source aircraft/EF models and associated materials inherited through V6 |
+| [Workshop 3689650533](https://steamcommunity.com/sharedfiles/filedetails/?id=3689650533) | Source F-111/RF models and materials inherited through V6 |
+| Earlier RAN F-111N Naval Wing releases | Fictional naval role/model definitions, corrected RAN maps, internal bay and carrier support |
+| [Australian roundel SVG](https://commons.wikimedia.org/wiki/File:Roundel_of_Australia.svg) | Original roundel vector; V8 adds a subdued colour variant |
+| [SEST-HOBBY native export](https://github.com/SEST-HOBBY/Seapower-mods/tree/feature/northern-front-iii-export/mods-source/_vanilla/original) | Native schema, ammunition/sensors and representative carrier references |
+| Sea Power | Stock assets and systems referenced at runtime; stock weapon models are not copied solely for previews |
+
+V8 adds programme configuration, authored surface materials/vector decal projection, build/validation utilities, simplified modern-weapon geometry inherited from V6, and documentation. It does not transfer ownership or assign a new blanket licence to third-party assets; original rights and upstream terms remain with their respective owners. No government, armed-service, manufacturer or game-publisher affiliation is implied.

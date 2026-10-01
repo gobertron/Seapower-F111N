@@ -87,7 +87,7 @@ def main():
     print('Installed:',target)
     if moved:print('Previous versions saved:',backup)
     print('Carrier definitions prepared:',len(carrier_report['carriers']))
-    print('In Sea Power Mod Manager: enable RAN F-111N Naval Wing V7 and disable older RAN Naval Wing copies.')
+    print('In Sea Power Mod Manager: enable RAN F-111N Naval Wing V8 and disable older RAN Naval Wing copies.')
     print('Give Naval Wing priority over carrier mods; keep source carrier mods enabled for their meshes.')
     print('Keep your existing Anchor Chain setup enabled. Restart Sea Power after changing the mod list.')
     return 0

@@ -1,4 +1,4 @@
-# V7 release notes
+# V8 release notes
 
 Fresh remake from the saved V6 base: sixteen aircraft, 167 selectable presets, dated Australian investment and eight USN-inspired late liveries. Original role/model/bay/landing contracts and M61/ECM/carrier arrangements are retained. Native modern-weapon approximations and explicit hypothetical naval masses remain documented.
 

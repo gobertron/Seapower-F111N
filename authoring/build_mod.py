@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Rebuild V7 data in the extracted package; existing visual assets are reused."""
+"""Rebuild V8 data in the extracted package; existing visual assets are reused."""
 from era_upgrade import read_ini,write_ini,ROOT,MOD,main,ROLES
 OUT=ROOT
 # Compatibility exports for the retained visual authoring utilities. Texture

@@ -1,6 +1,6 @@
 # Historical references
 
-V6 references checked 30 September 2026; V7 engine references checked 1 October 2026. All N-family procurement, integration and naval engineering are alternate-history assumptions. The historical reference baseline and estimated additions are separated in `loadout_manifest.json`.
+V6 references checked 30 September 2026; V8 engine references checked 1 October 2026. All N-family procurement, integration and naval engineering are alternate-history assumptions. The historical reference baseline and estimated additions are separated in `loadout_manifest.json`.
 
 | Primary/reference source | Used for |
 |---|---|
@@ -26,8 +26,8 @@ Estimated additions, not measured historical values: naval conversion 950 kg; re
 
 The preserved internal bay, relocated gun and SprintPig speed are explicit fictional design requirements. A historical mass reference is not proof of the aerodynamic, structural or carrier suitability of those changes.
 
-## V7 propulsion references and estimates
+## V8 propulsion references and estimates
 
 [GE historical military engine status report](https://www.geaerospace.com/news/press-releases/defense-engines/ge-aircraft-engines-military-engine-status-report) gives the F110-GE-400 120 kN afterburning class in operational service from April 1988 and the F110-GE-129 129 kN class from April 1992. These support the chosen 1995/2003 supplier classes; they do not establish an actual F-111 retrofit. [GE F110 datasheet](https://www.geaerospace.com/sites/default/files/2022-02/F110-Datasheet.pdf) is additional family context; later engine upgrades are not silently assigned to early editions.
 
-V7 adds systems/control allowances 0/150/650/850 kg; propulsion-retrofit allowances 0/0/600/750 kg; RF thermal allowances 0/50/150/250 kg, alongside the existing edition-avionics allowance. These are explicit engineering estimates. Installed dry thrust, TF30 uprating, F-111 naval adaptation, control/sensor/readiness ratings, nominal range growth and RF Mach 3 propulsion are fictional. The TPS-inspired RGB palette is an uncalibrated screen approximation, not a certified paint standard or historical USN F-111 scheme.
+V8 adds systems/control allowances 0/150/650/850 kg; propulsion-retrofit allowances 0/0/600/750 kg; RF thermal allowances 0/50/150/250 kg, alongside the existing edition-avionics allowance. These are explicit engineering estimates. Installed dry thrust, TF30 uprating, F-111 naval adaptation, control/sensor/readiness ratings, nominal range growth and RF Mach 3 propulsion are fictional. The TPS-inspired RGB palette is an uncalibrated screen approximation, not a certified paint standard or historical USN F-111 scheme.

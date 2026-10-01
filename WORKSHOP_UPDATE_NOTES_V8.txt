@@ -1,17 +1,21 @@
-[h2]V7 corrections — 1 October 2026[/h2]
+[h1]Version 8 — Release Naming Update[/h1]
+
+All release filenames, mod metadata, installer messages, preview branding and Workshop text now use V8. The existing aircraft, weapons, loadouts and carrier fixes are retained. The replacement script prepares or uploads the update to the existing Workshop item 3810606011.
+
+[h2]V8 corrections — 1 October 2026[/h2]
 [list]
 [*]Fixed all 61 custom missile, bomb, pod and tank display names in loadouts, weapon references and launched-weapon labels.
 [*]Set chaff reload time to zero on all 16 aircraft; existing chaff quantities and burst spacing remain.
 [*]Fixed Windows-encoded carrier source files causing the invalid UTF-8 byte 0xA0 installer error.
 [*]Repaired stale carrier elevator and taxi references in generated overrides, including the reported Majestic Elevator3/Elevator4 failures, using existing lift geometry. Original game/Workshop files remain unchanged.
-[*]Added a verified V7 replacement script with complete staging, dated backups and rollback checks.
+[*]Added a verified V8 replacement script with complete staging, dated backups and rollback checks.
 [/list]
 
-[h1]V7 — Fresh Remake from V6[/h1]
+[h1]V8 — Fresh Remake from V6[/h1]
 
-V7 rebuilds the Naval Wing from the verified V6 base, retaining four aircraft families across 1980, 1985, 1995 and 2003: [b]16 aircraft and 167 selectable presets[/b], including compatibility aliases.
+V8 rebuilds the Naval Wing from the verified V6 base, retaining four aircraft families across 1980, 1985, 1995 and 2003: [b]16 aircraft and 167 selectable presets[/b], including compatibility aliases.
 
-[h2]New in V7[/h2]
+[h2]New in V8[/h2]
 [list]
 [*]Dated engine output, velocity/thrust response, flight-control gains, climb and nominal cruise-range upgrades representing heavy Australian investment.
 [*]F/FB/EF afterburning thrust settings of 82.30 / 90.53 / 120 / 129 kN per engine. RF retains a separate fictional Mach 3 package with dated improvements.
@@ -37,4 +41,4 @@ Also passed: 18 replacement/recovery tests and six lift-repair tests. Majestic c
 
 Actual gun fire, guidance/release, Mach 3 flight, ECM display, dates and carrier landings still need Sea Power runtime testing. Native modern-weapon approximations and fictional naval engineering are documented.
 
-Enable V7, disable older Naval Wing copies and give V7 priority over carrier mods. Keep source carrier mods enabled, use the release installer to generate carrier overrides and restart the game. Existing missions using unsuffixed IDs select the 1980 aircraft; choose a later edition for newer equipment.
+Enable V8, disable older Naval Wing copies and give V8 priority over carrier mods. Keep source carrier mods enabled, use the release installer to generate carrier overrides and restart the game. Existing missions using unsuffixed IDs select the 1980 aircraft; choose a later edition for newer equipment.

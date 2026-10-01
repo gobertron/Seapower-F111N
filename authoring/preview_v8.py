@@ -1,11 +1,25 @@
 #!/usr/bin/env python3
-"""Render actual V7 assets and lettering; visual QA, not game execution."""
+"""Render actual V8 assets and lettering; visual QA, not game execution."""
 from PIL import Image,ImageDraw,ImageFont
 from render_preview import scene,render
 from paint_textures import FONT
 from era_upgrade import ROOT,MOD,ROLES,unit_id
+import argparse
 
 def font(size):return ImageFont.truetype(FONT,size)
+
+def contact_sheet():
+    """Rebuild release branding from the existing native mesh-render panels."""
+    contact=Image.new('RGB',(2240,2860),(233,237,240))
+    for row,role in enumerate(ROLES):
+        for col,year in enumerate((1995,2003)):
+            with Image.open(ROOT/(unit_id(role,year)+'_preview.png')) as panel:
+                contact.paste(panel.convert('RGB'),(col*1120,row*680))
+    draw=ImageDraw.Draw(contact)
+    draw.text((35,2752),'V8: eight dedicated 1995/2003 liveries; original UV geometry, transparency and mechanical atlas regions preserved.',font=font(21),fill=(45,62,71))
+    draw.text((35,2795),'Paint approximates FS35237 / FS36320 / FS36375. Native asset render, not a Sea Power screenshot.',font=font(19),fill=(64,83,93))
+    contact.save(ROOT/'RAN-F111N-USN-1995-2003-preview.png')
+    contact.save(ROOT/'RAN-F111N-preview.png')
 
 def main():
     contact=Image.new('RGB',(2240,2860),(233,237,240))
@@ -27,7 +41,10 @@ def main():
                     im=render(meshes,eye_vector=eye);draw=ImageDraw.Draw(im)
                     draw.text((30,25),f'{v[0]} 2003 - {"starboard" if n==0 else "port"} lettering',font=font(27),fill=(35,53,65));sides.paste(im,(n*1120,row*680))
     draw=ImageDraw.Draw(contact)
-    draw.text((35,2752),'V7: eight dedicated 1995/2003 liveries; original UV geometry, transparency and mechanical atlas regions preserved.',font=font(21),fill=(45,62,71))
+    draw.text((35,2752),'V8: eight dedicated 1995/2003 liveries; original UV geometry, transparency and mechanical atlas regions preserved.',font=font(21),fill=(45,62,71))
     draw.text((35,2795),'Paint approximates FS35237 / FS36320 / FS36375. Native asset render, not a Sea Power screenshot.',font=font(19),fill=(64,83,93))
-    contact.save(ROOT/'RAN-F111N-USN-1995-2003-preview.png');contact.save(ROOT/'RAN-F111N-preview.png');sides.save(ROOT/'lettering_both_sides_V7.png')
-if __name__=='__main__':main()
+    contact.save(ROOT/'RAN-F111N-USN-1995-2003-preview.png');contact.save(ROOT/'RAN-F111N-preview.png');sides.save(ROOT/'lettering_both_sides_V8.png')
+if __name__=='__main__':
+    parser=argparse.ArgumentParser();parser.add_argument('--contact-only',action='store_true')
+    if parser.parse_args().contact_only:contact_sheet()
+    else:main()

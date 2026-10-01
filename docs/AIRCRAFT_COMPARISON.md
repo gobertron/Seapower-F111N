@@ -1,4 +1,4 @@
-# V7: all sixteen aircraft compared
+# V8: all sixteen aircraft compared
 
 Four original roles, each in four funded editions. Values below come from the shipped configuration and manifests. Empty masses and naval upgrades are estimates. Maximum/cruise Mach values are settings, not verified flight results. Range is the nominal native Miles field, not combat radius.
 
@@ -25,4 +25,4 @@ RF uses its explicit fictional Mach 3 propulsion package and triple WaterPig vel
 
 The 167 selectable preset names include compatible Default/mission aliases with repeated inventories. Counts by year are 39 / 40 / 42 / 46. Service gates are 1980–1984, 1985–1994, 1995–2002 and 2003–2050. Unsuffixed aircraft IDs select 1980.
 
-[Complete loadouts and weight budgets](../COMPLETE_BREAKDOWN_V7.md) · [Investment details](INVESTMENT_PROGRAMME.md) · [Release notes](../RELEASE_NOTES_V7.md)
+[Complete loadouts and weight budgets](../COMPLETE_BREAKDOWN_V8.md) · [Investment details](INVESTMENT_PROGRAMME.md) · [Release notes](../RELEASE_NOTES_V8.md)

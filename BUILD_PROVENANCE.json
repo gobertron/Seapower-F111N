@@ -1,10 +1,12 @@
 {
-  "build": "V7 fresh remake",
+  "build": "Version 8 release",
   "base_name": "RAN-F111N-Naval-Wing-V6.zip",
   "base_bytes": 54787481,
   "base_sha256": "40469c032fb4869f655a7a3b6abf21ced1928783cf468c6eabb84bb76f606305",
   "base_zip_integrity": "PASS",
   "base_mod_checksums_sha256": "72354a62ea8d5a214c9139d72d8596b6db7a34702eb7663e679d00502dea94b9",
-  "built_from": "Clean extraction of saved V6; no abandoned V7 files reused",
-  "base_release": "V6"
+  "built_from": "Existing verified Naval Wing; release labels, filenames, preview branding, Workshop metadata and installer verification refreshed.",
+  "base_release": "V6",
+  "release_version": "V8",
+  "derived_from_commit": "94e449b345d9fa80f1b34738a78e801243e4e912"
 }
