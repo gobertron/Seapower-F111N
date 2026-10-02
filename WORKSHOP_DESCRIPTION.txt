@@ -1,70 +1,57 @@
 [h1]RAN F-111N Naval Wing — V8[/h1]
 
-A standalone alternate-history Australian naval F-111 family for Sea Power: Naval Combat in the Missile Age.
+An alternate-history Australian naval F-111 family for Sea Power: Naval Combat in the Missile Age. Australia retains fixed-wing carrier aviation and heavily funds a joint RAN/RAAF programme, with successive propulsion, flight-control, radar, EW and weapons upgrades.
 
-In this timeline, Australia retains fixed-wing carrier aviation and heavily funds a joint RAN/RAAF Naval F-111 programme. Successive upgrades improve engine output, flight controls, radar, electronic warfare and weapons integration while preserving four distinct aircraft roles.
-
-[b]Four families. Four editions: 1980, 1985, 1995 and 2003. Sixteen aircraft and 167 selectable loadout presets.[/b] Preset totals include compatibility aliases with repeated inventories.
+[b]Four roles, four editions: 1980, 1985, 1995 and 2003. Sixteen aircraft and 211 selectable loadout presets.[/b] Totals include compatibility aliases with repeated inventories.
 
 [h2]The aircraft[/h2]
 [list]
-[*][b]F-111N WaterPig — Fleet Defence[/b]
-Carrier fighter and interceptor with period Sidewinder/ASRAAM, Sparrow/AMRAAM, Phoenix and an M61 Vulcan. Configured maximum: Mach 2.5.
-[*][b]FB-111N MudPig — Maritime Strike and All-Rounder[/b]
-Anti-ship attack, long-range maritime strike and bombing remain its main jobs. It also carries the other families' period weapon types through interception, reconnaissance, EW and SEAD presets. M61 Vulcan fitted. Configured maximum: Mach 2.6.
-[*][b]RF-111N SprintPig — Reconnaissance and ELINT[/b]
-Fast reconnaissance with defensive missiles, M61 Vulcan, a four-tank endurance fit or clean ReconFast sprint. Fictional Mach 2.52 cruise and Mach 3 maximum. Velocity/thrust response gains are three times the matching-year WaterPig; maximum airspeed is not tripled.
-[*][b]EF-111N ScreamPig — Electronic Attack and SEAD[/b]
-Dedicated fleet-support aircraft with [b]two physical pylon-mounted ECM pods and two offensive ECM systems[/b], defensive missiles, and tanks or anti-radiation missiles. Configured maximum: Mach 2.2. No gun.
+[*][b]F-111N WaterPig — Fleet Defence:[/b] Period IR/BVR missiles, Phoenix and M61 Vulcan. Configured maximum Mach 2.5.
+[*][b]FB-111N MudPig — Maritime Strike:[/b] Anti-ship attack, bombing and long-range strike, plus interception, reconnaissance, EW and SEAD options using the other families' dated weapon types. M61 fitted; maximum Mach 2.6.
+[*][b]RF-111N SprintPig — Reconnaissance/ELINT:[/b] Defensive missiles, M61, four-tank endurance and clean ReconFast sprint. Fictional Mach 2.52 cruise/Mach 3 maximum. Velocity/thrust response gains are three times matching-year WaterPig; maximum airspeed is not tripled.
+[*][b]EF-111N ScreamPig — Electronic Attack/SEAD:[/b] Two physical ECM pods and two offensive ECM systems, defensive missiles, tanks or anti-radiation missiles. Maximum Mach 2.2; no gun.
 [/list]
-WaterPig, MudPig and SprintPig each carry an M61 with 2,000 rounds. MudPig's offensive ECM pods are removable and used in its EW fits.
+F/FB/RF each have an M61 with 2,000 rounds. MudPig carries removable offensive ECM pods in its EW fits.
 
 [h2]Four funded upgrade blocks[/h2]
 [list]
-[*][b]1980 — Block I:[/b] Initial naval conversion. AIM-9L, AIM-7F, AIM-54A, AGM-84A Harpoon, Maverick B, Shrike, Standard ARM, Mk 82/83/84 and Paveway II.
-[*][b]1985 — Block II:[/b] Hypothetical TF30 uprating and improved digital weapons/EW. AIM-9M, AIM-7M, AIM-54C, AGM-84C Harpoon, Maverick D, HARM A, GBU-15 and Paveway III.
-[*][b]1995 — Block III:[/b] Hypothetical F110-GE-400-class adaptation and digital mission suite. Adds AIM-120B, AGM-84D Harpoon, Maverick G, HARM C, Popeye and SLAM.
-[*][b]2003 — Block IV:[/b] Hypothetical F110-GE-129-class adaptation and precision-weapons upgrade. Adds ASRAAM, AIM-120C-5, AGM-84L Harpoon Block II, SLAM-ER, GBU-31/32 JDAM and AGM-154A JSOW.
+[*][b]1980 — Block I:[/b] Initial naval conversion: AIM-9L, AIM-7F, AIM-54A, Harpoon A, Maverick B, Shrike, Standard ARM, Mk 82/83/84 and Paveway II.
+[*][b]1985 — Block II:[/b] Hypothetical TF30 uprating and digital weapons/EW: AIM-9M, AIM-7M, AIM-54C, Harpoon C, Maverick D, HARM A, GBU-15 and Paveway III.
+[*][b]1995 — Block III:[/b] Hypothetical F110-GE-400-class adaptation and digital mission suite: AIM-120B, Harpoon D, Maverick G, HARM C, Popeye and SLAM.
+[*][b]2003 — Block IV:[/b] Hypothetical F110-GE-129-class adaptation and precision upgrade: ASRAAM, AIM-120C-5, Harpoon Block II, SLAM-ER, GBU-31/32 JDAM and AGM-154A JSOW.
 [/list]
-Later MudPig editions retain earlier bombing options. Period selection assumes heavily funded Australian acquisition, wiring, software, pylon engineering and trials; some integrations are deliberately accelerated alternate history.
+Later editions retain earlier bombing options. F/FB/EF afterburning thrust is configured at 82.30/90.53/120/129 kN per engine. Controls, radar/FLIR, RWR/ELINT, ECM, climb, nominal range and weapon readiness improve by edition. RF has a separate fictional propulsion package. These are game settings and estimated integrations, not historical N-family performance.
 
-F/FB/EF afterburning thrust is configured at 82.30 / 90.53 / 120 / 129 kN per engine across the four editions. Velocity/thrust response gains rise to 1.10x / 1.25x / 1.40x the 1980 setting; flight-control gains rise to 1.05x / 1.10x / 1.15x. Radar, FLIR, RWR/ELINT, offensive and defensive ECM, climb, nominal range and weapon readiness also improve. RF uses a separate fictional high-thrust package. These are game settings, not measured historical flight results.
-
-[h2]MudPig anti-ship loadouts[/h2]
-Harpoon and defensive IR missile variants follow the selected edition.
+[h2]Expanded MudPig internal bay[/h2]
 [list]
-[*][b]Anti Ship:[/b] 2 wing Harpoons + 2 defensive IR missiles. Internal bay empty.
-[*][b]Heavy Anti Ship:[/b] 4 wing Harpoons + 3 internal Harpoons: 7 Harpoons total.
-[*][b]Long Range Anti Ship:[/b] 2 wing Harpoons + 3 internal Harpoons + 2 defensive IR missiles + 2 external fuel tanks.
+[*]Three Mk 82 bombs or three edition-specific Harpoons.
+[*]Two Mk 83/Mk 84 bombs, GBU-12s, Mavericks or Phoenix missiles; two Shrikes in the 1980 Shrike fit.
+[*]Two SLAM missiles from 1995; two GBU-31/32 JDAMs in 2003.
+[*]44 new bay mission presets for anti-ship attack, bombing, precision strike and interception, including long-range tank fits.
+[*]Existing bombing, precision, Maverick, SLAM and JDAM presets gain additional internal stores.
 [/list]
-The original three-station internal bay, concealment and door animations are preserved. The separate fictional gun installation leaves the bay available. Laser designation and EO weapon-control pods occupy counted external stations.
+The original three stations, concealment and door animations remain. Single-store suspension adapters and interfaces receive estimated mass allowances of 40/50/60/75 kg by edition. Precision/EO control pods stay external; internal Phoenix uses the dedicated air-targeting controller. Popeye, SLAM-ER, JSOW and MER racks stay external. Armed launch, recovery and release require in-game testing.
 
-[h2]1995 and 2003 tactical greys[/h2]
-All eight late editions receive dedicated [b]US Navy-inspired tactical-grey liveries[/b]: darker upper surfaces, intermediate sides and lighter undersides, with Australian roundels, NAVY lettering, A8 serials, flying-pig badges and subdued markings. Tanks and aircraft-selection profiles match. The 2003 scheme adds modest wear.
+The original anti-ship fits are retained: [b]Anti Ship[/b] has 2 wing Harpoons and 2 IR missiles with an empty bay; [b]Heavy Anti Ship[/b] has 4 wing + 3 internal Harpoons; [b]Long Range Anti Ship[/b] has 2 wing + 3 internal Harpoons, 2 IR missiles and 2 tanks. Harpoon and IR types follow the edition. The separately relocated gun is fictional and leaves the bay available.
 
-NAVY and serial lettering is checked on both sides of the aircraft. Original UVs, alpha, protected cockpit/mechanical areas, normal/specular maps, earlier liveries, meshes and landing animations are retained.
+[h2]Late tactical greys[/h2]
+Eight 1995/2003 aircraft have US Navy-inspired tactical-grey liveries, Australian roundels, NAVY/A8 lettering, flying-pig badges and subdued markings. Matching tanks and selection profiles are included. Original meshes, cockpit, UVs, protected mechanical areas and landing animations are retained.
 
-[h2]Weight, fuel and carrier use[/h2]
-Mass budgets combine F-111C reference data and rounded carried-weapon masses with explicit estimates for naval conversion, gun hardware, mission equipment and upgrades. Each aircraft has 14,897 kg internal fuel. Each 600-US-gallon tank adds 1,770 kg fuel plus an estimated 150 kg shell; a full M61 magazine adds 544 kg.
+[h2]Weight, carrier use and setup[/h2]
+Budgets combine F-111C reference data, rounded weapon masses and explicit naval/mission/upgrade estimates. Internal fuel is 14,897 kg; each 600-US-gallon tank adds 1,770 kg fuel plus a 150 kg shell. A full M61 magazine adds 544 kg. All presets are below the 51,845 kg reference takeoff budget; the heaviest is RF-111N 2003 with four tanks at 50,897 kg. This does not certify carrier recovery or catapult limits.
 
-All presets remain below the 51,845 kg reference takeoff budget. The heaviest is RF-111N 2003 with four tanks at 50,897 kg. This is a mass check, not carrier certification.
+All sixteen aircraft retain carrier capability. The complete installer creates compatibility overrides for discovered stock, RAN and custom carriers while preserving source files and existing air groups. It also supports the existing fictional small-deck arrested-recovery conversion. Add dated aircraft to the carrier air group in the mission editor.
 
-All sixteen aircraft retain carrier capability. The release installer creates source-preserving compatibility overrides for discovered stock, RAN and custom carrier decks, including the existing fictional helicopter-deck arrested-recovery conversion. Existing air groups and helicopter/VTOL approaches are preserved. Add the desired dated aircraft to the carrier air group in the mission editor.
+Enable [b]RAN F-111N Naval Wing V8[/b], disable older Naval Wing copies, give V8 priority over carrier mods and keep carrier/source asset mods and the existing Anchor Chain setup enabled. Rerun the complete installer after carrier-mod updates; restart after changing enabled mods.
 
-Enable [b]RAN F-111N Naval Wing V8[/b], disable older Naval Wing copies, give V8 priority over carrier mods and keep source carrier mods enabled for their assets. Use the complete release installer for generated carrier overrides; rerun it after carrier-mod updates and restart after changing enabled mods.
+Service gates are 1980–1984, 1985–1994, 1995–2002 and 2003–2050. Unsuffixed IDs select 1980; later IDs use _1985/_1995/_2003. Existing missions need the later aircraft selected to receive newer equipment. RF ReconFast needs independent orders and suitable altitude; formation orders can limit speed.
 
-Service periods are 1980–1984, 1985–1994, 1995–2002 and 2003–2050. Unsuffixed aircraft IDs select 1980; later IDs use _1985, _1995 or _2003. Existing saved missions using old IDs need the later edition selected to receive its newer equipment. For RF sprint, use ReconFast and independent orders at suitable altitude; formation orders can limit speed.
+[h2]Validation and documentation[/h2]
+[b]35,186 mod checks, 2,243 carrier/installer checks and eight late texture audits passed.[/b] Actual gun fire, guidance/release, armed carrier recovery, Mach 3 flight, ECM display and date filtering remain untested in Sea Power.
 
-[h2]V8 changes and documentation[/h2]
-This is a fresh remake from V6. V8 adds dated propulsion, flight-control and sensor upgrades; improved weapon readiness and estimated AIM-120C-5 ECCM; dated ECM definitions; revised upgrade mass allowances; eight late grey liveries; and expanded comparison, loadout and build documentation.
+Full comparisons, every preset and mass budget, CSV/JSON, 61 local store definitions, references, credits, authoring sources and validation reports are included in the [url=https://github.com/gobertron/Seapower-F111N]release repository[/url]. The naval conversion, three-Harpoon bay, F110 adaptations and RF Mach 3 package are fictional. Native JDAM/JSOW, EO, AMRAAM, ASRAAM and Block II Harpoon simulation approximations remain documented.
 
-The release includes all sixteen aircraft comparisons, every one of the 167 presets, mass budgets, sortable CSV/JSON, 61 local store definitions including compatibility entries, historical references, credits, authoring sources and validation reports.
-
-[b]Static validation: 32,093 mod checks and 2,243 carrier/installer checks passed; eight late texture audits passed.[/b] Sea Power runtime testing remains outstanding for gun fire, weapon guidance/release, Mach 3 flight, ECM display, date filtering and actual carrier landings.
-
-The naval conversion, three-Harpoon bay, relocated gun, F110 adaptations, Mach 3 RF package and small-deck recovery are fictional. Native modern-weapon approximations remain: JDAM/JSOW do not add full GPS/INS guidance; EO weapons do not add manual retargeting; Block II Harpoon models ship attack; AMRAAM has no platform midcourse correction and ASRAAM adds no helmet sight/LOAL. The original cockpit is retained.
+V8 also includes native store display names, zero-reload chaff, Windows-encoding support, elevator/taxi repairs using existing geometry, and a replacement script with dated backups. Local installation and Steam publication are separate steps; use Update Existing for item 3810606011.
 
 [h2]Credits[/h2]
-Source models and materials are credited to [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3587484531]Workshop item 3587484531[/url], [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3689650533]Workshop item 3689650533[/url] and earlier Naval Wing releases. Further sources and references are listed in THIRD_PARTY_CREDITS.md and HISTORICAL_REFERENCES.md. Original third-party asset rights remain with their owners.
-
-[b]V8 corrections:[/b] Native display names for all 61 custom weapons/stores; zero-reload chaff on all 16 aircraft; Windows-encoding support and stale elevator/taxi reference repairs in the carrier installer; a standalone replacement script with dated backups. Carrier repairs use existing geometry and leave original source files unchanged.
+Source models/materials: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3587484531]Workshop 3587484531[/url], [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3689650533]Workshop 3689650533[/url] and earlier Naval Wing releases. See THIRD_PARTY_CREDITS.md and HISTORICAL_REFERENCES.md. Third-party asset rights remain with their owners.

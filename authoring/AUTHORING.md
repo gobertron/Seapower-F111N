@@ -24,3 +24,5 @@ Refresh hashes after any mod data/asset change. Aircraft validation checks dates
 `build_docs.py` derives all sixteen comparisons, every loadout budget, CSV, investment JSON and release notes from actual manifests and completed validation reports. `package_release.py` requires PASS reports and matching current mod hashes, skips caches/download/Git trees, checks ZIP integrity and writes a SHA-256 sidecar.
 
 Native guidance, gun fire, ECM display, service-date filtering, AI Mach 3 orders and actual landings still require Sea Power runtime testing. Historical facts and fictional estimates are separated in the root reference and manifest files.
+
+`bay_loadouts.py` adds dated MudPig multistore fits without adding physical stations. `bay_docs.py` derives the bay guide and combined breakdown from current manifests. Bay checks cover counts, targeting, attack modes, adapter mass/readiness and coarse closed-door horizontal footprints. Full packing, release separation and armed recovery remain runtime tests; follow `docs/INTERNAL_BAY_V8.md`.

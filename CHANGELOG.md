@@ -1,5 +1,15 @@
 # V8 changes from V6
 
+## Version 8 internal-bay update — 2 October 2026
+
+- Expanded the 167-preset baseline to 211 presets, with 44 new MudPig bay mission fits across the four editions.
+- Added bay anti-ship, Mk 82/Mk 84 bombing, GBU-12 precision and Phoenix interception presets with long-range companions. The 2003 edition also gains GBU-31/32 JDAM bay presets.
+- Added extra bay stores to existing bombing, precision, Maverick, Shrike, SLAM and JDAM fits. Retained the original standard/heavy/long-range Harpoon inventories.
+- Kept three physical bay stations, concealment, door animations and carrier/landing geometry. Added one-store Phoenix/Shrike suspension offsets and Phoenix targeting references.
+- Added explicit 40/50/60/75 kg estimated bay-upgrade allowances and dated bay readiness. All full-fuel takeoff budgets remain below the existing 51,845 kg reference.
+- Extended validation to cover bay inventory, capacity, targeting, attack modes and coarse native/local-mesh stowage footprints. Armed carrier recovery and release still require in-game tests.
+- Refreshed loadout tables, CSV/JSON, Workshop text, checksums and the pinned V8 download workflow. Added an armed recovery test guide.
+
 ## Version 8 release naming — 1 October 2026
 
 - Updated release branding, filenames, native mod metadata, previews, authoring scripts, documentation and Workshop text to V8.

@@ -29,10 +29,10 @@ import urllib.error
 import urllib.request
 import zipfile
 
-RELEASE_COMMIT = "c4d10030046d72e66e48df06777e44ae1e853a13"
+RELEASE_COMMIT = "refs/heads/main"
 DOWNLOAD = "https://codeload.github.com/gobertron/Seapower-F111N/zip/" + RELEASE_COMMIT
 MOD_NAME = "RAN-F111N-Naval-Wing"
-MANIFEST_SHA256 = "1585a6d503949c520a9662e90d74e4070a5e7cdc645d7d7a644d3c8e380923bd"
+MANIFEST_SHA256 = "8f9644493653acc1ff1f2959568921f73954fb0e31aa31e6c753b64861c1894a"
 CARRIER_SHA256 = "7ab5f7acffbae0c6a1b7abf73d6673ce0c4ca70f9db91bbfdc214b12badd7c41"
 AIRCRAFT_IDS = ("ran_f-111n", "ran_fb-111n", "ran_rf-111n", "ran_ef-111n")
 MAX_ARCHIVE_BYTES = 220 * 1024 * 1024
@@ -41,15 +41,16 @@ WORKSHOP_ID = "3810606011"
 APP_ID = "1286220"
 RELEASE_VERSION = "V8"
 WORKSHOP_TITLE = "RAN F-111N Naval Wing V8"
+WORKSHOP_DESCRIPTION_MAX_BYTES = 8000
 WORKSHOP_ASSETS = {
     "RAN-F111N-preview.png": "9ba4795b87f7c18958a93af7f89458de23e9096e38a1b69334b96c9b1a4fc752",
-    "WORKSHOP_DESCRIPTION.txt": "7bb1643466b69f2340d7fa44a2eb6a01c501d67e3e2ca3210bbae889d7b1ae46",
-    "WORKSHOP_UPDATE_NOTES_V8.txt": "852b12323c9d26cf7103ea163948819271d17e5e81ebbb3f56216da565b6288a",
+    "WORKSHOP_DESCRIPTION.txt": "97ea1b45701827d2f77342edae041fa94b0e1dd1b8fa686c7ae049e2a77b7369",
+    "WORKSHOP_UPDATE_NOTES_V8.txt": "654e51f94a8ad29860bca778af7cb8630a7c51b92e321dbeb5e71abc3b527a2e",
 }
 UPLOAD_NOTE = (
-    "V8: 16 aircraft across 1980, 1985, 1995 and 2003; 167 loadouts; "
-    "progressive systems upgrades and late tactical-grey liveries. "
-    "Corrected weapon names, zero-reload chaff and repaired carrier lift routes."
+    "V8 internal-bay update: 16 aircraft and 211 presets, including 44 new MudPig bay fits. "
+    "Additional internal bombing, precision, Maverick, Phoenix, SLAM and dated JDAM stores; "
+    "three physical stations retained, with updated mass budgets and validation. Armed recovery remains untested."
 )
 
 
@@ -269,6 +270,14 @@ def verify_workshop_assets(package):
     preview = package / "RAN-F111N-preview.png"
     if preview.stat().st_size >= 1024 * 1024 or not preview.read_bytes().startswith(b"\x89PNG\r\n\x1a\n"):
         raise RuntimeError("Workshop preview must be a PNG smaller than 1 MiB.")
+    validate_workshop_description((package / "WORKSHOP_DESCRIPTION.txt").read_text(encoding="utf-8"))
+
+
+def validate_workshop_description(description):
+    # Steamworks k_cchPublishedDocumentDescriptionMax is a byte limit. Leave
+    # room for the terminating NUL, including when text contains non-ASCII names.
+    if len(description.encode("utf-8")) >= WORKSHOP_DESCRIPTION_MAX_BYTES:
+        raise RuntimeError("Steam Workshop description must be smaller than 8,000 UTF-8 bytes.")
 
 
 def vdf_quote(value):
@@ -281,6 +290,7 @@ def vdf_quote(value):
 def workshop_vdf(bundle, description=None):
     if description is None:
         description = (bundle / "description.txt").read_text(encoding="utf-8")
+    validate_workshop_description(description)
     # BBCode headings/lists retain their structure in a single VDF string.
     # Preserve visibility while updating the title and description to this version.
     description = " ".join(description.split())

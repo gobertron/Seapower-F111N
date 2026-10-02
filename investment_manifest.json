@@ -9,6 +9,7 @@
       "role_equipment_estimate": 350,
       "separate_M61_installation_estimate": 650,
       "edition_avionics_growth_estimate": 0,
+      "internal_bay_multistore_upgrade_estimate": 0,
       "investment_systems_and_controls_estimate": 0,
       "propulsion_retrofit_estimate": 0,
       "recon_thermal_upgrade_estimate": 0
@@ -71,6 +72,7 @@
       "role_equipment_estimate": 350,
       "separate_M61_installation_estimate": 650,
       "edition_avionics_growth_estimate": 100,
+      "internal_bay_multistore_upgrade_estimate": 0,
       "investment_systems_and_controls_estimate": 150,
       "propulsion_retrofit_estimate": 0,
       "recon_thermal_upgrade_estimate": 0
@@ -133,6 +135,7 @@
       "role_equipment_estimate": 350,
       "separate_M61_installation_estimate": 650,
       "edition_avionics_growth_estimate": 250,
+      "internal_bay_multistore_upgrade_estimate": 0,
       "investment_systems_and_controls_estimate": 650,
       "propulsion_retrofit_estimate": 600,
       "recon_thermal_upgrade_estimate": 0
@@ -195,6 +198,7 @@
       "role_equipment_estimate": 350,
       "separate_M61_installation_estimate": 650,
       "edition_avionics_growth_estimate": 400,
+      "internal_bay_multistore_upgrade_estimate": 0,
       "investment_systems_and_controls_estimate": 850,
       "propulsion_retrofit_estimate": 750,
       "recon_thermal_upgrade_estimate": 0
@@ -257,6 +261,7 @@
       "role_equipment_estimate": 0,
       "separate_M61_installation_estimate": 650,
       "edition_avionics_growth_estimate": 0,
+      "internal_bay_multistore_upgrade_estimate": 40,
       "investment_systems_and_controls_estimate": 0,
       "propulsion_retrofit_estimate": 0,
       "recon_thermal_upgrade_estimate": 0
@@ -319,6 +324,7 @@
       "role_equipment_estimate": 0,
       "separate_M61_installation_estimate": 650,
       "edition_avionics_growth_estimate": 100,
+      "internal_bay_multistore_upgrade_estimate": 50,
       "investment_systems_and_controls_estimate": 150,
       "propulsion_retrofit_estimate": 0,
       "recon_thermal_upgrade_estimate": 0
@@ -381,6 +387,7 @@
       "role_equipment_estimate": 0,
       "separate_M61_installation_estimate": 650,
       "edition_avionics_growth_estimate": 250,
+      "internal_bay_multistore_upgrade_estimate": 60,
       "investment_systems_and_controls_estimate": 650,
       "propulsion_retrofit_estimate": 600,
       "recon_thermal_upgrade_estimate": 0
@@ -443,6 +450,7 @@
       "role_equipment_estimate": 0,
       "separate_M61_installation_estimate": 650,
       "edition_avionics_growth_estimate": 400,
+      "internal_bay_multistore_upgrade_estimate": 75,
       "investment_systems_and_controls_estimate": 850,
       "propulsion_retrofit_estimate": 750,
       "recon_thermal_upgrade_estimate": 0
@@ -505,6 +513,7 @@
       "role_equipment_estimate": 450,
       "separate_M61_installation_estimate": 650,
       "edition_avionics_growth_estimate": 0,
+      "internal_bay_multistore_upgrade_estimate": 0,
       "investment_systems_and_controls_estimate": 0,
       "propulsion_retrofit_estimate": 0,
       "recon_thermal_upgrade_estimate": 0
@@ -567,6 +576,7 @@
       "role_equipment_estimate": 450,
       "separate_M61_installation_estimate": 650,
       "edition_avionics_growth_estimate": 100,
+      "internal_bay_multistore_upgrade_estimate": 0,
       "investment_systems_and_controls_estimate": 150,
       "propulsion_retrofit_estimate": 0,
       "recon_thermal_upgrade_estimate": 50
@@ -629,6 +639,7 @@
       "role_equipment_estimate": 450,
       "separate_M61_installation_estimate": 650,
       "edition_avionics_growth_estimate": 250,
+      "internal_bay_multistore_upgrade_estimate": 0,
       "investment_systems_and_controls_estimate": 650,
       "propulsion_retrofit_estimate": 600,
       "recon_thermal_upgrade_estimate": 150
@@ -691,6 +702,7 @@
       "role_equipment_estimate": 450,
       "separate_M61_installation_estimate": 650,
       "edition_avionics_growth_estimate": 400,
+      "internal_bay_multistore_upgrade_estimate": 0,
       "investment_systems_and_controls_estimate": 850,
       "propulsion_retrofit_estimate": 750,
       "recon_thermal_upgrade_estimate": 250
@@ -753,6 +765,7 @@
       "role_equipment_estimate": 4000,
       "separate_M61_installation_estimate": 0,
       "edition_avionics_growth_estimate": 0,
+      "internal_bay_multistore_upgrade_estimate": 0,
       "investment_systems_and_controls_estimate": 0,
       "propulsion_retrofit_estimate": 0,
       "recon_thermal_upgrade_estimate": 0
@@ -815,6 +828,7 @@
       "role_equipment_estimate": 4000,
       "separate_M61_installation_estimate": 0,
       "edition_avionics_growth_estimate": 100,
+      "internal_bay_multistore_upgrade_estimate": 0,
       "investment_systems_and_controls_estimate": 150,
       "propulsion_retrofit_estimate": 0,
       "recon_thermal_upgrade_estimate": 0
@@ -877,6 +891,7 @@
       "role_equipment_estimate": 4000,
       "separate_M61_installation_estimate": 0,
       "edition_avionics_growth_estimate": 250,
+      "internal_bay_multistore_upgrade_estimate": 0,
       "investment_systems_and_controls_estimate": 650,
       "propulsion_retrofit_estimate": 600,
       "recon_thermal_upgrade_estimate": 0
@@ -939,6 +954,7 @@
       "role_equipment_estimate": 4000,
       "separate_M61_installation_estimate": 0,
       "edition_avionics_growth_estimate": 400,
+      "internal_bay_multistore_upgrade_estimate": 0,
       "investment_systems_and_controls_estimate": 850,
       "propulsion_retrofit_estimate": 750,
       "recon_thermal_upgrade_estimate": 0

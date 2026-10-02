@@ -81,6 +81,16 @@ class WorkshopTests(unittest.TestCase):
         self.assertFalse((self.game / "RAN-F111N-workshop").exists())
         self.assertFalse((self.game / "RAN-F111N-backups").exists())
 
+    def test_description_byte_limit_leaves_room_for_terminator(self):
+        self.assertIn('"description"', replacement.workshop_vdf(self.root, "x" * 7999))
+        with self.assertRaisesRegex(RuntimeError, "8,000 UTF-8 bytes"):
+            replacement.workshop_vdf(self.root, "x" * 8000)
+
+    def test_description_limit_counts_utf8_bytes(self):
+        self.assertIn('"description"', replacement.workshop_vdf(self.root, "é" * 3999))
+        with self.assertRaisesRegex(RuntimeError, "8,000 UTF-8 bytes"):
+            replacement.workshop_vdf(self.root, "é" * 4000)
+
     def test_invalid_preview_stops_before_replacement(self):
         before = snapshot(self.streaming)
         with mock.patch.dict(replacement.WORKSHOP_ASSETS, {"RAN-F111N-preview.png": "0" * 64}):

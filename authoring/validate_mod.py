@@ -9,6 +9,7 @@ import numpy as np
 from investment_programme import BLOCKS,pod_id,sensor_id
 from usn_liveries import protected_pixels
 from PIL import Image
+from bay_loadouts import BAY_UPGRADE_MASS
 
 def main():
     failures=[];checks=0
@@ -115,6 +116,7 @@ def main():
             check(float(ready['ReadyUpTime'])==(b['ready_fb'] if role=='fb' else b['ready_other']) and float(ready['CoolDownTime'])==b['cooldown'],uid+': readiness '+name)
 
             check(stores==ld['stores'],uid+': actual stores '+name)
+            check(by_system.get('3',{})==ld['internal_bay_stores'] if role=='fb' else not ld['internal_bay_stores'],uid+': actual internal bay inventory '+name)
             for k in stores:check(catalog[k]['earliest_edition']<=year,uid+': future store in '+name+' '+k)
             sm=sum(catalog[k]['mass_kg']*n for k,n in stores.items())
             tf=14897+sum(catalog[k].get('fuel_kg',0)*n for k,n in stores.items())
@@ -131,7 +133,65 @@ def main():
             check(d['WeaponMagazineM61']['Ammunition1']=='usn_cal_20mm' and int(d['WeaponMagazineM61']['Ammunition1_Count'])==2000,uid+': gun ammunition')
             check(gun['IsMountRotatable']=='False',uid+': fixed forward gun')
         if role=='fb':
-            check(d['WeaponSystem3']==baseline['WeaponSystem3'],uid+': preserved internal bay')
+            adapter_keys={'AssociatedSensors','BayPhoenixPositions','BayShrikePositions'}
+            check({k:v for k,v in d['WeaponSystem3'].items() if k not in adapter_keys}=={k:v for k,v in baseline['WeaponSystem3'].items() if k not in adapter_keys},uid+': preserved internal bay stations, concealment and door actions')
+            for adapter in ('BayPhoenixPositions','BayShrikePositions'):
+                check(len(d['WeaponSystem3'][adapter].split('|'))==1,uid+': single-store bay suspension adapter '+adapter)
+            bay_sensors=[d[sn]['SystemName'] for sn in d['WeaponSystem3']['AssociatedSensors'].split(',')]
+            check(sensor_id('StrikeRadar',year) in bay_sensors and sensor_id('PhoenixControl',year) in bay_sensors,uid+': internal bay strike and Phoenix targeting')
+            check(spec['empty_mass_components_kg']['internal_bay_multistore_upgrade_estimate']==BAY_UPGRADE_MASS[year],uid+': explicit bay upgrade mass')
+            aircraft_vertices,_,_,aircraft_groups=load_obj(MOD/d['Models']['ResourcesFolder']/d['Models']['ResourcesRoot'])
+            doors=[]
+            for door in ('bay_l','bay_r'):
+                offset=np.array([float(x) for x in d[door]['Position'].split(',')])
+                doors.append(aircraft_vertices[aircraft_groups[door][:,:,0]].reshape(-1,3)+offset)
+            footprint=np.concatenate(doors)
+            footprint_min,footprint_max=footprint.min(axis=0),footprint.max(axis=0)
+            envelopes={}
+            qualified={'mk82':3,'mk83':2,'mk84':2,'gbu12':2,'maverickb':2,'maverickd':2,'maverickg':2,'shrike':2,'aim54a':2,'aim54c':2,'slam':2,'gbu31':2,'gbu32':2,'harpoona':3,'harpoonc':3,'harpoond':3,'harpoonl':3}
+            for name,ld in spec['loadouts'].items():
+                bay=ld['internal_bay_stores']
+                check(sum(bay.values())<=3,uid+': three-station bay capacity '+name)
+                for key,count in bay.items():
+                    check(key.removeprefix('ran_nw_') in qualified and count<=qualified.get(key.removeprefix('ran_nw_'),0),uid+': qualified bay store/count '+name+' '+key)
+                if bay:
+                    values=d['WeaponSystem3'+name]
+                    check(float(values['ReadyUpTime'])==b['ready_fb'] and float(values['CoolDownTime'])==b['cooldown'],uid+': dated bay readiness '+name)
+                    for key in bay:
+                        ammo=read_ini(MOD/'ammunition'/(key+'.ini'))
+                        mode='Missiles' if ammo['General']['Type']=='Missile' else 'DumbBombs' if ammo.get('Guidance',{}).get('GuidanceType','0')=='0' else 'GuidedBombs'
+                        check(mode in values['LevelAttack'].split(','),uid+': internal store attack mode '+name+' '+key)
+                    # Horizontal footprint is a coarse stowage check, not a
+                    # three-dimensional separation or release-clearance model.
+                    # The legacy three-Harpoon arrangement remains an explicit
+                    # fictional requirement rather than a new qualification.
+                    for station,value in values.items():
+                        if not re.fullmatch(r'Station\d+',station) or 'harpoon' in value:continue
+                        key,*rack=value.split('|')
+                        if key not in envelopes:
+                            store=read_ini(MOD/'ammunition'/(key+'.ini'))
+                            model=store['Models']
+                            if model['ResourcesFolder'].startswith('assets/'):
+                                verts,_,_,groups=load_obj(MOD/model['ResourcesFolder']/model['ResourcesRoot'])
+                                points=verts[groups[model['ResourcesMesh']][:,:,0]].reshape(-1,3)
+                                envelopes[key]=(points.min(axis=0),points.max(axis=0))
+                            else:
+                                collider=store[store['Colliders']['Collider']]
+                                centre=np.array([float(x) for x in collider['Position'].split(',')])
+                                half=np.array([float(x) for x in collider['Scale'].split(',')])/2
+                                envelopes[key]=(centre-half,centre+half)
+                        offset=np.array([float(x) for x in d['WeaponSystem3'][station].split(',')])
+                        if rack:offset+=np.array([float(x) for x in d['WeaponSystem3'][rack[0]+'Positions'].split(',')])
+                        lower,upper=envelopes[key]
+                        check(all(lower[axis]+offset[axis]>=footprint_min[axis]-.00005 and upper[axis]+offset[axis]<=footprint_max[axis]+.00005 for axis in (0,2)),uid+': coarse bay stowage footprint '+name+' '+station+' '+key)
+                if name.startswith(('AntiShipBay','StrikeBay','StrikeHeavyBay','StrikePrecisionBay','JDAMBay','JDAMHeavyBay')):
+                    offensive={k:n for k,n in ld['wing_stores'].items() if k.startswith('ran_nw_') and not any(x in k for x in ('aim9','asraam','laserpod'))}
+                    check(not offensive and bool(bay),uid+': offensive stores internal on '+name)
+                if name.startswith('StrikePrecisionBay'):
+                    check(ld['wing_stores'].get('ran_nw_laserpod')==1 and bay=={'ran_nw_gbu12':2},uid+': laser pod and two internal precision bombs '+name)
+                if name.startswith('FleetInterceptBay'):
+                    phoenix='ran_nw_aim54a' if year==1980 else 'ran_nw_aim54c'
+                    check(bay=={phoenix:2},uid+': two internal Phoenix '+name)
             for name,wing_count,bay_count in [('AntiShip',2,0),('AntiShipHeavy',4,3),('AntiShipLongRange',2,3)]:
                 w=spec['loadouts'][name]['wing_stores'];bay=spec['loadouts'][name]['internal_bay_stores']
                 check(sum(n for k,n in w.items() if 'harpoon' in k)==wing_count,uid+': wing Harpoons '+name)
@@ -145,7 +205,7 @@ def main():
             check('ReconLongRange' in presets and 'EW' in presets,uid+': family mission stores')
             for name in ('StrikePrecision','StrikePrecisionLongRange','StrikePrecisionLight','StrikePrecisionMedium'):
                 check('ran_nw_laserpod' in spec['loadouts'][name]['stores'],uid+': external laser pod '+name)
-                check(not spec['loadouts'][name]['internal_bay_stores'],uid+': bay not consumed by precision stores')
+                check(spec['loadouts'][name]['internal_bay_stores']=={'ran_nw_gbu12':2},uid+': two extra internal precision bombs '+name)
             w=d['WeaponSystem1'];pv,_,_,pg=load_obj(MOD/'assets/ran_f111n/models/alq-131/alq-131.obj')
             pod=pv[pg['AN_ALQ_131'][:,:,0]]
             v,_,_,gg=load_obj(MOD/d['Models']['ResourcesFolder']/d['Models']['ResourcesRoot'])
@@ -191,7 +251,7 @@ def main():
         check(hashlib.sha256(a.read_bytes()).digest()!=hashlib.sha256(b.read_bytes()).digest(),role+': distinct late-edition materials')
     for line in (ROOT/'MOD_SHA256.txt').read_text().splitlines():
         digest,name=line.split('  ',1);check(hashlib.sha256((MOD/name).read_bytes()).hexdigest()==digest,'checksum '+name)
-    result={'status':'FAIL' if failures else 'PASS','checks':checks,'failures':failures,'aircraft':len(manifest),'loadouts':sum(len(x['loadouts']) for x in manifest.values()),'runtime_tested':False,'scope':'Dated weapon selection, increasing native investment, eight tactical atlases, all-rounder union, M61 magazines, exact retained bay/model/landing geometry, mass arithmetic, takeoff reference budget, store and sensor resolution, pod attachment, original assets and checksums'}
+    result={'status':'FAIL' if failures else 'PASS','checks':checks,'failures':failures,'aircraft':len(manifest),'loadouts':sum(len(x['loadouts']) for x in manifest.values()),'loaded_bay_presets':sum(bool(v['internal_bay_stores']) for s in manifest.values() for v in s['loadouts'].values()),'runtime_tested':False,'scope':'Dated weapon selection, increasing native investment, eight tactical atlases, all-rounder union, M61 magazines, retained bay/model/landing geometry, three-station bay capacity and targeting, internal inventory and attack modes, explicit bay upgrade mass, mass arithmetic, takeoff reference budget, store and sensor resolution, pod attachment, original assets and checksums'}
     (ROOT/'VALIDATION.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2))
     return bool(failures)
 

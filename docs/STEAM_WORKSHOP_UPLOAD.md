@@ -21,7 +21,7 @@ The native mod is installed at:
 ```
 
 1. Launch Sea Power through Steam while signed into the account that owns Workshop item **3810606011**.
-2. Open the Workshop uploader in Mod Manager and select **Update Existing**. Choose your existing item **3810606011**.
+2. Open the Workshop uploader in Mod Manager and select **Update Existing**. Choose your existing item **3810606011**, which may still appear as **RAN / RAAF F-111N Series**. Set Mod Name to **RAN F-111N Naval Wing V8**.
 3. Use **Pick Folder** and select `\user\RAN-F111N-Naval-Wing`. This is the folder with `_info.ini`, `aircraft`, `ammunition`, `assets`, `systems` and the other native directories directly inside it.
 4. Use **Pick Image** and select `\user\RAN-F111N-Naval-Wing\preview.png`. The supplied PNG is smaller than 1 MiB.
 5. Paste `description.txt` into Mod Description and `update-notes.txt` into Change Log, then submit the update.

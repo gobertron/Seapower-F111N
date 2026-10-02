@@ -11,6 +11,7 @@ from collections import OrderedDict, Counter
 from copy import deepcopy
 import re, json, math, hashlib, shutil
 from investment_programme import BLOCKS,mass_allowances,build_systems,apply as apply_investment,describe as describe_investment
+from bay_loadouts import BAY_UPGRADE_MASS, expand as expand_bay, qualification as bay_qualification
 
 ROOT=Path(__file__).resolve().parent.parent
 MOD=ROOT/'RAN-F111N-Naval-Wing'
@@ -275,7 +276,8 @@ def mass_budget(role,year):
     components={'historical_F111C_basic_reference':23300,'naval_conversion_estimate':NAVAL_ALLOWANCE,
       'role_equipment_estimate':{'f':350,'fb':0,'rf':450,'ef':4000}[role],
       'separate_M61_installation_estimate':GUN_INSTALLATION if role!='ef' else 0,
-      'edition_avionics_growth_estimate':{1980:0,1985:100,1995:250,2003:400}[year]}
+      'edition_avionics_growth_estimate':{1980:0,1985:100,1995:250,2003:400}[year],
+      'internal_bay_multistore_upgrade_estimate':BAY_UPGRADE_MASS[year] if role=='fb' else 0}
     components.update(mass_allowances(role,year))
     return components,sum(components.values())
 
@@ -295,7 +297,7 @@ def build_aircraft():
         for section in list(d):
             if re.fullmatch(r'SensorSystem\d+',section) and d[section].get('Type')=='LaserDesignator':
                 # A removable external pod allows laser bombing without taking
-                # any space from the unchanged internal three-missile bay.
+                # any space from the retained internal three-station bay.
                 del d[section]
         # Renumber sensors and fix existing references after the removed laser.
         sns=[(s,v) for s,v in d.items() if re.fullmatch(r'SensorSystem\d+',s)]
@@ -382,6 +384,9 @@ def build_aircraft():
             d['SensorSystem'+str(count)]={'Type':'Radar','SystemName':'AN/AWG-9_Phoenix','Mount':'Dummy','ModuleType':'Sensor'}
             d['SensorSystems']['NumberOfSensorSystems']=str(count)
             d['WeaponSystem1']['AssociatedSensors']='SensorSystem3,SensorSystem'+str(count)
+            # Internal Phoenix fits need the same dedicated air-targeting donor.
+            d['WeaponSystem3']['AssociatedSensors']='SensorSystem3,SensorSystem'+str(count)
+            expand_bay(d,year,ir,bvr,phoenix,ship,mav,tank,load)
             # Align ECM pod tops to this model's outer hardpoint bottoms.
             # Values are calculated from the source meshes by the validator.
             wing['ECMPositions']='0,-0.0020,0';wing['ECMRotations']='-2,0,0'
@@ -401,7 +406,7 @@ def build_aircraft():
           'Default':f'{model} {nickname} ({year}),{model} {year}',
           'DefaultDescription':f'{year} edition of the fictional RAN-RAAF Naval Wing. '+{
             'f':'Fleet defence fighter with period Sidewinder or ASRAAM, Sparrow or AMRAAM, Phoenix and M61 Vulcan.',
-            'fb':'All-round maritime and land strike aircraft; carries the fighter, reconnaissance and EW families\' period weapons, M61 Vulcan, and the unchanged three-missile internal bay.',
+            'fb':'All-round maritime and land strike aircraft; period weapons, M61 Vulcan and expanded three-station internal bay fits for anti-ship, bombing, precision strike and fleet interception.',
             'rf':'Fast reconnaissance and ELINT; defensive period IR missiles, M61 Vulcan, four tanks or clean sprint. Fictional Mach 3 performance retained.',
             'ef':'Electronic attack and SEAD escort with two physical ECM pods and two offensive ECM sensors; period defensive missiles and anti-radiation weapons.'}[role]+f' {BLOCKS[year]["name"]}. Empty mass {mass:,} kg; internal fuel {FUEL:,} kg. Naval weights are documented engineering estimates.',
           'Squadron1':f'{model} {year} - {squadrons[0]} Squadron heritage,{squadrons[0]} Sqn',
@@ -425,6 +430,7 @@ def build_aircraft():
            'flight_response':{k:float(d['FlightModel'][k]) for k in ('VelocityGain','ThrustGain','PitchGain','HeadingGain','BankGain')},
            'propulsion':{'engine_count':int(d['Performance']['EngineCount']),'dry_thrust_n_per_engine':int(d['Performance']['PerEngineMaxThrust']),'afterburner_thrust_n_per_engine':int(d['Performance']['PerEngineMaxAfterburnerThrust'])},
            'carrier_capable':True,'investment_programme':describe_investment(role,year),'loadouts':details}
+        if role=='fb':manifest[uid]['internal_bay_qualification']=bay_qualification()
     write_ini(MOD/'language_en/aircraft_names.ini',names)
     write_ini(MOD/'language_en/loadout_names.ini',lds)
     (ROOT/'loadout_manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
@@ -432,7 +438,7 @@ def build_aircraft():
     return manifest
 
 def finish(manifest):
-    info=read_ini(MOD/'_info.ini');info['Language_en'].update(Name='RAN F-111N Naval Wing V8 - 1980 / 1985 / 1995 / 2003',Description='Sixteen dated Australian naval aircraft with increasing engine, flight-control, targeting and EW investment. Period weapons, explicit mass budgets, M61 guns, preserved internal bay and carrier support. Dedicated USN-inspired 1995/2003 tactical grey liveries retain Australian markings.')
+    info=read_ini(MOD/'_info.ini');info['Language_en'].update(Name='RAN F-111N Naval Wing V8 - 1980 / 1985 / 1995 / 2003',Description='Sixteen dated Australian naval aircraft with increasing engine, flight-control, targeting and EW investment. Expanded MudPig internal-bay strike and interceptor loadouts, period weapons, explicit mass budgets, M61 guns and carrier support. USN-inspired 1995/2003 tactical greys retain Australian markings.')
     write_ini(MOD/'_info.ini',info)
     # All carrier allowlists must include every new unit ID, not only the four
     # compatibility IDs inherited from V5.2.1.

@@ -15,109 +15,153 @@ ran_f-111n_2003,F-111N,WaterPig,2003,Fighter,Default,4 × ASRAAM; 2 × AIM-120C-
 ran_f-111n_2003,F-111N,WaterPig,2003,Fighter,AirToAir,4 × ASRAAM; 2 × AIM-120C-5 AMRAAM,Empty,Empty,27250,656,14897,544.0,43347.0,51845,8498.0
 ran_f-111n_2003,F-111N,WaterPig,2003,Fighter,AirToAirLongRange,2 × ASRAAM; 2 × 600 US-gallon fuel tank,2 × AIM-54C Phoenix,Empty,27250,1402,18437,544.0,47633.0,51845,4212.0
 ran_f-111n_2003,F-111N,WaterPig,2003,Fighter,FleetIntercept,2 × ASRAAM; 2 × AIM-120C-5 AMRAAM,2 × AIM-54C Phoenix,Empty,27250,1406,14897,544.0,44097.0,51845,7748.0
-ran_fb-111n,FB-111N,MudPig,1980,Bomber,Default,2 × AIM-9L Sidewinder; 2 × AGM-84A Harpoon,Empty,Empty,24900,1224,14897,544.0,41565.0,51845,10280.0
-ran_fb-111n,FB-111N,MudPig,1980,Bomber,AirToAir,4 × AIM-9L Sidewinder; 2 × AIM-7F Sparrow,Empty,Empty,24900,806,14897,544.0,41147.0,51845,10698.0
-ran_fb-111n,FB-111N,MudPig,1980,Bomber,AirToAirLongRange,2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank; 2 × AIM-54A Phoenix,Empty,Empty,24900,1358,18437,544.0,45239.0,51845,6606.0
-ran_fb-111n,FB-111N,MudPig,1980,Bomber,FleetIntercept,2 × AIM-9L Sidewinder; 2 × AIM-7F Sparrow; 2 × AIM-54A Phoenix,Empty,Empty,24900,1520,14897,544.0,41861.0,51845,9984.0
-ran_fb-111n,FB-111N,MudPig,1980,Bomber,AntiShip,2 × AIM-9L Sidewinder; 2 × AGM-84A Harpoon,Empty,Empty,24900,1224,14897,544.0,41565.0,51845,10280.0
-ran_fb-111n,FB-111N,MudPig,1980,Bomber,AntiShipHeavy,4 × AGM-84A Harpoon,Empty,3 × AGM-84A Harpoon,24900,3682,14897,544.0,44023.0,51845,7822.0
-ran_fb-111n,FB-111N,MudPig,1980,Bomber,AntiShipLongRange,2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank; 2 × AGM-84A Harpoon,Empty,3 × AGM-84A Harpoon,24900,3102,18437,544.0,46983.0,51845,4862.0
-ran_fb-111n,FB-111N,MudPig,1980,Bomber,Strike,2 × AIM-9L Sidewinder; 24 × Mk 82 on six-bomb rack,Empty,Empty,24900,6020.0,14897,544.0,46361.0,51845,5484.0
-ran_fb-111n,FB-111N,MudPig,1980,Bomber,StrikeLongRange,2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank; 12 × Mk 82 on six-bomb rack,Empty,Empty,24900,3396.0,18437,544.0,47277.0,51845,4568.0
-ran_fb-111n,FB-111N,MudPig,1980,Bomber,StrikeHeavy,2 × AIM-9L Sidewinder; 4 × Mk 84 2000-lb GP bomb,Empty,Empty,24900,3800,14897,544.0,44141.0,51845,7704.0
-ran_fb-111n,FB-111N,MudPig,1980,Bomber,StrikeHeavyLongRange,2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank; 2 × Mk 84 2000-lb GP bomb,Empty,Empty,24900,2286,18437,544.0,46167.0,51845,5678.0
-ran_fb-111n,FB-111N,MudPig,1980,Bomber,StrikeMedium,2 × AIM-9L Sidewinder; 4 × Mk 83 1000-lb GP bomb,Empty,Empty,24900,1988,14897,544.0,42329.0,51845,9516.0
-ran_fb-111n,FB-111N,MudPig,1980,Bomber,StrikePrecision,2 × AIM-9L Sidewinder; 3 × GBU-10 Paveway II; 1 × External laser designation pod,Empty,Empty,24900,3124,14897,544.0,43465.0,51845,8380.0
-ran_fb-111n,FB-111N,MudPig,1980,Bomber,StrikePrecisionLight,2 × AIM-9L Sidewinder; 3 × GBU-12 Paveway II; 1 × External laser designation pod,Empty,Empty,24900,1153,14897,544.0,41494.0,51845,10351.0
-ran_fb-111n,FB-111N,MudPig,1980,Bomber,StrikePrecisionMedium,2 × AIM-9L Sidewinder; 3 × GBU-16 Paveway II; 1 × External laser designation pod,Empty,Empty,24900,1807,14897,544.0,42148.0,51845,9697.0
-ran_fb-111n,FB-111N,MudPig,1980,Bomber,StrikePrecisionLongRange,2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank; 1 × GBU-10 Paveway II; 1 × External laser designation pod,Empty,Empty,24900,1556,18437,544.0,45437.0,51845,6408.0
-ran_fb-111n,FB-111N,MudPig,1980,Bomber,MaverickStrike,2 × AIM-9L Sidewinder; 4 × AGM-65B Maverick,Empty,Empty,24900,1004,14897,544.0,41345.0,51845,10500.0
-ran_fb-111n,FB-111N,MudPig,1980,Bomber,SEAD,2 × AIM-9L Sidewinder; 4 × AGM-78 Standard ARM,Empty,Empty,24900,2652,14897,544.0,42993.0,51845,8852.0
-ran_fb-111n,FB-111N,MudPig,1980,Bomber,SEADShrike,2 × AIM-9L Sidewinder; 4 × AGM-45 Shrike,Empty,Empty,24900,884,14897,544.0,41225.0,51845,10620.0
-ran_fb-111n,FB-111N,MudPig,1980,Bomber,EW,2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (1980); 1 × Naval offensive ECM pod 2 (1980),Empty,Empty,24900,992,18437,544.0,44873.0,51845,6972.0
-ran_fb-111n,FB-111N,MudPig,1980,Bomber,EWLongRange,2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (1980); 1 × Naval offensive ECM pod 2 (1980),Empty,Empty,24900,992,18437,544.0,44873.0,51845,6972.0
-ran_fb-111n,FB-111N,MudPig,1980,Bomber,EscortSEAD,2 × AIM-9L Sidewinder; 2 × AGM-78 Standard ARM; 1 × Naval offensive ECM pod 1 (1980); 1 × Naval offensive ECM pod 2 (1980),Empty,Empty,24900,1932,14897,544.0,42273.0,51845,9572.0
-ran_fb-111n,FB-111N,MudPig,1980,Bomber,ReconLongRange,2 × AIM-9L Sidewinder; 4 × 600 US-gallon fuel tank,Empty,Empty,24900,772,21977,544.0,48193.0,51845,3652.0
-ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,Default,2 × AIM-9M Sidewinder; 2 × AGM-84C Harpoon,Empty,Empty,25150,1224,14897,544.0,41815.0,51845,10030.0
-ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,AirToAir,4 × AIM-9M Sidewinder; 2 × AIM-7M Sparrow,Empty,Empty,25150,806,14897,544.0,41397.0,51845,10448.0
-ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,AirToAirLongRange,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 2 × AIM-54C Phoenix,Empty,Empty,25150,1398,18437,544.0,45529.0,51845,6316.0
-ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,FleetIntercept,2 × AIM-9M Sidewinder; 2 × AIM-7M Sparrow; 2 × AIM-54C Phoenix,Empty,Empty,25150,1560,14897,544.0,42151.0,51845,9694.0
-ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,AntiShip,2 × AIM-9M Sidewinder; 2 × AGM-84C Harpoon,Empty,Empty,25150,1224,14897,544.0,41815.0,51845,10030.0
-ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,AntiShipHeavy,4 × AGM-84C Harpoon,Empty,3 × AGM-84C Harpoon,25150,3682,14897,544.0,44273.0,51845,7572.0
-ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,AntiShipLongRange,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 2 × AGM-84C Harpoon,Empty,3 × AGM-84C Harpoon,25150,3102,18437,544.0,47233.0,51845,4612.0
-ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,Strike,2 × AIM-9M Sidewinder; 24 × Mk 82 on six-bomb rack,Empty,Empty,25150,6020.0,14897,544.0,46611.0,51845,5234.0
-ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,StrikeLongRange,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 12 × Mk 82 on six-bomb rack,Empty,Empty,25150,3396.0,18437,544.0,47527.0,51845,4318.0
-ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,StrikeHeavy,2 × AIM-9M Sidewinder; 4 × Mk 84 2000-lb GP bomb,Empty,Empty,25150,3800,14897,544.0,44391.0,51845,7454.0
-ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,StrikeHeavyLongRange,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 2 × Mk 84 2000-lb GP bomb,Empty,Empty,25150,2286,18437,544.0,46417.0,51845,5428.0
-ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,StrikeMedium,2 × AIM-9M Sidewinder; 4 × Mk 83 1000-lb GP bomb,Empty,Empty,25150,1988,14897,544.0,42579.0,51845,9266.0
-ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,StrikePrecision,2 × AIM-9M Sidewinder; 3 × GBU-10 Paveway II; 1 × External laser designation pod,Empty,Empty,25150,3124,14897,544.0,43715.0,51845,8130.0
-ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,StrikePrecisionLight,2 × AIM-9M Sidewinder; 3 × GBU-12 Paveway II; 1 × External laser designation pod,Empty,Empty,25150,1153,14897,544.0,41744.0,51845,10101.0
-ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,StrikePrecisionMedium,2 × AIM-9M Sidewinder; 3 × GBU-16 Paveway II; 1 × External laser designation pod,Empty,Empty,25150,1807,14897,544.0,42398.0,51845,9447.0
-ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,StrikePrecisionLongRange,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 1 × GBU-10 Paveway II; 1 × External laser designation pod,Empty,Empty,25150,1556,18437,544.0,45687.0,51845,6158.0
-ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,MaverickStrike,2 × AIM-9M Sidewinder; 4 × AGM-65D Maverick,Empty,Empty,25150,1044,14897,544.0,41635.0,51845,10210.0
-ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,SEAD,2 × AIM-9M Sidewinder; 4 × AGM-88A HARM,Empty,Empty,25150,1616,14897,544.0,42207.0,51845,9638.0
-ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,EW,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (1985); 1 × Naval offensive ECM pod 2 (1985),Empty,Empty,25150,992,18437,544.0,45123.0,51845,6722.0
-ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,EWLongRange,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (1985); 1 × Naval offensive ECM pod 2 (1985),Empty,Empty,25150,992,18437,544.0,45123.0,51845,6722.0
-ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,EscortSEAD,2 × AIM-9M Sidewinder; 2 × AGM-88A HARM; 1 × Naval offensive ECM pod 1 (1985); 1 × Naval offensive ECM pod 2 (1985),Empty,Empty,25150,1414,14897,544.0,42005.0,51845,9840.0
-ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,ReconLongRange,2 × AIM-9M Sidewinder; 4 × 600 US-gallon fuel tank,Empty,Empty,25150,772,21977,544.0,48443.0,51845,3402.0
-ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,EOGlideStrike,2 × AIM-9M Sidewinder; 2 × GBU-15 electro-optical glide bomb; 1 × EO weapon control pod,Empty,Empty,25150,2692,14897,544.0,43283.0,51845,8562.0
-ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,StrikePavewayIII,2 × AIM-9M Sidewinder; 3 × GBU-24 Paveway III; 1 × External laser designation pod,Empty,Empty,25150,3574,14897,544.0,44165.0,51845,7680.0
-ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,Default,2 × AIM-9M Sidewinder; 2 × AGM-84D Harpoon Block 1C,Empty,Empty,26400,1224,14897,544.0,43065.0,51845,8780.0
-ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,AirToAir,4 × AIM-9M Sidewinder; 2 × AIM-120B AMRAAM,Empty,Empty,26400,648,14897,544.0,42489.0,51845,9356.0
-ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,AirToAirLongRange,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 2 × AIM-54C Phoenix,Empty,Empty,26400,1398,18437,544.0,46779.0,51845,5066.0
-ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,FleetIntercept,2 × AIM-9M Sidewinder; 2 × AIM-120B AMRAAM; 2 × AIM-54C Phoenix,Empty,Empty,26400,1402,14897,544.0,43243.0,51845,8602.0
-ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,AntiShip,2 × AIM-9M Sidewinder; 2 × AGM-84D Harpoon Block 1C,Empty,Empty,26400,1224,14897,544.0,43065.0,51845,8780.0
-ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,AntiShipHeavy,4 × AGM-84D Harpoon Block 1C,Empty,3 × AGM-84D Harpoon Block 1C,26400,3682,14897,544.0,45523.0,51845,6322.0
-ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,AntiShipLongRange,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 2 × AGM-84D Harpoon Block 1C,Empty,3 × AGM-84D Harpoon Block 1C,26400,3102,18437,544.0,48483.0,51845,3362.0
-ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,Strike,2 × AIM-9M Sidewinder; 24 × Mk 82 on six-bomb rack,Empty,Empty,26400,6020.0,14897,544.0,47861.0,51845,3984.0
-ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,StrikeLongRange,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 12 × Mk 82 on six-bomb rack,Empty,Empty,26400,3396.0,18437,544.0,48777.0,51845,3068.0
-ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,StrikeHeavy,2 × AIM-9M Sidewinder; 4 × Mk 84 2000-lb GP bomb,Empty,Empty,26400,3800,14897,544.0,45641.0,51845,6204.0
-ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,StrikeHeavyLongRange,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 2 × Mk 84 2000-lb GP bomb,Empty,Empty,26400,2286,18437,544.0,47667.0,51845,4178.0
-ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,StrikeMedium,2 × AIM-9M Sidewinder; 4 × Mk 83 1000-lb GP bomb,Empty,Empty,26400,1988,14897,544.0,43829.0,51845,8016.0
-ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,StrikePrecision,2 × AIM-9M Sidewinder; 3 × GBU-10 Paveway II; 1 × External laser designation pod,Empty,Empty,26400,3124,14897,544.0,44965.0,51845,6880.0
-ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,StrikePrecisionLight,2 × AIM-9M Sidewinder; 3 × GBU-12 Paveway II; 1 × External laser designation pod,Empty,Empty,26400,1153,14897,544.0,42994.0,51845,8851.0
-ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,StrikePrecisionMedium,2 × AIM-9M Sidewinder; 3 × GBU-16 Paveway II; 1 × External laser designation pod,Empty,Empty,26400,1807,14897,544.0,43648.0,51845,8197.0
-ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,StrikePrecisionLongRange,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 1 × GBU-10 Paveway II; 1 × External laser designation pod,Empty,Empty,26400,1556,18437,544.0,46937.0,51845,4908.0
-ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,MaverickStrike,2 × AIM-9M Sidewinder; 4 × AGM-65G Maverick,Empty,Empty,26400,1380,14897,544.0,43221.0,51845,8624.0
-ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,SEAD,2 × AIM-9M Sidewinder; 4 × AGM-88C HARM,Empty,Empty,26400,1616,14897,544.0,43457.0,51845,8388.0
-ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,EW,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (1995); 1 × Naval offensive ECM pod 2 (1995),Empty,Empty,26400,992,18437,544.0,46373.0,51845,5472.0
-ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,EWLongRange,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (1995); 1 × Naval offensive ECM pod 2 (1995),Empty,Empty,26400,992,18437,544.0,46373.0,51845,5472.0
-ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,EscortSEAD,2 × AIM-9M Sidewinder; 2 × AGM-88C HARM; 1 × Naval offensive ECM pod 1 (1995); 1 × Naval offensive ECM pod 2 (1995),Empty,Empty,26400,1414,14897,544.0,43255.0,51845,8590.0
-ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,ReconLongRange,2 × AIM-9M Sidewinder; 4 × 600 US-gallon fuel tank,Empty,Empty,26400,772,21977,544.0,49693.0,51845,2152.0
-ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,EOGlideStrike,2 × AIM-9M Sidewinder; 2 × GBU-15 electro-optical glide bomb; 1 × EO weapon control pod,Empty,Empty,26400,2692,14897,544.0,44533.0,51845,7312.0
-ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,StrikePavewayIII,2 × AIM-9M Sidewinder; 3 × GBU-24 Paveway III; 1 × External laser designation pod,Empty,Empty,26400,3574,14897,544.0,45415.0,51845,6430.0
-ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,PopeyeStrike,2 × AIM-9M Sidewinder; 2 × AGM-142 Popeye / Have Nap; 1 × EO weapon control pod,Empty,Empty,26400,3152,14897,544.0,44993.0,51845,6852.0
-ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,SLAMStrike,2 × AIM-9M Sidewinder; 2 × AGM-84E SLAM; 1 × EO weapon control pod,Empty,Empty,26400,1688,14897,544.0,43529.0,51845,8316.0
-ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,Default,2 × ASRAAM; 2 × AGM-84L Harpoon Block II,Empty,Empty,26900,1228,14897,544.0,43569.0,51845,8276.0
-ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,AirToAir,4 × ASRAAM; 2 × AIM-120C-5 AMRAAM,Empty,Empty,26900,656,14897,544.0,42997.0,51845,8848.0
-ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,AirToAirLongRange,2 × ASRAAM; 2 × 600 US-gallon fuel tank; 2 × AIM-54C Phoenix,Empty,Empty,26900,1402,18437,544.0,47283.0,51845,4562.0
-ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,FleetIntercept,2 × ASRAAM; 2 × AIM-120C-5 AMRAAM; 2 × AIM-54C Phoenix,Empty,Empty,26900,1406,14897,544.0,43747.0,51845,8098.0
-ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,AntiShip,2 × ASRAAM; 2 × AGM-84L Harpoon Block II,Empty,Empty,26900,1228,14897,544.0,43569.0,51845,8276.0
-ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,AntiShipHeavy,4 × AGM-84L Harpoon Block II,Empty,3 × AGM-84L Harpoon Block II,26900,3682,14897,544.0,46023.0,51845,5822.0
-ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,AntiShipLongRange,2 × ASRAAM; 2 × 600 US-gallon fuel tank; 2 × AGM-84L Harpoon Block II,Empty,3 × AGM-84L Harpoon Block II,26900,3106,18437,544.0,48987.0,51845,2858.0
-ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,Strike,2 × ASRAAM; 24 × Mk 82 on six-bomb rack,Empty,Empty,26900,6024.0,14897,544.0,48365.0,51845,3480.0
-ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,StrikeLongRange,2 × ASRAAM; 2 × 600 US-gallon fuel tank; 12 × Mk 82 on six-bomb rack,Empty,Empty,26900,3400.0,18437,544.0,49281.0,51845,2564.0
-ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,StrikeHeavy,2 × ASRAAM; 4 × Mk 84 2000-lb GP bomb,Empty,Empty,26900,3804,14897,544.0,46145.0,51845,5700.0
-ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,StrikeHeavyLongRange,2 × ASRAAM; 2 × 600 US-gallon fuel tank; 2 × Mk 84 2000-lb GP bomb,Empty,Empty,26900,2290,18437,544.0,48171.0,51845,3674.0
-ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,StrikeMedium,2 × ASRAAM; 4 × Mk 83 1000-lb GP bomb,Empty,Empty,26900,1992,14897,544.0,44333.0,51845,7512.0
-ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,StrikePrecision,2 × ASRAAM; 3 × GBU-10 Paveway II; 1 × External laser designation pod,Empty,Empty,26900,3128,14897,544.0,45469.0,51845,6376.0
-ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,StrikePrecisionLight,2 × ASRAAM; 3 × GBU-12 Paveway II; 1 × External laser designation pod,Empty,Empty,26900,1157,14897,544.0,43498.0,51845,8347.0
-ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,StrikePrecisionMedium,2 × ASRAAM; 3 × GBU-16 Paveway II; 1 × External laser designation pod,Empty,Empty,26900,1811,14897,544.0,44152.0,51845,7693.0
-ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,StrikePrecisionLongRange,2 × ASRAAM; 2 × 600 US-gallon fuel tank; 1 × GBU-10 Paveway II; 1 × External laser designation pod,Empty,Empty,26900,1560,18437,544.0,47441.0,51845,4404.0
-ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,MaverickStrike,2 × ASRAAM; 4 × AGM-65G Maverick,Empty,Empty,26900,1384,14897,544.0,43725.0,51845,8120.0
-ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,SEAD,2 × ASRAAM; 4 × AGM-88C HARM,Empty,Empty,26900,1620,14897,544.0,43961.0,51845,7884.0
-ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,EW,2 × ASRAAM; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (2003); 1 × Naval offensive ECM pod 2 (2003),Empty,Empty,26900,996,18437,544.0,46877.0,51845,4968.0
-ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,EWLongRange,2 × ASRAAM; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (2003); 1 × Naval offensive ECM pod 2 (2003),Empty,Empty,26900,996,18437,544.0,46877.0,51845,4968.0
-ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,EscortSEAD,2 × ASRAAM; 2 × AGM-88C HARM; 1 × Naval offensive ECM pod 1 (2003); 1 × Naval offensive ECM pod 2 (2003),Empty,Empty,26900,1418,14897,544.0,43759.0,51845,8086.0
-ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,ReconLongRange,2 × ASRAAM; 4 × 600 US-gallon fuel tank,Empty,Empty,26900,776,21977,544.0,50197.0,51845,1648.0
-ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,EOGlideStrike,2 × ASRAAM; 2 × GBU-15 electro-optical glide bomb; 1 × EO weapon control pod,Empty,Empty,26900,2696,14897,544.0,45037.0,51845,6808.0
-ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,StrikePavewayIII,2 × ASRAAM; 3 × GBU-24 Paveway III; 1 × External laser designation pod,Empty,Empty,26900,3578,14897,544.0,45919.0,51845,5926.0
-ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,PopeyeStrike,2 × ASRAAM; 2 × AGM-142 Popeye / Have Nap; 1 × EO weapon control pod,Empty,Empty,26900,3156,14897,544.0,45497.0,51845,6348.0
-ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,SLAMStrike,2 × ASRAAM; 2 × AGM-84E SLAM; 1 × EO weapon control pod,Empty,Empty,26900,1692,14897,544.0,44033.0,51845,7812.0
-ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,SLAMERStrike,2 × ASRAAM; 2 × AGM-84K SLAM-ER; 1 × EO weapon control pod,Empty,Empty,26900,1786,14897,544.0,44127.0,51845,7718.0
-ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,JDAMHeavy,2 × ASRAAM; 4 × GBU-31 JDAM Mk 84,Empty,Empty,26900,3876,14897,544.0,46217.0,51845,5628.0
-ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,JDAMMedium,2 × ASRAAM; 4 × GBU-32 JDAM Mk 83,Empty,Empty,26900,2020,14897,544.0,44361.0,51845,7484.0
-ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,JSOWStrike,2 × ASRAAM; 4 × AGM-154A JSOW,Empty,Empty,26900,2108,14897,544.0,44449.0,51845,7396.0
+ran_fb-111n,FB-111N,MudPig,1980,Bomber,Default,2 × AIM-9L Sidewinder; 2 × AGM-84A Harpoon,Empty,Empty,24940,1224,14897,544.0,41605.0,51845,10240.0
+ran_fb-111n,FB-111N,MudPig,1980,Bomber,AirToAir,4 × AIM-9L Sidewinder; 2 × AIM-7F Sparrow,Empty,Empty,24940,806,14897,544.0,41187.0,51845,10658.0
+ran_fb-111n,FB-111N,MudPig,1980,Bomber,AirToAirLongRange,2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank; 2 × AIM-54A Phoenix,Empty,Empty,24940,1358,18437,544.0,45279.0,51845,6566.0
+ran_fb-111n,FB-111N,MudPig,1980,Bomber,FleetIntercept,2 × AIM-9L Sidewinder; 2 × AIM-7F Sparrow; 2 × AIM-54A Phoenix,Empty,Empty,24940,1520,14897,544.0,41901.0,51845,9944.0
+ran_fb-111n,FB-111N,MudPig,1980,Bomber,AntiShip,2 × AIM-9L Sidewinder; 2 × AGM-84A Harpoon,Empty,Empty,24940,1224,14897,544.0,41605.0,51845,10240.0
+ran_fb-111n,FB-111N,MudPig,1980,Bomber,AntiShipHeavy,4 × AGM-84A Harpoon,Empty,3 × AGM-84A Harpoon,24940,3682,14897,544.0,44063.0,51845,7782.0
+ran_fb-111n,FB-111N,MudPig,1980,Bomber,AntiShipLongRange,2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank; 2 × AGM-84A Harpoon,Empty,3 × AGM-84A Harpoon,24940,3102,18437,544.0,47023.0,51845,4822.0
+ran_fb-111n,FB-111N,MudPig,1980,Bomber,Strike,2 × AIM-9L Sidewinder; 24 × Mk 82 on six-bomb rack,Empty,3 × Mk 82 500-lb GP bomb,24940,6701.0,14897,544.0,47082.0,51845,4763.0
+ran_fb-111n,FB-111N,MudPig,1980,Bomber,StrikeLongRange,2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank; 12 × Mk 82 on six-bomb rack,Empty,3 × Mk 82 500-lb GP bomb,24940,4077.0,18437,544.0,47998.0,51845,3847.0
+ran_fb-111n,FB-111N,MudPig,1980,Bomber,StrikeHeavy,2 × AIM-9L Sidewinder; 4 × Mk 84 2000-lb GP bomb,Empty,2 × Mk 84 2000-lb GP bomb,24940,5614,14897,544.0,45995.0,51845,5850.0
+ran_fb-111n,FB-111N,MudPig,1980,Bomber,StrikeHeavyLongRange,2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank; 2 × Mk 84 2000-lb GP bomb,Empty,2 × Mk 84 2000-lb GP bomb,24940,4100,18437,544.0,48021.0,51845,3824.0
+ran_fb-111n,FB-111N,MudPig,1980,Bomber,StrikeMedium,2 × AIM-9L Sidewinder; 4 × Mk 83 1000-lb GP bomb,Empty,2 × Mk 83 1000-lb GP bomb,24940,2896,14897,544.0,43277.0,51845,8568.0
+ran_fb-111n,FB-111N,MudPig,1980,Bomber,StrikePrecision,2 × AIM-9L Sidewinder; 3 × GBU-10 Paveway II; 1 × External laser designation pod,Empty,2 × GBU-12 Paveway II,24940,3678,14897,544.0,44059.0,51845,7786.0
+ran_fb-111n,FB-111N,MudPig,1980,Bomber,StrikePrecisionLight,2 × AIM-9L Sidewinder; 3 × GBU-12 Paveway II; 1 × External laser designation pod,Empty,2 × GBU-12 Paveway II,24940,1707,14897,544.0,42088.0,51845,9757.0
+ran_fb-111n,FB-111N,MudPig,1980,Bomber,StrikePrecisionMedium,2 × AIM-9L Sidewinder; 3 × GBU-16 Paveway II; 1 × External laser designation pod,Empty,2 × GBU-12 Paveway II,24940,2361,14897,544.0,42742.0,51845,9103.0
+ran_fb-111n,FB-111N,MudPig,1980,Bomber,StrikePrecisionLongRange,2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank; 1 × GBU-10 Paveway II; 1 × External laser designation pod,Empty,2 × GBU-12 Paveway II,24940,2110,18437,544.0,46031.0,51845,5814.0
+ran_fb-111n,FB-111N,MudPig,1980,Bomber,MaverickStrike,2 × AIM-9L Sidewinder; 4 × AGM-65B Maverick,Empty,2 × AGM-65B Maverick,24940,1420,14897,544.0,41801.0,51845,10044.0
+ran_fb-111n,FB-111N,MudPig,1980,Bomber,SEAD,2 × AIM-9L Sidewinder; 4 × AGM-78 Standard ARM,Empty,Empty,24940,2652,14897,544.0,43033.0,51845,8812.0
+ran_fb-111n,FB-111N,MudPig,1980,Bomber,SEADShrike,2 × AIM-9L Sidewinder; 4 × AGM-45 Shrike,Empty,2 × AGM-45 Shrike,24940,1240,14897,544.0,41621.0,51845,10224.0
+ran_fb-111n,FB-111N,MudPig,1980,Bomber,EW,2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (1980); 1 × Naval offensive ECM pod 2 (1980),Empty,Empty,24940,992,18437,544.0,44913.0,51845,6932.0
+ran_fb-111n,FB-111N,MudPig,1980,Bomber,EWLongRange,2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (1980); 1 × Naval offensive ECM pod 2 (1980),Empty,Empty,24940,992,18437,544.0,44913.0,51845,6932.0
+ran_fb-111n,FB-111N,MudPig,1980,Bomber,EscortSEAD,2 × AIM-9L Sidewinder; 2 × AGM-78 Standard ARM; 1 × Naval offensive ECM pod 1 (1980); 1 × Naval offensive ECM pod 2 (1980),Empty,Empty,24940,1932,14897,544.0,42313.0,51845,9532.0
+ran_fb-111n,FB-111N,MudPig,1980,Bomber,ReconLongRange,2 × AIM-9L Sidewinder; 4 × 600 US-gallon fuel tank,Empty,Empty,24940,772,21977,544.0,48233.0,51845,3612.0
+ran_fb-111n,FB-111N,MudPig,1980,Bomber,AntiShipBay,2 × AIM-9L Sidewinder,Empty,3 × AGM-84A Harpoon,24940,1750,14897,544.0,42131.0,51845,9714.0
+ran_fb-111n,FB-111N,MudPig,1980,Bomber,StrikeBay,2 × AIM-9L Sidewinder,Empty,3 × Mk 82 500-lb GP bomb,24940,853,14897,544.0,41234.0,51845,10611.0
+ran_fb-111n,FB-111N,MudPig,1980,Bomber,StrikeHeavyBay,2 × AIM-9L Sidewinder,Empty,2 × Mk 84 2000-lb GP bomb,24940,1986,14897,544.0,42367.0,51845,9478.0
+ran_fb-111n,FB-111N,MudPig,1980,Bomber,StrikePrecisionBay,2 × AIM-9L Sidewinder; 1 × External laser designation pod,Empty,2 × GBU-12 Paveway II,24940,876,14897,544.0,41257.0,51845,10588.0
+ran_fb-111n,FB-111N,MudPig,1980,Bomber,FleetInterceptBay,2 × AIM-9L Sidewinder; 2 × AIM-7F Sparrow,Empty,2 × AIM-54A Phoenix,24940,1520,14897,544.0,41901.0,51845,9944.0
+ran_fb-111n,FB-111N,MudPig,1980,Bomber,AntiShipBayLongRange,2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank,Empty,3 × AGM-84A Harpoon,24940,2050,18437,544.0,45971.0,51845,5874.0
+ran_fb-111n,FB-111N,MudPig,1980,Bomber,StrikeBayLongRange,2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank,Empty,3 × Mk 82 500-lb GP bomb,24940,1153,18437,544.0,45074.0,51845,6771.0
+ran_fb-111n,FB-111N,MudPig,1980,Bomber,StrikeHeavyBayLongRange,2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank,Empty,2 × Mk 84 2000-lb GP bomb,24940,2286,18437,544.0,46207.0,51845,5638.0
+ran_fb-111n,FB-111N,MudPig,1980,Bomber,StrikePrecisionBayLongRange,2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank; 1 × External laser designation pod,Empty,2 × GBU-12 Paveway II,24940,1176,18437,544.0,45097.0,51845,6748.0
+ran_fb-111n,FB-111N,MudPig,1980,Bomber,FleetInterceptBayLongRange,2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank; 2 × AIM-7F Sparrow,Empty,2 × AIM-54A Phoenix,24940,1820,18437,544.0,45741.0,51845,6104.0
+ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,Default,2 × AIM-9M Sidewinder; 2 × AGM-84C Harpoon,Empty,Empty,25200,1224,14897,544.0,41865.0,51845,9980.0
+ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,AirToAir,4 × AIM-9M Sidewinder; 2 × AIM-7M Sparrow,Empty,Empty,25200,806,14897,544.0,41447.0,51845,10398.0
+ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,AirToAirLongRange,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 2 × AIM-54C Phoenix,Empty,Empty,25200,1398,18437,544.0,45579.0,51845,6266.0
+ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,FleetIntercept,2 × AIM-9M Sidewinder; 2 × AIM-7M Sparrow; 2 × AIM-54C Phoenix,Empty,Empty,25200,1560,14897,544.0,42201.0,51845,9644.0
+ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,AntiShip,2 × AIM-9M Sidewinder; 2 × AGM-84C Harpoon,Empty,Empty,25200,1224,14897,544.0,41865.0,51845,9980.0
+ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,AntiShipHeavy,4 × AGM-84C Harpoon,Empty,3 × AGM-84C Harpoon,25200,3682,14897,544.0,44323.0,51845,7522.0
+ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,AntiShipLongRange,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 2 × AGM-84C Harpoon,Empty,3 × AGM-84C Harpoon,25200,3102,18437,544.0,47283.0,51845,4562.0
+ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,Strike,2 × AIM-9M Sidewinder; 24 × Mk 82 on six-bomb rack,Empty,3 × Mk 82 500-lb GP bomb,25200,6701.0,14897,544.0,47342.0,51845,4503.0
+ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,StrikeLongRange,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 12 × Mk 82 on six-bomb rack,Empty,3 × Mk 82 500-lb GP bomb,25200,4077.0,18437,544.0,48258.0,51845,3587.0
+ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,StrikeHeavy,2 × AIM-9M Sidewinder; 4 × Mk 84 2000-lb GP bomb,Empty,2 × Mk 84 2000-lb GP bomb,25200,5614,14897,544.0,46255.0,51845,5590.0
+ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,StrikeHeavyLongRange,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 2 × Mk 84 2000-lb GP bomb,Empty,2 × Mk 84 2000-lb GP bomb,25200,4100,18437,544.0,48281.0,51845,3564.0
+ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,StrikeMedium,2 × AIM-9M Sidewinder; 4 × Mk 83 1000-lb GP bomb,Empty,2 × Mk 83 1000-lb GP bomb,25200,2896,14897,544.0,43537.0,51845,8308.0
+ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,StrikePrecision,2 × AIM-9M Sidewinder; 3 × GBU-10 Paveway II; 1 × External laser designation pod,Empty,2 × GBU-12 Paveway II,25200,3678,14897,544.0,44319.0,51845,7526.0
+ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,StrikePrecisionLight,2 × AIM-9M Sidewinder; 3 × GBU-12 Paveway II; 1 × External laser designation pod,Empty,2 × GBU-12 Paveway II,25200,1707,14897,544.0,42348.0,51845,9497.0
+ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,StrikePrecisionMedium,2 × AIM-9M Sidewinder; 3 × GBU-16 Paveway II; 1 × External laser designation pod,Empty,2 × GBU-12 Paveway II,25200,2361,14897,544.0,43002.0,51845,8843.0
+ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,StrikePrecisionLongRange,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 1 × GBU-10 Paveway II; 1 × External laser designation pod,Empty,2 × GBU-12 Paveway II,25200,2110,18437,544.0,46291.0,51845,5554.0
+ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,MaverickStrike,2 × AIM-9M Sidewinder; 4 × AGM-65D Maverick,Empty,2 × AGM-65D Maverick,25200,1480,14897,544.0,42121.0,51845,9724.0
+ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,SEAD,2 × AIM-9M Sidewinder; 4 × AGM-88A HARM,Empty,Empty,25200,1616,14897,544.0,42257.0,51845,9588.0
+ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,EW,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (1985); 1 × Naval offensive ECM pod 2 (1985),Empty,Empty,25200,992,18437,544.0,45173.0,51845,6672.0
+ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,EWLongRange,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (1985); 1 × Naval offensive ECM pod 2 (1985),Empty,Empty,25200,992,18437,544.0,45173.0,51845,6672.0
+ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,EscortSEAD,2 × AIM-9M Sidewinder; 2 × AGM-88A HARM; 1 × Naval offensive ECM pod 1 (1985); 1 × Naval offensive ECM pod 2 (1985),Empty,Empty,25200,1414,14897,544.0,42055.0,51845,9790.0
+ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,ReconLongRange,2 × AIM-9M Sidewinder; 4 × 600 US-gallon fuel tank,Empty,Empty,25200,772,21977,544.0,48493.0,51845,3352.0
+ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,EOGlideStrike,2 × AIM-9M Sidewinder; 2 × GBU-15 electro-optical glide bomb; 1 × EO weapon control pod,Empty,Empty,25200,2692,14897,544.0,43333.0,51845,8512.0
+ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,StrikePavewayIII,2 × AIM-9M Sidewinder; 3 × GBU-24 Paveway III; 1 × External laser designation pod,Empty,2 × GBU-12 Paveway II,25200,4128,14897,544.0,44769.0,51845,7076.0
+ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,AntiShipBay,2 × AIM-9M Sidewinder,Empty,3 × AGM-84C Harpoon,25200,1750,14897,544.0,42391.0,51845,9454.0
+ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,StrikeBay,2 × AIM-9M Sidewinder,Empty,3 × Mk 82 500-lb GP bomb,25200,853,14897,544.0,41494.0,51845,10351.0
+ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,StrikeHeavyBay,2 × AIM-9M Sidewinder,Empty,2 × Mk 84 2000-lb GP bomb,25200,1986,14897,544.0,42627.0,51845,9218.0
+ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,StrikePrecisionBay,2 × AIM-9M Sidewinder; 1 × External laser designation pod,Empty,2 × GBU-12 Paveway II,25200,876,14897,544.0,41517.0,51845,10328.0
+ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,FleetInterceptBay,2 × AIM-9M Sidewinder; 2 × AIM-7M Sparrow,Empty,2 × AIM-54C Phoenix,25200,1560,14897,544.0,42201.0,51845,9644.0
+ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,AntiShipBayLongRange,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank,Empty,3 × AGM-84C Harpoon,25200,2050,18437,544.0,46231.0,51845,5614.0
+ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,StrikeBayLongRange,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank,Empty,3 × Mk 82 500-lb GP bomb,25200,1153,18437,544.0,45334.0,51845,6511.0
+ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,StrikeHeavyBayLongRange,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank,Empty,2 × Mk 84 2000-lb GP bomb,25200,2286,18437,544.0,46467.0,51845,5378.0
+ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,StrikePrecisionBayLongRange,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 1 × External laser designation pod,Empty,2 × GBU-12 Paveway II,25200,1176,18437,544.0,45357.0,51845,6488.0
+ran_fb-111n_1985,FB-111N,MudPig,1985,Bomber,FleetInterceptBayLongRange,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 2 × AIM-7M Sparrow,Empty,2 × AIM-54C Phoenix,25200,1860,18437,544.0,46041.0,51845,5804.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,Default,2 × AIM-9M Sidewinder; 2 × AGM-84D Harpoon Block 1C,Empty,Empty,26460,1224,14897,544.0,43125.0,51845,8720.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,AirToAir,4 × AIM-9M Sidewinder; 2 × AIM-120B AMRAAM,Empty,Empty,26460,648,14897,544.0,42549.0,51845,9296.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,AirToAirLongRange,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 2 × AIM-54C Phoenix,Empty,Empty,26460,1398,18437,544.0,46839.0,51845,5006.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,FleetIntercept,2 × AIM-9M Sidewinder; 2 × AIM-120B AMRAAM; 2 × AIM-54C Phoenix,Empty,Empty,26460,1402,14897,544.0,43303.0,51845,8542.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,AntiShip,2 × AIM-9M Sidewinder; 2 × AGM-84D Harpoon Block 1C,Empty,Empty,26460,1224,14897,544.0,43125.0,51845,8720.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,AntiShipHeavy,4 × AGM-84D Harpoon Block 1C,Empty,3 × AGM-84D Harpoon Block 1C,26460,3682,14897,544.0,45583.0,51845,6262.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,AntiShipLongRange,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 2 × AGM-84D Harpoon Block 1C,Empty,3 × AGM-84D Harpoon Block 1C,26460,3102,18437,544.0,48543.0,51845,3302.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,Strike,2 × AIM-9M Sidewinder; 24 × Mk 82 on six-bomb rack,Empty,3 × Mk 82 500-lb GP bomb,26460,6701.0,14897,544.0,48602.0,51845,3243.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,StrikeLongRange,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 12 × Mk 82 on six-bomb rack,Empty,3 × Mk 82 500-lb GP bomb,26460,4077.0,18437,544.0,49518.0,51845,2327.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,StrikeHeavy,2 × AIM-9M Sidewinder; 4 × Mk 84 2000-lb GP bomb,Empty,2 × Mk 84 2000-lb GP bomb,26460,5614,14897,544.0,47515.0,51845,4330.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,StrikeHeavyLongRange,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 2 × Mk 84 2000-lb GP bomb,Empty,2 × Mk 84 2000-lb GP bomb,26460,4100,18437,544.0,49541.0,51845,2304.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,StrikeMedium,2 × AIM-9M Sidewinder; 4 × Mk 83 1000-lb GP bomb,Empty,2 × Mk 83 1000-lb GP bomb,26460,2896,14897,544.0,44797.0,51845,7048.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,StrikePrecision,2 × AIM-9M Sidewinder; 3 × GBU-10 Paveway II; 1 × External laser designation pod,Empty,2 × GBU-12 Paveway II,26460,3678,14897,544.0,45579.0,51845,6266.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,StrikePrecisionLight,2 × AIM-9M Sidewinder; 3 × GBU-12 Paveway II; 1 × External laser designation pod,Empty,2 × GBU-12 Paveway II,26460,1707,14897,544.0,43608.0,51845,8237.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,StrikePrecisionMedium,2 × AIM-9M Sidewinder; 3 × GBU-16 Paveway II; 1 × External laser designation pod,Empty,2 × GBU-12 Paveway II,26460,2361,14897,544.0,44262.0,51845,7583.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,StrikePrecisionLongRange,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 1 × GBU-10 Paveway II; 1 × External laser designation pod,Empty,2 × GBU-12 Paveway II,26460,2110,18437,544.0,47551.0,51845,4294.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,MaverickStrike,2 × AIM-9M Sidewinder; 4 × AGM-65G Maverick,Empty,2 × AGM-65G Maverick,26460,1984,14897,544.0,43885.0,51845,7960.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,SEAD,2 × AIM-9M Sidewinder; 4 × AGM-88C HARM,Empty,Empty,26460,1616,14897,544.0,43517.0,51845,8328.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,EW,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (1995); 1 × Naval offensive ECM pod 2 (1995),Empty,Empty,26460,992,18437,544.0,46433.0,51845,5412.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,EWLongRange,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (1995); 1 × Naval offensive ECM pod 2 (1995),Empty,Empty,26460,992,18437,544.0,46433.0,51845,5412.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,EscortSEAD,2 × AIM-9M Sidewinder; 2 × AGM-88C HARM; 1 × Naval offensive ECM pod 1 (1995); 1 × Naval offensive ECM pod 2 (1995),Empty,Empty,26460,1414,14897,544.0,43315.0,51845,8530.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,ReconLongRange,2 × AIM-9M Sidewinder; 4 × 600 US-gallon fuel tank,Empty,Empty,26460,772,21977,544.0,49753.0,51845,2092.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,EOGlideStrike,2 × AIM-9M Sidewinder; 2 × GBU-15 electro-optical glide bomb; 1 × EO weapon control pod,Empty,Empty,26460,2692,14897,544.0,44593.0,51845,7252.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,StrikePavewayIII,2 × AIM-9M Sidewinder; 3 × GBU-24 Paveway III; 1 × External laser designation pod,Empty,2 × GBU-12 Paveway II,26460,4128,14897,544.0,46029.0,51845,5816.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,PopeyeStrike,2 × AIM-9M Sidewinder; 2 × AGM-142 Popeye / Have Nap; 1 × EO weapon control pod,Empty,Empty,26460,3152,14897,544.0,45053.0,51845,6792.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,SLAMStrike,2 × AIM-9M Sidewinder; 2 × AGM-84E SLAM; 1 × EO weapon control pod,Empty,2 × AGM-84E SLAM,26460,2944,14897,544.0,44845.0,51845,7000.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,AntiShipBay,2 × AIM-9M Sidewinder,Empty,3 × AGM-84D Harpoon Block 1C,26460,1750,14897,544.0,43651.0,51845,8194.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,StrikeBay,2 × AIM-9M Sidewinder,Empty,3 × Mk 82 500-lb GP bomb,26460,853,14897,544.0,42754.0,51845,9091.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,StrikeHeavyBay,2 × AIM-9M Sidewinder,Empty,2 × Mk 84 2000-lb GP bomb,26460,1986,14897,544.0,43887.0,51845,7958.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,StrikePrecisionBay,2 × AIM-9M Sidewinder; 1 × External laser designation pod,Empty,2 × GBU-12 Paveway II,26460,876,14897,544.0,42777.0,51845,9068.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,FleetInterceptBay,2 × AIM-9M Sidewinder; 2 × AIM-120B AMRAAM,Empty,2 × AIM-54C Phoenix,26460,1402,14897,544.0,43303.0,51845,8542.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,AntiShipBayLongRange,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank,Empty,3 × AGM-84D Harpoon Block 1C,26460,2050,18437,544.0,47491.0,51845,4354.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,StrikeBayLongRange,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank,Empty,3 × Mk 82 500-lb GP bomb,26460,1153,18437,544.0,46594.0,51845,5251.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,StrikeHeavyBayLongRange,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank,Empty,2 × Mk 84 2000-lb GP bomb,26460,2286,18437,544.0,47727.0,51845,4118.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,StrikePrecisionBayLongRange,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 1 × External laser designation pod,Empty,2 × GBU-12 Paveway II,26460,1176,18437,544.0,46617.0,51845,5228.0
+ran_fb-111n_1995,FB-111N,MudPig,1995,Bomber,FleetInterceptBayLongRange,2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 2 × AIM-120B AMRAAM,Empty,2 × AIM-54C Phoenix,26460,1702,18437,544.0,47143.0,51845,4702.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,Default,2 × ASRAAM; 2 × AGM-84L Harpoon Block II,Empty,Empty,26975,1228,14897,544.0,43644.0,51845,8201.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,AirToAir,4 × ASRAAM; 2 × AIM-120C-5 AMRAAM,Empty,Empty,26975,656,14897,544.0,43072.0,51845,8773.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,AirToAirLongRange,2 × ASRAAM; 2 × 600 US-gallon fuel tank; 2 × AIM-54C Phoenix,Empty,Empty,26975,1402,18437,544.0,47358.0,51845,4487.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,FleetIntercept,2 × ASRAAM; 2 × AIM-120C-5 AMRAAM; 2 × AIM-54C Phoenix,Empty,Empty,26975,1406,14897,544.0,43822.0,51845,8023.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,AntiShip,2 × ASRAAM; 2 × AGM-84L Harpoon Block II,Empty,Empty,26975,1228,14897,544.0,43644.0,51845,8201.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,AntiShipHeavy,4 × AGM-84L Harpoon Block II,Empty,3 × AGM-84L Harpoon Block II,26975,3682,14897,544.0,46098.0,51845,5747.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,AntiShipLongRange,2 × ASRAAM; 2 × 600 US-gallon fuel tank; 2 × AGM-84L Harpoon Block II,Empty,3 × AGM-84L Harpoon Block II,26975,3106,18437,544.0,49062.0,51845,2783.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,Strike,2 × ASRAAM; 24 × Mk 82 on six-bomb rack,Empty,3 × Mk 82 500-lb GP bomb,26975,6705.0,14897,544.0,49121.0,51845,2724.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,StrikeLongRange,2 × ASRAAM; 2 × 600 US-gallon fuel tank; 12 × Mk 82 on six-bomb rack,Empty,3 × Mk 82 500-lb GP bomb,26975,4081.0,18437,544.0,50037.0,51845,1808.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,StrikeHeavy,2 × ASRAAM; 4 × Mk 84 2000-lb GP bomb,Empty,2 × Mk 84 2000-lb GP bomb,26975,5618,14897,544.0,48034.0,51845,3811.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,StrikeHeavyLongRange,2 × ASRAAM; 2 × 600 US-gallon fuel tank; 2 × Mk 84 2000-lb GP bomb,Empty,2 × Mk 84 2000-lb GP bomb,26975,4104,18437,544.0,50060.0,51845,1785.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,StrikeMedium,2 × ASRAAM; 4 × Mk 83 1000-lb GP bomb,Empty,2 × Mk 83 1000-lb GP bomb,26975,2900,14897,544.0,45316.0,51845,6529.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,StrikePrecision,2 × ASRAAM; 3 × GBU-10 Paveway II; 1 × External laser designation pod,Empty,2 × GBU-12 Paveway II,26975,3682,14897,544.0,46098.0,51845,5747.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,StrikePrecisionLight,2 × ASRAAM; 3 × GBU-12 Paveway II; 1 × External laser designation pod,Empty,2 × GBU-12 Paveway II,26975,1711,14897,544.0,44127.0,51845,7718.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,StrikePrecisionMedium,2 × ASRAAM; 3 × GBU-16 Paveway II; 1 × External laser designation pod,Empty,2 × GBU-12 Paveway II,26975,2365,14897,544.0,44781.0,51845,7064.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,StrikePrecisionLongRange,2 × ASRAAM; 2 × 600 US-gallon fuel tank; 1 × GBU-10 Paveway II; 1 × External laser designation pod,Empty,2 × GBU-12 Paveway II,26975,2114,18437,544.0,48070.0,51845,3775.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,MaverickStrike,2 × ASRAAM; 4 × AGM-65G Maverick,Empty,2 × AGM-65G Maverick,26975,1988,14897,544.0,44404.0,51845,7441.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,SEAD,2 × ASRAAM; 4 × AGM-88C HARM,Empty,Empty,26975,1620,14897,544.0,44036.0,51845,7809.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,EW,2 × ASRAAM; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (2003); 1 × Naval offensive ECM pod 2 (2003),Empty,Empty,26975,996,18437,544.0,46952.0,51845,4893.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,EWLongRange,2 × ASRAAM; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (2003); 1 × Naval offensive ECM pod 2 (2003),Empty,Empty,26975,996,18437,544.0,46952.0,51845,4893.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,EscortSEAD,2 × ASRAAM; 2 × AGM-88C HARM; 1 × Naval offensive ECM pod 1 (2003); 1 × Naval offensive ECM pod 2 (2003),Empty,Empty,26975,1418,14897,544.0,43834.0,51845,8011.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,ReconLongRange,2 × ASRAAM; 4 × 600 US-gallon fuel tank,Empty,Empty,26975,776,21977,544.0,50272.0,51845,1573.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,EOGlideStrike,2 × ASRAAM; 2 × GBU-15 electro-optical glide bomb; 1 × EO weapon control pod,Empty,Empty,26975,2696,14897,544.0,45112.0,51845,6733.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,StrikePavewayIII,2 × ASRAAM; 3 × GBU-24 Paveway III; 1 × External laser designation pod,Empty,2 × GBU-12 Paveway II,26975,4132,14897,544.0,46548.0,51845,5297.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,PopeyeStrike,2 × ASRAAM; 2 × AGM-142 Popeye / Have Nap; 1 × EO weapon control pod,Empty,Empty,26975,3156,14897,544.0,45572.0,51845,6273.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,SLAMStrike,2 × ASRAAM; 2 × AGM-84E SLAM; 1 × EO weapon control pod,Empty,2 × AGM-84E SLAM,26975,2948,14897,544.0,45364.0,51845,6481.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,SLAMERStrike,2 × ASRAAM; 2 × AGM-84K SLAM-ER; 1 × EO weapon control pod,Empty,Empty,26975,1786,14897,544.0,44202.0,51845,7643.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,JDAMHeavy,2 × ASRAAM; 4 × GBU-31 JDAM Mk 84,Empty,2 × GBU-31 JDAM Mk 84,26975,5726,14897,544.0,48142.0,51845,3703.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,JDAMMedium,2 × ASRAAM; 4 × GBU-32 JDAM Mk 83,Empty,2 × GBU-32 JDAM Mk 83,26975,2942,14897,544.0,45358.0,51845,6487.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,JSOWStrike,2 × ASRAAM; 4 × AGM-154A JSOW,Empty,Empty,26975,2108,14897,544.0,44524.0,51845,7321.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,AntiShipBay,2 × ASRAAM,Empty,3 × AGM-84L Harpoon Block II,26975,1754,14897,544.0,44170.0,51845,7675.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,StrikeBay,2 × ASRAAM,Empty,3 × Mk 82 500-lb GP bomb,26975,857,14897,544.0,43273.0,51845,8572.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,StrikeHeavyBay,2 × ASRAAM,Empty,2 × Mk 84 2000-lb GP bomb,26975,1990,14897,544.0,44406.0,51845,7439.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,StrikePrecisionBay,2 × ASRAAM; 1 × External laser designation pod,Empty,2 × GBU-12 Paveway II,26975,880,14897,544.0,43296.0,51845,8549.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,FleetInterceptBay,2 × ASRAAM; 2 × AIM-120C-5 AMRAAM,Empty,2 × AIM-54C Phoenix,26975,1406,14897,544.0,43822.0,51845,8023.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,JDAMBay,2 × ASRAAM,Empty,2 × GBU-32 JDAM Mk 83,26975,1098,14897,544.0,43514.0,51845,8331.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,JDAMHeavyBay,2 × ASRAAM,Empty,2 × GBU-31 JDAM Mk 84,26975,2026,14897,544.0,44442.0,51845,7403.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,AntiShipBayLongRange,2 × ASRAAM; 2 × 600 US-gallon fuel tank,Empty,3 × AGM-84L Harpoon Block II,26975,2054,18437,544.0,48010.0,51845,3835.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,StrikeBayLongRange,2 × ASRAAM; 2 × 600 US-gallon fuel tank,Empty,3 × Mk 82 500-lb GP bomb,26975,1157,18437,544.0,47113.0,51845,4732.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,StrikeHeavyBayLongRange,2 × ASRAAM; 2 × 600 US-gallon fuel tank,Empty,2 × Mk 84 2000-lb GP bomb,26975,2290,18437,544.0,48246.0,51845,3599.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,StrikePrecisionBayLongRange,2 × ASRAAM; 2 × 600 US-gallon fuel tank; 1 × External laser designation pod,Empty,2 × GBU-12 Paveway II,26975,1180,18437,544.0,47136.0,51845,4709.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,FleetInterceptBayLongRange,2 × ASRAAM; 2 × 600 US-gallon fuel tank; 2 × AIM-120C-5 AMRAAM,Empty,2 × AIM-54C Phoenix,26975,1706,18437,544.0,47662.0,51845,4183.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,JDAMBayLongRange,2 × ASRAAM; 2 × 600 US-gallon fuel tank,Empty,2 × GBU-32 JDAM Mk 83,26975,1398,18437,544.0,47354.0,51845,4491.0
+ran_fb-111n_2003,FB-111N,MudPig,2003,Bomber,JDAMHeavyBayLongRange,2 × ASRAAM; 2 × 600 US-gallon fuel tank,Empty,2 × GBU-31 JDAM Mk 84,26975,2326,18437,544.0,48282.0,51845,3563.0
 ran_rf-111n,RF-111N,SprintPig,1980,"Recon,ESM",Default,2 × AIM-9L Sidewinder; 4 × 600 US-gallon fuel tank,Empty,Empty,25350,772,21977,544.0,48643.0,51845,3202.0
 ran_rf-111n,RF-111N,SprintPig,1980,"Recon,ESM",AirToAir,2 × AIM-9L Sidewinder; 4 × 600 US-gallon fuel tank,Empty,Empty,25350,772,21977,544.0,48643.0,51845,3202.0
 ran_rf-111n,RF-111N,SprintPig,1980,"Recon,ESM",AirToAirLongRange,2 × AIM-9L Sidewinder; 4 × 600 US-gallon fuel tank,Empty,Empty,25350,772,21977,544.0,48643.0,51845,3202.0

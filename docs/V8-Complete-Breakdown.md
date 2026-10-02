@@ -1,25 +1,12 @@
 # RAN F-111N Naval Wing V8 — Complete Breakdown
 
-**1 October 2026 correction:** all 61 custom ammunition/store names now use the native AmmunitionNames table; all 16 aircraft select a local chaff dispenser with ReloadTime=0. The carrier reader accepts Windows-encoded source INIs and repairs stale elevator/taxi references using existing lift geometry. The standalone script passed 18 replacement/recovery tests; six lift-repair tests cover representative Majestic Elevator3/Elevator4 failures, route remapping, idempotence and unavailable geometry.
+Version 8 internal-bay update, 2 October 2026. Four families in four editions: 16 aircraft, 211 selectable presets and 61 local store definitions. The 167-preset V6 baseline is expanded with 44 new MudPig bay fits. Station geometry, concealment, door actions, original models and carrier/landing settings are retained. Targeting and estimated bay-upgrade mass are updated.
 
-This describes Version 8 of the completed naval programme built from the verified V6 base. Release naming, filenames, previews and Workshop metadata now use V8. Values describe the shipped game configuration, not tested real-world performance.
+Use the release installer to refresh V8. Enable it with priority over carrier mods, keep required source assets enabled and restart. Select dated aircraft in carrier air groups; unsuffixed IDs are 1980. Armed recovery and release still require in-game testing.
 
-## Scope and changes from V6
+## V8: all sixteen aircraft compared
 
-Four families in 1980, 1985, 1995 and 2003 editions: **16 aircraft, 167 selectable presets and 61 local store definitions**. Compatibility aliases can repeat inventories; 61 definitions do not mean 61 different weapons. V6 already supplied these four dated families and presets.
-
-V8 adds dated engine output, flight response/controls, climb/range improvements, local dated radar/FLIR/RWR/ELINT/ECM ratings, weapon readiness, estimated AIM-120C-5 ECCM, sixteen dated ECM aliases, explicit upgrade mass allowances, eight late grey liveries and expanded documentation. V6 role, gun, bay, model/landing and carrier contracts are retained.
-
-| Family | Main role | Configured maximum Mach | Gun / offensive EW | Presets across all years |
-|---|---|---:|---|---:|
-| F-111N WaterPig | Fleet defence/interception | 2.5 | M61, 2,000 rounds | 16 |
-| FB-111N MudPig | Maritime/land strike; all-rounder | 2.6 | M61, 2,000 rounds | 103 |
-| RF-111N SprintPig | Fast reconnaissance/ELINT | 3.0 | M61, 2,000 rounds | 24 |
-| EF-111N ScreamPig | Electronic attack/SEAD | 2.2 | 2 pods / 2 offensive ECM systems; no gun | 24 |
-
-## All sixteen aircraft compared
-
-Maximum/cruise speeds, thrust, range and response are native game settings. Range is the configured nominal Miles field, not a combat radius. Empty weights include explicit estimates for the fictional naval programme.
+Four original roles, each in four funded editions. Values below come from the shipped configuration and manifests. Empty masses and naval upgrades are estimates. Maximum/cruise Mach values are settings, not verified flight results. Range is the nominal native Miles field, not combat radius.
 
 | Aircraft | Year | Role | Empty kg | Max Mach | Cruise Mach | Range miles | AB kN/engine | Gun / rounds | Presets | Suggested fit |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -27,10 +14,10 @@ Maximum/cruise speeds, thrust, range and response are native game settings. Rang
 | F-111N WaterPig | 1985 | Fighter | 25,500 | 2.5 | 0.88 | 1,537 | 90.53 | M61 / 2,000 | 4 | FleetIntercept / AirToAirLongRange |
 | F-111N WaterPig | 1995 | Fighter | 26,750 | 2.5 | 0.92 | 1,653 | 120 | M61 / 2,000 | 4 | FleetIntercept / AirToAirLongRange |
 | F-111N WaterPig | 2003 | Fighter | 27,250 | 2.5 | 0.96 | 1,769 | 129 | M61 / 2,000 | 4 | FleetIntercept / AirToAirLongRange |
-| FB-111N MudPig | 1980 | Bomber | 24,900 | 2.6 | 0.84 | 1,550 | 82.3 | M61 / 2,000 | 23 | AntiShip / AntiShipHeavy / AntiShipLongRange |
-| FB-111N MudPig | 1985 | Bomber | 25,150 | 2.6 | 0.88 | 1,643 | 90.53 | M61 / 2,000 | 24 | AntiShip / AntiShipHeavy / AntiShipLongRange |
-| FB-111N MudPig | 1995 | Bomber | 26,400 | 2.6 | 0.92 | 1,767 | 120 | M61 / 2,000 | 26 | AntiShip / AntiShipHeavy / AntiShipLongRange |
-| FB-111N MudPig | 2003 | Bomber | 26,900 | 2.6 | 0.96 | 1,891 | 129 | M61 / 2,000 | 30 | AntiShip / AntiShipHeavy / AntiShipLongRange |
+| FB-111N MudPig | 1980 | Bomber | 24,940 | 2.6 | 0.84 | 1,550 | 82.3 | M61 / 2,000 | 33 | AntiShipHeavy / StrikeBay / FleetInterceptBay |
+| FB-111N MudPig | 1985 | Bomber | 25,200 | 2.6 | 0.88 | 1,643 | 90.53 | M61 / 2,000 | 34 | AntiShipHeavy / StrikeBay / FleetInterceptBay |
+| FB-111N MudPig | 1995 | Bomber | 26,460 | 2.6 | 0.92 | 1,767 | 120 | M61 / 2,000 | 36 | AntiShipHeavy / StrikeBay / FleetInterceptBay |
+| FB-111N MudPig | 2003 | Bomber | 26,975 | 2.6 | 0.96 | 1,891 | 129 | M61 / 2,000 | 44 | AntiShipHeavy / StrikeBay / FleetInterceptBay |
 | RF-111N SprintPig | 1980 | Recon,ESM | 25,350 | 3.0 | 2.52 | 2,300 | 480 | M61 / 2,000 | 6 | ReconFast / ReconLongRange |
 | RF-111N SprintPig | 1985 | Recon,ESM | 25,650 | 3.0 | 2.52 | 2,438 | 528 | M61 / 2,000 | 6 | ReconFast / ReconLongRange |
 | RF-111N SprintPig | 1995 | Recon,ESM | 27,000 | 3.0 | 2.52 | 2,622 | 600 | M61 / 2,000 | 6 | ReconFast / ReconLongRange |
@@ -40,20 +27,13 @@ Maximum/cruise speeds, thrust, range and response are native game settings. Rang
 | EF-111N ScreamPig | 1995 | EW,ESM | 29,750 | 2.2 | 0.92 | 1,938 | 120 | None | 6 | EWLongRange / EscortSEAD |
 | EF-111N ScreamPig | 2003 | EW,ESM | 30,250 | 2.2 | 0.96 | 2,074 | 129 | None | 6 | EWLongRange / EscortSEAD |
 
-## Editions, service dates and weapons
+RF uses its explicit fictional Mach 3 propulsion package and triple WaterPig velocity/thrust gains for the same year. FB carries the other families' period weapon types, while F/RF/EF preserve specialised roles. EF always has two physical ECM pods and two offensive systems; FB receives removable offensive ECM only in its EW fits.
 
-| Edition | Service gate | Presets | Air-to-air | Harpoon | Strike/SEAD additions |
-|---|---|---:|---|---|---|
-| 1980 | 1980–1984 | 39 | AIM-9L, AIM-7F, AIM-54A | AGM-84A | Mk 82/83/84, Paveway II, Maverick B, Shrike, Standard ARM |
-| 1985 | 1985–1994 | 40 | AIM-9M, AIM-7M, AIM-54C | AGM-84C | Maverick D, HARM A, GBU-15, Paveway III |
-| 1995 | 1995–2002 | 42 | AIM-9M, AIM-120B, AIM-54C | AGM-84D | Maverick G, HARM C, Popeye, SLAM |
-| 2003 | 2003–2050 | 46 | ASRAAM, AIM-120C-5, AIM-54C | AGM-84L Block II | SLAM-ER, GBU-31/32 JDAM, AGM-154A JSOW |
+The 211 selectable preset names include compatible Default/mission aliases with repeated inventories. Counts by year are 49 / 50 / 52 / 60. Service gates are 1980–1984, 1985–1994, 1995–2002 and 2003–2050. Unsuffixed aircraft IDs select 1980.
 
-Later MudPig editions retain earlier bombing options. These choices assume funded Australian procurement and integration, including accelerated early adoption. They do not assert actual historical Australian service, export approval or F-111 certification. The exact inventories of all presets follow below.
+[Complete loadouts and weight budgets](../COMPLETE_BREAKDOWN_V8.md) · [Internal bay](INTERNAL_BAY_V8.md) · [Investment details](INVESTMENT_PROGRAMME.md) · [Release notes](../RELEASE_NOTES_V8.md)
 
-Unsuffixed IDs are the 1980 aircraft. Later IDs end `_1985`, `_1995` or `_2003`. Saved missions using an old unsuffixed ID select 1980 equipment; choose a later edition to use its newer equipment.
-
-## Funded propulsion, flight and mission-system investment
+## V8 Australian investment programme
 
 Every edition assumes heavy Australian funding for naval conversion, propulsion, flight controls, weapons integration, targeting and EW. Native settings improve by year. They are hypothetical programme ratings, not measured historical N-family performance.
 
@@ -99,67 +79,208 @@ F uses AWG-9 donor geometry/settings, labelled as a hypothetical APG-71-class di
 
 RF keeps Mach 2.52 cruise and Mach 3 maximum throughout. VelocityGain and ThrustGain stay three times WaterPig's matching edition, with the same dated improvement factor. This is not triple maximum airspeed. Use ReconFast, independent orders and appropriate altitude for a sprint; actual AI flight needs runtime testing.
 
-These upgrades improve native settings and retain original cockpit/model geometry. No new interactive digital cockpit, custom flight DLL or independently calibrated sensor simulation is added.
+GE's historical status report supplies the 120 kN F110-GE-400 and 129 kN F110-GE-129 afterburning classes, available before the assigned editions. F-111 adaptation, installed dry thrust, TF30 uprating, mass allowances, thermal upgrades and control/sensor ratings are estimates. [GE reference](https://www.geaerospace.com/news/press-releases/defense-engines/ge-aircraft-engines-military-engine-status-report). The RF package is entirely fictional.
 
-## Bay, guns and pylons
+[Aircraft comparison](AIRCRAFT_COMPARISON.md) · [Full mass/loadout breakdown](../COMPLETE_BREAKDOWN_V8.md)
 
-The retained FB three-station bay, concealment and door animations are unchanged. AntiShip carries two wing Harpoons and two IR missiles with an empty bay. AntiShipHeavy carries four wing and three bay Harpoons. AntiShipLongRange carries two wing and three bay Harpoons, two IR missiles and two tanks. All variants follow the edition.
+## V8 MudPig internal bay and armed carrier recovery
 
-F/FB/RF retain a forward M61 with 2,000 rounds. Its separate fictional installation does not use a bay or pylon station. EF has no gun and retains exactly two physical pylon ECM pods and two offensive ECM systems. FB receives two removable pods only in EW fits. External laser-designation and EO-control pods are counted in station and mass budgets.
+Version 8 retains three physical stations, original concealment and the Bay_Open/Bay_Close door actions. Bay targeting now includes the dedicated Phoenix controller. Single-store suspension adapters offset Phoenix 10 cm rearward and Shrike 50 cm rearward to accommodate their native origin/collider envelopes. The supplied carrier configuration has no condition requiring an empty bay for launch or recovery. Actual armed recovery has not been runtime-tested.
 
-## Liveries
+### Investment and capacity
 
-Eight dedicated 1995/2003 3072 × 2048 maps use USN-inspired darker upper/intermediate side/light underside tactical greys with Australian roundels, NAVY lettering, A8 serials, flying-pig badges and subdued checks. Fuel tanks and selection profiles match; 2003 adds modest wear. Main lettering was checked on both sides of rendered aircraft. Original UVs, alpha, protected cockpit/mechanical pixels, normal/specular maps, earlier liveries, meshes and landing animations are retained. The colours are screen approximations, not certified paint standards.
+Real Australian F-111 investment included Pave Tack/Harpoon and the Avionics Update Program. These naval bay integrations extend that history within the hypothetical Naval Wing programme; they are not historical F-111 certifications. Estimated adapters and interfaces add 40/50/60/75 kg to MudPig empty mass for 1980/1985/1995/2003. Bay readiness improves to 30/25/20/15 seconds with the existing dated programme. External designation/control pods leave the bay available.
 
-## Carrier installation and use
+| Internal store | Maximum selected | Editions |
+|---|---|---|
+| Mk 82 | 3 | All |
+| Harpoon | 3 | All; edition-specific missile |
+| Mk 83 / Mk 84 | 2 | All |
+| GBU-12 | 2 | All; external laser pod |
+| Maverick | 2 | All; edition-specific seeker |
+| Phoenix | 2 | All; dedicated air-targeting controller |
+| Shrike | 2 | 1980 Shrike fit |
+| SLAM | 2 | 1995 / 2003; external control pod |
+| GBU-31 / GBU-32 JDAM | 2 | 2003 only |
 
-All sixteen IDs retain carrier capability. The release installer creates source-preserving overrides for discovered installed stock, RAN and custom decks, including the retained fictional helicopter-deck arrested-recovery conversion. Existing air groups and helicopter/VTOL approaches are preserved. Select the dated aircraft in the carrier air group manually. This configuration does not prove successful recovery on every installed carrier.
+These are bounded, estimated integrations in the existing model. The three-Harpoon fit remains a fictional design requirement. No internal MER racks or stacked ammunition are added. Popeye, SLAM-ER and JSOW stay external; their shipped deployed-wing models and integration are not qualified for these internal stations. Larger Paveway/EO bombs stay external while smaller GBU-12s supplement precision fits.
 
-On CachyOS/Linux, close the game, extract the complete release ZIP and run `bash install-ran-f111n.sh` from its V8 folder. An optional first argument specifies the Sea Power install path. Enable V8, disable older Naval Wing copies, give V8 priority over carrier mods, keep source carrier mods enabled for assets and restart. Rerun after carrier-mod updates. For Windows/manual installation, use the included `carrier_compatibility.py` and the release README instructions.
+### New bay mission presets
 
-For RF sprint, use `ReconFast` and independent orders above 37,000 ft; a formation leader can limit speed. Mach settings do not force the AI to hold that airspeed.
+Each listed preset has a LongRange companion with two external fuel tanks. Offensive strike stores are internal; defensive IR missiles, tanks and the precision designation pod remain external. FleetInterceptBay also carries external BVR missiles.
 
-## Validation and limits
+| Preset | Internal stores | Editions |
+|---|---|---|
+| AntiShipBay | 3 Harpoons | All |
+| StrikeBay | 3 Mk 82 | All |
+| StrikeHeavyBay | 2 Mk 84 | All |
+| StrikePrecisionBay | 2 GBU-12 | All |
+| FleetInterceptBay | 2 Phoenix | All |
+| JDAMBay | 2 GBU-32 | 2003 |
+| JDAMHeavyBay | 2 GBU-31 | 2003 |
 
-| Check | Status | Count |
-|---|---|---:|
-| Mod data, mass, stores, sensors and retained design | PASS | 32,093 |
-| Carrier/installer fixtures | PASS | 2,243 |
-| New late-edition texture audits | PASS | 8 |
-| Runtime flight, weapons and landings | Not tested | — |
+### Every loaded-bay fit and mass budget
 
-Carrier tests use native and representative RAN/custom fixtures; they are not a test of every carrier in the user’s installation. Gun fire, guidance/release, Mach 3 flight, ECM display, date filtering and actual carrier landings still need Sea Power runtime testing.
+| Edition | Preset | Internal bay | Full-fuel takeoff kg | Reference margin kg |
+|---|---|---|---|---|
+| 1980 | AntiShipHeavy | 3 × AGM-84A Harpoon | 44,063 | 7,782 |
+| 1980 | AntiShipLongRange | 3 × AGM-84A Harpoon | 47,023 | 4,822 |
+| 1980 | Strike | 3 × Mk 82 500-lb GP bomb | 47,082 | 4,763 |
+| 1980 | StrikeLongRange | 3 × Mk 82 500-lb GP bomb | 47,998 | 3,847 |
+| 1980 | StrikeHeavy | 2 × Mk 84 2000-lb GP bomb | 45,995 | 5,850 |
+| 1980 | StrikeHeavyLongRange | 2 × Mk 84 2000-lb GP bomb | 48,021 | 3,824 |
+| 1980 | StrikeMedium | 2 × Mk 83 1000-lb GP bomb | 43,277 | 8,568 |
+| 1980 | StrikePrecision | 2 × GBU-12 Paveway II | 44,059 | 7,786 |
+| 1980 | StrikePrecisionLight | 2 × GBU-12 Paveway II | 42,088 | 9,757 |
+| 1980 | StrikePrecisionMedium | 2 × GBU-12 Paveway II | 42,742 | 9,103 |
+| 1980 | StrikePrecisionLongRange | 2 × GBU-12 Paveway II | 46,031 | 5,814 |
+| 1980 | MaverickStrike | 2 × AGM-65B Maverick | 41,801 | 10,044 |
+| 1980 | SEADShrike | 2 × AGM-45 Shrike | 41,621 | 10,224 |
+| 1980 | AntiShipBay | 3 × AGM-84A Harpoon | 42,131 | 9,714 |
+| 1980 | StrikeBay | 3 × Mk 82 500-lb GP bomb | 41,234 | 10,611 |
+| 1980 | StrikeHeavyBay | 2 × Mk 84 2000-lb GP bomb | 42,367 | 9,478 |
+| 1980 | StrikePrecisionBay | 2 × GBU-12 Paveway II | 41,257 | 10,588 |
+| 1980 | FleetInterceptBay | 2 × AIM-54A Phoenix | 41,901 | 9,944 |
+| 1980 | AntiShipBayLongRange | 3 × AGM-84A Harpoon | 45,971 | 5,874 |
+| 1980 | StrikeBayLongRange | 3 × Mk 82 500-lb GP bomb | 45,074 | 6,771 |
+| 1980 | StrikeHeavyBayLongRange | 2 × Mk 84 2000-lb GP bomb | 46,207 | 5,638 |
+| 1980 | StrikePrecisionBayLongRange | 2 × GBU-12 Paveway II | 45,097 | 6,748 |
+| 1980 | FleetInterceptBayLongRange | 2 × AIM-54A Phoenix | 45,741 | 6,104 |
+| 1985 | AntiShipHeavy | 3 × AGM-84C Harpoon | 44,323 | 7,522 |
+| 1985 | AntiShipLongRange | 3 × AGM-84C Harpoon | 47,283 | 4,562 |
+| 1985 | Strike | 3 × Mk 82 500-lb GP bomb | 47,342 | 4,503 |
+| 1985 | StrikeLongRange | 3 × Mk 82 500-lb GP bomb | 48,258 | 3,587 |
+| 1985 | StrikeHeavy | 2 × Mk 84 2000-lb GP bomb | 46,255 | 5,590 |
+| 1985 | StrikeHeavyLongRange | 2 × Mk 84 2000-lb GP bomb | 48,281 | 3,564 |
+| 1985 | StrikeMedium | 2 × Mk 83 1000-lb GP bomb | 43,537 | 8,308 |
+| 1985 | StrikePrecision | 2 × GBU-12 Paveway II | 44,319 | 7,526 |
+| 1985 | StrikePrecisionLight | 2 × GBU-12 Paveway II | 42,348 | 9,497 |
+| 1985 | StrikePrecisionMedium | 2 × GBU-12 Paveway II | 43,002 | 8,843 |
+| 1985 | StrikePrecisionLongRange | 2 × GBU-12 Paveway II | 46,291 | 5,554 |
+| 1985 | MaverickStrike | 2 × AGM-65D Maverick | 42,121 | 9,724 |
+| 1985 | StrikePavewayIII | 2 × GBU-12 Paveway II | 44,769 | 7,076 |
+| 1985 | AntiShipBay | 3 × AGM-84C Harpoon | 42,391 | 9,454 |
+| 1985 | StrikeBay | 3 × Mk 82 500-lb GP bomb | 41,494 | 10,351 |
+| 1985 | StrikeHeavyBay | 2 × Mk 84 2000-lb GP bomb | 42,627 | 9,218 |
+| 1985 | StrikePrecisionBay | 2 × GBU-12 Paveway II | 41,517 | 10,328 |
+| 1985 | FleetInterceptBay | 2 × AIM-54C Phoenix | 42,201 | 9,644 |
+| 1985 | AntiShipBayLongRange | 3 × AGM-84C Harpoon | 46,231 | 5,614 |
+| 1985 | StrikeBayLongRange | 3 × Mk 82 500-lb GP bomb | 45,334 | 6,511 |
+| 1985 | StrikeHeavyBayLongRange | 2 × Mk 84 2000-lb GP bomb | 46,467 | 5,378 |
+| 1985 | StrikePrecisionBayLongRange | 2 × GBU-12 Paveway II | 45,357 | 6,488 |
+| 1985 | FleetInterceptBayLongRange | 2 × AIM-54C Phoenix | 46,041 | 5,804 |
+| 1995 | AntiShipHeavy | 3 × AGM-84D Harpoon Block 1C | 45,583 | 6,262 |
+| 1995 | AntiShipLongRange | 3 × AGM-84D Harpoon Block 1C | 48,543 | 3,302 |
+| 1995 | Strike | 3 × Mk 82 500-lb GP bomb | 48,602 | 3,243 |
+| 1995 | StrikeLongRange | 3 × Mk 82 500-lb GP bomb | 49,518 | 2,327 |
+| 1995 | StrikeHeavy | 2 × Mk 84 2000-lb GP bomb | 47,515 | 4,330 |
+| 1995 | StrikeHeavyLongRange | 2 × Mk 84 2000-lb GP bomb | 49,541 | 2,304 |
+| 1995 | StrikeMedium | 2 × Mk 83 1000-lb GP bomb | 44,797 | 7,048 |
+| 1995 | StrikePrecision | 2 × GBU-12 Paveway II | 45,579 | 6,266 |
+| 1995 | StrikePrecisionLight | 2 × GBU-12 Paveway II | 43,608 | 8,237 |
+| 1995 | StrikePrecisionMedium | 2 × GBU-12 Paveway II | 44,262 | 7,583 |
+| 1995 | StrikePrecisionLongRange | 2 × GBU-12 Paveway II | 47,551 | 4,294 |
+| 1995 | MaverickStrike | 2 × AGM-65G Maverick | 43,885 | 7,960 |
+| 1995 | StrikePavewayIII | 2 × GBU-12 Paveway II | 46,029 | 5,816 |
+| 1995 | SLAMStrike | 2 × AGM-84E SLAM | 44,845 | 7,000 |
+| 1995 | AntiShipBay | 3 × AGM-84D Harpoon Block 1C | 43,651 | 8,194 |
+| 1995 | StrikeBay | 3 × Mk 82 500-lb GP bomb | 42,754 | 9,091 |
+| 1995 | StrikeHeavyBay | 2 × Mk 84 2000-lb GP bomb | 43,887 | 7,958 |
+| 1995 | StrikePrecisionBay | 2 × GBU-12 Paveway II | 42,777 | 9,068 |
+| 1995 | FleetInterceptBay | 2 × AIM-54C Phoenix | 43,303 | 8,542 |
+| 1995 | AntiShipBayLongRange | 3 × AGM-84D Harpoon Block 1C | 47,491 | 4,354 |
+| 1995 | StrikeBayLongRange | 3 × Mk 82 500-lb GP bomb | 46,594 | 5,251 |
+| 1995 | StrikeHeavyBayLongRange | 2 × Mk 84 2000-lb GP bomb | 47,727 | 4,118 |
+| 1995 | StrikePrecisionBayLongRange | 2 × GBU-12 Paveway II | 46,617 | 5,228 |
+| 1995 | FleetInterceptBayLongRange | 2 × AIM-54C Phoenix | 47,143 | 4,702 |
+| 2003 | AntiShipHeavy | 3 × AGM-84L Harpoon Block II | 46,098 | 5,747 |
+| 2003 | AntiShipLongRange | 3 × AGM-84L Harpoon Block II | 49,062 | 2,783 |
+| 2003 | Strike | 3 × Mk 82 500-lb GP bomb | 49,121 | 2,724 |
+| 2003 | StrikeLongRange | 3 × Mk 82 500-lb GP bomb | 50,037 | 1,808 |
+| 2003 | StrikeHeavy | 2 × Mk 84 2000-lb GP bomb | 48,034 | 3,811 |
+| 2003 | StrikeHeavyLongRange | 2 × Mk 84 2000-lb GP bomb | 50,060 | 1,785 |
+| 2003 | StrikeMedium | 2 × Mk 83 1000-lb GP bomb | 45,316 | 6,529 |
+| 2003 | StrikePrecision | 2 × GBU-12 Paveway II | 46,098 | 5,747 |
+| 2003 | StrikePrecisionLight | 2 × GBU-12 Paveway II | 44,127 | 7,718 |
+| 2003 | StrikePrecisionMedium | 2 × GBU-12 Paveway II | 44,781 | 7,064 |
+| 2003 | StrikePrecisionLongRange | 2 × GBU-12 Paveway II | 48,070 | 3,775 |
+| 2003 | MaverickStrike | 2 × AGM-65G Maverick | 44,404 | 7,441 |
+| 2003 | StrikePavewayIII | 2 × GBU-12 Paveway II | 46,548 | 5,297 |
+| 2003 | SLAMStrike | 2 × AGM-84E SLAM | 45,364 | 6,481 |
+| 2003 | JDAMHeavy | 2 × GBU-31 JDAM Mk 84 | 48,142 | 3,703 |
+| 2003 | JDAMMedium | 2 × GBU-32 JDAM Mk 83 | 45,358 | 6,487 |
+| 2003 | AntiShipBay | 3 × AGM-84L Harpoon Block II | 44,170 | 7,675 |
+| 2003 | StrikeBay | 3 × Mk 82 500-lb GP bomb | 43,273 | 8,572 |
+| 2003 | StrikeHeavyBay | 2 × Mk 84 2000-lb GP bomb | 44,406 | 7,439 |
+| 2003 | StrikePrecisionBay | 2 × GBU-12 Paveway II | 43,296 | 8,549 |
+| 2003 | FleetInterceptBay | 2 × AIM-54C Phoenix | 43,822 | 8,023 |
+| 2003 | JDAMBay | 2 × GBU-32 JDAM Mk 83 | 43,514 | 8,331 |
+| 2003 | JDAMHeavyBay | 2 × GBU-31 JDAM Mk 84 | 44,442 | 7,403 |
+| 2003 | AntiShipBayLongRange | 3 × AGM-84L Harpoon Block II | 48,010 | 3,835 |
+| 2003 | StrikeBayLongRange | 3 × Mk 82 500-lb GP bomb | 47,113 | 4,732 |
+| 2003 | StrikeHeavyBayLongRange | 2 × Mk 84 2000-lb GP bomb | 48,246 | 3,599 |
+| 2003 | StrikePrecisionBayLongRange | 2 × GBU-12 Paveway II | 47,136 | 4,709 |
+| 2003 | FleetInterceptBayLongRange | 2 × AIM-54C Phoenix | 47,662 | 4,183 |
+| 2003 | JDAMBayLongRange | 2 × GBU-32 JDAM Mk 83 | 47,354 | 4,491 |
+| 2003 | JDAMHeavyBayLongRange | 2 × GBU-31 JDAM Mk 84 | 48,282 | 3,563 |
 
-Native guidance limits: AMRAAM has no platform midcourse correction; ASRAAM adds no helmet sight/LOAL; EO weapons add no manual retargeting; Block II Harpoon models ship attack; JDAM/JSOW use native CEP/ballistic/glide approximations rather than full GPS/INS. Naval conversion, relocated gun, three-Harpoon bay, RF propulsion and small-deck recovery remain alternate history.
+### Armed recovery test in Sea Power
 
-## Every preset, store and mass budget
+1. Enable the refreshed V8 and required carrier/source mods, then restart. Use the 2003 MudPig on a stock catapult carrier first.
+2. Select StrikeHeavyBay (two internal Mk 84s), launch, issue independent flight orders and return without firing. Check approach, bay doors, touchdown and deck recovery.
+3. Repeat with AntiShipBay, FleetInterceptBay, StrikePrecisionBay and JDAMHeavyBay; then check the generated RAN carrier overrides.
+4. Test weapon release separately. Check that doors open for release, close afterwards and do not interfere with landing gear.
 
-Generated from the shipped INIs and manifests. All 16 aircraft, all 167 selectable presets and all 61 local store definitions are listed. Compatible aliases may carry identical stores. Values are rounded carried-mass budgets; fictional naval equipment and retrofit allowances are explicit.
+All budgets include full internal fuel, every carried store, external tank fuel and gun ammunition. The 51,845 kg reference is a takeoff budget, not an arrestor/catapult or maximum carrier-landing limit. A real recovery assessment must account for fuel and the carrier's arresting limits. Native collider/local-mesh envelopes are checked against the closed-door horizontal footprint for the additional weapon types. This coarse check does not establish three-dimensional packing or release clearance; the retained three-Harpoon fit remains a fictional requirement. Static configuration checks cannot certify armed recovery or release clearance.
 
-## Empty mass components
+[Real RAAF upgrades](https://www.airforce.gov.au/sites/default/files/2023-07/F111%20A8-142.pdf) · [Every loadout](../COMPLETE_BREAKDOWN_V8.md)
 
-The basic reference is 23,300 kg F-111C. The retained fictional bay is not re-engineered. Every version has 14,897 kg internal fuel; tank fuel and M61 ammunition are separate from empty mass.
+## V8 release notes
 
-| Aircraft | Year | Basic reference kg | Naval kg | Role kg | Gun hardware kg | Edition avionics kg | Systems/controls kg | Propulsion kg | RF thermal kg | Total kg |
-|---|---|---|---|---|---|---|---|---|---|---|
-| F-111N | 1980 | 23,300 | 950 | 350 | 650 | 0 | 0 | 0 | 0 | 25,250 |
-| F-111N | 1985 | 23,300 | 950 | 350 | 650 | 100 | 150 | 0 | 0 | 25,500 |
-| F-111N | 1995 | 23,300 | 950 | 350 | 650 | 250 | 650 | 600 | 0 | 26,750 |
-| F-111N | 2003 | 23,300 | 950 | 350 | 650 | 400 | 850 | 750 | 0 | 27,250 |
-| FB-111N | 1980 | 23,300 | 950 | 0 | 650 | 0 | 0 | 0 | 0 | 24,900 |
-| FB-111N | 1985 | 23,300 | 950 | 0 | 650 | 100 | 150 | 0 | 0 | 25,150 |
-| FB-111N | 1995 | 23,300 | 950 | 0 | 650 | 250 | 650 | 600 | 0 | 26,400 |
-| FB-111N | 2003 | 23,300 | 950 | 0 | 650 | 400 | 850 | 750 | 0 | 26,900 |
-| RF-111N | 1980 | 23,300 | 950 | 450 | 650 | 0 | 0 | 0 | 0 | 25,350 |
-| RF-111N | 1985 | 23,300 | 950 | 450 | 650 | 100 | 150 | 0 | 50 | 25,650 |
-| RF-111N | 1995 | 23,300 | 950 | 450 | 650 | 250 | 650 | 600 | 150 | 27,000 |
-| RF-111N | 2003 | 23,300 | 950 | 450 | 650 | 400 | 850 | 750 | 250 | 27,600 |
-| EF-111N | 1980 | 23,300 | 950 | 4,000 | 0 | 0 | 0 | 0 | 0 | 28,250 |
-| EF-111N | 1985 | 23,300 | 950 | 4,000 | 0 | 100 | 150 | 0 | 0 | 28,500 |
-| EF-111N | 1995 | 23,300 | 950 | 4,000 | 0 | 250 | 650 | 600 | 0 | 29,750 |
-| EF-111N | 2003 | 23,300 | 950 | 4,000 | 0 | 400 | 850 | 750 | 0 | 30,250 |
+Version 8 internal-bay update: sixteen aircraft and 211 selectable presets, including 44 new MudPig bay mission fits. Existing bombing/precision/Maverick/SLAM/JDAM fits receive additional internal stores. Dated Australian investment and eight USN-inspired late liveries are retained. Original role/model/bay-station/landing contracts and M61/ECM/carrier arrangements remain. Native modern-weapon approximations and explicit hypothetical naval masses are documented.
 
-## Budget rules
+| Verification | Status | Checks/maps |
+|---|---|---|
+| VALIDATION.json | PASS | 35186 |
+| CARRIER_VALIDATION.json | PASS | 2243 |
+| USN_TEXTURE_VALIDATION.json | PASS | 8 |
+
+Heaviest full-fuel budget: ran_rf-111n_2003 / ReconLongRange at 50,897 kg, margin 948 kg. Python compilation and installer shell syntax are checked separately. ZIP integrity and SHA-256 are supplied with the package.
+
+Carrier validation uses native and representative RAN/custom deck fixtures, not the user's exact installed RAN carriers. Installation checks cover staging, backups, source preservation and idempotence. Preview images render the shipped assets and omit stock weapon meshes unavailable outside the game.
+
+**Runtime tested: no.** Sea Power is not installed here. Actual gun fire, guidance/release, date filtering, Mach 3 flight, ECM display and landings require in-game verification. No new DLL, interactive cockpit, real GPS weapon simulation or real carrier certification is claimed.
+
+The README, all-aircraft/system comparisons, every loadout/mass breakdown, CSV/JSON data, references, Steam description, credits, authoring sources and validation reports are included. GitHub publication is separate from this downloadable release.
+
+## V8 complete aircraft, loadout and mass breakdown
+
+Generated from the shipped INIs and manifests. All 16 aircraft, all 211 selectable presets and all 61 local store definitions are listed. Compatible aliases may carry identical stores. Values are rounded carried-mass budgets; fictional naval equipment and retrofit allowances are explicit.
+
+### Empty mass components
+
+The basic reference is 23,300 kg F-111C. Bay station/door geometry is retained; MudPig multistore adapters and interfaces receive explicit estimated mass allowances of 40/50/60/75 kg. Every version has 14,897 kg internal fuel; tank fuel and M61 ammunition are separate from empty mass.
+
+| Aircraft | Year | Basic reference kg | Naval kg | Role kg | Gun hardware kg | Edition avionics kg | Bay upgrade kg | Systems/controls kg | Propulsion kg | RF thermal kg | Total kg |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| F-111N | 1980 | 23,300 | 950 | 350 | 650 | 0 | 0 | 0 | 0 | 0 | 25,250 |
+| F-111N | 1985 | 23,300 | 950 | 350 | 650 | 100 | 0 | 150 | 0 | 0 | 25,500 |
+| F-111N | 1995 | 23,300 | 950 | 350 | 650 | 250 | 0 | 650 | 600 | 0 | 26,750 |
+| F-111N | 2003 | 23,300 | 950 | 350 | 650 | 400 | 0 | 850 | 750 | 0 | 27,250 |
+| FB-111N | 1980 | 23,300 | 950 | 0 | 650 | 0 | 40 | 0 | 0 | 0 | 24,940 |
+| FB-111N | 1985 | 23,300 | 950 | 0 | 650 | 100 | 50 | 150 | 0 | 0 | 25,200 |
+| FB-111N | 1995 | 23,300 | 950 | 0 | 650 | 250 | 60 | 650 | 600 | 0 | 26,460 |
+| FB-111N | 2003 | 23,300 | 950 | 0 | 650 | 400 | 75 | 850 | 750 | 0 | 26,975 |
+| RF-111N | 1980 | 23,300 | 950 | 450 | 650 | 0 | 0 | 0 | 0 | 0 | 25,350 |
+| RF-111N | 1985 | 23,300 | 950 | 450 | 650 | 100 | 0 | 150 | 0 | 50 | 25,650 |
+| RF-111N | 1995 | 23,300 | 950 | 450 | 650 | 250 | 0 | 650 | 600 | 150 | 27,000 |
+| RF-111N | 2003 | 23,300 | 950 | 450 | 650 | 400 | 0 | 850 | 750 | 250 | 27,600 |
+| EF-111N | 1980 | 23,300 | 950 | 4,000 | 0 | 0 | 0 | 0 | 0 | 0 | 28,250 |
+| EF-111N | 1985 | 23,300 | 950 | 4,000 | 0 | 100 | 0 | 150 | 0 | 0 | 28,500 |
+| EF-111N | 1995 | 23,300 | 950 | 4,000 | 0 | 250 | 0 | 650 | 600 | 0 | 29,750 |
+| EF-111N | 2003 | 23,300 | 950 | 4,000 | 0 | 400 | 0 | 850 | 750 | 0 | 30,250 |
+
+### Budget rules
 
 - Each 600-US-gallon tank: 1,770 kg fuel plus estimated 150 kg dry shell. Two tanks give 18,437 kg total fuel; four give 21,977 kg.
 - Fixed M61 hardware/feed/housing allowance: 650 kg within F/FB/RF empty mass. Loaded 2,000-round magazine: another 544 kg. EF has no gun.
@@ -167,7 +288,7 @@ The basic reference is 23,300 kg F-111C. The retained fictional bay is not re-en
 - Full-fuel takeoff budget = empty mass + dry stores/rack allowances + internal/external fuel + gun ammunition.
 - Every preset is checked against the 51,845 kg F-111C reference maximum. This is not a carrier catapult/arrestor certification.
 
-## F-111N WaterPig — 1980
+### F-111N WaterPig — 1980
 
 ID: `ran_f-111n`. Role: Fighter. Empty: 25,250 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.5; cruise Mach: 0.84.
 
@@ -178,7 +299,7 @@ ID: `ran_f-111n`. Role: Fighter. Empty: 25,250 kg. Internal fuel: 14,897 kg. Gun
 | AirToAirLongRange | 2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank | 2 × AIM-54A Phoenix | Empty | 1,358 | 18,437 | 45,589 | 6,256 |
 | FleetIntercept | 2 × AIM-9L Sidewinder; 2 × AIM-7F Sparrow | 2 × AIM-54A Phoenix | Empty | 1,520 | 14,897 | 42,211 | 9,634 |
 
-## F-111N WaterPig — 1985
+### F-111N WaterPig — 1985
 
 ID: `ran_f-111n_1985`. Role: Fighter. Empty: 25,500 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.5; cruise Mach: 0.88.
 
@@ -189,7 +310,7 @@ ID: `ran_f-111n_1985`. Role: Fighter. Empty: 25,500 kg. Internal fuel: 14,897 kg
 | AirToAirLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank | 2 × AIM-54C Phoenix | Empty | 1,398 | 18,437 | 45,879 | 5,966 |
 | FleetIntercept | 2 × AIM-9M Sidewinder; 2 × AIM-7M Sparrow | 2 × AIM-54C Phoenix | Empty | 1,560 | 14,897 | 42,501 | 9,344 |
 
-## F-111N WaterPig — 1995
+### F-111N WaterPig — 1995
 
 ID: `ran_f-111n_1995`. Role: Fighter. Empty: 26,750 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.5; cruise Mach: 0.92.
 
@@ -200,7 +321,7 @@ ID: `ran_f-111n_1995`. Role: Fighter. Empty: 26,750 kg. Internal fuel: 14,897 kg
 | AirToAirLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank | 2 × AIM-54C Phoenix | Empty | 1,398 | 18,437 | 47,129 | 4,716 |
 | FleetIntercept | 2 × AIM-9M Sidewinder; 2 × AIM-120B AMRAAM | 2 × AIM-54C Phoenix | Empty | 1,402 | 14,897 | 43,593 | 8,252 |
 
-## F-111N WaterPig — 2003
+### F-111N WaterPig — 2003
 
 ID: `ran_f-111n_2003`. Role: Fighter. Empty: 27,250 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.5; cruise Mach: 0.96.
 
@@ -211,138 +332,182 @@ ID: `ran_f-111n_2003`. Role: Fighter. Empty: 27,250 kg. Internal fuel: 14,897 kg
 | AirToAirLongRange | 2 × ASRAAM; 2 × 600 US-gallon fuel tank | 2 × AIM-54C Phoenix | Empty | 1,402 | 18,437 | 47,633 | 4,212 |
 | FleetIntercept | 2 × ASRAAM; 2 × AIM-120C-5 AMRAAM | 2 × AIM-54C Phoenix | Empty | 1,406 | 14,897 | 44,097 | 7,748 |
 
-## FB-111N MudPig — 1980
+### FB-111N MudPig — 1980
 
-ID: `ran_fb-111n`. Role: Bomber. Empty: 24,900 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.6; cruise Mach: 0.84.
-
-| Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
-|---|---|---|---|---|---|---|---|
-| Default | 2 × AIM-9L Sidewinder; 2 × AGM-84A Harpoon | Empty | Empty | 1,224 | 14,897 | 41,565 | 10,280 |
-| AirToAir | 4 × AIM-9L Sidewinder; 2 × AIM-7F Sparrow | Empty | Empty | 806 | 14,897 | 41,147 | 10,698 |
-| AirToAirLongRange | 2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank; 2 × AIM-54A Phoenix | Empty | Empty | 1,358 | 18,437 | 45,239 | 6,606 |
-| FleetIntercept | 2 × AIM-9L Sidewinder; 2 × AIM-7F Sparrow; 2 × AIM-54A Phoenix | Empty | Empty | 1,520 | 14,897 | 41,861 | 9,984 |
-| AntiShip | 2 × AIM-9L Sidewinder; 2 × AGM-84A Harpoon | Empty | Empty | 1,224 | 14,897 | 41,565 | 10,280 |
-| AntiShipHeavy | 4 × AGM-84A Harpoon | Empty | 3 × AGM-84A Harpoon | 3,682 | 14,897 | 44,023 | 7,822 |
-| AntiShipLongRange | 2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank; 2 × AGM-84A Harpoon | Empty | 3 × AGM-84A Harpoon | 3,102 | 18,437 | 46,983 | 4,862 |
-| Strike | 2 × AIM-9L Sidewinder; 24 × Mk 82 on six-bomb rack | Empty | Empty | 6,020 | 14,897 | 46,361 | 5,484 |
-| StrikeLongRange | 2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank; 12 × Mk 82 on six-bomb rack | Empty | Empty | 3,396 | 18,437 | 47,277 | 4,568 |
-| StrikeHeavy | 2 × AIM-9L Sidewinder; 4 × Mk 84 2000-lb GP bomb | Empty | Empty | 3,800 | 14,897 | 44,141 | 7,704 |
-| StrikeHeavyLongRange | 2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank; 2 × Mk 84 2000-lb GP bomb | Empty | Empty | 2,286 | 18,437 | 46,167 | 5,678 |
-| StrikeMedium | 2 × AIM-9L Sidewinder; 4 × Mk 83 1000-lb GP bomb | Empty | Empty | 1,988 | 14,897 | 42,329 | 9,516 |
-| StrikePrecision | 2 × AIM-9L Sidewinder; 3 × GBU-10 Paveway II; 1 × External laser designation pod | Empty | Empty | 3,124 | 14,897 | 43,465 | 8,380 |
-| StrikePrecisionLight | 2 × AIM-9L Sidewinder; 3 × GBU-12 Paveway II; 1 × External laser designation pod | Empty | Empty | 1,153 | 14,897 | 41,494 | 10,351 |
-| StrikePrecisionMedium | 2 × AIM-9L Sidewinder; 3 × GBU-16 Paveway II; 1 × External laser designation pod | Empty | Empty | 1,807 | 14,897 | 42,148 | 9,697 |
-| StrikePrecisionLongRange | 2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank; 1 × GBU-10 Paveway II; 1 × External laser designation pod | Empty | Empty | 1,556 | 18,437 | 45,437 | 6,408 |
-| MaverickStrike | 2 × AIM-9L Sidewinder; 4 × AGM-65B Maverick | Empty | Empty | 1,004 | 14,897 | 41,345 | 10,500 |
-| SEAD | 2 × AIM-9L Sidewinder; 4 × AGM-78 Standard ARM | Empty | Empty | 2,652 | 14,897 | 42,993 | 8,852 |
-| SEADShrike | 2 × AIM-9L Sidewinder; 4 × AGM-45 Shrike | Empty | Empty | 884 | 14,897 | 41,225 | 10,620 |
-| EW | 2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (1980); 1 × Naval offensive ECM pod 2 (1980) | Empty | Empty | 992 | 18,437 | 44,873 | 6,972 |
-| EWLongRange | 2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (1980); 1 × Naval offensive ECM pod 2 (1980) | Empty | Empty | 992 | 18,437 | 44,873 | 6,972 |
-| EscortSEAD | 2 × AIM-9L Sidewinder; 2 × AGM-78 Standard ARM; 1 × Naval offensive ECM pod 1 (1980); 1 × Naval offensive ECM pod 2 (1980) | Empty | Empty | 1,932 | 14,897 | 42,273 | 9,572 |
-| ReconLongRange | 2 × AIM-9L Sidewinder; 4 × 600 US-gallon fuel tank | Empty | Empty | 772 | 21,977 | 48,193 | 3,652 |
-
-## FB-111N MudPig — 1985
-
-ID: `ran_fb-111n_1985`. Role: Bomber. Empty: 25,150 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.6; cruise Mach: 0.88.
+ID: `ran_fb-111n`. Role: Bomber. Empty: 24,940 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.6; cruise Mach: 0.84.
 
 | Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
 |---|---|---|---|---|---|---|---|
-| Default | 2 × AIM-9M Sidewinder; 2 × AGM-84C Harpoon | Empty | Empty | 1,224 | 14,897 | 41,815 | 10,030 |
-| AirToAir | 4 × AIM-9M Sidewinder; 2 × AIM-7M Sparrow | Empty | Empty | 806 | 14,897 | 41,397 | 10,448 |
-| AirToAirLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 2 × AIM-54C Phoenix | Empty | Empty | 1,398 | 18,437 | 45,529 | 6,316 |
-| FleetIntercept | 2 × AIM-9M Sidewinder; 2 × AIM-7M Sparrow; 2 × AIM-54C Phoenix | Empty | Empty | 1,560 | 14,897 | 42,151 | 9,694 |
-| AntiShip | 2 × AIM-9M Sidewinder; 2 × AGM-84C Harpoon | Empty | Empty | 1,224 | 14,897 | 41,815 | 10,030 |
-| AntiShipHeavy | 4 × AGM-84C Harpoon | Empty | 3 × AGM-84C Harpoon | 3,682 | 14,897 | 44,273 | 7,572 |
-| AntiShipLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 2 × AGM-84C Harpoon | Empty | 3 × AGM-84C Harpoon | 3,102 | 18,437 | 47,233 | 4,612 |
-| Strike | 2 × AIM-9M Sidewinder; 24 × Mk 82 on six-bomb rack | Empty | Empty | 6,020 | 14,897 | 46,611 | 5,234 |
-| StrikeLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 12 × Mk 82 on six-bomb rack | Empty | Empty | 3,396 | 18,437 | 47,527 | 4,318 |
-| StrikeHeavy | 2 × AIM-9M Sidewinder; 4 × Mk 84 2000-lb GP bomb | Empty | Empty | 3,800 | 14,897 | 44,391 | 7,454 |
-| StrikeHeavyLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 2 × Mk 84 2000-lb GP bomb | Empty | Empty | 2,286 | 18,437 | 46,417 | 5,428 |
-| StrikeMedium | 2 × AIM-9M Sidewinder; 4 × Mk 83 1000-lb GP bomb | Empty | Empty | 1,988 | 14,897 | 42,579 | 9,266 |
-| StrikePrecision | 2 × AIM-9M Sidewinder; 3 × GBU-10 Paveway II; 1 × External laser designation pod | Empty | Empty | 3,124 | 14,897 | 43,715 | 8,130 |
-| StrikePrecisionLight | 2 × AIM-9M Sidewinder; 3 × GBU-12 Paveway II; 1 × External laser designation pod | Empty | Empty | 1,153 | 14,897 | 41,744 | 10,101 |
-| StrikePrecisionMedium | 2 × AIM-9M Sidewinder; 3 × GBU-16 Paveway II; 1 × External laser designation pod | Empty | Empty | 1,807 | 14,897 | 42,398 | 9,447 |
-| StrikePrecisionLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 1 × GBU-10 Paveway II; 1 × External laser designation pod | Empty | Empty | 1,556 | 18,437 | 45,687 | 6,158 |
-| MaverickStrike | 2 × AIM-9M Sidewinder; 4 × AGM-65D Maverick | Empty | Empty | 1,044 | 14,897 | 41,635 | 10,210 |
-| SEAD | 2 × AIM-9M Sidewinder; 4 × AGM-88A HARM | Empty | Empty | 1,616 | 14,897 | 42,207 | 9,638 |
-| EW | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (1985); 1 × Naval offensive ECM pod 2 (1985) | Empty | Empty | 992 | 18,437 | 45,123 | 6,722 |
-| EWLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (1985); 1 × Naval offensive ECM pod 2 (1985) | Empty | Empty | 992 | 18,437 | 45,123 | 6,722 |
-| EscortSEAD | 2 × AIM-9M Sidewinder; 2 × AGM-88A HARM; 1 × Naval offensive ECM pod 1 (1985); 1 × Naval offensive ECM pod 2 (1985) | Empty | Empty | 1,414 | 14,897 | 42,005 | 9,840 |
-| ReconLongRange | 2 × AIM-9M Sidewinder; 4 × 600 US-gallon fuel tank | Empty | Empty | 772 | 21,977 | 48,443 | 3,402 |
-| EOGlideStrike | 2 × AIM-9M Sidewinder; 2 × GBU-15 electro-optical glide bomb; 1 × EO weapon control pod | Empty | Empty | 2,692 | 14,897 | 43,283 | 8,562 |
-| StrikePavewayIII | 2 × AIM-9M Sidewinder; 3 × GBU-24 Paveway III; 1 × External laser designation pod | Empty | Empty | 3,574 | 14,897 | 44,165 | 7,680 |
+| Default | 2 × AIM-9L Sidewinder; 2 × AGM-84A Harpoon | Empty | Empty | 1,224 | 14,897 | 41,605 | 10,240 |
+| AirToAir | 4 × AIM-9L Sidewinder; 2 × AIM-7F Sparrow | Empty | Empty | 806 | 14,897 | 41,187 | 10,658 |
+| AirToAirLongRange | 2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank; 2 × AIM-54A Phoenix | Empty | Empty | 1,358 | 18,437 | 45,279 | 6,566 |
+| FleetIntercept | 2 × AIM-9L Sidewinder; 2 × AIM-7F Sparrow; 2 × AIM-54A Phoenix | Empty | Empty | 1,520 | 14,897 | 41,901 | 9,944 |
+| AntiShip | 2 × AIM-9L Sidewinder; 2 × AGM-84A Harpoon | Empty | Empty | 1,224 | 14,897 | 41,605 | 10,240 |
+| AntiShipHeavy | 4 × AGM-84A Harpoon | Empty | 3 × AGM-84A Harpoon | 3,682 | 14,897 | 44,063 | 7,782 |
+| AntiShipLongRange | 2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank; 2 × AGM-84A Harpoon | Empty | 3 × AGM-84A Harpoon | 3,102 | 18,437 | 47,023 | 4,822 |
+| Strike | 2 × AIM-9L Sidewinder; 24 × Mk 82 on six-bomb rack | Empty | 3 × Mk 82 500-lb GP bomb | 6,701 | 14,897 | 47,082 | 4,763 |
+| StrikeLongRange | 2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank; 12 × Mk 82 on six-bomb rack | Empty | 3 × Mk 82 500-lb GP bomb | 4,077 | 18,437 | 47,998 | 3,847 |
+| StrikeHeavy | 2 × AIM-9L Sidewinder; 4 × Mk 84 2000-lb GP bomb | Empty | 2 × Mk 84 2000-lb GP bomb | 5,614 | 14,897 | 45,995 | 5,850 |
+| StrikeHeavyLongRange | 2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank; 2 × Mk 84 2000-lb GP bomb | Empty | 2 × Mk 84 2000-lb GP bomb | 4,100 | 18,437 | 48,021 | 3,824 |
+| StrikeMedium | 2 × AIM-9L Sidewinder; 4 × Mk 83 1000-lb GP bomb | Empty | 2 × Mk 83 1000-lb GP bomb | 2,896 | 14,897 | 43,277 | 8,568 |
+| StrikePrecision | 2 × AIM-9L Sidewinder; 3 × GBU-10 Paveway II; 1 × External laser designation pod | Empty | 2 × GBU-12 Paveway II | 3,678 | 14,897 | 44,059 | 7,786 |
+| StrikePrecisionLight | 2 × AIM-9L Sidewinder; 3 × GBU-12 Paveway II; 1 × External laser designation pod | Empty | 2 × GBU-12 Paveway II | 1,707 | 14,897 | 42,088 | 9,757 |
+| StrikePrecisionMedium | 2 × AIM-9L Sidewinder; 3 × GBU-16 Paveway II; 1 × External laser designation pod | Empty | 2 × GBU-12 Paveway II | 2,361 | 14,897 | 42,742 | 9,103 |
+| StrikePrecisionLongRange | 2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank; 1 × GBU-10 Paveway II; 1 × External laser designation pod | Empty | 2 × GBU-12 Paveway II | 2,110 | 18,437 | 46,031 | 5,814 |
+| MaverickStrike | 2 × AIM-9L Sidewinder; 4 × AGM-65B Maverick | Empty | 2 × AGM-65B Maverick | 1,420 | 14,897 | 41,801 | 10,044 |
+| SEAD | 2 × AIM-9L Sidewinder; 4 × AGM-78 Standard ARM | Empty | Empty | 2,652 | 14,897 | 43,033 | 8,812 |
+| SEADShrike | 2 × AIM-9L Sidewinder; 4 × AGM-45 Shrike | Empty | 2 × AGM-45 Shrike | 1,240 | 14,897 | 41,621 | 10,224 |
+| EW | 2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (1980); 1 × Naval offensive ECM pod 2 (1980) | Empty | Empty | 992 | 18,437 | 44,913 | 6,932 |
+| EWLongRange | 2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (1980); 1 × Naval offensive ECM pod 2 (1980) | Empty | Empty | 992 | 18,437 | 44,913 | 6,932 |
+| EscortSEAD | 2 × AIM-9L Sidewinder; 2 × AGM-78 Standard ARM; 1 × Naval offensive ECM pod 1 (1980); 1 × Naval offensive ECM pod 2 (1980) | Empty | Empty | 1,932 | 14,897 | 42,313 | 9,532 |
+| ReconLongRange | 2 × AIM-9L Sidewinder; 4 × 600 US-gallon fuel tank | Empty | Empty | 772 | 21,977 | 48,233 | 3,612 |
+| AntiShipBay | 2 × AIM-9L Sidewinder | Empty | 3 × AGM-84A Harpoon | 1,750 | 14,897 | 42,131 | 9,714 |
+| StrikeBay | 2 × AIM-9L Sidewinder | Empty | 3 × Mk 82 500-lb GP bomb | 853 | 14,897 | 41,234 | 10,611 |
+| StrikeHeavyBay | 2 × AIM-9L Sidewinder | Empty | 2 × Mk 84 2000-lb GP bomb | 1,986 | 14,897 | 42,367 | 9,478 |
+| StrikePrecisionBay | 2 × AIM-9L Sidewinder; 1 × External laser designation pod | Empty | 2 × GBU-12 Paveway II | 876 | 14,897 | 41,257 | 10,588 |
+| FleetInterceptBay | 2 × AIM-9L Sidewinder; 2 × AIM-7F Sparrow | Empty | 2 × AIM-54A Phoenix | 1,520 | 14,897 | 41,901 | 9,944 |
+| AntiShipBayLongRange | 2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank | Empty | 3 × AGM-84A Harpoon | 2,050 | 18,437 | 45,971 | 5,874 |
+| StrikeBayLongRange | 2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank | Empty | 3 × Mk 82 500-lb GP bomb | 1,153 | 18,437 | 45,074 | 6,771 |
+| StrikeHeavyBayLongRange | 2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank | Empty | 2 × Mk 84 2000-lb GP bomb | 2,286 | 18,437 | 46,207 | 5,638 |
+| StrikePrecisionBayLongRange | 2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank; 1 × External laser designation pod | Empty | 2 × GBU-12 Paveway II | 1,176 | 18,437 | 45,097 | 6,748 |
+| FleetInterceptBayLongRange | 2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank; 2 × AIM-7F Sparrow | Empty | 2 × AIM-54A Phoenix | 1,820 | 18,437 | 45,741 | 6,104 |
 
-## FB-111N MudPig — 1995
+### FB-111N MudPig — 1985
 
-ID: `ran_fb-111n_1995`. Role: Bomber. Empty: 26,400 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.6; cruise Mach: 0.92.
-
-| Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
-|---|---|---|---|---|---|---|---|
-| Default | 2 × AIM-9M Sidewinder; 2 × AGM-84D Harpoon Block 1C | Empty | Empty | 1,224 | 14,897 | 43,065 | 8,780 |
-| AirToAir | 4 × AIM-9M Sidewinder; 2 × AIM-120B AMRAAM | Empty | Empty | 648 | 14,897 | 42,489 | 9,356 |
-| AirToAirLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 2 × AIM-54C Phoenix | Empty | Empty | 1,398 | 18,437 | 46,779 | 5,066 |
-| FleetIntercept | 2 × AIM-9M Sidewinder; 2 × AIM-120B AMRAAM; 2 × AIM-54C Phoenix | Empty | Empty | 1,402 | 14,897 | 43,243 | 8,602 |
-| AntiShip | 2 × AIM-9M Sidewinder; 2 × AGM-84D Harpoon Block 1C | Empty | Empty | 1,224 | 14,897 | 43,065 | 8,780 |
-| AntiShipHeavy | 4 × AGM-84D Harpoon Block 1C | Empty | 3 × AGM-84D Harpoon Block 1C | 3,682 | 14,897 | 45,523 | 6,322 |
-| AntiShipLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 2 × AGM-84D Harpoon Block 1C | Empty | 3 × AGM-84D Harpoon Block 1C | 3,102 | 18,437 | 48,483 | 3,362 |
-| Strike | 2 × AIM-9M Sidewinder; 24 × Mk 82 on six-bomb rack | Empty | Empty | 6,020 | 14,897 | 47,861 | 3,984 |
-| StrikeLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 12 × Mk 82 on six-bomb rack | Empty | Empty | 3,396 | 18,437 | 48,777 | 3,068 |
-| StrikeHeavy | 2 × AIM-9M Sidewinder; 4 × Mk 84 2000-lb GP bomb | Empty | Empty | 3,800 | 14,897 | 45,641 | 6,204 |
-| StrikeHeavyLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 2 × Mk 84 2000-lb GP bomb | Empty | Empty | 2,286 | 18,437 | 47,667 | 4,178 |
-| StrikeMedium | 2 × AIM-9M Sidewinder; 4 × Mk 83 1000-lb GP bomb | Empty | Empty | 1,988 | 14,897 | 43,829 | 8,016 |
-| StrikePrecision | 2 × AIM-9M Sidewinder; 3 × GBU-10 Paveway II; 1 × External laser designation pod | Empty | Empty | 3,124 | 14,897 | 44,965 | 6,880 |
-| StrikePrecisionLight | 2 × AIM-9M Sidewinder; 3 × GBU-12 Paveway II; 1 × External laser designation pod | Empty | Empty | 1,153 | 14,897 | 42,994 | 8,851 |
-| StrikePrecisionMedium | 2 × AIM-9M Sidewinder; 3 × GBU-16 Paveway II; 1 × External laser designation pod | Empty | Empty | 1,807 | 14,897 | 43,648 | 8,197 |
-| StrikePrecisionLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 1 × GBU-10 Paveway II; 1 × External laser designation pod | Empty | Empty | 1,556 | 18,437 | 46,937 | 4,908 |
-| MaverickStrike | 2 × AIM-9M Sidewinder; 4 × AGM-65G Maverick | Empty | Empty | 1,380 | 14,897 | 43,221 | 8,624 |
-| SEAD | 2 × AIM-9M Sidewinder; 4 × AGM-88C HARM | Empty | Empty | 1,616 | 14,897 | 43,457 | 8,388 |
-| EW | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (1995); 1 × Naval offensive ECM pod 2 (1995) | Empty | Empty | 992 | 18,437 | 46,373 | 5,472 |
-| EWLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (1995); 1 × Naval offensive ECM pod 2 (1995) | Empty | Empty | 992 | 18,437 | 46,373 | 5,472 |
-| EscortSEAD | 2 × AIM-9M Sidewinder; 2 × AGM-88C HARM; 1 × Naval offensive ECM pod 1 (1995); 1 × Naval offensive ECM pod 2 (1995) | Empty | Empty | 1,414 | 14,897 | 43,255 | 8,590 |
-| ReconLongRange | 2 × AIM-9M Sidewinder; 4 × 600 US-gallon fuel tank | Empty | Empty | 772 | 21,977 | 49,693 | 2,152 |
-| EOGlideStrike | 2 × AIM-9M Sidewinder; 2 × GBU-15 electro-optical glide bomb; 1 × EO weapon control pod | Empty | Empty | 2,692 | 14,897 | 44,533 | 7,312 |
-| StrikePavewayIII | 2 × AIM-9M Sidewinder; 3 × GBU-24 Paveway III; 1 × External laser designation pod | Empty | Empty | 3,574 | 14,897 | 45,415 | 6,430 |
-| PopeyeStrike | 2 × AIM-9M Sidewinder; 2 × AGM-142 Popeye / Have Nap; 1 × EO weapon control pod | Empty | Empty | 3,152 | 14,897 | 44,993 | 6,852 |
-| SLAMStrike | 2 × AIM-9M Sidewinder; 2 × AGM-84E SLAM; 1 × EO weapon control pod | Empty | Empty | 1,688 | 14,897 | 43,529 | 8,316 |
-
-## FB-111N MudPig — 2003
-
-ID: `ran_fb-111n_2003`. Role: Bomber. Empty: 26,900 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.6; cruise Mach: 0.96.
+ID: `ran_fb-111n_1985`. Role: Bomber. Empty: 25,200 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.6; cruise Mach: 0.88.
 
 | Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
 |---|---|---|---|---|---|---|---|
-| Default | 2 × ASRAAM; 2 × AGM-84L Harpoon Block II | Empty | Empty | 1,228 | 14,897 | 43,569 | 8,276 |
-| AirToAir | 4 × ASRAAM; 2 × AIM-120C-5 AMRAAM | Empty | Empty | 656 | 14,897 | 42,997 | 8,848 |
-| AirToAirLongRange | 2 × ASRAAM; 2 × 600 US-gallon fuel tank; 2 × AIM-54C Phoenix | Empty | Empty | 1,402 | 18,437 | 47,283 | 4,562 |
-| FleetIntercept | 2 × ASRAAM; 2 × AIM-120C-5 AMRAAM; 2 × AIM-54C Phoenix | Empty | Empty | 1,406 | 14,897 | 43,747 | 8,098 |
-| AntiShip | 2 × ASRAAM; 2 × AGM-84L Harpoon Block II | Empty | Empty | 1,228 | 14,897 | 43,569 | 8,276 |
-| AntiShipHeavy | 4 × AGM-84L Harpoon Block II | Empty | 3 × AGM-84L Harpoon Block II | 3,682 | 14,897 | 46,023 | 5,822 |
-| AntiShipLongRange | 2 × ASRAAM; 2 × 600 US-gallon fuel tank; 2 × AGM-84L Harpoon Block II | Empty | 3 × AGM-84L Harpoon Block II | 3,106 | 18,437 | 48,987 | 2,858 |
-| Strike | 2 × ASRAAM; 24 × Mk 82 on six-bomb rack | Empty | Empty | 6,024 | 14,897 | 48,365 | 3,480 |
-| StrikeLongRange | 2 × ASRAAM; 2 × 600 US-gallon fuel tank; 12 × Mk 82 on six-bomb rack | Empty | Empty | 3,400 | 18,437 | 49,281 | 2,564 |
-| StrikeHeavy | 2 × ASRAAM; 4 × Mk 84 2000-lb GP bomb | Empty | Empty | 3,804 | 14,897 | 46,145 | 5,700 |
-| StrikeHeavyLongRange | 2 × ASRAAM; 2 × 600 US-gallon fuel tank; 2 × Mk 84 2000-lb GP bomb | Empty | Empty | 2,290 | 18,437 | 48,171 | 3,674 |
-| StrikeMedium | 2 × ASRAAM; 4 × Mk 83 1000-lb GP bomb | Empty | Empty | 1,992 | 14,897 | 44,333 | 7,512 |
-| StrikePrecision | 2 × ASRAAM; 3 × GBU-10 Paveway II; 1 × External laser designation pod | Empty | Empty | 3,128 | 14,897 | 45,469 | 6,376 |
-| StrikePrecisionLight | 2 × ASRAAM; 3 × GBU-12 Paveway II; 1 × External laser designation pod | Empty | Empty | 1,157 | 14,897 | 43,498 | 8,347 |
-| StrikePrecisionMedium | 2 × ASRAAM; 3 × GBU-16 Paveway II; 1 × External laser designation pod | Empty | Empty | 1,811 | 14,897 | 44,152 | 7,693 |
-| StrikePrecisionLongRange | 2 × ASRAAM; 2 × 600 US-gallon fuel tank; 1 × GBU-10 Paveway II; 1 × External laser designation pod | Empty | Empty | 1,560 | 18,437 | 47,441 | 4,404 |
-| MaverickStrike | 2 × ASRAAM; 4 × AGM-65G Maverick | Empty | Empty | 1,384 | 14,897 | 43,725 | 8,120 |
-| SEAD | 2 × ASRAAM; 4 × AGM-88C HARM | Empty | Empty | 1,620 | 14,897 | 43,961 | 7,884 |
-| EW | 2 × ASRAAM; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (2003); 1 × Naval offensive ECM pod 2 (2003) | Empty | Empty | 996 | 18,437 | 46,877 | 4,968 |
-| EWLongRange | 2 × ASRAAM; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (2003); 1 × Naval offensive ECM pod 2 (2003) | Empty | Empty | 996 | 18,437 | 46,877 | 4,968 |
-| EscortSEAD | 2 × ASRAAM; 2 × AGM-88C HARM; 1 × Naval offensive ECM pod 1 (2003); 1 × Naval offensive ECM pod 2 (2003) | Empty | Empty | 1,418 | 14,897 | 43,759 | 8,086 |
-| ReconLongRange | 2 × ASRAAM; 4 × 600 US-gallon fuel tank | Empty | Empty | 776 | 21,977 | 50,197 | 1,648 |
-| EOGlideStrike | 2 × ASRAAM; 2 × GBU-15 electro-optical glide bomb; 1 × EO weapon control pod | Empty | Empty | 2,696 | 14,897 | 45,037 | 6,808 |
-| StrikePavewayIII | 2 × ASRAAM; 3 × GBU-24 Paveway III; 1 × External laser designation pod | Empty | Empty | 3,578 | 14,897 | 45,919 | 5,926 |
-| PopeyeStrike | 2 × ASRAAM; 2 × AGM-142 Popeye / Have Nap; 1 × EO weapon control pod | Empty | Empty | 3,156 | 14,897 | 45,497 | 6,348 |
-| SLAMStrike | 2 × ASRAAM; 2 × AGM-84E SLAM; 1 × EO weapon control pod | Empty | Empty | 1,692 | 14,897 | 44,033 | 7,812 |
-| SLAMERStrike | 2 × ASRAAM; 2 × AGM-84K SLAM-ER; 1 × EO weapon control pod | Empty | Empty | 1,786 | 14,897 | 44,127 | 7,718 |
-| JDAMHeavy | 2 × ASRAAM; 4 × GBU-31 JDAM Mk 84 | Empty | Empty | 3,876 | 14,897 | 46,217 | 5,628 |
-| JDAMMedium | 2 × ASRAAM; 4 × GBU-32 JDAM Mk 83 | Empty | Empty | 2,020 | 14,897 | 44,361 | 7,484 |
-| JSOWStrike | 2 × ASRAAM; 4 × AGM-154A JSOW | Empty | Empty | 2,108 | 14,897 | 44,449 | 7,396 |
+| Default | 2 × AIM-9M Sidewinder; 2 × AGM-84C Harpoon | Empty | Empty | 1,224 | 14,897 | 41,865 | 9,980 |
+| AirToAir | 4 × AIM-9M Sidewinder; 2 × AIM-7M Sparrow | Empty | Empty | 806 | 14,897 | 41,447 | 10,398 |
+| AirToAirLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 2 × AIM-54C Phoenix | Empty | Empty | 1,398 | 18,437 | 45,579 | 6,266 |
+| FleetIntercept | 2 × AIM-9M Sidewinder; 2 × AIM-7M Sparrow; 2 × AIM-54C Phoenix | Empty | Empty | 1,560 | 14,897 | 42,201 | 9,644 |
+| AntiShip | 2 × AIM-9M Sidewinder; 2 × AGM-84C Harpoon | Empty | Empty | 1,224 | 14,897 | 41,865 | 9,980 |
+| AntiShipHeavy | 4 × AGM-84C Harpoon | Empty | 3 × AGM-84C Harpoon | 3,682 | 14,897 | 44,323 | 7,522 |
+| AntiShipLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 2 × AGM-84C Harpoon | Empty | 3 × AGM-84C Harpoon | 3,102 | 18,437 | 47,283 | 4,562 |
+| Strike | 2 × AIM-9M Sidewinder; 24 × Mk 82 on six-bomb rack | Empty | 3 × Mk 82 500-lb GP bomb | 6,701 | 14,897 | 47,342 | 4,503 |
+| StrikeLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 12 × Mk 82 on six-bomb rack | Empty | 3 × Mk 82 500-lb GP bomb | 4,077 | 18,437 | 48,258 | 3,587 |
+| StrikeHeavy | 2 × AIM-9M Sidewinder; 4 × Mk 84 2000-lb GP bomb | Empty | 2 × Mk 84 2000-lb GP bomb | 5,614 | 14,897 | 46,255 | 5,590 |
+| StrikeHeavyLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 2 × Mk 84 2000-lb GP bomb | Empty | 2 × Mk 84 2000-lb GP bomb | 4,100 | 18,437 | 48,281 | 3,564 |
+| StrikeMedium | 2 × AIM-9M Sidewinder; 4 × Mk 83 1000-lb GP bomb | Empty | 2 × Mk 83 1000-lb GP bomb | 2,896 | 14,897 | 43,537 | 8,308 |
+| StrikePrecision | 2 × AIM-9M Sidewinder; 3 × GBU-10 Paveway II; 1 × External laser designation pod | Empty | 2 × GBU-12 Paveway II | 3,678 | 14,897 | 44,319 | 7,526 |
+| StrikePrecisionLight | 2 × AIM-9M Sidewinder; 3 × GBU-12 Paveway II; 1 × External laser designation pod | Empty | 2 × GBU-12 Paveway II | 1,707 | 14,897 | 42,348 | 9,497 |
+| StrikePrecisionMedium | 2 × AIM-9M Sidewinder; 3 × GBU-16 Paveway II; 1 × External laser designation pod | Empty | 2 × GBU-12 Paveway II | 2,361 | 14,897 | 43,002 | 8,843 |
+| StrikePrecisionLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 1 × GBU-10 Paveway II; 1 × External laser designation pod | Empty | 2 × GBU-12 Paveway II | 2,110 | 18,437 | 46,291 | 5,554 |
+| MaverickStrike | 2 × AIM-9M Sidewinder; 4 × AGM-65D Maverick | Empty | 2 × AGM-65D Maverick | 1,480 | 14,897 | 42,121 | 9,724 |
+| SEAD | 2 × AIM-9M Sidewinder; 4 × AGM-88A HARM | Empty | Empty | 1,616 | 14,897 | 42,257 | 9,588 |
+| EW | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (1985); 1 × Naval offensive ECM pod 2 (1985) | Empty | Empty | 992 | 18,437 | 45,173 | 6,672 |
+| EWLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (1985); 1 × Naval offensive ECM pod 2 (1985) | Empty | Empty | 992 | 18,437 | 45,173 | 6,672 |
+| EscortSEAD | 2 × AIM-9M Sidewinder; 2 × AGM-88A HARM; 1 × Naval offensive ECM pod 1 (1985); 1 × Naval offensive ECM pod 2 (1985) | Empty | Empty | 1,414 | 14,897 | 42,055 | 9,790 |
+| ReconLongRange | 2 × AIM-9M Sidewinder; 4 × 600 US-gallon fuel tank | Empty | Empty | 772 | 21,977 | 48,493 | 3,352 |
+| EOGlideStrike | 2 × AIM-9M Sidewinder; 2 × GBU-15 electro-optical glide bomb; 1 × EO weapon control pod | Empty | Empty | 2,692 | 14,897 | 43,333 | 8,512 |
+| StrikePavewayIII | 2 × AIM-9M Sidewinder; 3 × GBU-24 Paveway III; 1 × External laser designation pod | Empty | 2 × GBU-12 Paveway II | 4,128 | 14,897 | 44,769 | 7,076 |
+| AntiShipBay | 2 × AIM-9M Sidewinder | Empty | 3 × AGM-84C Harpoon | 1,750 | 14,897 | 42,391 | 9,454 |
+| StrikeBay | 2 × AIM-9M Sidewinder | Empty | 3 × Mk 82 500-lb GP bomb | 853 | 14,897 | 41,494 | 10,351 |
+| StrikeHeavyBay | 2 × AIM-9M Sidewinder | Empty | 2 × Mk 84 2000-lb GP bomb | 1,986 | 14,897 | 42,627 | 9,218 |
+| StrikePrecisionBay | 2 × AIM-9M Sidewinder; 1 × External laser designation pod | Empty | 2 × GBU-12 Paveway II | 876 | 14,897 | 41,517 | 10,328 |
+| FleetInterceptBay | 2 × AIM-9M Sidewinder; 2 × AIM-7M Sparrow | Empty | 2 × AIM-54C Phoenix | 1,560 | 14,897 | 42,201 | 9,644 |
+| AntiShipBayLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank | Empty | 3 × AGM-84C Harpoon | 2,050 | 18,437 | 46,231 | 5,614 |
+| StrikeBayLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank | Empty | 3 × Mk 82 500-lb GP bomb | 1,153 | 18,437 | 45,334 | 6,511 |
+| StrikeHeavyBayLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank | Empty | 2 × Mk 84 2000-lb GP bomb | 2,286 | 18,437 | 46,467 | 5,378 |
+| StrikePrecisionBayLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 1 × External laser designation pod | Empty | 2 × GBU-12 Paveway II | 1,176 | 18,437 | 45,357 | 6,488 |
+| FleetInterceptBayLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 2 × AIM-7M Sparrow | Empty | 2 × AIM-54C Phoenix | 1,860 | 18,437 | 46,041 | 5,804 |
 
-## RF-111N SprintPig — 1980
+### FB-111N MudPig — 1995
+
+ID: `ran_fb-111n_1995`. Role: Bomber. Empty: 26,460 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.6; cruise Mach: 0.92.
+
+| Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
+|---|---|---|---|---|---|---|---|
+| Default | 2 × AIM-9M Sidewinder; 2 × AGM-84D Harpoon Block 1C | Empty | Empty | 1,224 | 14,897 | 43,125 | 8,720 |
+| AirToAir | 4 × AIM-9M Sidewinder; 2 × AIM-120B AMRAAM | Empty | Empty | 648 | 14,897 | 42,549 | 9,296 |
+| AirToAirLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 2 × AIM-54C Phoenix | Empty | Empty | 1,398 | 18,437 | 46,839 | 5,006 |
+| FleetIntercept | 2 × AIM-9M Sidewinder; 2 × AIM-120B AMRAAM; 2 × AIM-54C Phoenix | Empty | Empty | 1,402 | 14,897 | 43,303 | 8,542 |
+| AntiShip | 2 × AIM-9M Sidewinder; 2 × AGM-84D Harpoon Block 1C | Empty | Empty | 1,224 | 14,897 | 43,125 | 8,720 |
+| AntiShipHeavy | 4 × AGM-84D Harpoon Block 1C | Empty | 3 × AGM-84D Harpoon Block 1C | 3,682 | 14,897 | 45,583 | 6,262 |
+| AntiShipLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 2 × AGM-84D Harpoon Block 1C | Empty | 3 × AGM-84D Harpoon Block 1C | 3,102 | 18,437 | 48,543 | 3,302 |
+| Strike | 2 × AIM-9M Sidewinder; 24 × Mk 82 on six-bomb rack | Empty | 3 × Mk 82 500-lb GP bomb | 6,701 | 14,897 | 48,602 | 3,243 |
+| StrikeLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 12 × Mk 82 on six-bomb rack | Empty | 3 × Mk 82 500-lb GP bomb | 4,077 | 18,437 | 49,518 | 2,327 |
+| StrikeHeavy | 2 × AIM-9M Sidewinder; 4 × Mk 84 2000-lb GP bomb | Empty | 2 × Mk 84 2000-lb GP bomb | 5,614 | 14,897 | 47,515 | 4,330 |
+| StrikeHeavyLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 2 × Mk 84 2000-lb GP bomb | Empty | 2 × Mk 84 2000-lb GP bomb | 4,100 | 18,437 | 49,541 | 2,304 |
+| StrikeMedium | 2 × AIM-9M Sidewinder; 4 × Mk 83 1000-lb GP bomb | Empty | 2 × Mk 83 1000-lb GP bomb | 2,896 | 14,897 | 44,797 | 7,048 |
+| StrikePrecision | 2 × AIM-9M Sidewinder; 3 × GBU-10 Paveway II; 1 × External laser designation pod | Empty | 2 × GBU-12 Paveway II | 3,678 | 14,897 | 45,579 | 6,266 |
+| StrikePrecisionLight | 2 × AIM-9M Sidewinder; 3 × GBU-12 Paveway II; 1 × External laser designation pod | Empty | 2 × GBU-12 Paveway II | 1,707 | 14,897 | 43,608 | 8,237 |
+| StrikePrecisionMedium | 2 × AIM-9M Sidewinder; 3 × GBU-16 Paveway II; 1 × External laser designation pod | Empty | 2 × GBU-12 Paveway II | 2,361 | 14,897 | 44,262 | 7,583 |
+| StrikePrecisionLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 1 × GBU-10 Paveway II; 1 × External laser designation pod | Empty | 2 × GBU-12 Paveway II | 2,110 | 18,437 | 47,551 | 4,294 |
+| MaverickStrike | 2 × AIM-9M Sidewinder; 4 × AGM-65G Maverick | Empty | 2 × AGM-65G Maverick | 1,984 | 14,897 | 43,885 | 7,960 |
+| SEAD | 2 × AIM-9M Sidewinder; 4 × AGM-88C HARM | Empty | Empty | 1,616 | 14,897 | 43,517 | 8,328 |
+| EW | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (1995); 1 × Naval offensive ECM pod 2 (1995) | Empty | Empty | 992 | 18,437 | 46,433 | 5,412 |
+| EWLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (1995); 1 × Naval offensive ECM pod 2 (1995) | Empty | Empty | 992 | 18,437 | 46,433 | 5,412 |
+| EscortSEAD | 2 × AIM-9M Sidewinder; 2 × AGM-88C HARM; 1 × Naval offensive ECM pod 1 (1995); 1 × Naval offensive ECM pod 2 (1995) | Empty | Empty | 1,414 | 14,897 | 43,315 | 8,530 |
+| ReconLongRange | 2 × AIM-9M Sidewinder; 4 × 600 US-gallon fuel tank | Empty | Empty | 772 | 21,977 | 49,753 | 2,092 |
+| EOGlideStrike | 2 × AIM-9M Sidewinder; 2 × GBU-15 electro-optical glide bomb; 1 × EO weapon control pod | Empty | Empty | 2,692 | 14,897 | 44,593 | 7,252 |
+| StrikePavewayIII | 2 × AIM-9M Sidewinder; 3 × GBU-24 Paveway III; 1 × External laser designation pod | Empty | 2 × GBU-12 Paveway II | 4,128 | 14,897 | 46,029 | 5,816 |
+| PopeyeStrike | 2 × AIM-9M Sidewinder; 2 × AGM-142 Popeye / Have Nap; 1 × EO weapon control pod | Empty | Empty | 3,152 | 14,897 | 45,053 | 6,792 |
+| SLAMStrike | 2 × AIM-9M Sidewinder; 2 × AGM-84E SLAM; 1 × EO weapon control pod | Empty | 2 × AGM-84E SLAM | 2,944 | 14,897 | 44,845 | 7,000 |
+| AntiShipBay | 2 × AIM-9M Sidewinder | Empty | 3 × AGM-84D Harpoon Block 1C | 1,750 | 14,897 | 43,651 | 8,194 |
+| StrikeBay | 2 × AIM-9M Sidewinder | Empty | 3 × Mk 82 500-lb GP bomb | 853 | 14,897 | 42,754 | 9,091 |
+| StrikeHeavyBay | 2 × AIM-9M Sidewinder | Empty | 2 × Mk 84 2000-lb GP bomb | 1,986 | 14,897 | 43,887 | 7,958 |
+| StrikePrecisionBay | 2 × AIM-9M Sidewinder; 1 × External laser designation pod | Empty | 2 × GBU-12 Paveway II | 876 | 14,897 | 42,777 | 9,068 |
+| FleetInterceptBay | 2 × AIM-9M Sidewinder; 2 × AIM-120B AMRAAM | Empty | 2 × AIM-54C Phoenix | 1,402 | 14,897 | 43,303 | 8,542 |
+| AntiShipBayLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank | Empty | 3 × AGM-84D Harpoon Block 1C | 2,050 | 18,437 | 47,491 | 4,354 |
+| StrikeBayLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank | Empty | 3 × Mk 82 500-lb GP bomb | 1,153 | 18,437 | 46,594 | 5,251 |
+| StrikeHeavyBayLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank | Empty | 2 × Mk 84 2000-lb GP bomb | 2,286 | 18,437 | 47,727 | 4,118 |
+| StrikePrecisionBayLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 1 × External laser designation pod | Empty | 2 × GBU-12 Paveway II | 1,176 | 18,437 | 46,617 | 5,228 |
+| FleetInterceptBayLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 2 × AIM-120B AMRAAM | Empty | 2 × AIM-54C Phoenix | 1,702 | 18,437 | 47,143 | 4,702 |
+
+### FB-111N MudPig — 2003
+
+ID: `ran_fb-111n_2003`. Role: Bomber. Empty: 26,975 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.6; cruise Mach: 0.96.
+
+| Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
+|---|---|---|---|---|---|---|---|
+| Default | 2 × ASRAAM; 2 × AGM-84L Harpoon Block II | Empty | Empty | 1,228 | 14,897 | 43,644 | 8,201 |
+| AirToAir | 4 × ASRAAM; 2 × AIM-120C-5 AMRAAM | Empty | Empty | 656 | 14,897 | 43,072 | 8,773 |
+| AirToAirLongRange | 2 × ASRAAM; 2 × 600 US-gallon fuel tank; 2 × AIM-54C Phoenix | Empty | Empty | 1,402 | 18,437 | 47,358 | 4,487 |
+| FleetIntercept | 2 × ASRAAM; 2 × AIM-120C-5 AMRAAM; 2 × AIM-54C Phoenix | Empty | Empty | 1,406 | 14,897 | 43,822 | 8,023 |
+| AntiShip | 2 × ASRAAM; 2 × AGM-84L Harpoon Block II | Empty | Empty | 1,228 | 14,897 | 43,644 | 8,201 |
+| AntiShipHeavy | 4 × AGM-84L Harpoon Block II | Empty | 3 × AGM-84L Harpoon Block II | 3,682 | 14,897 | 46,098 | 5,747 |
+| AntiShipLongRange | 2 × ASRAAM; 2 × 600 US-gallon fuel tank; 2 × AGM-84L Harpoon Block II | Empty | 3 × AGM-84L Harpoon Block II | 3,106 | 18,437 | 49,062 | 2,783 |
+| Strike | 2 × ASRAAM; 24 × Mk 82 on six-bomb rack | Empty | 3 × Mk 82 500-lb GP bomb | 6,705 | 14,897 | 49,121 | 2,724 |
+| StrikeLongRange | 2 × ASRAAM; 2 × 600 US-gallon fuel tank; 12 × Mk 82 on six-bomb rack | Empty | 3 × Mk 82 500-lb GP bomb | 4,081 | 18,437 | 50,037 | 1,808 |
+| StrikeHeavy | 2 × ASRAAM; 4 × Mk 84 2000-lb GP bomb | Empty | 2 × Mk 84 2000-lb GP bomb | 5,618 | 14,897 | 48,034 | 3,811 |
+| StrikeHeavyLongRange | 2 × ASRAAM; 2 × 600 US-gallon fuel tank; 2 × Mk 84 2000-lb GP bomb | Empty | 2 × Mk 84 2000-lb GP bomb | 4,104 | 18,437 | 50,060 | 1,785 |
+| StrikeMedium | 2 × ASRAAM; 4 × Mk 83 1000-lb GP bomb | Empty | 2 × Mk 83 1000-lb GP bomb | 2,900 | 14,897 | 45,316 | 6,529 |
+| StrikePrecision | 2 × ASRAAM; 3 × GBU-10 Paveway II; 1 × External laser designation pod | Empty | 2 × GBU-12 Paveway II | 3,682 | 14,897 | 46,098 | 5,747 |
+| StrikePrecisionLight | 2 × ASRAAM; 3 × GBU-12 Paveway II; 1 × External laser designation pod | Empty | 2 × GBU-12 Paveway II | 1,711 | 14,897 | 44,127 | 7,718 |
+| StrikePrecisionMedium | 2 × ASRAAM; 3 × GBU-16 Paveway II; 1 × External laser designation pod | Empty | 2 × GBU-12 Paveway II | 2,365 | 14,897 | 44,781 | 7,064 |
+| StrikePrecisionLongRange | 2 × ASRAAM; 2 × 600 US-gallon fuel tank; 1 × GBU-10 Paveway II; 1 × External laser designation pod | Empty | 2 × GBU-12 Paveway II | 2,114 | 18,437 | 48,070 | 3,775 |
+| MaverickStrike | 2 × ASRAAM; 4 × AGM-65G Maverick | Empty | 2 × AGM-65G Maverick | 1,988 | 14,897 | 44,404 | 7,441 |
+| SEAD | 2 × ASRAAM; 4 × AGM-88C HARM | Empty | Empty | 1,620 | 14,897 | 44,036 | 7,809 |
+| EW | 2 × ASRAAM; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (2003); 1 × Naval offensive ECM pod 2 (2003) | Empty | Empty | 996 | 18,437 | 46,952 | 4,893 |
+| EWLongRange | 2 × ASRAAM; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (2003); 1 × Naval offensive ECM pod 2 (2003) | Empty | Empty | 996 | 18,437 | 46,952 | 4,893 |
+| EscortSEAD | 2 × ASRAAM; 2 × AGM-88C HARM; 1 × Naval offensive ECM pod 1 (2003); 1 × Naval offensive ECM pod 2 (2003) | Empty | Empty | 1,418 | 14,897 | 43,834 | 8,011 |
+| ReconLongRange | 2 × ASRAAM; 4 × 600 US-gallon fuel tank | Empty | Empty | 776 | 21,977 | 50,272 | 1,573 |
+| EOGlideStrike | 2 × ASRAAM; 2 × GBU-15 electro-optical glide bomb; 1 × EO weapon control pod | Empty | Empty | 2,696 | 14,897 | 45,112 | 6,733 |
+| StrikePavewayIII | 2 × ASRAAM; 3 × GBU-24 Paveway III; 1 × External laser designation pod | Empty | 2 × GBU-12 Paveway II | 4,132 | 14,897 | 46,548 | 5,297 |
+| PopeyeStrike | 2 × ASRAAM; 2 × AGM-142 Popeye / Have Nap; 1 × EO weapon control pod | Empty | Empty | 3,156 | 14,897 | 45,572 | 6,273 |
+| SLAMStrike | 2 × ASRAAM; 2 × AGM-84E SLAM; 1 × EO weapon control pod | Empty | 2 × AGM-84E SLAM | 2,948 | 14,897 | 45,364 | 6,481 |
+| SLAMERStrike | 2 × ASRAAM; 2 × AGM-84K SLAM-ER; 1 × EO weapon control pod | Empty | Empty | 1,786 | 14,897 | 44,202 | 7,643 |
+| JDAMHeavy | 2 × ASRAAM; 4 × GBU-31 JDAM Mk 84 | Empty | 2 × GBU-31 JDAM Mk 84 | 5,726 | 14,897 | 48,142 | 3,703 |
+| JDAMMedium | 2 × ASRAAM; 4 × GBU-32 JDAM Mk 83 | Empty | 2 × GBU-32 JDAM Mk 83 | 2,942 | 14,897 | 45,358 | 6,487 |
+| JSOWStrike | 2 × ASRAAM; 4 × AGM-154A JSOW | Empty | Empty | 2,108 | 14,897 | 44,524 | 7,321 |
+| AntiShipBay | 2 × ASRAAM | Empty | 3 × AGM-84L Harpoon Block II | 1,754 | 14,897 | 44,170 | 7,675 |
+| StrikeBay | 2 × ASRAAM | Empty | 3 × Mk 82 500-lb GP bomb | 857 | 14,897 | 43,273 | 8,572 |
+| StrikeHeavyBay | 2 × ASRAAM | Empty | 2 × Mk 84 2000-lb GP bomb | 1,990 | 14,897 | 44,406 | 7,439 |
+| StrikePrecisionBay | 2 × ASRAAM; 1 × External laser designation pod | Empty | 2 × GBU-12 Paveway II | 880 | 14,897 | 43,296 | 8,549 |
+| FleetInterceptBay | 2 × ASRAAM; 2 × AIM-120C-5 AMRAAM | Empty | 2 × AIM-54C Phoenix | 1,406 | 14,897 | 43,822 | 8,023 |
+| JDAMBay | 2 × ASRAAM | Empty | 2 × GBU-32 JDAM Mk 83 | 1,098 | 14,897 | 43,514 | 8,331 |
+| JDAMHeavyBay | 2 × ASRAAM | Empty | 2 × GBU-31 JDAM Mk 84 | 2,026 | 14,897 | 44,442 | 7,403 |
+| AntiShipBayLongRange | 2 × ASRAAM; 2 × 600 US-gallon fuel tank | Empty | 3 × AGM-84L Harpoon Block II | 2,054 | 18,437 | 48,010 | 3,835 |
+| StrikeBayLongRange | 2 × ASRAAM; 2 × 600 US-gallon fuel tank | Empty | 3 × Mk 82 500-lb GP bomb | 1,157 | 18,437 | 47,113 | 4,732 |
+| StrikeHeavyBayLongRange | 2 × ASRAAM; 2 × 600 US-gallon fuel tank | Empty | 2 × Mk 84 2000-lb GP bomb | 2,290 | 18,437 | 48,246 | 3,599 |
+| StrikePrecisionBayLongRange | 2 × ASRAAM; 2 × 600 US-gallon fuel tank; 1 × External laser designation pod | Empty | 2 × GBU-12 Paveway II | 1,180 | 18,437 | 47,136 | 4,709 |
+| FleetInterceptBayLongRange | 2 × ASRAAM; 2 × 600 US-gallon fuel tank; 2 × AIM-120C-5 AMRAAM | Empty | 2 × AIM-54C Phoenix | 1,706 | 18,437 | 47,662 | 4,183 |
+| JDAMBayLongRange | 2 × ASRAAM; 2 × 600 US-gallon fuel tank | Empty | 2 × GBU-32 JDAM Mk 83 | 1,398 | 18,437 | 47,354 | 4,491 |
+| JDAMHeavyBayLongRange | 2 × ASRAAM; 2 × 600 US-gallon fuel tank | Empty | 2 × GBU-31 JDAM Mk 84 | 2,326 | 18,437 | 48,282 | 3,563 |
+
+### RF-111N SprintPig — 1980
 
 ID: `ran_rf-111n`. Role: Recon,ESM. Empty: 25,350 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 3.0; cruise Mach: 2.52.
 
@@ -355,7 +520,7 @@ ID: `ran_rf-111n`. Role: Recon,ESM. Empty: 25,350 kg. Internal fuel: 14,897 kg. 
 | ReconLongRange | 2 × AIM-9L Sidewinder; 4 × 600 US-gallon fuel tank | Empty | Empty | 772 | 21,977 | 48,643 | 3,202 |
 | ReconFast | 2 × AIM-9L Sidewinder | Empty | Empty | 172 | 14,897 | 40,963 | 10,882 |
 
-## RF-111N SprintPig — 1985
+### RF-111N SprintPig — 1985
 
 ID: `ran_rf-111n_1985`. Role: Recon,ESM. Empty: 25,650 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 3.0; cruise Mach: 2.52.
 
@@ -368,7 +533,7 @@ ID: `ran_rf-111n_1985`. Role: Recon,ESM. Empty: 25,650 kg. Internal fuel: 14,897
 | ReconLongRange | 2 × AIM-9M Sidewinder; 4 × 600 US-gallon fuel tank | Empty | Empty | 772 | 21,977 | 48,943 | 2,902 |
 | ReconFast | 2 × AIM-9M Sidewinder | Empty | Empty | 172 | 14,897 | 41,263 | 10,582 |
 
-## RF-111N SprintPig — 1995
+### RF-111N SprintPig — 1995
 
 ID: `ran_rf-111n_1995`. Role: Recon,ESM. Empty: 27,000 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 3.0; cruise Mach: 2.52.
 
@@ -381,7 +546,7 @@ ID: `ran_rf-111n_1995`. Role: Recon,ESM. Empty: 27,000 kg. Internal fuel: 14,897
 | ReconLongRange | 2 × AIM-9M Sidewinder; 4 × 600 US-gallon fuel tank | Empty | Empty | 772 | 21,977 | 50,293 | 1,552 |
 | ReconFast | 2 × AIM-9M Sidewinder | Empty | Empty | 172 | 14,897 | 42,613 | 9,232 |
 
-## RF-111N SprintPig — 2003
+### RF-111N SprintPig — 2003
 
 ID: `ran_rf-111n_2003`. Role: Recon,ESM. Empty: 27,600 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 3.0; cruise Mach: 2.52.
 
@@ -394,7 +559,7 @@ ID: `ran_rf-111n_2003`. Role: Recon,ESM. Empty: 27,600 kg. Internal fuel: 14,897
 | ReconLongRange | 2 × ASRAAM; 4 × 600 US-gallon fuel tank | Empty | Empty | 776 | 21,977 | 50,897 | 948 |
 | ReconFast | 2 × ASRAAM | Empty | Empty | 176 | 14,897 | 43,217 | 8,628 |
 
-## EF-111N ScreamPig — 1980
+### EF-111N ScreamPig — 1980
 
 ID: `ran_ef-111n`. Role: EW,ESM. Empty: 28,250 kg. Internal fuel: 14,897 kg. Gun ammunition: none. Max Mach: 2.2; cruise Mach: 0.84.
 
@@ -407,7 +572,7 @@ ID: `ran_ef-111n`. Role: EW,ESM. Empty: 28,250 kg. Internal fuel: 14,897 kg. Gun
 | EWLongRange | 2 × AIM-9L Sidewinder; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (1980); 1 × Naval offensive ECM pod 2 (1980) | Empty | Empty | 992 | 18,437 | 47,679 | 4,166 |
 | EscortSEAD | 2 × AIM-9L Sidewinder; 2 × AGM-78 Standard ARM; 1 × Naval offensive ECM pod 1 (1980); 1 × Naval offensive ECM pod 2 (1980) | Empty | Empty | 1,932 | 14,897 | 45,079 | 6,766 |
 
-## EF-111N ScreamPig — 1985
+### EF-111N ScreamPig — 1985
 
 ID: `ran_ef-111n_1985`. Role: EW,ESM. Empty: 28,500 kg. Internal fuel: 14,897 kg. Gun ammunition: none. Max Mach: 2.2; cruise Mach: 0.88.
 
@@ -420,7 +585,7 @@ ID: `ran_ef-111n_1985`. Role: EW,ESM. Empty: 28,500 kg. Internal fuel: 14,897 kg
 | EWLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (1985); 1 × Naval offensive ECM pod 2 (1985) | Empty | Empty | 992 | 18,437 | 47,929 | 3,916 |
 | EscortSEAD | 2 × AIM-9M Sidewinder; 2 × AGM-88A HARM; 1 × Naval offensive ECM pod 1 (1985); 1 × Naval offensive ECM pod 2 (1985) | Empty | Empty | 1,414 | 14,897 | 44,811 | 7,034 |
 
-## EF-111N ScreamPig — 1995
+### EF-111N ScreamPig — 1995
 
 ID: `ran_ef-111n_1995`. Role: EW,ESM. Empty: 29,750 kg. Internal fuel: 14,897 kg. Gun ammunition: none. Max Mach: 2.2; cruise Mach: 0.92.
 
@@ -433,7 +598,7 @@ ID: `ran_ef-111n_1995`. Role: EW,ESM. Empty: 29,750 kg. Internal fuel: 14,897 kg
 | EWLongRange | 2 × AIM-9M Sidewinder; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (1995); 1 × Naval offensive ECM pod 2 (1995) | Empty | Empty | 992 | 18,437 | 49,179 | 2,666 |
 | EscortSEAD | 2 × AIM-9M Sidewinder; 2 × AGM-88C HARM; 1 × Naval offensive ECM pod 1 (1995); 1 × Naval offensive ECM pod 2 (1995) | Empty | Empty | 1,414 | 14,897 | 46,061 | 5,784 |
 
-## EF-111N ScreamPig — 2003
+### EF-111N ScreamPig — 2003
 
 ID: `ran_ef-111n_2003`. Role: EW,ESM. Empty: 30,250 kg. Internal fuel: 14,897 kg. Gun ammunition: none. Max Mach: 2.2; cruise Mach: 0.96.
 
@@ -446,7 +611,7 @@ ID: `ran_ef-111n_2003`. Role: EW,ESM. Empty: 30,250 kg. Internal fuel: 14,897 kg
 | EWLongRange | 2 × ASRAAM; 2 × 600 US-gallon fuel tank; 1 × Naval offensive ECM pod 1 (2003); 1 × Naval offensive ECM pod 2 (2003) | Empty | Empty | 996 | 18,437 | 49,683 | 2,162 |
 | EscortSEAD | 2 × ASRAAM; 2 × AGM-88C HARM; 1 × Naval offensive ECM pod 1 (2003); 1 × Naval offensive ECM pod 2 (2003) | Empty | Empty | 1,418 | 14,897 | 46,565 | 5,280 |
 
-## Every local store definition
+### Every local store definition
 
 Dated aliases use the same physical store geometry and mass with year-specific sensors. Unselected legacy definitions are retained for compatibility; 61 definitions do not mean 61 different weapon designs. Tank shell mass excludes fuel.
 
@@ -472,7 +637,7 @@ Dated aliases use the same physical store geometry and mass with year-specific s
 | ran_nw_shrike | AGM-45 Shrike | 178 | 0 | 1980 | Yes | Native guidance; rounded historical carried mass |
 | ran_nw_harma | AGM-88A HARM | 361 | 0 | 1985 | Yes | Native guidance; rounded historical carried mass |
 | ran_nw_harmc | AGM-88C HARM | 361 | 0 | 1995 | Yes | Native HARM-A geometry/flight model with estimated C seeker resilience |
-| ran_nw_mk82 | Mk 82 500-lb GP bomb | 227 | 0 | 1980 | Compatibility definition | Native guidance; rounded historical carried mass |
+| ran_nw_mk82 | Mk 82 500-lb GP bomb | 227 | 0 | 1980 | Yes | Native guidance; rounded historical carried mass |
 | ran_nw_mk83 | Mk 83 1000-lb GP bomb | 454 | 0 | 1980 | Yes | Native guidance; rounded historical carried mass |
 | ran_nw_mk84 | Mk 84 2000-lb GP bomb | 907 | 0 | 1980 | Yes | Native guidance; rounded historical carried mass |
 | ran_nw_gbu10 | GBU-10 Paveway II | 934 | 0 | 1980 | Yes | Native guidance; rounded historical carried mass |
@@ -514,61 +679,12 @@ Dated aliases use the same physical store geometry and mass with year-specific s
 | ran_alq-131n_2_2003 | Naval offensive ECM pod 2 (2003) | 260 | 0 | 2003 | Yes | Two physical pods with dated native jammer power/channels; fictional programme ratings. |
 | ran_nw_ecmpod_2_2003 | Naval offensive ECM pod 2 (2003) | 260 | 0 | 2003 | Yes | Two physical pods with dated native jammer power/channels; fictional programme ratings. |
 
-## Preserved design and simulation limits
+### Preserved design and simulation limits
 
-MudPig AntiShip is two wing Harpoons/two IR missiles with empty bay; AntiShipHeavy is four wing and three bay Harpoons; AntiShipLongRange is two wing and three bay Harpoons, two IR missiles and two tanks. Bay stations, concealment and doors are exact original definitions. The separately relocated M61 is fictional; no new gun fairing is drawn.
+MudPig AntiShip is two wing Harpoons/two IR missiles with empty bay; AntiShipHeavy is four wing and three bay Harpoons; AntiShipLongRange is two wing and three bay Harpoons, two IR missiles and two tanks. Bay stations, concealment and doors are exact original definitions. Extra strike/interceptor fits use those stations with strike/Phoenix targeting. [Bay loadouts and armed recovery test](INTERNAL_BAY_V8.md). The separately relocated M61 is fictional; no new gun fairing is drawn.
 
 EF retains two physical pylon ECM pods and two offensive sensors. FB only carries removable offensive containers in its EW presets. Designation and EO control pods occupy counted external stations. Existing cockpit, model and landing animation geometry remains.
 
 Native modern-weapon approximations: AMRAAM lacks platform midcourse correction; ASRAAM lacks helmet sight/LOAL; EO weapons lack manual man-in-the-loop retargeting; Block II Harpoon models radar-homing ship attack; JDAM/JSOW use CEP/ballistic/glide settings instead of full GPS/INS. Period choices assume funded Australian integration, including accelerated early procurement.
 
-Static checks do not prove gun fire, release trajectories, AI Mach 3 behaviour, ECM display, date filtering or carrier landings. These still need Sea Power runtime testing. References (`HISTORICAL_REFERENCES.md` in the release) · Aircraft comparison (`docs/AIRCRAFT_COMPARISON.md` in the release) · Investment (`docs/INVESTMENT_PROGRAMME.md` in the release)
-
-## Source references and credits
-
-The following reference list is supplied with the release. N-family performance and naval modifications remain explicitly hypothetical.
-
-V6 references checked 30 September 2026; V8 engine references checked 1 October 2026. All N-family procurement, integration and naval engineering are alternate-history assumptions. The historical reference baseline and estimated additions are separated in `loadout_manifest.json`.
-
-| Primary/reference source | Used for |
-|---|---|
-| [RAAF A8-142 technical sheet](https://www.airforce.gov.au/sites/default/files/2023-07/F111%20A8-142.pdf) | 51,845 kg loaded maximum; 43.6/82.3 kN engine thrust; historical F-111C weapon capability. Its 24,270 kg empty figure includes Pave Tack; V6's common budget uses the basic reference below with an external designator instead. |
-| [Queensland Air Museum specifications](https://www.qldairmuseum.au/qam-content/aircraft/specs/F-111-specs.htm) | 23,300 kg F-111C basic mass reference. |
-| [Queensland Air Museum flight-manual fuel table](https://qldairmuseum.au/qam-content/aircraft/f-111/F-111-deliveries.htm) | Internal 14,897 kg and external 600 US-gallon fuel 1,770 kg at SG .78. Uses this later manual-based table rather than the inconsistent older specification-page conversions. |
-| [USAF Museum EF-111A](https://www.nationalmuseum.af.mil/Visit/Museum-Exhibits/Fact-Sheets/Display/Article/195968/general-dynamics-ef-111a-raven/) | Approximately four tons of integrated EW equipment; rounded role allowance. External naval pods are additional stores. |
-| [USAF Sidewinder](https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104557/aim-9-sidewinder/) | M-model deliveries from 1983; approximately 86 kg launch mass. |
-| [NAVAIR Phoenix history](https://www.navair.navy.mil/node/12701) | A before 1980, C early fleet deployment in 1985. 1985 Australian purchase is assumed; later C-plus upgrades are not silently used. |
-| [USAF AMRAAM index](https://www.af.mil/About-Us/Fact-Sheets/Search/aim-120/) / [Air University 1998 review](https://www.airuniversity.af.mil/Portals/10/ASPJ/journals/Volume-12_Issue-1-4/1998_Vol12_No3.pdf) | 1991 operational introduction; appears in 1995/2003 only. Variant engagement ranges and ECCM are game estimates. |
-| [MBDA ASRAAM](https://www.mbda-systems.com/products/air-dominance/asraam) / [1999 UK programme evidence](https://publications.parliament.uk/pa/cm199899/cmselect/cmdfence/544/544w09.htm) | 88 kg; period weapon programme. 2003 N-family integration is assumed. |
-| [USAF Maverick](https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104577/agm-65-maverick/) | B/D/G seeker/mass differences; G deliveries from 1989. |
-| [NAVAIR Harpoon](https://www.navair.navy.mil/harpoon) / [Boeing first Block II export delivery, 2002](https://boeing.mediaroom.com/2002-04-26-Boeing-Delivers-First-Harpoon-Block-II-Kits-to-Denmark) | Period maritime choices; 2003 Block II. Air-launched mass without surface booster is rounded to 526 kg. Native guidance is retained as a ship-attack approximation. |
-| [US Navy HARM deployment history](https://www.history.navy.mil/about-us/leadership/director/directors-corner/in-memoriam/memoriam-newman.html) | Late-1985 HARM deployment; early Australian acquisition is fictional. |
-| [USAF Gulf War Air Power Survey](https://media.defense.gov/2010/Sep/27/2001329817/-1/-1/0/AFD-100927-066.pdf) | Period guided weapons including the 3,000-pound AGM-142. Popeye carried mass 1,360 kg; 1995 Australian integration is accelerated relative to actual history. |
-| [USAF TO 1-1M-34 hosted scan](https://www.scribd.com/document/793762586/TO-1-1M-34) | Guided bomb mass depends on kit/fuze. Catalogue uses rounded selected Paveway configurations: 934 / 277 / 495 / 1,084 kg for GBU-10/12/16/24. GP bombs retain nominal class mass. |
-| [USAF JDAM](https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104572/joint-direct-attack-munition-gbu-313238/joint-direct-attack-munition-gbu-313238/) / [Boeing production card](https://www.boeing.com/content/dam/boeing/boeingdotcom/defense/weapons-weapons/images/jdam_product_card.pdf) | 1998 production/1999 deployment; approximately 925/461 kg GBU-31/32. Only 2003 editions. Native CEP approximation, not full GPS simulation. |
-| [NAVAIR JSOW](https://www.navair.navy.mil/product/jsow) | January 1999 deployment; approximately 483 kg AGM-154A. No later C-1 maritime/datalink capability. |
-| [US Navy SLAM-ER](https://www.navy.mil/DesktopModules/ArticleCS/Print.aspx?Article=2168997&ModuleId=4201&PortalId=1) | June 2000 IOC; approximately 675 kg; 2003 fit. |
-| [Native Sea Power data](https://github.com/SEST-HOBBY/Seapower-mods/tree/feature/northern-front-iii-export/mods-source/_vanilla/original) | Supported schema, M61/20 mm ammunition, stock models, guidance and sensors. Native .272 kg round mass used for the gun budget. |
-
-Estimated additions, not measured historical values: naval conversion 950 kg; relocated M61 hardware/feed/housing 650 kg; fighter radar 350 kg; recon kit 450 kg; avionics growth 0/100/250/400 kg; dry tank shell 150 kg; rack 100 kg; designator 150 kg; EO control pod 260 kg. The early naval laser fit and later modern-weapon choices assume aircraft wiring, software, control interfaces, pylon engineering and trials.
-
-The preserved internal bay, relocated gun and SprintPig speed are explicit fictional design requirements. A historical mass reference is not proof of the aerodynamic, structural or carrier suitability of those changes.
-
-## V8 propulsion references and estimates
-
-[GE historical military engine status report](https://www.geaerospace.com/news/press-releases/defense-engines/ge-aircraft-engines-military-engine-status-report) gives the F110-GE-400 120 kN afterburning class in operational service from April 1988 and the F110-GE-129 129 kN class from April 1992. These support the chosen 1995/2003 supplier classes; they do not establish an actual F-111 retrofit. [GE F110 datasheet](https://www.geaerospace.com/sites/default/files/2022-02/F110-Datasheet.pdf) is additional family context; later engine upgrades are not silently assigned to early editions.
-
-V8 adds systems/control allowances 0/150/650/850 kg; propulsion-retrofit allowances 0/0/600/750 kg; RF thermal allowances 0/50/150/250 kg, alongside the existing edition-avionics allowance. These are explicit engineering estimates. Installed dry thrust, TF30 uprating, F-111 naval adaptation, control/sensor/readiness ratings, nominal range growth and RF Mach 3 propulsion are fictional. The TPS-inspired RGB palette is an uncalibrated screen approximation, not a certified paint standard or historical USN F-111 scheme.
-
-## Asset credits
-
-| Source | Contribution |
-|---|---|
-| [Workshop 3587484531](https://steamcommunity.com/sharedfiles/filedetails/?id=3587484531) | Source aircraft/EF models and associated materials inherited through V6 |
-| [Workshop 3689650533](https://steamcommunity.com/sharedfiles/filedetails/?id=3689650533) | Source F-111/RF models and materials inherited through V6 |
-| Earlier RAN F-111N Naval Wing releases | Fictional naval role/model definitions, corrected RAN maps, internal bay and carrier support |
-| [Australian roundel SVG](https://commons.wikimedia.org/wiki/File:Roundel_of_Australia.svg) | Original roundel vector; V8 adds a subdued colour variant |
-| [SEST-HOBBY native export](https://github.com/SEST-HOBBY/Seapower-mods/tree/feature/northern-front-iii-export/mods-source/_vanilla/original) | Native schema, ammunition/sensors and representative carrier references |
-| Sea Power | Stock assets and systems referenced at runtime; stock weapon models are not copied solely for previews |
-
-V8 adds programme configuration, authored surface materials/vector decal projection, build/validation utilities, simplified modern-weapon geometry inherited from V6, and documentation. It does not transfer ownership or assign a new blanket licence to third-party assets; original rights and upstream terms remain with their respective owners. No government, armed-service, manufacturer or game-publisher affiliation is implied.
+Static checks do not prove gun fire, release trajectories, AI Mach 3 behaviour, ECM display, date filtering or carrier landings. These still need Sea Power runtime testing. [References](../HISTORICAL_REFERENCES.md) · [Aircraft comparison](AIRCRAFT_COMPARISON.md) · [Investment](INVESTMENT_PROGRAMME.md)

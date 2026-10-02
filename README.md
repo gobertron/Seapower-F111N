@@ -1,12 +1,15 @@
 # RAN F-111N Naval Wing V8
 
-**Version 8.** All release labels, filenames, installer messages, previews and Workshop text now use V8. This release carries the existing verified aircraft and installation fixes: four aircraft families in 1980, 1985, 1995 and 2003 editions; 16 aircraft and 167 selectable presets.
+**Version 8 internal-bay update — 2 October 2026.** MudPig gains 44 bay mission fits and extra internal stores on existing bombing, precision, Maverick, Shrike, SLAM and JDAM presets. The release now has 211 presets. Original bay stations, doors and carrier/landing geometry are retained; armed launch/recovery still requires in-game testing.
+
+**Version 8.** All release labels, filenames, installer messages, previews and Workshop text now use V8. This release carries the existing verified aircraft and installation fixes: four aircraft families in 1980, 1985, 1995 and 2003 editions; 16 aircraft and 211 selectable presets.
 
 - [Download the complete V8 mod and source ZIP](https://github.com/gobertron/Seapower-F111N/archive/refs/heads/main.zip)
 - [Standalone replacement and Workshop preparation script](replace-f111n-with-v8.sh) · [Replacement instructions](docs/REPLACE_WITH_V8.md) · [Steam upload instructions](docs/STEAM_WORKSHOP_UPLOAD.md)
 - [Checksums for every game file](MOD_SHA256.txt)
 - [Complete breakdown: all aircraft, presets, weights and references](docs/V8-Complete-Breakdown.md)
 - [Sortable list of every loadout](ALL_LOADOUTS_V8.csv)
+- [Expanded internal bay, capacity and armed recovery test](docs/INTERNAL_BAY_V8.md)
 - [Steam Workshop description](WORKSHOP_DESCRIPTION.txt) and [V8 update notes](WORKSHOP_UPDATE_NOTES_V8.txt)
 - [All sixteen aircraft compared](docs/AIRCRAFT_COMPARISON.md) and [investment/system upgrades](docs/INVESTMENT_PROGRAMME.md)
 
@@ -14,9 +17,9 @@
 
 The repository includes the complete aircraft assets, native configuration, installers, authoring source, previews and validation reports. The GitHub ZIP includes the complete mod tree, expanded publication breakdown and Workshop text. Game assets match the validated standalone V8 release.
 
-**Verification:** 32,093 mod checks, 2,243 carrier/installer checks and eight late texture audits passed. In-game gun fire, guidance/release, flight performance, ECM display, date filtering and carrier landings remain untested. This is an alternate-history programme with documented native simulation limits.
+**Verification:** 35,186 mod checks, 2,243 carrier/installer checks and eight late texture audits passed. In-game gun fire, guidance/release, flight performance, ECM display, date filtering and carrier landings remain untested. This is an alternate-history programme with documented native simulation limits.
 
-An alternate-history Australian carrier F-111 programme for **Sea Power**: four original roles in **1980, 1985, 1995 and 2003** editions. This fresh V8 is built from the saved V6 base and contains **16 aircraft and 167 loadout presets**, progressive propulsion/mission-system investment, period weapons and eight dedicated late-edition grey liveries.
+An alternate-history Australian carrier F-111 programme for **Sea Power**: four original roles in **1980, 1985, 1995 and 2003** editions. This fresh V8 is built from the saved V6 base and contains **16 aircraft and 211 loadout presets**, progressive propulsion/mission-system investment, period weapons and eight dedicated late-edition grey liveries.
 
 ![1995 and 2003 comparison](RAN-F111N-USN-1995-2003-preview.png)
 
@@ -62,6 +65,10 @@ Later MudPig versions retain older bombing options. Procurement, wiring, softwar
 | Long range | 2 defensive IR missiles + 2 Harpoons + 2 tanks | 3 Harpoons |
 
 Missile variants follow the edition. The bay's three stations, concealment and door animations remain exact. The separate fictional M61 installation does not consume the bay; historical F-111 gun placement did use bay space. No new exterior gun fairing is drawn. Laser/EO control pods use counted external stations. MudPig's offensive ECM containers are removable for EW fits.
+
+The expanded bay also carries three Mk 82s, or two Mk 83/Mk 84/GBU-12 bombs, Mavericks, Phoenix missiles, later SLAMs or 2003 GBU-31/32 JDAMs. New `AntiShipBay`, `StrikeBay`, `StrikeHeavyBay`, `StrikePrecisionBay` and `FleetInterceptBay` fits each have a two-tank `LongRange` companion; 2003 also adds `JDAMBay` and `JDAMHeavyBay` pairs. Phoenix uses the dedicated air-targeting controller. Single-store suspension offsets accommodate Phoenix/Shrike native geometry without adding stations.
+
+Estimated bay adapters and interfaces add 40/50/60/75 kg to MudPig empty mass across the four editions, alongside existing propulsion and mission-system investment. Coarse stowage, counts, targeting, attack modes and full-fuel mass budgets are checked. The takeoff reference does not certify a carrier landing weight or armed recovery. See the [bay guide](docs/INTERNAL_BAY_V8.md) for every loaded-bay fit and the runtime test sequence.
 
 ## Weights and paint
 

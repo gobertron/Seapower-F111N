@@ -15,6 +15,7 @@
       "role_equipment_estimate": 350,
       "separate_M61_installation_estimate": 650,
       "edition_avionics_growth_estimate": 0,
+      "internal_bay_multistore_upgrade_estimate": 0,
       "investment_systems_and_controls_estimate": 0,
       "propulsion_retrofit_estimate": 0,
       "recon_thermal_upgrade_estimate": 0
@@ -173,6 +174,7 @@
       "role_equipment_estimate": 350,
       "separate_M61_installation_estimate": 650,
       "edition_avionics_growth_estimate": 100,
+      "internal_bay_multistore_upgrade_estimate": 0,
       "investment_systems_and_controls_estimate": 150,
       "propulsion_retrofit_estimate": 0,
       "recon_thermal_upgrade_estimate": 0
@@ -331,6 +333,7 @@
       "role_equipment_estimate": 350,
       "separate_M61_installation_estimate": 650,
       "edition_avionics_growth_estimate": 250,
+      "internal_bay_multistore_upgrade_estimate": 0,
       "investment_systems_and_controls_estimate": 650,
       "propulsion_retrofit_estimate": 600,
       "recon_thermal_upgrade_estimate": 0
@@ -489,6 +492,7 @@
       "role_equipment_estimate": 350,
       "separate_M61_installation_estimate": 650,
       "edition_avionics_growth_estimate": 400,
+      "internal_bay_multistore_upgrade_estimate": 0,
       "investment_systems_and_controls_estimate": 850,
       "propulsion_retrofit_estimate": 750,
       "recon_thermal_upgrade_estimate": 0
@@ -640,13 +644,14 @@
       1984
     ],
     "role": "Bomber",
-    "empty_mass_kg": 24900,
+    "empty_mass_kg": 24940,
     "empty_mass_components_kg": {
       "historical_F111C_basic_reference": 23300,
       "naval_conversion_estimate": 950,
       "role_equipment_estimate": 0,
       "separate_M61_installation_estimate": 650,
       "edition_avionics_growth_estimate": 0,
+      "internal_bay_multistore_upgrade_estimate": 40,
       "investment_systems_and_controls_estimate": 0,
       "propulsion_retrofit_estimate": 0,
       "recon_thermal_upgrade_estimate": 0
@@ -723,9 +728,9 @@
         "stores_mass_kg": 1224,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 41565.0,
+        "full_fuel_takeoff_mass_kg": 41605.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 10280.0
+        "margin_kg": 10240.0
       },
       "AirToAir": {
         "stores": {
@@ -741,9 +746,9 @@
         "stores_mass_kg": 806,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 41147.0,
+        "full_fuel_takeoff_mass_kg": 41187.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 10698.0
+        "margin_kg": 10658.0
       },
       "AirToAirLongRange": {
         "stores": {
@@ -761,9 +766,9 @@
         "stores_mass_kg": 1358,
         "total_fuel_kg": 18437,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 45239.0,
+        "full_fuel_takeoff_mass_kg": 45279.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 6606.0
+        "margin_kg": 6566.0
       },
       "FleetIntercept": {
         "stores": {
@@ -781,9 +786,9 @@
         "stores_mass_kg": 1520,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 41861.0,
+        "full_fuel_takeoff_mass_kg": 41901.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 9984.0
+        "margin_kg": 9944.0
       },
       "AntiShip": {
         "stores": {
@@ -799,9 +804,9 @@
         "stores_mass_kg": 1224,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 41565.0,
+        "full_fuel_takeoff_mass_kg": 41605.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 10280.0
+        "margin_kg": 10240.0
       },
       "AntiShipHeavy": {
         "stores": {
@@ -817,9 +822,9 @@
         "stores_mass_kg": 3682,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 44023.0,
+        "full_fuel_takeoff_mass_kg": 44063.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 7822.0
+        "margin_kg": 7782.0
       },
       "AntiShipLongRange": {
         "stores": {
@@ -839,33 +844,37 @@
         "stores_mass_kg": 3102,
         "total_fuel_kg": 18437,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 46983.0,
+        "full_fuel_takeoff_mass_kg": 47023.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 4862.0
+        "margin_kg": 4822.0
       },
       "Strike": {
         "stores": {
           "ran_nw_aim9l": 2,
-          "ran_nw_mk82_mer": 24
+          "ran_nw_mk82_mer": 24,
+          "ran_nw_mk82": 3
         },
         "wing_stores": {
           "ran_nw_aim9l": 2,
           "ran_nw_mk82_mer": 24
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 6020.0,
+        "internal_bay_stores": {
+          "ran_nw_mk82": 3
+        },
+        "stores_mass_kg": 6701.0,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 46361.0,
+        "full_fuel_takeoff_mass_kg": 47082.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 5484.0
+        "margin_kg": 4763.0
       },
       "StrikeLongRange": {
         "stores": {
           "ran_nw_aim9l": 2,
           "ran_tank_600_fb111n": 2,
-          "ran_nw_mk82_mer": 12
+          "ran_nw_mk82_mer": 12,
+          "ran_nw_mk82": 3
         },
         "wing_stores": {
           "ran_nw_aim9l": 2,
@@ -873,37 +882,41 @@
           "ran_nw_mk82_mer": 12
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 3396.0,
+        "internal_bay_stores": {
+          "ran_nw_mk82": 3
+        },
+        "stores_mass_kg": 4077.0,
         "total_fuel_kg": 18437,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 47277.0,
+        "full_fuel_takeoff_mass_kg": 47998.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 4568.0
+        "margin_kg": 3847.0
       },
       "StrikeHeavy": {
         "stores": {
           "ran_nw_aim9l": 2,
-          "ran_nw_mk84": 4
+          "ran_nw_mk84": 6
         },
         "wing_stores": {
           "ran_nw_aim9l": 2,
           "ran_nw_mk84": 4
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 3800,
+        "internal_bay_stores": {
+          "ran_nw_mk84": 2
+        },
+        "stores_mass_kg": 5614,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 44141.0,
+        "full_fuel_takeoff_mass_kg": 45995.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 7704.0
+        "margin_kg": 5850.0
       },
       "StrikeHeavyLongRange": {
         "stores": {
           "ran_nw_aim9l": 2,
           "ran_tank_600_fb111n": 2,
-          "ran_nw_mk84": 2
+          "ran_nw_mk84": 4
         },
         "wing_stores": {
           "ran_nw_aim9l": 2,
@@ -911,37 +924,42 @@
           "ran_nw_mk84": 2
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 2286,
+        "internal_bay_stores": {
+          "ran_nw_mk84": 2
+        },
+        "stores_mass_kg": 4100,
         "total_fuel_kg": 18437,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 46167.0,
+        "full_fuel_takeoff_mass_kg": 48021.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 5678.0
+        "margin_kg": 3824.0
       },
       "StrikeMedium": {
         "stores": {
           "ran_nw_aim9l": 2,
-          "ran_nw_mk83": 4
+          "ran_nw_mk83": 6
         },
         "wing_stores": {
           "ran_nw_aim9l": 2,
           "ran_nw_mk83": 4
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 1988,
+        "internal_bay_stores": {
+          "ran_nw_mk83": 2
+        },
+        "stores_mass_kg": 2896,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 42329.0,
+        "full_fuel_takeoff_mass_kg": 43277.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 9516.0
+        "margin_kg": 8568.0
       },
       "StrikePrecision": {
         "stores": {
           "ran_nw_aim9l": 2,
           "ran_nw_gbu10": 3,
-          "ran_nw_laserpod": 1
+          "ran_nw_laserpod": 1,
+          "ran_nw_gbu12": 2
         },
         "wing_stores": {
           "ran_nw_aim9l": 2,
@@ -949,18 +967,20 @@
           "ran_nw_laserpod": 1
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 3124,
+        "internal_bay_stores": {
+          "ran_nw_gbu12": 2
+        },
+        "stores_mass_kg": 3678,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 43465.0,
+        "full_fuel_takeoff_mass_kg": 44059.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 8380.0
+        "margin_kg": 7786.0
       },
       "StrikePrecisionLight": {
         "stores": {
           "ran_nw_aim9l": 2,
-          "ran_nw_gbu12": 3,
+          "ran_nw_gbu12": 5,
           "ran_nw_laserpod": 1
         },
         "wing_stores": {
@@ -969,19 +989,22 @@
           "ran_nw_laserpod": 1
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 1153,
+        "internal_bay_stores": {
+          "ran_nw_gbu12": 2
+        },
+        "stores_mass_kg": 1707,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 41494.0,
+        "full_fuel_takeoff_mass_kg": 42088.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 10351.0
+        "margin_kg": 9757.0
       },
       "StrikePrecisionMedium": {
         "stores": {
           "ran_nw_aim9l": 2,
           "ran_nw_gbu16": 3,
-          "ran_nw_laserpod": 1
+          "ran_nw_laserpod": 1,
+          "ran_nw_gbu12": 2
         },
         "wing_stores": {
           "ran_nw_aim9l": 2,
@@ -989,20 +1012,23 @@
           "ran_nw_laserpod": 1
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 1807,
+        "internal_bay_stores": {
+          "ran_nw_gbu12": 2
+        },
+        "stores_mass_kg": 2361,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 42148.0,
+        "full_fuel_takeoff_mass_kg": 42742.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 9697.0
+        "margin_kg": 9103.0
       },
       "StrikePrecisionLongRange": {
         "stores": {
           "ran_nw_aim9l": 2,
           "ran_tank_600_fb111n": 2,
           "ran_nw_gbu10": 1,
-          "ran_nw_laserpod": 1
+          "ran_nw_laserpod": 1,
+          "ran_nw_gbu12": 2
         },
         "wing_stores": {
           "ran_nw_aim9l": 2,
@@ -1011,31 +1037,35 @@
           "ran_nw_laserpod": 1
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 1556,
+        "internal_bay_stores": {
+          "ran_nw_gbu12": 2
+        },
+        "stores_mass_kg": 2110,
         "total_fuel_kg": 18437,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 45437.0,
+        "full_fuel_takeoff_mass_kg": 46031.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 6408.0
+        "margin_kg": 5814.0
       },
       "MaverickStrike": {
         "stores": {
           "ran_nw_aim9l": 2,
-          "ran_nw_maverickb": 4
+          "ran_nw_maverickb": 6
         },
         "wing_stores": {
           "ran_nw_aim9l": 2,
           "ran_nw_maverickb": 4
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 1004,
+        "internal_bay_stores": {
+          "ran_nw_maverickb": 2
+        },
+        "stores_mass_kg": 1420,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 41345.0,
+        "full_fuel_takeoff_mass_kg": 41801.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 10500.0
+        "margin_kg": 10044.0
       },
       "SEAD": {
         "stores": {
@@ -1051,27 +1081,29 @@
         "stores_mass_kg": 2652,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 42993.0,
+        "full_fuel_takeoff_mass_kg": 43033.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 8852.0
+        "margin_kg": 8812.0
       },
       "SEADShrike": {
         "stores": {
           "ran_nw_aim9l": 2,
-          "ran_nw_shrike": 4
+          "ran_nw_shrike": 6
         },
         "wing_stores": {
           "ran_nw_aim9l": 2,
           "ran_nw_shrike": 4
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 884,
+        "internal_bay_stores": {
+          "ran_nw_shrike": 2
+        },
+        "stores_mass_kg": 1240,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 41225.0,
+        "full_fuel_takeoff_mass_kg": 41621.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 10620.0
+        "margin_kg": 10224.0
       },
       "EW": {
         "stores": {
@@ -1091,9 +1123,9 @@
         "stores_mass_kg": 992,
         "total_fuel_kg": 18437,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 44873.0,
+        "full_fuel_takeoff_mass_kg": 44913.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 6972.0
+        "margin_kg": 6932.0
       },
       "EWLongRange": {
         "stores": {
@@ -1113,9 +1145,9 @@
         "stores_mass_kg": 992,
         "total_fuel_kg": 18437,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 44873.0,
+        "full_fuel_takeoff_mass_kg": 44913.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 6972.0
+        "margin_kg": 6932.0
       },
       "EscortSEAD": {
         "stores": {
@@ -1135,9 +1167,9 @@
         "stores_mass_kg": 1932,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 42273.0,
+        "full_fuel_takeoff_mass_kg": 42313.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 9572.0
+        "margin_kg": 9532.0
       },
       "ReconLongRange": {
         "stores": {
@@ -1153,10 +1185,263 @@
         "stores_mass_kg": 772,
         "total_fuel_kg": 21977,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 48193.0,
+        "full_fuel_takeoff_mass_kg": 48233.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 3652.0
+        "margin_kg": 3612.0
+      },
+      "AntiShipBay": {
+        "stores": {
+          "ran_nw_aim9l": 2,
+          "ran_nw_harpoona": 3
+        },
+        "wing_stores": {
+          "ran_nw_aim9l": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_harpoona": 3
+        },
+        "stores_mass_kg": 1750,
+        "total_fuel_kg": 14897,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 42131.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 9714.0
+      },
+      "StrikeBay": {
+        "stores": {
+          "ran_nw_aim9l": 2,
+          "ran_nw_mk82": 3
+        },
+        "wing_stores": {
+          "ran_nw_aim9l": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_mk82": 3
+        },
+        "stores_mass_kg": 853,
+        "total_fuel_kg": 14897,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 41234.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 10611.0
+      },
+      "StrikeHeavyBay": {
+        "stores": {
+          "ran_nw_aim9l": 2,
+          "ran_nw_mk84": 2
+        },
+        "wing_stores": {
+          "ran_nw_aim9l": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_mk84": 2
+        },
+        "stores_mass_kg": 1986,
+        "total_fuel_kg": 14897,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 42367.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 9478.0
+      },
+      "StrikePrecisionBay": {
+        "stores": {
+          "ran_nw_aim9l": 2,
+          "ran_nw_laserpod": 1,
+          "ran_nw_gbu12": 2
+        },
+        "wing_stores": {
+          "ran_nw_aim9l": 2,
+          "ran_nw_laserpod": 1
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_gbu12": 2
+        },
+        "stores_mass_kg": 876,
+        "total_fuel_kg": 14897,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 41257.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 10588.0
+      },
+      "FleetInterceptBay": {
+        "stores": {
+          "ran_nw_aim9l": 2,
+          "ran_nw_aim7f": 2,
+          "ran_nw_aim54a": 2
+        },
+        "wing_stores": {
+          "ran_nw_aim9l": 2,
+          "ran_nw_aim7f": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_aim54a": 2
+        },
+        "stores_mass_kg": 1520,
+        "total_fuel_kg": 14897,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 41901.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 9944.0
+      },
+      "AntiShipBayLongRange": {
+        "stores": {
+          "ran_nw_aim9l": 2,
+          "ran_tank_600_fb111n": 2,
+          "ran_nw_harpoona": 3
+        },
+        "wing_stores": {
+          "ran_nw_aim9l": 2,
+          "ran_tank_600_fb111n": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_harpoona": 3
+        },
+        "stores_mass_kg": 2050,
+        "total_fuel_kg": 18437,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 45971.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 5874.0
+      },
+      "StrikeBayLongRange": {
+        "stores": {
+          "ran_nw_aim9l": 2,
+          "ran_tank_600_fb111n": 2,
+          "ran_nw_mk82": 3
+        },
+        "wing_stores": {
+          "ran_nw_aim9l": 2,
+          "ran_tank_600_fb111n": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_mk82": 3
+        },
+        "stores_mass_kg": 1153,
+        "total_fuel_kg": 18437,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 45074.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 6771.0
+      },
+      "StrikeHeavyBayLongRange": {
+        "stores": {
+          "ran_nw_aim9l": 2,
+          "ran_tank_600_fb111n": 2,
+          "ran_nw_mk84": 2
+        },
+        "wing_stores": {
+          "ran_nw_aim9l": 2,
+          "ran_tank_600_fb111n": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_mk84": 2
+        },
+        "stores_mass_kg": 2286,
+        "total_fuel_kg": 18437,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 46207.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 5638.0
+      },
+      "StrikePrecisionBayLongRange": {
+        "stores": {
+          "ran_nw_aim9l": 2,
+          "ran_tank_600_fb111n": 2,
+          "ran_nw_laserpod": 1,
+          "ran_nw_gbu12": 2
+        },
+        "wing_stores": {
+          "ran_nw_aim9l": 2,
+          "ran_tank_600_fb111n": 2,
+          "ran_nw_laserpod": 1
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_gbu12": 2
+        },
+        "stores_mass_kg": 1176,
+        "total_fuel_kg": 18437,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 45097.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 6748.0
+      },
+      "FleetInterceptBayLongRange": {
+        "stores": {
+          "ran_nw_aim9l": 2,
+          "ran_tank_600_fb111n": 2,
+          "ran_nw_aim7f": 2,
+          "ran_nw_aim54a": 2
+        },
+        "wing_stores": {
+          "ran_nw_aim9l": 2,
+          "ran_tank_600_fb111n": 2,
+          "ran_nw_aim7f": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_aim54a": 2
+        },
+        "stores_mass_kg": 1820,
+        "total_fuel_kg": 18437,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 45741.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 6104.0
       }
+    },
+    "internal_bay_qualification": {
+      "physical_stations": 3,
+      "single_store_adapter_offsets_metres": {
+        "Phoenix": [
+          0,
+          0,
+          -0.1
+        ],
+        "Shrike": [
+          0,
+          0,
+          -0.5
+        ]
+      },
+      "upgrade_mass_kg_by_edition": {
+        "1980": 40,
+        "1985": 50,
+        "1995": 60,
+        "2003": 75
+      },
+      "status": "Estimated integration in the hypothetical Australian naval programme",
+      "maximum_counts": {
+        "Mk 82": 3,
+        "Harpoon": 3,
+        "Mk 83": 2,
+        "Mk 84": 2,
+        "GBU-12": 2,
+        "Maverick": 2,
+        "Shrike": 2,
+        "Phoenix": 2,
+        "SLAM": 2,
+        "GBU-31": 2,
+        "GBU-32": 2
+      },
+      "excluded_internal_stores": [
+        "Popeye",
+        "SLAM-ER",
+        "JSOW",
+        "external MER racks",
+        "fuel tanks",
+        "control/ECM pods"
+      ],
+      "carrier_recovery_runtime_tested": false,
+      "carrier_arrestor_or_catapult_certified": false
     }
   },
   "ran_fb-111n_1985": {
@@ -1168,13 +1453,14 @@
       1994
     ],
     "role": "Bomber",
-    "empty_mass_kg": 25150,
+    "empty_mass_kg": 25200,
     "empty_mass_components_kg": {
       "historical_F111C_basic_reference": 23300,
       "naval_conversion_estimate": 950,
       "role_equipment_estimate": 0,
       "separate_M61_installation_estimate": 650,
       "edition_avionics_growth_estimate": 100,
+      "internal_bay_multistore_upgrade_estimate": 50,
       "investment_systems_and_controls_estimate": 150,
       "propulsion_retrofit_estimate": 0,
       "recon_thermal_upgrade_estimate": 0
@@ -1251,9 +1537,9 @@
         "stores_mass_kg": 1224,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 41815.0,
+        "full_fuel_takeoff_mass_kg": 41865.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 10030.0
+        "margin_kg": 9980.0
       },
       "AirToAir": {
         "stores": {
@@ -1269,9 +1555,9 @@
         "stores_mass_kg": 806,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 41397.0,
+        "full_fuel_takeoff_mass_kg": 41447.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 10448.0
+        "margin_kg": 10398.0
       },
       "AirToAirLongRange": {
         "stores": {
@@ -1289,9 +1575,9 @@
         "stores_mass_kg": 1398,
         "total_fuel_kg": 18437,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 45529.0,
+        "full_fuel_takeoff_mass_kg": 45579.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 6316.0
+        "margin_kg": 6266.0
       },
       "FleetIntercept": {
         "stores": {
@@ -1309,9 +1595,9 @@
         "stores_mass_kg": 1560,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 42151.0,
+        "full_fuel_takeoff_mass_kg": 42201.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 9694.0
+        "margin_kg": 9644.0
       },
       "AntiShip": {
         "stores": {
@@ -1327,9 +1613,9 @@
         "stores_mass_kg": 1224,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 41815.0,
+        "full_fuel_takeoff_mass_kg": 41865.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 10030.0
+        "margin_kg": 9980.0
       },
       "AntiShipHeavy": {
         "stores": {
@@ -1345,9 +1631,9 @@
         "stores_mass_kg": 3682,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 44273.0,
+        "full_fuel_takeoff_mass_kg": 44323.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 7572.0
+        "margin_kg": 7522.0
       },
       "AntiShipLongRange": {
         "stores": {
@@ -1367,33 +1653,37 @@
         "stores_mass_kg": 3102,
         "total_fuel_kg": 18437,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 47233.0,
+        "full_fuel_takeoff_mass_kg": 47283.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 4612.0
+        "margin_kg": 4562.0
       },
       "Strike": {
         "stores": {
           "ran_nw_aim9m": 2,
-          "ran_nw_mk82_mer": 24
+          "ran_nw_mk82_mer": 24,
+          "ran_nw_mk82": 3
         },
         "wing_stores": {
           "ran_nw_aim9m": 2,
           "ran_nw_mk82_mer": 24
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 6020.0,
+        "internal_bay_stores": {
+          "ran_nw_mk82": 3
+        },
+        "stores_mass_kg": 6701.0,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 46611.0,
+        "full_fuel_takeoff_mass_kg": 47342.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 5234.0
+        "margin_kg": 4503.0
       },
       "StrikeLongRange": {
         "stores": {
           "ran_nw_aim9m": 2,
           "ran_tank_600_fb111n": 2,
-          "ran_nw_mk82_mer": 12
+          "ran_nw_mk82_mer": 12,
+          "ran_nw_mk82": 3
         },
         "wing_stores": {
           "ran_nw_aim9m": 2,
@@ -1401,37 +1691,41 @@
           "ran_nw_mk82_mer": 12
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 3396.0,
+        "internal_bay_stores": {
+          "ran_nw_mk82": 3
+        },
+        "stores_mass_kg": 4077.0,
         "total_fuel_kg": 18437,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 47527.0,
+        "full_fuel_takeoff_mass_kg": 48258.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 4318.0
+        "margin_kg": 3587.0
       },
       "StrikeHeavy": {
         "stores": {
           "ran_nw_aim9m": 2,
-          "ran_nw_mk84": 4
+          "ran_nw_mk84": 6
         },
         "wing_stores": {
           "ran_nw_aim9m": 2,
           "ran_nw_mk84": 4
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 3800,
+        "internal_bay_stores": {
+          "ran_nw_mk84": 2
+        },
+        "stores_mass_kg": 5614,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 44391.0,
+        "full_fuel_takeoff_mass_kg": 46255.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 7454.0
+        "margin_kg": 5590.0
       },
       "StrikeHeavyLongRange": {
         "stores": {
           "ran_nw_aim9m": 2,
           "ran_tank_600_fb111n": 2,
-          "ran_nw_mk84": 2
+          "ran_nw_mk84": 4
         },
         "wing_stores": {
           "ran_nw_aim9m": 2,
@@ -1439,37 +1733,42 @@
           "ran_nw_mk84": 2
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 2286,
+        "internal_bay_stores": {
+          "ran_nw_mk84": 2
+        },
+        "stores_mass_kg": 4100,
         "total_fuel_kg": 18437,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 46417.0,
+        "full_fuel_takeoff_mass_kg": 48281.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 5428.0
+        "margin_kg": 3564.0
       },
       "StrikeMedium": {
         "stores": {
           "ran_nw_aim9m": 2,
-          "ran_nw_mk83": 4
+          "ran_nw_mk83": 6
         },
         "wing_stores": {
           "ran_nw_aim9m": 2,
           "ran_nw_mk83": 4
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 1988,
+        "internal_bay_stores": {
+          "ran_nw_mk83": 2
+        },
+        "stores_mass_kg": 2896,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 42579.0,
+        "full_fuel_takeoff_mass_kg": 43537.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 9266.0
+        "margin_kg": 8308.0
       },
       "StrikePrecision": {
         "stores": {
           "ran_nw_aim9m": 2,
           "ran_nw_gbu10": 3,
-          "ran_nw_laserpod": 1
+          "ran_nw_laserpod": 1,
+          "ran_nw_gbu12": 2
         },
         "wing_stores": {
           "ran_nw_aim9m": 2,
@@ -1477,18 +1776,20 @@
           "ran_nw_laserpod": 1
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 3124,
+        "internal_bay_stores": {
+          "ran_nw_gbu12": 2
+        },
+        "stores_mass_kg": 3678,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 43715.0,
+        "full_fuel_takeoff_mass_kg": 44319.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 8130.0
+        "margin_kg": 7526.0
       },
       "StrikePrecisionLight": {
         "stores": {
           "ran_nw_aim9m": 2,
-          "ran_nw_gbu12": 3,
+          "ran_nw_gbu12": 5,
           "ran_nw_laserpod": 1
         },
         "wing_stores": {
@@ -1497,19 +1798,22 @@
           "ran_nw_laserpod": 1
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 1153,
+        "internal_bay_stores": {
+          "ran_nw_gbu12": 2
+        },
+        "stores_mass_kg": 1707,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 41744.0,
+        "full_fuel_takeoff_mass_kg": 42348.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 10101.0
+        "margin_kg": 9497.0
       },
       "StrikePrecisionMedium": {
         "stores": {
           "ran_nw_aim9m": 2,
           "ran_nw_gbu16": 3,
-          "ran_nw_laserpod": 1
+          "ran_nw_laserpod": 1,
+          "ran_nw_gbu12": 2
         },
         "wing_stores": {
           "ran_nw_aim9m": 2,
@@ -1517,20 +1821,23 @@
           "ran_nw_laserpod": 1
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 1807,
+        "internal_bay_stores": {
+          "ran_nw_gbu12": 2
+        },
+        "stores_mass_kg": 2361,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 42398.0,
+        "full_fuel_takeoff_mass_kg": 43002.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 9447.0
+        "margin_kg": 8843.0
       },
       "StrikePrecisionLongRange": {
         "stores": {
           "ran_nw_aim9m": 2,
           "ran_tank_600_fb111n": 2,
           "ran_nw_gbu10": 1,
-          "ran_nw_laserpod": 1
+          "ran_nw_laserpod": 1,
+          "ran_nw_gbu12": 2
         },
         "wing_stores": {
           "ran_nw_aim9m": 2,
@@ -1539,31 +1846,35 @@
           "ran_nw_laserpod": 1
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 1556,
+        "internal_bay_stores": {
+          "ran_nw_gbu12": 2
+        },
+        "stores_mass_kg": 2110,
         "total_fuel_kg": 18437,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 45687.0,
+        "full_fuel_takeoff_mass_kg": 46291.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 6158.0
+        "margin_kg": 5554.0
       },
       "MaverickStrike": {
         "stores": {
           "ran_nw_aim9m": 2,
-          "ran_nw_maverickd": 4
+          "ran_nw_maverickd": 6
         },
         "wing_stores": {
           "ran_nw_aim9m": 2,
           "ran_nw_maverickd": 4
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 1044,
+        "internal_bay_stores": {
+          "ran_nw_maverickd": 2
+        },
+        "stores_mass_kg": 1480,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 41635.0,
+        "full_fuel_takeoff_mass_kg": 42121.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 10210.0
+        "margin_kg": 9724.0
       },
       "SEAD": {
         "stores": {
@@ -1579,9 +1890,9 @@
         "stores_mass_kg": 1616,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 42207.0,
+        "full_fuel_takeoff_mass_kg": 42257.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 9638.0
+        "margin_kg": 9588.0
       },
       "EW": {
         "stores": {
@@ -1601,9 +1912,9 @@
         "stores_mass_kg": 992,
         "total_fuel_kg": 18437,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 45123.0,
+        "full_fuel_takeoff_mass_kg": 45173.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 6722.0
+        "margin_kg": 6672.0
       },
       "EWLongRange": {
         "stores": {
@@ -1623,9 +1934,9 @@
         "stores_mass_kg": 992,
         "total_fuel_kg": 18437,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 45123.0,
+        "full_fuel_takeoff_mass_kg": 45173.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 6722.0
+        "margin_kg": 6672.0
       },
       "EscortSEAD": {
         "stores": {
@@ -1645,9 +1956,9 @@
         "stores_mass_kg": 1414,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 42005.0,
+        "full_fuel_takeoff_mass_kg": 42055.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 9840.0
+        "margin_kg": 9790.0
       },
       "ReconLongRange": {
         "stores": {
@@ -1663,9 +1974,9 @@
         "stores_mass_kg": 772,
         "total_fuel_kg": 21977,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 48443.0,
+        "full_fuel_takeoff_mass_kg": 48493.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 3402.0
+        "margin_kg": 3352.0
       },
       "EOGlideStrike": {
         "stores": {
@@ -1683,15 +1994,16 @@
         "stores_mass_kg": 2692,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 43283.0,
+        "full_fuel_takeoff_mass_kg": 43333.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 8562.0
+        "margin_kg": 8512.0
       },
       "StrikePavewayIII": {
         "stores": {
           "ran_nw_aim9m": 2,
           "ran_nw_gbu24": 3,
-          "ran_nw_laserpod": 1
+          "ran_nw_laserpod": 1,
+          "ran_nw_gbu12": 2
         },
         "wing_stores": {
           "ran_nw_aim9m": 2,
@@ -1699,14 +2011,269 @@
           "ran_nw_laserpod": 1
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 3574,
+        "internal_bay_stores": {
+          "ran_nw_gbu12": 2
+        },
+        "stores_mass_kg": 4128,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 44165.0,
+        "full_fuel_takeoff_mass_kg": 44769.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 7680.0
+        "margin_kg": 7076.0
+      },
+      "AntiShipBay": {
+        "stores": {
+          "ran_nw_aim9m": 2,
+          "ran_nw_harpoonc": 3
+        },
+        "wing_stores": {
+          "ran_nw_aim9m": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_harpoonc": 3
+        },
+        "stores_mass_kg": 1750,
+        "total_fuel_kg": 14897,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 42391.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 9454.0
+      },
+      "StrikeBay": {
+        "stores": {
+          "ran_nw_aim9m": 2,
+          "ran_nw_mk82": 3
+        },
+        "wing_stores": {
+          "ran_nw_aim9m": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_mk82": 3
+        },
+        "stores_mass_kg": 853,
+        "total_fuel_kg": 14897,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 41494.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 10351.0
+      },
+      "StrikeHeavyBay": {
+        "stores": {
+          "ran_nw_aim9m": 2,
+          "ran_nw_mk84": 2
+        },
+        "wing_stores": {
+          "ran_nw_aim9m": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_mk84": 2
+        },
+        "stores_mass_kg": 1986,
+        "total_fuel_kg": 14897,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 42627.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 9218.0
+      },
+      "StrikePrecisionBay": {
+        "stores": {
+          "ran_nw_aim9m": 2,
+          "ran_nw_laserpod": 1,
+          "ran_nw_gbu12": 2
+        },
+        "wing_stores": {
+          "ran_nw_aim9m": 2,
+          "ran_nw_laserpod": 1
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_gbu12": 2
+        },
+        "stores_mass_kg": 876,
+        "total_fuel_kg": 14897,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 41517.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 10328.0
+      },
+      "FleetInterceptBay": {
+        "stores": {
+          "ran_nw_aim9m": 2,
+          "ran_nw_aim7m": 2,
+          "ran_nw_aim54c": 2
+        },
+        "wing_stores": {
+          "ran_nw_aim9m": 2,
+          "ran_nw_aim7m": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_aim54c": 2
+        },
+        "stores_mass_kg": 1560,
+        "total_fuel_kg": 14897,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 42201.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 9644.0
+      },
+      "AntiShipBayLongRange": {
+        "stores": {
+          "ran_nw_aim9m": 2,
+          "ran_tank_600_fb111n": 2,
+          "ran_nw_harpoonc": 3
+        },
+        "wing_stores": {
+          "ran_nw_aim9m": 2,
+          "ran_tank_600_fb111n": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_harpoonc": 3
+        },
+        "stores_mass_kg": 2050,
+        "total_fuel_kg": 18437,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 46231.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 5614.0
+      },
+      "StrikeBayLongRange": {
+        "stores": {
+          "ran_nw_aim9m": 2,
+          "ran_tank_600_fb111n": 2,
+          "ran_nw_mk82": 3
+        },
+        "wing_stores": {
+          "ran_nw_aim9m": 2,
+          "ran_tank_600_fb111n": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_mk82": 3
+        },
+        "stores_mass_kg": 1153,
+        "total_fuel_kg": 18437,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 45334.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 6511.0
+      },
+      "StrikeHeavyBayLongRange": {
+        "stores": {
+          "ran_nw_aim9m": 2,
+          "ran_tank_600_fb111n": 2,
+          "ran_nw_mk84": 2
+        },
+        "wing_stores": {
+          "ran_nw_aim9m": 2,
+          "ran_tank_600_fb111n": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_mk84": 2
+        },
+        "stores_mass_kg": 2286,
+        "total_fuel_kg": 18437,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 46467.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 5378.0
+      },
+      "StrikePrecisionBayLongRange": {
+        "stores": {
+          "ran_nw_aim9m": 2,
+          "ran_tank_600_fb111n": 2,
+          "ran_nw_laserpod": 1,
+          "ran_nw_gbu12": 2
+        },
+        "wing_stores": {
+          "ran_nw_aim9m": 2,
+          "ran_tank_600_fb111n": 2,
+          "ran_nw_laserpod": 1
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_gbu12": 2
+        },
+        "stores_mass_kg": 1176,
+        "total_fuel_kg": 18437,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 45357.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 6488.0
+      },
+      "FleetInterceptBayLongRange": {
+        "stores": {
+          "ran_nw_aim9m": 2,
+          "ran_tank_600_fb111n": 2,
+          "ran_nw_aim7m": 2,
+          "ran_nw_aim54c": 2
+        },
+        "wing_stores": {
+          "ran_nw_aim9m": 2,
+          "ran_tank_600_fb111n": 2,
+          "ran_nw_aim7m": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_aim54c": 2
+        },
+        "stores_mass_kg": 1860,
+        "total_fuel_kg": 18437,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 46041.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 5804.0
       }
+    },
+    "internal_bay_qualification": {
+      "physical_stations": 3,
+      "single_store_adapter_offsets_metres": {
+        "Phoenix": [
+          0,
+          0,
+          -0.1
+        ],
+        "Shrike": [
+          0,
+          0,
+          -0.5
+        ]
+      },
+      "upgrade_mass_kg_by_edition": {
+        "1980": 40,
+        "1985": 50,
+        "1995": 60,
+        "2003": 75
+      },
+      "status": "Estimated integration in the hypothetical Australian naval programme",
+      "maximum_counts": {
+        "Mk 82": 3,
+        "Harpoon": 3,
+        "Mk 83": 2,
+        "Mk 84": 2,
+        "GBU-12": 2,
+        "Maverick": 2,
+        "Shrike": 2,
+        "Phoenix": 2,
+        "SLAM": 2,
+        "GBU-31": 2,
+        "GBU-32": 2
+      },
+      "excluded_internal_stores": [
+        "Popeye",
+        "SLAM-ER",
+        "JSOW",
+        "external MER racks",
+        "fuel tanks",
+        "control/ECM pods"
+      ],
+      "carrier_recovery_runtime_tested": false,
+      "carrier_arrestor_or_catapult_certified": false
     }
   },
   "ran_fb-111n_1995": {
@@ -1718,13 +2285,14 @@
       2002
     ],
     "role": "Bomber",
-    "empty_mass_kg": 26400,
+    "empty_mass_kg": 26460,
     "empty_mass_components_kg": {
       "historical_F111C_basic_reference": 23300,
       "naval_conversion_estimate": 950,
       "role_equipment_estimate": 0,
       "separate_M61_installation_estimate": 650,
       "edition_avionics_growth_estimate": 250,
+      "internal_bay_multistore_upgrade_estimate": 60,
       "investment_systems_and_controls_estimate": 650,
       "propulsion_retrofit_estimate": 600,
       "recon_thermal_upgrade_estimate": 0
@@ -1801,9 +2369,9 @@
         "stores_mass_kg": 1224,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 43065.0,
+        "full_fuel_takeoff_mass_kg": 43125.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 8780.0
+        "margin_kg": 8720.0
       },
       "AirToAir": {
         "stores": {
@@ -1819,9 +2387,9 @@
         "stores_mass_kg": 648,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 42489.0,
+        "full_fuel_takeoff_mass_kg": 42549.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 9356.0
+        "margin_kg": 9296.0
       },
       "AirToAirLongRange": {
         "stores": {
@@ -1839,9 +2407,9 @@
         "stores_mass_kg": 1398,
         "total_fuel_kg": 18437,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 46779.0,
+        "full_fuel_takeoff_mass_kg": 46839.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 5066.0
+        "margin_kg": 5006.0
       },
       "FleetIntercept": {
         "stores": {
@@ -1859,9 +2427,9 @@
         "stores_mass_kg": 1402,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 43243.0,
+        "full_fuel_takeoff_mass_kg": 43303.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 8602.0
+        "margin_kg": 8542.0
       },
       "AntiShip": {
         "stores": {
@@ -1877,9 +2445,9 @@
         "stores_mass_kg": 1224,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 43065.0,
+        "full_fuel_takeoff_mass_kg": 43125.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 8780.0
+        "margin_kg": 8720.0
       },
       "AntiShipHeavy": {
         "stores": {
@@ -1895,9 +2463,9 @@
         "stores_mass_kg": 3682,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 45523.0,
+        "full_fuel_takeoff_mass_kg": 45583.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 6322.0
+        "margin_kg": 6262.0
       },
       "AntiShipLongRange": {
         "stores": {
@@ -1917,33 +2485,37 @@
         "stores_mass_kg": 3102,
         "total_fuel_kg": 18437,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 48483.0,
+        "full_fuel_takeoff_mass_kg": 48543.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 3362.0
+        "margin_kg": 3302.0
       },
       "Strike": {
         "stores": {
           "ran_nw_aim9m": 2,
-          "ran_nw_mk82_mer": 24
+          "ran_nw_mk82_mer": 24,
+          "ran_nw_mk82": 3
         },
         "wing_stores": {
           "ran_nw_aim9m": 2,
           "ran_nw_mk82_mer": 24
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 6020.0,
+        "internal_bay_stores": {
+          "ran_nw_mk82": 3
+        },
+        "stores_mass_kg": 6701.0,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 47861.0,
+        "full_fuel_takeoff_mass_kg": 48602.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 3984.0
+        "margin_kg": 3243.0
       },
       "StrikeLongRange": {
         "stores": {
           "ran_nw_aim9m": 2,
           "ran_tank_600_fb111n": 2,
-          "ran_nw_mk82_mer": 12
+          "ran_nw_mk82_mer": 12,
+          "ran_nw_mk82": 3
         },
         "wing_stores": {
           "ran_nw_aim9m": 2,
@@ -1951,37 +2523,41 @@
           "ran_nw_mk82_mer": 12
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 3396.0,
+        "internal_bay_stores": {
+          "ran_nw_mk82": 3
+        },
+        "stores_mass_kg": 4077.0,
         "total_fuel_kg": 18437,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 48777.0,
+        "full_fuel_takeoff_mass_kg": 49518.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 3068.0
+        "margin_kg": 2327.0
       },
       "StrikeHeavy": {
         "stores": {
           "ran_nw_aim9m": 2,
-          "ran_nw_mk84": 4
+          "ran_nw_mk84": 6
         },
         "wing_stores": {
           "ran_nw_aim9m": 2,
           "ran_nw_mk84": 4
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 3800,
+        "internal_bay_stores": {
+          "ran_nw_mk84": 2
+        },
+        "stores_mass_kg": 5614,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 45641.0,
+        "full_fuel_takeoff_mass_kg": 47515.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 6204.0
+        "margin_kg": 4330.0
       },
       "StrikeHeavyLongRange": {
         "stores": {
           "ran_nw_aim9m": 2,
           "ran_tank_600_fb111n": 2,
-          "ran_nw_mk84": 2
+          "ran_nw_mk84": 4
         },
         "wing_stores": {
           "ran_nw_aim9m": 2,
@@ -1989,37 +2565,42 @@
           "ran_nw_mk84": 2
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 2286,
+        "internal_bay_stores": {
+          "ran_nw_mk84": 2
+        },
+        "stores_mass_kg": 4100,
         "total_fuel_kg": 18437,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 47667.0,
+        "full_fuel_takeoff_mass_kg": 49541.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 4178.0
+        "margin_kg": 2304.0
       },
       "StrikeMedium": {
         "stores": {
           "ran_nw_aim9m": 2,
-          "ran_nw_mk83": 4
+          "ran_nw_mk83": 6
         },
         "wing_stores": {
           "ran_nw_aim9m": 2,
           "ran_nw_mk83": 4
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 1988,
+        "internal_bay_stores": {
+          "ran_nw_mk83": 2
+        },
+        "stores_mass_kg": 2896,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 43829.0,
+        "full_fuel_takeoff_mass_kg": 44797.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 8016.0
+        "margin_kg": 7048.0
       },
       "StrikePrecision": {
         "stores": {
           "ran_nw_aim9m": 2,
           "ran_nw_gbu10": 3,
-          "ran_nw_laserpod": 1
+          "ran_nw_laserpod": 1,
+          "ran_nw_gbu12": 2
         },
         "wing_stores": {
           "ran_nw_aim9m": 2,
@@ -2027,18 +2608,20 @@
           "ran_nw_laserpod": 1
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 3124,
+        "internal_bay_stores": {
+          "ran_nw_gbu12": 2
+        },
+        "stores_mass_kg": 3678,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 44965.0,
+        "full_fuel_takeoff_mass_kg": 45579.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 6880.0
+        "margin_kg": 6266.0
       },
       "StrikePrecisionLight": {
         "stores": {
           "ran_nw_aim9m": 2,
-          "ran_nw_gbu12": 3,
+          "ran_nw_gbu12": 5,
           "ran_nw_laserpod": 1
         },
         "wing_stores": {
@@ -2047,19 +2630,22 @@
           "ran_nw_laserpod": 1
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 1153,
+        "internal_bay_stores": {
+          "ran_nw_gbu12": 2
+        },
+        "stores_mass_kg": 1707,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 42994.0,
+        "full_fuel_takeoff_mass_kg": 43608.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 8851.0
+        "margin_kg": 8237.0
       },
       "StrikePrecisionMedium": {
         "stores": {
           "ran_nw_aim9m": 2,
           "ran_nw_gbu16": 3,
-          "ran_nw_laserpod": 1
+          "ran_nw_laserpod": 1,
+          "ran_nw_gbu12": 2
         },
         "wing_stores": {
           "ran_nw_aim9m": 2,
@@ -2067,20 +2653,23 @@
           "ran_nw_laserpod": 1
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 1807,
+        "internal_bay_stores": {
+          "ran_nw_gbu12": 2
+        },
+        "stores_mass_kg": 2361,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 43648.0,
+        "full_fuel_takeoff_mass_kg": 44262.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 8197.0
+        "margin_kg": 7583.0
       },
       "StrikePrecisionLongRange": {
         "stores": {
           "ran_nw_aim9m": 2,
           "ran_tank_600_fb111n": 2,
           "ran_nw_gbu10": 1,
-          "ran_nw_laserpod": 1
+          "ran_nw_laserpod": 1,
+          "ran_nw_gbu12": 2
         },
         "wing_stores": {
           "ran_nw_aim9m": 2,
@@ -2089,31 +2678,35 @@
           "ran_nw_laserpod": 1
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 1556,
+        "internal_bay_stores": {
+          "ran_nw_gbu12": 2
+        },
+        "stores_mass_kg": 2110,
         "total_fuel_kg": 18437,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 46937.0,
+        "full_fuel_takeoff_mass_kg": 47551.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 4908.0
+        "margin_kg": 4294.0
       },
       "MaverickStrike": {
         "stores": {
           "ran_nw_aim9m": 2,
-          "ran_nw_maverickg": 4
+          "ran_nw_maverickg": 6
         },
         "wing_stores": {
           "ran_nw_aim9m": 2,
           "ran_nw_maverickg": 4
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 1380,
+        "internal_bay_stores": {
+          "ran_nw_maverickg": 2
+        },
+        "stores_mass_kg": 1984,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 43221.0,
+        "full_fuel_takeoff_mass_kg": 43885.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 8624.0
+        "margin_kg": 7960.0
       },
       "SEAD": {
         "stores": {
@@ -2129,9 +2722,9 @@
         "stores_mass_kg": 1616,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 43457.0,
+        "full_fuel_takeoff_mass_kg": 43517.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 8388.0
+        "margin_kg": 8328.0
       },
       "EW": {
         "stores": {
@@ -2151,9 +2744,9 @@
         "stores_mass_kg": 992,
         "total_fuel_kg": 18437,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 46373.0,
+        "full_fuel_takeoff_mass_kg": 46433.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 5472.0
+        "margin_kg": 5412.0
       },
       "EWLongRange": {
         "stores": {
@@ -2173,9 +2766,9 @@
         "stores_mass_kg": 992,
         "total_fuel_kg": 18437,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 46373.0,
+        "full_fuel_takeoff_mass_kg": 46433.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 5472.0
+        "margin_kg": 5412.0
       },
       "EscortSEAD": {
         "stores": {
@@ -2195,9 +2788,9 @@
         "stores_mass_kg": 1414,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 43255.0,
+        "full_fuel_takeoff_mass_kg": 43315.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 8590.0
+        "margin_kg": 8530.0
       },
       "ReconLongRange": {
         "stores": {
@@ -2213,9 +2806,9 @@
         "stores_mass_kg": 772,
         "total_fuel_kg": 21977,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 49693.0,
+        "full_fuel_takeoff_mass_kg": 49753.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 2152.0
+        "margin_kg": 2092.0
       },
       "EOGlideStrike": {
         "stores": {
@@ -2233,15 +2826,16 @@
         "stores_mass_kg": 2692,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 44533.0,
+        "full_fuel_takeoff_mass_kg": 44593.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 7312.0
+        "margin_kg": 7252.0
       },
       "StrikePavewayIII": {
         "stores": {
           "ran_nw_aim9m": 2,
           "ran_nw_gbu24": 3,
-          "ran_nw_laserpod": 1
+          "ran_nw_laserpod": 1,
+          "ran_nw_gbu12": 2
         },
         "wing_stores": {
           "ran_nw_aim9m": 2,
@@ -2249,13 +2843,15 @@
           "ran_nw_laserpod": 1
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 3574,
+        "internal_bay_stores": {
+          "ran_nw_gbu12": 2
+        },
+        "stores_mass_kg": 4128,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 45415.0,
+        "full_fuel_takeoff_mass_kg": 46029.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 6430.0
+        "margin_kg": 5816.0
       },
       "PopeyeStrike": {
         "stores": {
@@ -2273,14 +2869,14 @@
         "stores_mass_kg": 3152,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 44993.0,
+        "full_fuel_takeoff_mass_kg": 45053.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 6852.0
+        "margin_kg": 6792.0
       },
       "SLAMStrike": {
         "stores": {
           "ran_nw_aim9m": 2,
-          "ran_nw_slam": 2,
+          "ran_nw_slam": 4,
           "ran_nw_datalink": 1
         },
         "wing_stores": {
@@ -2289,14 +2885,269 @@
           "ran_nw_datalink": 1
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 1688,
+        "internal_bay_stores": {
+          "ran_nw_slam": 2
+        },
+        "stores_mass_kg": 2944,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 43529.0,
+        "full_fuel_takeoff_mass_kg": 44845.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 8316.0
+        "margin_kg": 7000.0
+      },
+      "AntiShipBay": {
+        "stores": {
+          "ran_nw_aim9m": 2,
+          "ran_nw_harpoond": 3
+        },
+        "wing_stores": {
+          "ran_nw_aim9m": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_harpoond": 3
+        },
+        "stores_mass_kg": 1750,
+        "total_fuel_kg": 14897,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 43651.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 8194.0
+      },
+      "StrikeBay": {
+        "stores": {
+          "ran_nw_aim9m": 2,
+          "ran_nw_mk82": 3
+        },
+        "wing_stores": {
+          "ran_nw_aim9m": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_mk82": 3
+        },
+        "stores_mass_kg": 853,
+        "total_fuel_kg": 14897,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 42754.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 9091.0
+      },
+      "StrikeHeavyBay": {
+        "stores": {
+          "ran_nw_aim9m": 2,
+          "ran_nw_mk84": 2
+        },
+        "wing_stores": {
+          "ran_nw_aim9m": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_mk84": 2
+        },
+        "stores_mass_kg": 1986,
+        "total_fuel_kg": 14897,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 43887.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 7958.0
+      },
+      "StrikePrecisionBay": {
+        "stores": {
+          "ran_nw_aim9m": 2,
+          "ran_nw_laserpod": 1,
+          "ran_nw_gbu12": 2
+        },
+        "wing_stores": {
+          "ran_nw_aim9m": 2,
+          "ran_nw_laserpod": 1
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_gbu12": 2
+        },
+        "stores_mass_kg": 876,
+        "total_fuel_kg": 14897,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 42777.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 9068.0
+      },
+      "FleetInterceptBay": {
+        "stores": {
+          "ran_nw_aim9m": 2,
+          "ran_nw_aim120b": 2,
+          "ran_nw_aim54c": 2
+        },
+        "wing_stores": {
+          "ran_nw_aim9m": 2,
+          "ran_nw_aim120b": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_aim54c": 2
+        },
+        "stores_mass_kg": 1402,
+        "total_fuel_kg": 14897,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 43303.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 8542.0
+      },
+      "AntiShipBayLongRange": {
+        "stores": {
+          "ran_nw_aim9m": 2,
+          "ran_tank_600_fb111n": 2,
+          "ran_nw_harpoond": 3
+        },
+        "wing_stores": {
+          "ran_nw_aim9m": 2,
+          "ran_tank_600_fb111n": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_harpoond": 3
+        },
+        "stores_mass_kg": 2050,
+        "total_fuel_kg": 18437,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 47491.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 4354.0
+      },
+      "StrikeBayLongRange": {
+        "stores": {
+          "ran_nw_aim9m": 2,
+          "ran_tank_600_fb111n": 2,
+          "ran_nw_mk82": 3
+        },
+        "wing_stores": {
+          "ran_nw_aim9m": 2,
+          "ran_tank_600_fb111n": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_mk82": 3
+        },
+        "stores_mass_kg": 1153,
+        "total_fuel_kg": 18437,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 46594.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 5251.0
+      },
+      "StrikeHeavyBayLongRange": {
+        "stores": {
+          "ran_nw_aim9m": 2,
+          "ran_tank_600_fb111n": 2,
+          "ran_nw_mk84": 2
+        },
+        "wing_stores": {
+          "ran_nw_aim9m": 2,
+          "ran_tank_600_fb111n": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_mk84": 2
+        },
+        "stores_mass_kg": 2286,
+        "total_fuel_kg": 18437,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 47727.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 4118.0
+      },
+      "StrikePrecisionBayLongRange": {
+        "stores": {
+          "ran_nw_aim9m": 2,
+          "ran_tank_600_fb111n": 2,
+          "ran_nw_laserpod": 1,
+          "ran_nw_gbu12": 2
+        },
+        "wing_stores": {
+          "ran_nw_aim9m": 2,
+          "ran_tank_600_fb111n": 2,
+          "ran_nw_laserpod": 1
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_gbu12": 2
+        },
+        "stores_mass_kg": 1176,
+        "total_fuel_kg": 18437,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 46617.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 5228.0
+      },
+      "FleetInterceptBayLongRange": {
+        "stores": {
+          "ran_nw_aim9m": 2,
+          "ran_tank_600_fb111n": 2,
+          "ran_nw_aim120b": 2,
+          "ran_nw_aim54c": 2
+        },
+        "wing_stores": {
+          "ran_nw_aim9m": 2,
+          "ran_tank_600_fb111n": 2,
+          "ran_nw_aim120b": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_aim54c": 2
+        },
+        "stores_mass_kg": 1702,
+        "total_fuel_kg": 18437,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 47143.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 4702.0
       }
+    },
+    "internal_bay_qualification": {
+      "physical_stations": 3,
+      "single_store_adapter_offsets_metres": {
+        "Phoenix": [
+          0,
+          0,
+          -0.1
+        ],
+        "Shrike": [
+          0,
+          0,
+          -0.5
+        ]
+      },
+      "upgrade_mass_kg_by_edition": {
+        "1980": 40,
+        "1985": 50,
+        "1995": 60,
+        "2003": 75
+      },
+      "status": "Estimated integration in the hypothetical Australian naval programme",
+      "maximum_counts": {
+        "Mk 82": 3,
+        "Harpoon": 3,
+        "Mk 83": 2,
+        "Mk 84": 2,
+        "GBU-12": 2,
+        "Maverick": 2,
+        "Shrike": 2,
+        "Phoenix": 2,
+        "SLAM": 2,
+        "GBU-31": 2,
+        "GBU-32": 2
+      },
+      "excluded_internal_stores": [
+        "Popeye",
+        "SLAM-ER",
+        "JSOW",
+        "external MER racks",
+        "fuel tanks",
+        "control/ECM pods"
+      ],
+      "carrier_recovery_runtime_tested": false,
+      "carrier_arrestor_or_catapult_certified": false
     }
   },
   "ran_fb-111n_2003": {
@@ -2308,13 +3159,14 @@
       2050
     ],
     "role": "Bomber",
-    "empty_mass_kg": 26900,
+    "empty_mass_kg": 26975,
     "empty_mass_components_kg": {
       "historical_F111C_basic_reference": 23300,
       "naval_conversion_estimate": 950,
       "role_equipment_estimate": 0,
       "separate_M61_installation_estimate": 650,
       "edition_avionics_growth_estimate": 400,
+      "internal_bay_multistore_upgrade_estimate": 75,
       "investment_systems_and_controls_estimate": 850,
       "propulsion_retrofit_estimate": 750,
       "recon_thermal_upgrade_estimate": 0
@@ -2391,9 +3243,9 @@
         "stores_mass_kg": 1228,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 43569.0,
+        "full_fuel_takeoff_mass_kg": 43644.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 8276.0
+        "margin_kg": 8201.0
       },
       "AirToAir": {
         "stores": {
@@ -2409,9 +3261,9 @@
         "stores_mass_kg": 656,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 42997.0,
+        "full_fuel_takeoff_mass_kg": 43072.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 8848.0
+        "margin_kg": 8773.0
       },
       "AirToAirLongRange": {
         "stores": {
@@ -2429,9 +3281,9 @@
         "stores_mass_kg": 1402,
         "total_fuel_kg": 18437,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 47283.0,
+        "full_fuel_takeoff_mass_kg": 47358.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 4562.0
+        "margin_kg": 4487.0
       },
       "FleetIntercept": {
         "stores": {
@@ -2449,9 +3301,9 @@
         "stores_mass_kg": 1406,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 43747.0,
+        "full_fuel_takeoff_mass_kg": 43822.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 8098.0
+        "margin_kg": 8023.0
       },
       "AntiShip": {
         "stores": {
@@ -2467,9 +3319,9 @@
         "stores_mass_kg": 1228,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 43569.0,
+        "full_fuel_takeoff_mass_kg": 43644.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 8276.0
+        "margin_kg": 8201.0
       },
       "AntiShipHeavy": {
         "stores": {
@@ -2485,9 +3337,9 @@
         "stores_mass_kg": 3682,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 46023.0,
+        "full_fuel_takeoff_mass_kg": 46098.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 5822.0
+        "margin_kg": 5747.0
       },
       "AntiShipLongRange": {
         "stores": {
@@ -2507,33 +3359,37 @@
         "stores_mass_kg": 3106,
         "total_fuel_kg": 18437,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 48987.0,
+        "full_fuel_takeoff_mass_kg": 49062.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 2858.0
+        "margin_kg": 2783.0
       },
       "Strike": {
         "stores": {
           "ran_nw_asraam": 2,
-          "ran_nw_mk82_mer": 24
+          "ran_nw_mk82_mer": 24,
+          "ran_nw_mk82": 3
         },
         "wing_stores": {
           "ran_nw_asraam": 2,
           "ran_nw_mk82_mer": 24
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 6024.0,
+        "internal_bay_stores": {
+          "ran_nw_mk82": 3
+        },
+        "stores_mass_kg": 6705.0,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 48365.0,
+        "full_fuel_takeoff_mass_kg": 49121.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 3480.0
+        "margin_kg": 2724.0
       },
       "StrikeLongRange": {
         "stores": {
           "ran_nw_asraam": 2,
           "ran_tank_600_fb111n": 2,
-          "ran_nw_mk82_mer": 12
+          "ran_nw_mk82_mer": 12,
+          "ran_nw_mk82": 3
         },
         "wing_stores": {
           "ran_nw_asraam": 2,
@@ -2541,37 +3397,41 @@
           "ran_nw_mk82_mer": 12
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 3400.0,
+        "internal_bay_stores": {
+          "ran_nw_mk82": 3
+        },
+        "stores_mass_kg": 4081.0,
         "total_fuel_kg": 18437,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 49281.0,
+        "full_fuel_takeoff_mass_kg": 50037.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 2564.0
+        "margin_kg": 1808.0
       },
       "StrikeHeavy": {
         "stores": {
           "ran_nw_asraam": 2,
-          "ran_nw_mk84": 4
+          "ran_nw_mk84": 6
         },
         "wing_stores": {
           "ran_nw_asraam": 2,
           "ran_nw_mk84": 4
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 3804,
+        "internal_bay_stores": {
+          "ran_nw_mk84": 2
+        },
+        "stores_mass_kg": 5618,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 46145.0,
+        "full_fuel_takeoff_mass_kg": 48034.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 5700.0
+        "margin_kg": 3811.0
       },
       "StrikeHeavyLongRange": {
         "stores": {
           "ran_nw_asraam": 2,
           "ran_tank_600_fb111n": 2,
-          "ran_nw_mk84": 2
+          "ran_nw_mk84": 4
         },
         "wing_stores": {
           "ran_nw_asraam": 2,
@@ -2579,37 +3439,42 @@
           "ran_nw_mk84": 2
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 2290,
+        "internal_bay_stores": {
+          "ran_nw_mk84": 2
+        },
+        "stores_mass_kg": 4104,
         "total_fuel_kg": 18437,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 48171.0,
+        "full_fuel_takeoff_mass_kg": 50060.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 3674.0
+        "margin_kg": 1785.0
       },
       "StrikeMedium": {
         "stores": {
           "ran_nw_asraam": 2,
-          "ran_nw_mk83": 4
+          "ran_nw_mk83": 6
         },
         "wing_stores": {
           "ran_nw_asraam": 2,
           "ran_nw_mk83": 4
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 1992,
+        "internal_bay_stores": {
+          "ran_nw_mk83": 2
+        },
+        "stores_mass_kg": 2900,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 44333.0,
+        "full_fuel_takeoff_mass_kg": 45316.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 7512.0
+        "margin_kg": 6529.0
       },
       "StrikePrecision": {
         "stores": {
           "ran_nw_asraam": 2,
           "ran_nw_gbu10": 3,
-          "ran_nw_laserpod": 1
+          "ran_nw_laserpod": 1,
+          "ran_nw_gbu12": 2
         },
         "wing_stores": {
           "ran_nw_asraam": 2,
@@ -2617,18 +3482,20 @@
           "ran_nw_laserpod": 1
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 3128,
+        "internal_bay_stores": {
+          "ran_nw_gbu12": 2
+        },
+        "stores_mass_kg": 3682,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 45469.0,
+        "full_fuel_takeoff_mass_kg": 46098.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 6376.0
+        "margin_kg": 5747.0
       },
       "StrikePrecisionLight": {
         "stores": {
           "ran_nw_asraam": 2,
-          "ran_nw_gbu12": 3,
+          "ran_nw_gbu12": 5,
           "ran_nw_laserpod": 1
         },
         "wing_stores": {
@@ -2637,19 +3504,22 @@
           "ran_nw_laserpod": 1
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 1157,
+        "internal_bay_stores": {
+          "ran_nw_gbu12": 2
+        },
+        "stores_mass_kg": 1711,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 43498.0,
+        "full_fuel_takeoff_mass_kg": 44127.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 8347.0
+        "margin_kg": 7718.0
       },
       "StrikePrecisionMedium": {
         "stores": {
           "ran_nw_asraam": 2,
           "ran_nw_gbu16": 3,
-          "ran_nw_laserpod": 1
+          "ran_nw_laserpod": 1,
+          "ran_nw_gbu12": 2
         },
         "wing_stores": {
           "ran_nw_asraam": 2,
@@ -2657,20 +3527,23 @@
           "ran_nw_laserpod": 1
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 1811,
+        "internal_bay_stores": {
+          "ran_nw_gbu12": 2
+        },
+        "stores_mass_kg": 2365,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 44152.0,
+        "full_fuel_takeoff_mass_kg": 44781.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 7693.0
+        "margin_kg": 7064.0
       },
       "StrikePrecisionLongRange": {
         "stores": {
           "ran_nw_asraam": 2,
           "ran_tank_600_fb111n": 2,
           "ran_nw_gbu10": 1,
-          "ran_nw_laserpod": 1
+          "ran_nw_laserpod": 1,
+          "ran_nw_gbu12": 2
         },
         "wing_stores": {
           "ran_nw_asraam": 2,
@@ -2679,31 +3552,35 @@
           "ran_nw_laserpod": 1
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 1560,
+        "internal_bay_stores": {
+          "ran_nw_gbu12": 2
+        },
+        "stores_mass_kg": 2114,
         "total_fuel_kg": 18437,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 47441.0,
+        "full_fuel_takeoff_mass_kg": 48070.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 4404.0
+        "margin_kg": 3775.0
       },
       "MaverickStrike": {
         "stores": {
           "ran_nw_asraam": 2,
-          "ran_nw_maverickg": 4
+          "ran_nw_maverickg": 6
         },
         "wing_stores": {
           "ran_nw_asraam": 2,
           "ran_nw_maverickg": 4
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 1384,
+        "internal_bay_stores": {
+          "ran_nw_maverickg": 2
+        },
+        "stores_mass_kg": 1988,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 43725.0,
+        "full_fuel_takeoff_mass_kg": 44404.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 8120.0
+        "margin_kg": 7441.0
       },
       "SEAD": {
         "stores": {
@@ -2719,9 +3596,9 @@
         "stores_mass_kg": 1620,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 43961.0,
+        "full_fuel_takeoff_mass_kg": 44036.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 7884.0
+        "margin_kg": 7809.0
       },
       "EW": {
         "stores": {
@@ -2741,9 +3618,9 @@
         "stores_mass_kg": 996,
         "total_fuel_kg": 18437,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 46877.0,
+        "full_fuel_takeoff_mass_kg": 46952.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 4968.0
+        "margin_kg": 4893.0
       },
       "EWLongRange": {
         "stores": {
@@ -2763,9 +3640,9 @@
         "stores_mass_kg": 996,
         "total_fuel_kg": 18437,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 46877.0,
+        "full_fuel_takeoff_mass_kg": 46952.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 4968.0
+        "margin_kg": 4893.0
       },
       "EscortSEAD": {
         "stores": {
@@ -2785,9 +3662,9 @@
         "stores_mass_kg": 1418,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 43759.0,
+        "full_fuel_takeoff_mass_kg": 43834.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 8086.0
+        "margin_kg": 8011.0
       },
       "ReconLongRange": {
         "stores": {
@@ -2803,9 +3680,9 @@
         "stores_mass_kg": 776,
         "total_fuel_kg": 21977,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 50197.0,
+        "full_fuel_takeoff_mass_kg": 50272.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 1648.0
+        "margin_kg": 1573.0
       },
       "EOGlideStrike": {
         "stores": {
@@ -2823,15 +3700,16 @@
         "stores_mass_kg": 2696,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 45037.0,
+        "full_fuel_takeoff_mass_kg": 45112.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 6808.0
+        "margin_kg": 6733.0
       },
       "StrikePavewayIII": {
         "stores": {
           "ran_nw_asraam": 2,
           "ran_nw_gbu24": 3,
-          "ran_nw_laserpod": 1
+          "ran_nw_laserpod": 1,
+          "ran_nw_gbu12": 2
         },
         "wing_stores": {
           "ran_nw_asraam": 2,
@@ -2839,13 +3717,15 @@
           "ran_nw_laserpod": 1
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 3578,
+        "internal_bay_stores": {
+          "ran_nw_gbu12": 2
+        },
+        "stores_mass_kg": 4132,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 45919.0,
+        "full_fuel_takeoff_mass_kg": 46548.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 5926.0
+        "margin_kg": 5297.0
       },
       "PopeyeStrike": {
         "stores": {
@@ -2863,14 +3743,14 @@
         "stores_mass_kg": 3156,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 45497.0,
+        "full_fuel_takeoff_mass_kg": 45572.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 6348.0
+        "margin_kg": 6273.0
       },
       "SLAMStrike": {
         "stores": {
           "ran_nw_asraam": 2,
-          "ran_nw_slam": 2,
+          "ran_nw_slam": 4,
           "ran_nw_datalink": 1
         },
         "wing_stores": {
@@ -2879,13 +3759,15 @@
           "ran_nw_datalink": 1
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 1692,
+        "internal_bay_stores": {
+          "ran_nw_slam": 2
+        },
+        "stores_mass_kg": 2948,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 44033.0,
+        "full_fuel_takeoff_mass_kg": 45364.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 7812.0
+        "margin_kg": 6481.0
       },
       "SLAMERStrike": {
         "stores": {
@@ -2903,45 +3785,49 @@
         "stores_mass_kg": 1786,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 44127.0,
+        "full_fuel_takeoff_mass_kg": 44202.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 7718.0
+        "margin_kg": 7643.0
       },
       "JDAMHeavy": {
         "stores": {
           "ran_nw_asraam": 2,
-          "ran_nw_gbu31": 4
+          "ran_nw_gbu31": 6
         },
         "wing_stores": {
           "ran_nw_asraam": 2,
           "ran_nw_gbu31": 4
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 3876,
+        "internal_bay_stores": {
+          "ran_nw_gbu31": 2
+        },
+        "stores_mass_kg": 5726,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 46217.0,
+        "full_fuel_takeoff_mass_kg": 48142.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 5628.0
+        "margin_kg": 3703.0
       },
       "JDAMMedium": {
         "stores": {
           "ran_nw_asraam": 2,
-          "ran_nw_gbu32": 4
+          "ran_nw_gbu32": 6
         },
         "wing_stores": {
           "ran_nw_asraam": 2,
           "ran_nw_gbu32": 4
         },
         "auxiliary_external_stores": {},
-        "internal_bay_stores": {},
-        "stores_mass_kg": 2020,
+        "internal_bay_stores": {
+          "ran_nw_gbu32": 2
+        },
+        "stores_mass_kg": 2942,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 44361.0,
+        "full_fuel_takeoff_mass_kg": 45358.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 7484.0
+        "margin_kg": 6487.0
       },
       "JSOWStrike": {
         "stores": {
@@ -2957,10 +3843,343 @@
         "stores_mass_kg": 2108,
         "total_fuel_kg": 14897,
         "gun_ammunition_mass_kg": 544.0,
-        "full_fuel_takeoff_mass_kg": 44449.0,
+        "full_fuel_takeoff_mass_kg": 44524.0,
         "reference_max_takeoff_kg": 51845,
-        "margin_kg": 7396.0
+        "margin_kg": 7321.0
+      },
+      "AntiShipBay": {
+        "stores": {
+          "ran_nw_asraam": 2,
+          "ran_nw_harpoonl": 3
+        },
+        "wing_stores": {
+          "ran_nw_asraam": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_harpoonl": 3
+        },
+        "stores_mass_kg": 1754,
+        "total_fuel_kg": 14897,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 44170.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 7675.0
+      },
+      "StrikeBay": {
+        "stores": {
+          "ran_nw_asraam": 2,
+          "ran_nw_mk82": 3
+        },
+        "wing_stores": {
+          "ran_nw_asraam": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_mk82": 3
+        },
+        "stores_mass_kg": 857,
+        "total_fuel_kg": 14897,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 43273.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 8572.0
+      },
+      "StrikeHeavyBay": {
+        "stores": {
+          "ran_nw_asraam": 2,
+          "ran_nw_mk84": 2
+        },
+        "wing_stores": {
+          "ran_nw_asraam": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_mk84": 2
+        },
+        "stores_mass_kg": 1990,
+        "total_fuel_kg": 14897,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 44406.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 7439.0
+      },
+      "StrikePrecisionBay": {
+        "stores": {
+          "ran_nw_asraam": 2,
+          "ran_nw_laserpod": 1,
+          "ran_nw_gbu12": 2
+        },
+        "wing_stores": {
+          "ran_nw_asraam": 2,
+          "ran_nw_laserpod": 1
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_gbu12": 2
+        },
+        "stores_mass_kg": 880,
+        "total_fuel_kg": 14897,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 43296.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 8549.0
+      },
+      "FleetInterceptBay": {
+        "stores": {
+          "ran_nw_asraam": 2,
+          "ran_nw_aim120c5": 2,
+          "ran_nw_aim54c": 2
+        },
+        "wing_stores": {
+          "ran_nw_asraam": 2,
+          "ran_nw_aim120c5": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_aim54c": 2
+        },
+        "stores_mass_kg": 1406,
+        "total_fuel_kg": 14897,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 43822.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 8023.0
+      },
+      "JDAMBay": {
+        "stores": {
+          "ran_nw_asraam": 2,
+          "ran_nw_gbu32": 2
+        },
+        "wing_stores": {
+          "ran_nw_asraam": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_gbu32": 2
+        },
+        "stores_mass_kg": 1098,
+        "total_fuel_kg": 14897,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 43514.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 8331.0
+      },
+      "JDAMHeavyBay": {
+        "stores": {
+          "ran_nw_asraam": 2,
+          "ran_nw_gbu31": 2
+        },
+        "wing_stores": {
+          "ran_nw_asraam": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_gbu31": 2
+        },
+        "stores_mass_kg": 2026,
+        "total_fuel_kg": 14897,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 44442.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 7403.0
+      },
+      "AntiShipBayLongRange": {
+        "stores": {
+          "ran_nw_asraam": 2,
+          "ran_tank_600_fb111n": 2,
+          "ran_nw_harpoonl": 3
+        },
+        "wing_stores": {
+          "ran_nw_asraam": 2,
+          "ran_tank_600_fb111n": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_harpoonl": 3
+        },
+        "stores_mass_kg": 2054,
+        "total_fuel_kg": 18437,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 48010.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 3835.0
+      },
+      "StrikeBayLongRange": {
+        "stores": {
+          "ran_nw_asraam": 2,
+          "ran_tank_600_fb111n": 2,
+          "ran_nw_mk82": 3
+        },
+        "wing_stores": {
+          "ran_nw_asraam": 2,
+          "ran_tank_600_fb111n": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_mk82": 3
+        },
+        "stores_mass_kg": 1157,
+        "total_fuel_kg": 18437,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 47113.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 4732.0
+      },
+      "StrikeHeavyBayLongRange": {
+        "stores": {
+          "ran_nw_asraam": 2,
+          "ran_tank_600_fb111n": 2,
+          "ran_nw_mk84": 2
+        },
+        "wing_stores": {
+          "ran_nw_asraam": 2,
+          "ran_tank_600_fb111n": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_mk84": 2
+        },
+        "stores_mass_kg": 2290,
+        "total_fuel_kg": 18437,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 48246.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 3599.0
+      },
+      "StrikePrecisionBayLongRange": {
+        "stores": {
+          "ran_nw_asraam": 2,
+          "ran_tank_600_fb111n": 2,
+          "ran_nw_laserpod": 1,
+          "ran_nw_gbu12": 2
+        },
+        "wing_stores": {
+          "ran_nw_asraam": 2,
+          "ran_tank_600_fb111n": 2,
+          "ran_nw_laserpod": 1
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_gbu12": 2
+        },
+        "stores_mass_kg": 1180,
+        "total_fuel_kg": 18437,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 47136.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 4709.0
+      },
+      "FleetInterceptBayLongRange": {
+        "stores": {
+          "ran_nw_asraam": 2,
+          "ran_tank_600_fb111n": 2,
+          "ran_nw_aim120c5": 2,
+          "ran_nw_aim54c": 2
+        },
+        "wing_stores": {
+          "ran_nw_asraam": 2,
+          "ran_tank_600_fb111n": 2,
+          "ran_nw_aim120c5": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_aim54c": 2
+        },
+        "stores_mass_kg": 1706,
+        "total_fuel_kg": 18437,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 47662.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 4183.0
+      },
+      "JDAMBayLongRange": {
+        "stores": {
+          "ran_nw_asraam": 2,
+          "ran_tank_600_fb111n": 2,
+          "ran_nw_gbu32": 2
+        },
+        "wing_stores": {
+          "ran_nw_asraam": 2,
+          "ran_tank_600_fb111n": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_gbu32": 2
+        },
+        "stores_mass_kg": 1398,
+        "total_fuel_kg": 18437,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 47354.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 4491.0
+      },
+      "JDAMHeavyBayLongRange": {
+        "stores": {
+          "ran_nw_asraam": 2,
+          "ran_tank_600_fb111n": 2,
+          "ran_nw_gbu31": 2
+        },
+        "wing_stores": {
+          "ran_nw_asraam": 2,
+          "ran_tank_600_fb111n": 2
+        },
+        "auxiliary_external_stores": {},
+        "internal_bay_stores": {
+          "ran_nw_gbu31": 2
+        },
+        "stores_mass_kg": 2326,
+        "total_fuel_kg": 18437,
+        "gun_ammunition_mass_kg": 544.0,
+        "full_fuel_takeoff_mass_kg": 48282.0,
+        "reference_max_takeoff_kg": 51845,
+        "margin_kg": 3563.0
       }
+    },
+    "internal_bay_qualification": {
+      "physical_stations": 3,
+      "single_store_adapter_offsets_metres": {
+        "Phoenix": [
+          0,
+          0,
+          -0.1
+        ],
+        "Shrike": [
+          0,
+          0,
+          -0.5
+        ]
+      },
+      "upgrade_mass_kg_by_edition": {
+        "1980": 40,
+        "1985": 50,
+        "1995": 60,
+        "2003": 75
+      },
+      "status": "Estimated integration in the hypothetical Australian naval programme",
+      "maximum_counts": {
+        "Mk 82": 3,
+        "Harpoon": 3,
+        "Mk 83": 2,
+        "Mk 84": 2,
+        "GBU-12": 2,
+        "Maverick": 2,
+        "Shrike": 2,
+        "Phoenix": 2,
+        "SLAM": 2,
+        "GBU-31": 2,
+        "GBU-32": 2
+      },
+      "excluded_internal_stores": [
+        "Popeye",
+        "SLAM-ER",
+        "JSOW",
+        "external MER racks",
+        "fuel tanks",
+        "control/ECM pods"
+      ],
+      "carrier_recovery_runtime_tested": false,
+      "carrier_arrestor_or_catapult_certified": false
     }
   },
   "ran_rf-111n": {
@@ -2979,6 +4198,7 @@
       "role_equipment_estimate": 450,
       "separate_M61_installation_estimate": 650,
       "edition_avionics_growth_estimate": 0,
+      "internal_bay_multistore_upgrade_estimate": 0,
       "investment_systems_and_controls_estimate": 0,
       "propulsion_retrofit_estimate": 0,
       "recon_thermal_upgrade_estimate": 0
@@ -3165,6 +4385,7 @@
       "role_equipment_estimate": 450,
       "separate_M61_installation_estimate": 650,
       "edition_avionics_growth_estimate": 100,
+      "internal_bay_multistore_upgrade_estimate": 0,
       "investment_systems_and_controls_estimate": 150,
       "propulsion_retrofit_estimate": 0,
       "recon_thermal_upgrade_estimate": 50
@@ -3351,6 +4572,7 @@
       "role_equipment_estimate": 450,
       "separate_M61_installation_estimate": 650,
       "edition_avionics_growth_estimate": 250,
+      "internal_bay_multistore_upgrade_estimate": 0,
       "investment_systems_and_controls_estimate": 650,
       "propulsion_retrofit_estimate": 600,
       "recon_thermal_upgrade_estimate": 150
@@ -3537,6 +4759,7 @@
       "role_equipment_estimate": 450,
       "separate_M61_installation_estimate": 650,
       "edition_avionics_growth_estimate": 400,
+      "internal_bay_multistore_upgrade_estimate": 0,
       "investment_systems_and_controls_estimate": 850,
       "propulsion_retrofit_estimate": 750,
       "recon_thermal_upgrade_estimate": 250
@@ -3723,6 +4946,7 @@
       "role_equipment_estimate": 4000,
       "separate_M61_installation_estimate": 0,
       "edition_avionics_growth_estimate": 0,
+      "internal_bay_multistore_upgrade_estimate": 0,
       "investment_systems_and_controls_estimate": 0,
       "propulsion_retrofit_estimate": 0,
       "recon_thermal_upgrade_estimate": 0
@@ -3930,6 +5154,7 @@
       "role_equipment_estimate": 4000,
       "separate_M61_installation_estimate": 0,
       "edition_avionics_growth_estimate": 100,
+      "internal_bay_multistore_upgrade_estimate": 0,
       "investment_systems_and_controls_estimate": 150,
       "propulsion_retrofit_estimate": 0,
       "recon_thermal_upgrade_estimate": 0
@@ -4137,6 +5362,7 @@
       "role_equipment_estimate": 4000,
       "separate_M61_installation_estimate": 0,
       "edition_avionics_growth_estimate": 250,
+      "internal_bay_multistore_upgrade_estimate": 0,
       "investment_systems_and_controls_estimate": 650,
       "propulsion_retrofit_estimate": 600,
       "recon_thermal_upgrade_estimate": 0
@@ -4344,6 +5570,7 @@
       "role_equipment_estimate": 4000,
       "separate_M61_installation_estimate": 0,
       "edition_avionics_growth_estimate": 400,
+      "internal_bay_multistore_upgrade_estimate": 0,
       "investment_systems_and_controls_estimate": 850,
       "propulsion_retrofit_estimate": 750,
       "recon_thermal_upgrade_estimate": 0

@@ -1,3 +1,16 @@
+[h1]Version 8 — Internal-Bay Update, 2 October 2026[/h1]
+
+[list]
+[*]Expanded to 211 selectable presets, with 44 new MudPig bay mission fits.
+[*]Added bay anti-ship, Mk 82/Mk 84 bombing, GBU-12 precision and Phoenix interception presets with long-range companions; 2003 also adds GBU-31/32 JDAM bay fits.
+[*]Added extra internal stores to existing bombing, precision, Maverick, Shrike, SLAM and JDAM presets.
+[*]Retained three physical bay stations, original concealment/doors and carrier/landing geometry. Added one-store Phoenix/Shrike suspension offsets and dedicated Phoenix bay targeting.
+[*]Included estimated dated bay-upgrade hardware mass and readiness in the Australian investment programme. All full-fuel takeoff budgets remain below the existing reference.
+[*]Added bay inventory, capacity, targeting, attack-mode and coarse stowage checks; regenerated loadout tables, CSV/JSON, Workshop text and verified installer downloads.
+[/list]
+
+Armed takeoff, carrier recovery and weapon release still require Sea Power runtime testing. The 51,845 kg takeoff reference is not a carrier landing or arresting-gear certification.
+
 [h1]Version 8 — Release Naming Update[/h1]
 
 All release filenames, mod metadata, installer messages, preview branding and Workshop text now use V8. The existing aircraft, weapons, loadouts and carrier fixes are retained. The replacement script prepares or uploads the update to the existing Workshop item 3810606011.
@@ -13,7 +26,7 @@ All release filenames, mod metadata, installer messages, preview branding and Wo
 
 [h1]V8 — Fresh Remake from V6[/h1]
 
-V8 rebuilds the Naval Wing from the verified V6 base, retaining four aircraft families across 1980, 1985, 1995 and 2003: [b]16 aircraft and 167 selectable presets[/b], including compatibility aliases.
+V8 rebuilds the Naval Wing from the verified V6 base, retaining four aircraft families across 1980, 1985, 1995 and 2003: [b]16 aircraft and 211 selectable presets[/b], including compatibility aliases.
 
 [h2]New in V8[/h2]
 [list]
@@ -36,7 +49,7 @@ V8 rebuilds the Naval Wing from the verified V6 base, retaining four aircraft fa
 [/list]
 
 [h2]Validation and installation[/h2]
-[b]Passed: 32,093 mod checks, 2,243 carrier/installer checks and eight late texture audits.[/b]
+[b]Passed: 35,186 mod checks, 2,243 carrier/installer checks and eight late texture audits.[/b]
 Also passed: 18 replacement/recovery tests and six lift-repair tests. Majestic cases use representative native layouts; exact installed RAN source definitions were unavailable.
 
 Actual gun fire, guidance/release, Mach 3 flight, ECM display, dates and carrier landings still need Sea Power runtime testing. Native modern-weapon approximations and fictional naval engineering are documented.
