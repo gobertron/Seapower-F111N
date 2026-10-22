@@ -29,10 +29,10 @@ import urllib.error
 import urllib.request
 import zipfile
 
-RELEASE_COMMIT = "08ac71a59d671fbf8f3649941e17a8dbed2411a7"
+RELEASE_COMMIT = "refs/heads/main"
 DOWNLOAD = "https://codeload.github.com/gobertron/Seapower-F111N/zip/" + RELEASE_COMMIT
 MOD_NAME = "RAN-F111N-Naval-Wing"
-MANIFEST_SHA256 = "5a210d1da7a9db5a6ae76daea3791e62b1faf549f2b686dd10abf7cb4da1626a"
+MANIFEST_SHA256 = "79d1812ac2800635012895104d2a0a8379a48fcc4979295119bee20ed0c0e1c0"
 CARRIER_SHA256 = "7ab5f7acffbae0c6a1b7abf73d6673ce0c4ca70f9db91bbfdc214b12badd7c41"
 AIRCRAFT_IDS = ("ran_f-111n", "ran_fb-111n", "ran_rf-111n", "ran_ef-111n")
 MAX_ARCHIVE_BYTES = 220 * 1024 * 1024
@@ -44,13 +44,13 @@ WORKSHOP_TITLE = "RAN F-111N Naval Wing V8"
 WORKSHOP_DESCRIPTION_MAX_BYTES = 8000
 WORKSHOP_ASSETS = {
     "RAN-F111N-preview.png": "9ba4795b87f7c18958a93af7f89458de23e9096e38a1b69334b96c9b1a4fc752",
-    "WORKSHOP_DESCRIPTION.txt": "a017e2231b82cbc7c8893e11b2a2c0ac2d59fa5833141bcc2ea72b8c7499bb83",
-    "WORKSHOP_UPDATE_NOTES_V8.txt": "bb6f139abbf34a95123c70a1cad185f1553e3658a038e6a9cea72e1dfa29b386",
+    "WORKSHOP_DESCRIPTION.txt": "34041af0710fd4192fc48eab99ec830094f7be506ed6e90bad50ce58ea09288b",
+    "WORKSHOP_UPDATE_NOTES_V8.txt": "2957568e92586f734d1e5839c04661ccf4cdf8e32b2edcccc04548e94fe45d87",
 }
 UPLOAD_NOTE = (
-    "V8 speed correction: all 16 aircraft use maximum Mach 2.875 (F-111 Mach 2.5 plus 15%). "
-    "Common dry maximum Mach 1.38, native sea-level cap 897 knots and dated cruise/thrust/response. "
-    "Original landing/loiter/stall settings and all 211 loadouts retained. Runtime flight remains untested."
+    "V8 sourced speeds: common maximum Mach 2.875; RAAF sea-level 1345 km/h plus 15% = 1546.75 km/h; "
+    "RAAF cruise 778 km/h plus 15% = 894.7 km/h. Normal power uses sourced cruise, without claiming "
+    "a historical dry-thrust maximum. Original approach settings and all 211 presets retained; runtime flight untested."
 )
 
 

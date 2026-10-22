@@ -8,13 +8,13 @@ An alternate-history Australian naval F-111 family for Sea Power: Naval Combat i
 [list]
 [*][b]F-111N WaterPig — Fleet Defence:[/b] Period IR/BVR missiles, Phoenix and M61 Vulcan. Configured maximum Mach 2.875.
 [*][b]FB-111N MudPig — Maritime Strike:[/b] Anti-ship attack, bombing and long-range strike, plus interception, reconnaissance, EW and SEAD options using the other families' dated weapon types. M61 fitted; maximum Mach 2.875.
-[*][b]RF-111N SprintPig — Reconnaissance/ELINT:[/b] Defensive missiles, M61, four-tank endurance and clean ReconFast sprint. Configured maximum Mach 2.875, with the same dated cruise, thrust and response settings as the other families.
+[*][b]RF-111N SprintPig — Reconnaissance/ELINT:[/b] Defensive missiles, M61, four-tank endurance and clean ReconFast sprint. Configured maximum Mach 2.875, with the same sourced cruise target and dated thrust/response as the other families.
 [*][b]EF-111N ScreamPig — Electronic Attack/SEAD:[/b] Two physical ECM pods and two offensive ECM systems, defensive missiles, tanks or anti-radiation missiles. Maximum Mach 2.875; no gun.
 [/list]
 F/FB/RF each have an M61 with 2,000 rounds. MudPig carries removable offensive ECM pods in its EW fits.
 
 [h2]Common speed correction[/h2]
-All sixteen aircraft use the F-111 Mach 2.5 reference plus 15%: maximum Mach 2.875. Maximum dry throttle is Mach 1.38; the native sea-level cap is 897 knots. Cruise is Mach 0.84/0.88/0.92/0.96 by edition. Original landing, loiter and stall settings are retained. Actual speed depends on altitude, load and orders and requires in-game verification.
+All sixteen aircraft use published speed references plus 15%: fastest-reference Mach 2.5 becomes Mach 2.875; RAAF sea-level 1,345 km/h becomes 1,546.75 km/h; cruise 778 km/h becomes 894.7 km/h. Cruise is represented by Mach 0.842269 at the retained 37,000-ft ISA reference. Normal power uses that cruise target because a verified dry-thrust maximum is unavailable. Dated thrust, response and range remain programme estimates. Landing/loiter/stall settings remain original; actual loaded flight needs in-game verification.
 
 [h2]Four funded upgrade blocks[/h2]
 [list]
@@ -50,7 +50,7 @@ Enable [b]RAN F-111N Naval Wing V8[/b], disable older Naval Wing copies, give V8
 Service gates are 1980–1984, 1985–1994, 1995–2002 and 2003–2050. Unsuffixed IDs select 1980; later IDs use _1985/_1995/_2003. Existing missions need the later aircraft selected to receive newer equipment. RF ReconFast needs independent orders and suitable altitude; formation orders can limit speed.
 
 [h2]Validation and documentation[/h2]
-[b]35,326 mod checks, 2,243 carrier/installer checks and eight late texture audits passed.[/b] Actual gun fire, guidance/release, armed carrier recovery, maximum-speed flight, ECM display and date filtering remain untested in Sea Power.
+[b]35,358 mod checks, 2,243 carrier/installer checks and eight late texture audits passed.[/b] Actual gun fire, guidance/release, armed carrier recovery, maximum-speed flight, ECM display and date filtering remain untested in Sea Power.
 
 Full comparisons, every preset and mass budget, CSV/JSON, 61 local store definitions, references, credits, authoring sources and validation reports are included in the [url=https://github.com/gobertron/Seapower-F111N]release repository[/url]. The naval conversion, three-Harpoon bay, F110 adaptations and 15% speed uplift are fictional. Native JDAM/JSOW, EO, AMRAAM, ASRAAM and Block II Harpoon simulation approximations remain documented.
 

@@ -71,10 +71,12 @@ def main():
         check(spec['investment_programme']['name']==b['name'],uid+': investment block')
         check(float(d['Performance']['PerEngineMaxThrust'])==b['dry_n'] and float(d['Performance']['PerEngineMaxAfterburnerThrust'])==b['afterburner_n'],uid+': dated propulsion')
         check(float(d['Performance']['MachLimit'])==spec['mach_limit']==2.875,uid+': F-111 maximum Mach 2.5 plus 15%')
-        check(float(d['Performance']['MaxSpeedAtSeaLevel'])==897,uid+': common native sea-level maximum plus 15%')
-        check(float(d['Performance']['SpeedAndRange_Max'].split(',')[0])==1.38,uid+': common maximum dry throttle speed')
+        check(abs(float(d['Performance']['MaxSpeedAtSeaLevel'])*1.852-1546.75)<.00001,uid+': RAAF sea-level TAS plus 15% converted to native knots')
+        check(float(d['Performance']['SpeedAndRange_Max'].split(',')[0])==.842269,uid+': normal-power command uses sourced cruise target')
         check(float(d['Performance']['SpeedAndRange_Afterburner'].split(',')[0])==2.875,uid+': common afterburner speed')
-        check(float(d['Performance']['SpeedAndRange_Cruise'].split(',')[0])==spec['cruise_mach']==b['cruise'],uid+': common dated cruise')
+        check(float(d['Performance']['SpeedAndRange_Cruise'].split(',')[0])==spec['cruise_mach']==b['cruise'],uid+': common sourced cruise')
+        check(abs(spec['cruise_mach']*1062.250176631587-894.7)<.001,uid+': RAAF cruise TAS plus 15% translated at ISA cruise altitude')
+        check(float(d['Performance']['CruiseAltitude'])==37000,uid+': retained ISA cruise reference altitude')
         check(spec['speed_profile']==spec['investment_programme']['speed_profile']==SPEED_PROFILE,uid+': speed policy metadata')
         for key in ('StallSpeed','SpeedAndRange_Landing','SpeedAndRange_Loiter'):
             check(d['Performance'][key]==baseline['Performance'][key],uid+': retained approach/low-speed setting '+key)
@@ -257,7 +259,7 @@ def main():
         check(hashlib.sha256(a.read_bytes()).digest()!=hashlib.sha256(b.read_bytes()).digest(),role+': distinct late-edition materials')
     for line in (ROOT/'MOD_SHA256.txt').read_text().splitlines():
         digest,name=line.split('  ',1);check(hashlib.sha256((MOD/name).read_bytes()).hexdigest()==digest,'checksum '+name)
-    result={'status':'FAIL' if failures else 'PASS','checks':checks,'failures':failures,'aircraft':len(manifest),'loadouts':sum(len(x['loadouts']) for x in manifest.values()),'loaded_bay_presets':sum(bool(v['internal_bay_stores']) for s in manifest.values() for v in s['loadouts'].values()),'runtime_tested':False,'scope':'Common F-111 maximum plus 15%, common dated cruise/propulsion/response, retained landing/loiter/stall settings, dated weapon selection, increasing native investment, eight tactical atlases, all-rounder union, M61 magazines, retained bay/model/landing geometry, three-station bay capacity and targeting, internal inventory and attack modes, explicit bay upgrade mass, mass arithmetic, takeoff reference budget, store and sensor resolution, pod attachment, original assets and checksums'}
+    result={'status':'FAIL' if failures else 'PASS','checks':checks,'failures':failures,'aircraft':len(manifest),'loadouts':sum(len(x['loadouts']) for x in manifest.values()),'loaded_bay_presets':sum(bool(v['internal_bay_stores']) for s in manifest.values() for v in s['loadouts'].values()),'runtime_tested':False,'scope':'Common F-111 maximum plus 15%, sourced cruise and sea-level TAS conversions, estimated dated propulsion/response, retained landing/loiter/stall settings, dated weapon selection, increasing native investment, eight tactical atlases, all-rounder union, M61 magazines, retained bay/model/landing geometry, three-station bay capacity and targeting, internal inventory and attack modes, explicit bay upgrade mass, mass arithmetic, takeoff reference budget, store and sensor resolution, pod attachment, original assets and checksums'}
     (ROOT/'VALIDATION.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2))
     return bool(failures)
 

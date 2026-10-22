@@ -10,7 +10,7 @@ Every edition assumes heavy Australian funding for naval conversion, propulsion,
 | Velocity/thrust response multiplier | 1 | 1.1 | 1.25 | 1.4 |
 | Pitch/heading/bank gain multiplier | 1 | 1.05 | 1.1 | 1.15 |
 | Nominal cruise-range factor | 1 | 1.06 | 1.14 | 1.22 |
-| Cruise Mach for all roles | 0.84 | 0.88 | 0.92 | 0.96 |
+| Cruise Mach for all roles | 0.842269 | 0.842269 | 0.842269 | 0.842269 |
 | Climb-setting multiplier | 1 | 1.05 | 1.15 | 1.25 |
 | Additional systems/control mass kg | 0 | 150 | 650 | 850 |
 | Propulsion-retrofit allowance kg | 0 | 0 | 600 | 750 |
@@ -42,8 +42,8 @@ F uses AWG-9 donor geometry/settings, labelled as a hypothetical APG-71-class di
 | Dry N per engine | 43600 | 47960 | 60000 | 65000 |
 | Afterburning N per engine | 82300 | 90530 | 120000 | 129000 |
 
-The speed correction supersedes the former RF-only Mach 3, Mach 2.52 cruise, oversized thrust and triple response. All roles now use the same dated propulsion and cruise schedules, maximum Mach 2.875, maximum dry Mach 1.38 and 897-knot native sea-level cap. Landing, loiter and stall settings retain the original values. Use independent orders and suitable altitude to assess maximum speed; actual AI flight needs runtime testing.
+The speed correction supersedes the former RF-only Mach 3, Mach 2.52 cruise, oversized thrust and triple response. All roles use maximum Mach 2.875, sourced cruise Mach 0.842269 and an 835.178186-knot sea-level cap. The normal-power game command follows cruise; it is not a claimed historical maximum dry-thrust speed. Dated propulsion and response remain estimated. Landing, loiter and stall settings retain the original values. Use independent orders and suitable altitude to assess maximum speed; actual AI flight needs runtime testing.
 
-GE's historical status report supplies the 120 kN F110-GE-400 and 129 kN F110-GE-129 afterburning classes, available before the assigned editions. F-111 adaptation, installed dry thrust, TF30 uprating, mass allowances, thermal upgrades and control/sensor ratings are estimates. [GE reference](https://www.geaerospace.com/news/press-releases/defense-engines/ge-aircraft-engines-military-engine-status-report). The 15% speed increase is a requested fictional gameplay rating. NASA describes Mach 2.5 capability for the F-111A: [technical report](https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf). The dry and sea-level fields scale the native fighter baseline, not a new historical measurement.
+GE's historical status report supplies the 120 kN F110-GE-400 and 129 kN F110-GE-129 afterburning classes, available before the assigned editions. F-111 adaptation, installed dry thrust, TF30 uprating, mass allowances, thermal upgrades and control/sensor ratings are estimates. [GE reference](https://www.geaerospace.com/news/press-releases/defense-engines/ge-aircraft-engines-military-engine-status-report). The 15% speed increase is a requested fictional gameplay rating. NASA describes Mach 2.5 capability for the F-111A: [technical report](https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf). RAAF reference sea-level 1,345 km/h and cruise 778 km/h are boosted to 1,546.75 and 894.7 km/h. The cruise Mach conversion assumes ISA at 37,000 ft; [RAAF reference](https://www.airforce.gov.au/sites/default/files/2023-07/F111%20A8-142.pdf). The source does not establish a maximum dry-thrust speed; the normal-power command is conservatively set to the sourced cruise target. These speed targets do not turn the estimated propulsion, fuel/range or flight model into a certified real-world envelope.
 
 [Aircraft comparison](AIRCRAFT_COMPARISON.md) · [Full mass/loadout breakdown](../COMPLETE_BREAKDOWN_V8.md)

@@ -1,6 +1,6 @@
 # RAN F-111N Naval Wing V8
 
-**Version 8 speed correction — 22 October 2026.** All sixteen aircraft now share maximum Mach **2.875**, using the published F-111 Mach 2.5 reference plus 15%. The dry maximum is Mach 1.38 and the native sea-level cap is 897 knots. All roles share dated cruise, thrust and response settings; original landing/loiter/stall values remain.
+**Version 8 sourced speed profile — 22 October 2026.** All sixteen aircraft share maximum Mach **2.875** (fastest published Mach 2.5 reference plus 15%). RAAF sea-level speed 1,345 km/h and cruise 778 km/h become **1,546.75 km/h** and **894.7 km/h**. Cruise is represented by Mach **0.842269** at the retained 37,000-ft ISA reference; the native sea-level cap is **835.178186 knots**. Normal power uses the cruise target because a verified dry-thrust maximum is unavailable. Original landing/loiter/stall values remain.
 
 **Version 8 internal-bay update — 2 October 2026.** MudPig gains 44 bay mission fits and extra internal stores on existing bombing, precision, Maverick, Shrike, SLAM and JDAM presets. The release now has 211 presets. Original bay stations, doors and carrier/landing geometry are retained; armed launch/recovery still requires in-game testing.
 
@@ -19,7 +19,7 @@
 
 The repository includes the complete aircraft assets, native configuration, installers, authoring source, previews and validation reports. The GitHub ZIP includes the complete mod tree, expanded publication breakdown and Workshop text. Game assets match the validated standalone V8 release.
 
-**Verification:** 35,326 mod checks, 2,243 carrier/installer checks and eight late texture audits passed. In-game gun fire, guidance/release, flight performance, ECM display, date filtering and carrier landings remain untested. This is an alternate-history programme with documented native simulation limits.
+**Verification:** 35,358 mod checks, 2,243 carrier/installer checks and eight late texture audits passed. In-game gun fire, guidance/release, flight performance, ECM display, date filtering and carrier landings remain untested. This is an alternate-history programme with documented native simulation limits.
 
 An alternate-history Australian carrier F-111 programme for **Sea Power**: four original roles in **1980, 1985, 1995 and 2003** editions. This fresh V8 is built from the saved V6 base and contains **16 aircraft and 211 loadout presets**, progressive propulsion/mission-system investment, period weapons and eight dedicated late-edition grey liveries.
 
@@ -34,7 +34,7 @@ An alternate-history Australian carrier F-111 programme for **Sea Power**: four 
 | RF-111N SprintPig | Fast reconnaissance/ELINT | Defensive IR missiles, M61, four tanks or clean sprint | Mach 2.875 |
 | EF-111N ScreamPig | Dedicated electronic attack/SEAD | Two physical pylon ECM pods, two offensive ECM systems, defensive missiles and tanks/ARMs | Mach 2.875 |
 
-F/FB/RF each have a fixed forward M61 with 2,000 rounds. EF retains its dedicated EW fit without a gun. All roles use the same matching-year cruise schedule (Mach 0.84 / 0.88 / 0.92 / 0.96), thrust and response gains. This supersedes the old RF Mach 3, Mach 2.52 cruise and triple response. The requested 15% maximum-speed increase is fictional; [NASA report](https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf) supplies the Mach 2.5 reference. The sea-level/dry settings scale the native fighter baseline.
+F/FB/RF each have a fixed forward M61 with 2,000 rounds. EF retains its dedicated EW fit without a gun. All roles share the sourced speed targets above. [NASA](https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf) supplies the selected Mach 2.5 high-altitude capability; the [RAAF specification](https://www.airforce.gov.au/sites/default/files/2023-07/F111%20A8-142.pdf) supplies sea-level and cruise true airspeeds. The former RF-only Mach 3, Mach 2.52 cruise and triple response are superseded. The 15% increase is hypothetical; dated thrust, response, range and naval engineering remain programme estimates.
 
 ## Australian investment
 

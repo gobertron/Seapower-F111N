@@ -1,5 +1,13 @@
 # V8 changes from V6
 
+## Version 8 sourced speed-profile correction — 22 October 2026
+
+- Retained common fastest-reference maximum Mach 2.875 (published Mach 2.5 plus 15%).
+- Replaced the game-derived 897-knot sea-level cap with the RAAF published 1,345 km/h plus 15%: 1,546.75 km/h / 835.178186 knots.
+- Replaced the estimated dated cruise schedule with the RAAF published 778 km/h plus 15%: 894.7 km/h / Mach 0.842269 at the retained 37,000-ft ISA reference.
+- Replaced the unverified Mach 1.38 dry-throttle command with the sourced cruise target. This game command is not a claimed historical maximum dry-thrust speed.
+- Retained original approach/loiter/stall values and all 211 loadouts. Dated propulsion/response, fuel/range and naval engineering remain documented estimates; actual flight needs in-game verification.
+
 ## Version 8 speed correction — 22 October 2026
 
 - Applied common maximum Mach 2.875 (F-111 Mach 2.5 × 1.15) to all sixteen aircraft and afterburner schedules.

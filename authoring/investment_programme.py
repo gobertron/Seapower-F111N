@@ -4,25 +4,37 @@ are hypothetical. All roles share the requested F-111 maximum plus 15%.
 """
 from copy import deepcopy
 import re
+from math import sqrt
+
+# Published speeds are true airspeeds. The native cruise command uses Mach;
+# translate at the retained 37,000-ft cruise altitude using ISA temperature.
+SPEED_PROFILE={
+    'reference_maximum_mach':2.5,
+    'reference_sea_level_mach':1.1,
+    'reference_sea_level_kmh':1345,
+    'reference_cruise_kmh':778,
+    'speed_multiplier':1.15,
+    'maximum_mach':round(2.5*1.15,3),
+    'maximum_sea_level_mach_reference':round(1.1*1.15,3),
+    'maximum_sea_level_kmh':round(1345*1.15,2),
+    'maximum_sea_level_knots':round(1345*1.15/1.852,6),
+    'cruise_kmh':round(778*1.15,2),
+    'cruise_altitude_feet':37000,
+    'isa_cruise_temperature_kelvin':216.65,
+    'cruise_mach':round(778*1.15/(3.6*sqrt(1.4*287.05287*216.65)),6),
+    'maximum_reference_url':'https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf',
+    'sea_level_and_cruise_reference_url':'https://www.airforce.gov.au/sites/default/files/2023-07/F111%20A8-142.pdf',
+    'status':'Published F-111 speed references plus requested 15%: fastest-reference maximum Mach 2.5, RAAF sea-level 1345 km/h and cruise 778 km/h. Normal-power command uses the sourced cruise target, not a claimed maximum dry-thrust speed. ISA translation and actual game flight require verification.'}
+SPEED_PROFILE['normal_power_command_mach']=SPEED_PROFILE['cruise_mach']
 
 FIELDS=('name','engine','dry_n','afterburner_n','acceleration','controls','range_factor','cruise','climb_factor','systems_mass','engine_mass','rf_thermal_mass','radar_gain','radar_range_factor','radar_targets','radar_weapons','lookdown','flir','esm_gain','rwr_resolution','elint_resolution','decm','jam_power','jam_range','jam_gain','jam_channels','ready_fb','ready_other','cooldown')
 ROWS={
-1980:('Block I: naval programme','TF30-P-109 reference',43600,82300,1,1,1,.84,1,0,0,0,0,1,1,2,.85,2,5,25,10,.40,1000,240,6,1,30,20,60),
-1985:('Block II: propulsion and digital weapons','TF30 naval uprating (fictional)',47960,90530,1.10,1.05,1.06,.88,1.05,150,0,50,1,1.06,2,4,.90,2.1,5.5,22,8,.48,1250,260,6.5,2,25,18,55),
-1995:('Block III: major re-engine and digital mission suite','F110-GE-400-class naval adaptation',60000,120000,1.25,1.10,1.14,.92,1.15,650,600,150,2.5,1.14,4,6,.96,2.4,6.5,17,6,.60,1700,300,7,3,20,15,45),
-2003:('Block IV: networked precision and propulsion growth','F110-GE-129-class naval adaptation',65000,129000,1.40,1.15,1.22,.96,1.25,850,750,250,4,1.22,6,8,1,2.7,7.5,12,4,.72,2200,340,7.5,4,15,12,40)}
+1980:('Block I: naval programme','TF30-P-109 reference',43600,82300,1,1,1,SPEED_PROFILE['cruise_mach'],1,0,0,0,0,1,1,2,.85,2,5,25,10,.40,1000,240,6,1,30,20,60),
+1985:('Block II: propulsion and digital weapons','TF30 naval uprating (fictional)',47960,90530,1.10,1.05,1.06,SPEED_PROFILE['cruise_mach'],1.05,150,0,50,1,1.06,2,4,.90,2.1,5.5,22,8,.48,1250,260,6.5,2,25,18,55),
+1995:('Block III: major re-engine and digital mission suite','F110-GE-400-class naval adaptation',60000,120000,1.25,1.10,1.14,SPEED_PROFILE['cruise_mach'],1.15,650,600,150,2.5,1.14,4,6,.96,2.4,6.5,17,6,.60,1700,300,7,3,20,15,45),
+2003:('Block IV: networked precision and propulsion growth','F110-GE-129-class naval adaptation',65000,129000,1.40,1.15,1.22,SPEED_PROFILE['cruise_mach'],1.25,850,750,250,4,1.22,6,8,1,2.7,7.5,12,4,.72,2200,340,7.5,4,15,12,40)}
 assert all(len(row)==len(FIELDS) for row in ROWS.values())
 BLOCKS={year:dict(zip(FIELDS,row)) for year,row in ROWS.items()}
-SPEED_PROFILE={
-    'reference_maximum_mach':2.5,
-    'speed_multiplier':1.15,
-    'maximum_mach':round(2.5*1.15,3),
-    'baseline_maximum_dry_mach':1.2,
-    'maximum_dry_mach':round(1.2*1.15,3),
-    'baseline_maximum_sea_level_knots':780,
-    'maximum_sea_level_knots':round(780*1.15),
-    'reference_url':'https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf',
-    'status':'Published Mach 2.5 reference plus requested fictional 15% increase; dry/sea-level settings scale the native fighter baseline. Actual flight is untested.'}
 
 def sensor_id(kind,year):return f'RAN_NW_{kind}_{year}'
 def pod_id(role,n,year):return ('ran_alq-131n_' if role=='ef' else 'ran_nw_ecmpod_')+str(n)+'_'+str(year)
@@ -62,10 +74,11 @@ def apply(d,role,year):
     b=BLOCKS[year];p=d['Performance'];fm=d['FlightModel']
     p.update(PerEngineMaxThrust=str(b['dry_n']),PerEngineMaxAfterburnerThrust=str(b['afterburner_n']),
              MachLimit=f'{SPEED_PROFILE["maximum_mach"]:g}',
-             MaxSpeedAtSeaLevel=str(SPEED_PROFILE['maximum_sea_level_knots']))
-    for key,speed in (('SpeedAndRange_Max',SPEED_PROFILE['maximum_dry_mach']),
+             MaxSpeedAtSeaLevel=str(SPEED_PROFILE['maximum_sea_level_knots']),
+             CruiseAltitude=str(SPEED_PROFILE['cruise_altitude_feet']))
+    for key,speed in (('SpeedAndRange_Max',SPEED_PROFILE['normal_power_command_mach']),
                       ('SpeedAndRange_Afterburner',SPEED_PROFILE['maximum_mach'])):
-        _,rng=p[key].split(',');p[key]=f'{speed:g},{rng}'
+        _,rng=p[key].split(',');p[key]=f'{speed},{rng}'
     cruise=b['cruise']
     _,rng=p['SpeedAndRange_Cruise'].split(',')
     p['SpeedAndRange_Cruise']=f'{cruise},{round(float(rng)*b["range_factor"])}'

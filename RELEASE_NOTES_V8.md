@@ -4,7 +4,7 @@ Version 8 speed correction: common maximum Mach 2.875 (F-111 Mach 2.5 plus 15%) 
 
 | Verification | Status | Checks/maps |
 |---|---|---|
-| VALIDATION.json | PASS | 35326 |
+| VALIDATION.json | PASS | 35358 |
 | CARRIER_VALIDATION.json | PASS | 2243 |
 | USN_TEXTURE_VALIDATION.json | PASS | 8 |
 

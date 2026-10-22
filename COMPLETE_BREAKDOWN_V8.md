@@ -35,7 +35,7 @@ The basic reference is 23,300 kg F-111C. Bay station/door geometry is retained; 
 
 ## F-111N WaterPig — 1980
 
-ID: `ran_f-111n`. Role: Fighter. Empty: 25,250 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.84.
+ID: `ran_f-111n`. Role: Fighter. Empty: 25,250 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.842269.
 
 | Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
 |---|---|---|---|---|---|---|---|
@@ -46,7 +46,7 @@ ID: `ran_f-111n`. Role: Fighter. Empty: 25,250 kg. Internal fuel: 14,897 kg. Gun
 
 ## F-111N WaterPig — 1985
 
-ID: `ran_f-111n_1985`. Role: Fighter. Empty: 25,500 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.88.
+ID: `ran_f-111n_1985`. Role: Fighter. Empty: 25,500 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.842269.
 
 | Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
 |---|---|---|---|---|---|---|---|
@@ -57,7 +57,7 @@ ID: `ran_f-111n_1985`. Role: Fighter. Empty: 25,500 kg. Internal fuel: 14,897 kg
 
 ## F-111N WaterPig — 1995
 
-ID: `ran_f-111n_1995`. Role: Fighter. Empty: 26,750 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.92.
+ID: `ran_f-111n_1995`. Role: Fighter. Empty: 26,750 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.842269.
 
 | Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
 |---|---|---|---|---|---|---|---|
@@ -68,7 +68,7 @@ ID: `ran_f-111n_1995`. Role: Fighter. Empty: 26,750 kg. Internal fuel: 14,897 kg
 
 ## F-111N WaterPig — 2003
 
-ID: `ran_f-111n_2003`. Role: Fighter. Empty: 27,250 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.96.
+ID: `ran_f-111n_2003`. Role: Fighter. Empty: 27,250 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.842269.
 
 | Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
 |---|---|---|---|---|---|---|---|
@@ -79,7 +79,7 @@ ID: `ran_f-111n_2003`. Role: Fighter. Empty: 27,250 kg. Internal fuel: 14,897 kg
 
 ## FB-111N MudPig — 1980
 
-ID: `ran_fb-111n`. Role: Bomber. Empty: 24,940 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.84.
+ID: `ran_fb-111n`. Role: Bomber. Empty: 24,940 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.842269.
 
 | Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
 |---|---|---|---|---|---|---|---|
@@ -119,7 +119,7 @@ ID: `ran_fb-111n`. Role: Bomber. Empty: 24,940 kg. Internal fuel: 14,897 kg. Gun
 
 ## FB-111N MudPig — 1985
 
-ID: `ran_fb-111n_1985`. Role: Bomber. Empty: 25,200 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.88.
+ID: `ran_fb-111n_1985`. Role: Bomber. Empty: 25,200 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.842269.
 
 | Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
 |---|---|---|---|---|---|---|---|
@@ -160,7 +160,7 @@ ID: `ran_fb-111n_1985`. Role: Bomber. Empty: 25,200 kg. Internal fuel: 14,897 kg
 
 ## FB-111N MudPig — 1995
 
-ID: `ran_fb-111n_1995`. Role: Bomber. Empty: 26,460 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.92.
+ID: `ran_fb-111n_1995`. Role: Bomber. Empty: 26,460 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.842269.
 
 | Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
 |---|---|---|---|---|---|---|---|
@@ -203,7 +203,7 @@ ID: `ran_fb-111n_1995`. Role: Bomber. Empty: 26,460 kg. Internal fuel: 14,897 kg
 
 ## FB-111N MudPig — 2003
 
-ID: `ran_fb-111n_2003`. Role: Bomber. Empty: 26,975 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.96.
+ID: `ran_fb-111n_2003`. Role: Bomber. Empty: 26,975 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.842269.
 
 | Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
 |---|---|---|---|---|---|---|---|
@@ -254,7 +254,7 @@ ID: `ran_fb-111n_2003`. Role: Bomber. Empty: 26,975 kg. Internal fuel: 14,897 kg
 
 ## RF-111N SprintPig — 1980
 
-ID: `ran_rf-111n`. Role: Recon,ESM. Empty: 25,350 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.84.
+ID: `ran_rf-111n`. Role: Recon,ESM. Empty: 25,350 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.842269.
 
 | Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
 |---|---|---|---|---|---|---|---|
@@ -267,7 +267,7 @@ ID: `ran_rf-111n`. Role: Recon,ESM. Empty: 25,350 kg. Internal fuel: 14,897 kg. 
 
 ## RF-111N SprintPig — 1985
 
-ID: `ran_rf-111n_1985`. Role: Recon,ESM. Empty: 25,650 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.88.
+ID: `ran_rf-111n_1985`. Role: Recon,ESM. Empty: 25,650 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.842269.
 
 | Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
 |---|---|---|---|---|---|---|---|
@@ -280,7 +280,7 @@ ID: `ran_rf-111n_1985`. Role: Recon,ESM. Empty: 25,650 kg. Internal fuel: 14,897
 
 ## RF-111N SprintPig — 1995
 
-ID: `ran_rf-111n_1995`. Role: Recon,ESM. Empty: 27,000 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.92.
+ID: `ran_rf-111n_1995`. Role: Recon,ESM. Empty: 27,000 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.842269.
 
 | Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
 |---|---|---|---|---|---|---|---|
@@ -293,7 +293,7 @@ ID: `ran_rf-111n_1995`. Role: Recon,ESM. Empty: 27,000 kg. Internal fuel: 14,897
 
 ## RF-111N SprintPig — 2003
 
-ID: `ran_rf-111n_2003`. Role: Recon,ESM. Empty: 27,600 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.96.
+ID: `ran_rf-111n_2003`. Role: Recon,ESM. Empty: 27,600 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.842269.
 
 | Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
 |---|---|---|---|---|---|---|---|
@@ -306,7 +306,7 @@ ID: `ran_rf-111n_2003`. Role: Recon,ESM. Empty: 27,600 kg. Internal fuel: 14,897
 
 ## EF-111N ScreamPig — 1980
 
-ID: `ran_ef-111n`. Role: EW,ESM. Empty: 28,250 kg. Internal fuel: 14,897 kg. Gun ammunition: none. Max Mach: 2.875; cruise Mach: 0.84.
+ID: `ran_ef-111n`. Role: EW,ESM. Empty: 28,250 kg. Internal fuel: 14,897 kg. Gun ammunition: none. Max Mach: 2.875; cruise Mach: 0.842269.
 
 | Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
 |---|---|---|---|---|---|---|---|
@@ -319,7 +319,7 @@ ID: `ran_ef-111n`. Role: EW,ESM. Empty: 28,250 kg. Internal fuel: 14,897 kg. Gun
 
 ## EF-111N ScreamPig — 1985
 
-ID: `ran_ef-111n_1985`. Role: EW,ESM. Empty: 28,500 kg. Internal fuel: 14,897 kg. Gun ammunition: none. Max Mach: 2.875; cruise Mach: 0.88.
+ID: `ran_ef-111n_1985`. Role: EW,ESM. Empty: 28,500 kg. Internal fuel: 14,897 kg. Gun ammunition: none. Max Mach: 2.875; cruise Mach: 0.842269.
 
 | Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
 |---|---|---|---|---|---|---|---|
@@ -332,7 +332,7 @@ ID: `ran_ef-111n_1985`. Role: EW,ESM. Empty: 28,500 kg. Internal fuel: 14,897 kg
 
 ## EF-111N ScreamPig — 1995
 
-ID: `ran_ef-111n_1995`. Role: EW,ESM. Empty: 29,750 kg. Internal fuel: 14,897 kg. Gun ammunition: none. Max Mach: 2.875; cruise Mach: 0.92.
+ID: `ran_ef-111n_1995`. Role: EW,ESM. Empty: 29,750 kg. Internal fuel: 14,897 kg. Gun ammunition: none. Max Mach: 2.875; cruise Mach: 0.842269.
 
 | Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
 |---|---|---|---|---|---|---|---|
@@ -345,7 +345,7 @@ ID: `ran_ef-111n_1995`. Role: EW,ESM. Empty: 29,750 kg. Internal fuel: 14,897 kg
 
 ## EF-111N ScreamPig — 2003
 
-ID: `ran_ef-111n_2003`. Role: EW,ESM. Empty: 30,250 kg. Internal fuel: 14,897 kg. Gun ammunition: none. Max Mach: 2.875; cruise Mach: 0.96.
+ID: `ran_ef-111n_2003`. Role: EW,ESM. Empty: 30,250 kg. Internal fuel: 14,897 kg. Gun ammunition: none. Max Mach: 2.875; cruise Mach: 0.842269.
 
 | Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
 |---|---|---|---|---|---|---|---|

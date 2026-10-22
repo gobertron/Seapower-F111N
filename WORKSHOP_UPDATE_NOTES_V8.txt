@@ -1,3 +1,15 @@
+[h1]Version 8 — Sourced Speed Profile, 22 October 2026[/h1]
+
+[list]
+[*]Retained the common fastest-reference Mach 2.875 maximum across all sixteen aircraft.
+[*]Applied real RAAF sea-level 1,345 km/h plus 15%: 1,546.75 km/h / 835.178186 knots.
+[*]Applied real RAAF cruise 778 km/h plus 15%: 894.7 km/h, represented by Mach 0.842269 at the retained 37,000-ft ISA reference.
+[*]Normal power now uses that sourced cruise target. A verified maximum dry-thrust speed is unavailable; the earlier game-derived Mach 1.38 command is superseded.
+[*]Preserved approach, loiter, stall, roles, weapons and all 211 presets. Dated thrust/response and range remain programme estimates; actual loaded flight needs in-game verification.
+[/list]
+
+The earlier speed correction below describes its original settings; this sourced profile supersedes its sea-level, cruise and dry-throttle figures.
+
 [h1]Version 8 — Speed Correction, 22 October 2026[/h1]
 
 [list]
@@ -60,7 +72,7 @@ V8 rebuilds the Naval Wing from the verified V6 base, retaining four aircraft fa
 [/list]
 
 [h2]Validation and installation[/h2]
-[b]Passed: 35,326 mod checks, 2,243 carrier/installer checks and eight late texture audits.[/b]
+[b]Passed: 35,358 mod checks, 2,243 carrier/installer checks and eight late texture audits.[/b]
 Also passed: 18 replacement/recovery tests and six lift-repair tests. Majestic cases use representative native layouts; exact installed RAN source definitions were unavailable.
 
 Actual gun fire, guidance/release, Mach 3 flight, ECM display, dates and carrier landings still need Sea Power runtime testing. Native modern-weapon approximations and fictional naval engineering are documented.
