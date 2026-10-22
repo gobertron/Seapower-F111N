@@ -10,24 +10,24 @@ Four original roles, each in four funded editions. Values below come from the sh
 
 | Aircraft | Year | Role | Empty kg | Max Mach | Cruise Mach | Range miles | AB kN/engine | Gun / rounds | Presets | Suggested fit |
 |---|---|---|---|---|---|---|---|---|---|---|
-| F-111N WaterPig | 1980 | Fighter | 25,250 | 2.5 | 0.84 | 1,450 | 82.3 | M61 / 2,000 | 4 | FleetIntercept / AirToAirLongRange |
-| F-111N WaterPig | 1985 | Fighter | 25,500 | 2.5 | 0.88 | 1,537 | 90.53 | M61 / 2,000 | 4 | FleetIntercept / AirToAirLongRange |
-| F-111N WaterPig | 1995 | Fighter | 26,750 | 2.5 | 0.92 | 1,653 | 120 | M61 / 2,000 | 4 | FleetIntercept / AirToAirLongRange |
-| F-111N WaterPig | 2003 | Fighter | 27,250 | 2.5 | 0.96 | 1,769 | 129 | M61 / 2,000 | 4 | FleetIntercept / AirToAirLongRange |
-| FB-111N MudPig | 1980 | Bomber | 24,940 | 2.6 | 0.84 | 1,550 | 82.3 | M61 / 2,000 | 33 | AntiShipHeavy / StrikeBay / FleetInterceptBay |
-| FB-111N MudPig | 1985 | Bomber | 25,200 | 2.6 | 0.88 | 1,643 | 90.53 | M61 / 2,000 | 34 | AntiShipHeavy / StrikeBay / FleetInterceptBay |
-| FB-111N MudPig | 1995 | Bomber | 26,460 | 2.6 | 0.92 | 1,767 | 120 | M61 / 2,000 | 36 | AntiShipHeavy / StrikeBay / FleetInterceptBay |
-| FB-111N MudPig | 2003 | Bomber | 26,975 | 2.6 | 0.96 | 1,891 | 129 | M61 / 2,000 | 44 | AntiShipHeavy / StrikeBay / FleetInterceptBay |
-| RF-111N SprintPig | 1980 | Recon,ESM | 25,350 | 3.0 | 2.52 | 2,300 | 480 | M61 / 2,000 | 6 | ReconFast / ReconLongRange |
-| RF-111N SprintPig | 1985 | Recon,ESM | 25,650 | 3.0 | 2.52 | 2,438 | 528 | M61 / 2,000 | 6 | ReconFast / ReconLongRange |
-| RF-111N SprintPig | 1995 | Recon,ESM | 27,000 | 3.0 | 2.52 | 2,622 | 600 | M61 / 2,000 | 6 | ReconFast / ReconLongRange |
-| RF-111N SprintPig | 2003 | Recon,ESM | 27,600 | 3.0 | 2.52 | 2,806 | 672 | M61 / 2,000 | 6 | ReconFast / ReconLongRange |
-| EF-111N ScreamPig | 1980 | EW,ESM | 28,250 | 2.2 | 0.84 | 1,700 | 82.3 | None | 6 | EWLongRange / EscortSEAD |
-| EF-111N ScreamPig | 1985 | EW,ESM | 28,500 | 2.2 | 0.88 | 1,802 | 90.53 | None | 6 | EWLongRange / EscortSEAD |
-| EF-111N ScreamPig | 1995 | EW,ESM | 29,750 | 2.2 | 0.92 | 1,938 | 120 | None | 6 | EWLongRange / EscortSEAD |
-| EF-111N ScreamPig | 2003 | EW,ESM | 30,250 | 2.2 | 0.96 | 2,074 | 129 | None | 6 | EWLongRange / EscortSEAD |
+| F-111N WaterPig | 1980 | Fighter | 25,250 | 2.875 | 0.84 | 1,450 | 82.3 | M61 / 2,000 | 4 | FleetIntercept / AirToAirLongRange |
+| F-111N WaterPig | 1985 | Fighter | 25,500 | 2.875 | 0.88 | 1,537 | 90.53 | M61 / 2,000 | 4 | FleetIntercept / AirToAirLongRange |
+| F-111N WaterPig | 1995 | Fighter | 26,750 | 2.875 | 0.92 | 1,653 | 120 | M61 / 2,000 | 4 | FleetIntercept / AirToAirLongRange |
+| F-111N WaterPig | 2003 | Fighter | 27,250 | 2.875 | 0.96 | 1,769 | 129 | M61 / 2,000 | 4 | FleetIntercept / AirToAirLongRange |
+| FB-111N MudPig | 1980 | Bomber | 24,940 | 2.875 | 0.84 | 1,550 | 82.3 | M61 / 2,000 | 33 | AntiShipHeavy / StrikeBay / FleetInterceptBay |
+| FB-111N MudPig | 1985 | Bomber | 25,200 | 2.875 | 0.88 | 1,643 | 90.53 | M61 / 2,000 | 34 | AntiShipHeavy / StrikeBay / FleetInterceptBay |
+| FB-111N MudPig | 1995 | Bomber | 26,460 | 2.875 | 0.92 | 1,767 | 120 | M61 / 2,000 | 36 | AntiShipHeavy / StrikeBay / FleetInterceptBay |
+| FB-111N MudPig | 2003 | Bomber | 26,975 | 2.875 | 0.96 | 1,891 | 129 | M61 / 2,000 | 44 | AntiShipHeavy / StrikeBay / FleetInterceptBay |
+| RF-111N SprintPig | 1980 | Recon,ESM | 25,350 | 2.875 | 0.84 | 2,300 | 82.3 | M61 / 2,000 | 6 | ReconFast / ReconLongRange |
+| RF-111N SprintPig | 1985 | Recon,ESM | 25,650 | 2.875 | 0.88 | 2,438 | 90.53 | M61 / 2,000 | 6 | ReconFast / ReconLongRange |
+| RF-111N SprintPig | 1995 | Recon,ESM | 27,000 | 2.875 | 0.92 | 2,622 | 120 | M61 / 2,000 | 6 | ReconFast / ReconLongRange |
+| RF-111N SprintPig | 2003 | Recon,ESM | 27,600 | 2.875 | 0.96 | 2,806 | 129 | M61 / 2,000 | 6 | ReconFast / ReconLongRange |
+| EF-111N ScreamPig | 1980 | EW,ESM | 28,250 | 2.875 | 0.84 | 1,700 | 82.3 | None | 6 | EWLongRange / EscortSEAD |
+| EF-111N ScreamPig | 1985 | EW,ESM | 28,500 | 2.875 | 0.88 | 1,802 | 90.53 | None | 6 | EWLongRange / EscortSEAD |
+| EF-111N ScreamPig | 1995 | EW,ESM | 29,750 | 2.875 | 0.92 | 1,938 | 120 | None | 6 | EWLongRange / EscortSEAD |
+| EF-111N ScreamPig | 2003 | EW,ESM | 30,250 | 2.875 | 0.96 | 2,074 | 129 | None | 6 | EWLongRange / EscortSEAD |
 
-RF uses its explicit fictional Mach 3 propulsion package and triple WaterPig velocity/thrust gains for the same year. FB carries the other families' period weapon types, while F/RF/EF preserve specialised roles. EF always has two physical ECM pods and two offensive systems; FB receives removable offensive ECM only in its EW fits.
+All sixteen aircraft use maximum Mach 2.875 (published F-111 Mach 2.5 reference plus 15%). Maximum dry throttle is Mach 1.38 and the native sea-level maximum is 897 knots, both 15% above the fighter baseline. All roles share matching-year cruise, thrust and velocity/thrust response settings. FB carries the other families' period weapon types, while F/RF/EF preserve specialised roles. EF always has two physical ECM pods and two offensive systems; FB receives removable offensive ECM only in its EW fits.
 
 The 211 selectable preset names include compatible Default/mission aliases with repeated inventories. Counts by year are 49 / 50 / 52 / 60. Service gates are 1980–1984, 1985–1994, 1995–2002 and 2003–2050. Unsuffixed aircraft IDs select 1980.
 
@@ -39,13 +39,13 @@ Every edition assumes heavy Australian funding for naval conversion, propulsion,
 
 | Setting | 1980 | 1985 | 1995 | 2003 |
 |---|---|---|---|---|
-| Engine for F/FB/EF | TF30-P-109 reference | TF30 naval uprating (fictional) | F110-GE-400-class naval adaptation | F110-GE-129-class naval adaptation |
-| Dry thrust N/engine for F/FB/EF | 43600 | 47960 | 60000 | 65000 |
-| Afterburning thrust N/engine for F/FB/EF | 82300 | 90530 | 120000 | 129000 |
+| Engine for all roles | TF30-P-109 reference | TF30 naval uprating (fictional) | F110-GE-400-class naval adaptation | F110-GE-129-class naval adaptation |
+| Dry thrust N/engine for all roles | 43600 | 47960 | 60000 | 65000 |
+| Afterburning thrust N/engine for all roles | 82300 | 90530 | 120000 | 129000 |
 | Velocity/thrust response multiplier | 1 | 1.1 | 1.25 | 1.4 |
 | Pitch/heading/bank gain multiplier | 1 | 1.05 | 1.1 | 1.15 |
 | Nominal cruise-range factor | 1 | 1.06 | 1.14 | 1.22 |
-| Cruise Mach for F/FB/EF | 0.84 | 0.88 | 0.92 | 0.96 |
+| Cruise Mach for all roles | 0.84 | 0.88 | 0.92 | 0.96 |
 | Climb-setting multiplier | 1 | 1.05 | 1.15 | 1.25 |
 | Additional systems/control mass kg | 0 | 150 | 650 | 850 |
 | Propulsion-retrofit allowance kg | 0 | 0 | 600 | 750 |
@@ -74,12 +74,12 @@ F uses AWG-9 donor geometry/settings, labelled as a hypothetical APG-71-class di
 
 | RF propulsion setting | 1980 | 1985 | 1995 | 2003 |
 |---|---|---|---|---|
-| Dry N per engine | 320000 | 352000 | 400000 | 448000 |
-| Afterburning N per engine | 480000 | 528000 | 600000 | 672000 |
+| Dry N per engine | 43600 | 47960 | 60000 | 65000 |
+| Afterburning N per engine | 82300 | 90530 | 120000 | 129000 |
 
-RF keeps Mach 2.52 cruise and Mach 3 maximum throughout. VelocityGain and ThrustGain stay three times WaterPig's matching edition, with the same dated improvement factor. This is not triple maximum airspeed. Use ReconFast, independent orders and appropriate altitude for a sprint; actual AI flight needs runtime testing.
+The speed correction supersedes the former RF-only Mach 3, Mach 2.52 cruise, oversized thrust and triple response. All roles now use the same dated propulsion and cruise schedules, maximum Mach 2.875, maximum dry Mach 1.38 and 897-knot native sea-level cap. Landing, loiter and stall settings retain the original values. Use independent orders and suitable altitude to assess maximum speed; actual AI flight needs runtime testing.
 
-GE's historical status report supplies the 120 kN F110-GE-400 and 129 kN F110-GE-129 afterburning classes, available before the assigned editions. F-111 adaptation, installed dry thrust, TF30 uprating, mass allowances, thermal upgrades and control/sensor ratings are estimates. [GE reference](https://www.geaerospace.com/news/press-releases/defense-engines/ge-aircraft-engines-military-engine-status-report). The RF package is entirely fictional.
+GE's historical status report supplies the 120 kN F110-GE-400 and 129 kN F110-GE-129 afterburning classes, available before the assigned editions. F-111 adaptation, installed dry thrust, TF30 uprating, mass allowances, thermal upgrades and control/sensor ratings are estimates. [GE reference](https://www.geaerospace.com/news/press-releases/defense-engines/ge-aircraft-engines-military-engine-status-report). The 15% speed increase is a requested fictional gameplay rating. NASA describes Mach 2.5 capability for the F-111A: [technical report](https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf). The dry and sea-level fields scale the native fighter baseline, not a new historical measurement.
 
 [Aircraft comparison](AIRCRAFT_COMPARISON.md) · [Full mass/loadout breakdown](../COMPLETE_BREAKDOWN_V8.md)
 
@@ -237,11 +237,11 @@ All budgets include full internal fuel, every carried store, external tank fuel 
 
 ## V8 release notes
 
-Version 8 internal-bay update: sixteen aircraft and 211 selectable presets, including 44 new MudPig bay mission fits. Existing bombing/precision/Maverick/SLAM/JDAM fits receive additional internal stores. Dated Australian investment and eight USN-inspired late liveries are retained. Original role/model/bay-station/landing contracts and M61/ECM/carrier arrangements remain. Native modern-weapon approximations and explicit hypothetical naval masses are documented.
+Version 8 speed correction: common maximum Mach 2.875 (F-111 Mach 2.5 plus 15%) across sixteen aircraft and 211 selectable presets, including 44 new MudPig bay mission fits. Existing bombing/precision/Maverick/SLAM/JDAM fits receive additional internal stores. Dated Australian investment and eight USN-inspired late liveries are retained. Original role/model/bay-station/landing contracts and M61/ECM/carrier arrangements remain. Native modern-weapon approximations and explicit hypothetical naval masses are documented.
 
 | Verification | Status | Checks/maps |
 |---|---|---|
-| VALIDATION.json | PASS | 35186 |
+| VALIDATION.json | PASS | 35326 |
 | CARRIER_VALIDATION.json | PASS | 2243 |
 | USN_TEXTURE_VALIDATION.json | PASS | 8 |
 
@@ -249,7 +249,7 @@ Heaviest full-fuel budget: ran_rf-111n_2003 / ReconLongRange at 50,897 kg, margi
 
 Carrier validation uses native and representative RAN/custom deck fixtures, not the user's exact installed RAN carriers. Installation checks cover staging, backups, source preservation and idempotence. Preview images render the shipped assets and omit stock weapon meshes unavailable outside the game.
 
-**Runtime tested: no.** Sea Power is not installed here. Actual gun fire, guidance/release, date filtering, Mach 3 flight, ECM display and landings require in-game verification. No new DLL, interactive cockpit, real GPS weapon simulation or real carrier certification is claimed.
+**Runtime tested: no.** Sea Power is not installed here. Actual gun fire, guidance/release, date filtering, maximum-speed flight, ECM display and landings require in-game verification. No new DLL, interactive cockpit, real GPS weapon simulation or real carrier certification is claimed.
 
 The README, all-aircraft/system comparisons, every loadout/mass breakdown, CSV/JSON data, references, Steam description, credits, authoring sources and validation reports are included. GitHub publication is separate from this downloadable release.
 
@@ -290,7 +290,7 @@ The basic reference is 23,300 kg F-111C. Bay station/door geometry is retained; 
 
 ### F-111N WaterPig — 1980
 
-ID: `ran_f-111n`. Role: Fighter. Empty: 25,250 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.5; cruise Mach: 0.84.
+ID: `ran_f-111n`. Role: Fighter. Empty: 25,250 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.84.
 
 | Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
 |---|---|---|---|---|---|---|---|
@@ -301,7 +301,7 @@ ID: `ran_f-111n`. Role: Fighter. Empty: 25,250 kg. Internal fuel: 14,897 kg. Gun
 
 ### F-111N WaterPig — 1985
 
-ID: `ran_f-111n_1985`. Role: Fighter. Empty: 25,500 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.5; cruise Mach: 0.88.
+ID: `ran_f-111n_1985`. Role: Fighter. Empty: 25,500 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.88.
 
 | Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
 |---|---|---|---|---|---|---|---|
@@ -312,7 +312,7 @@ ID: `ran_f-111n_1985`. Role: Fighter. Empty: 25,500 kg. Internal fuel: 14,897 kg
 
 ### F-111N WaterPig — 1995
 
-ID: `ran_f-111n_1995`. Role: Fighter. Empty: 26,750 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.5; cruise Mach: 0.92.
+ID: `ran_f-111n_1995`. Role: Fighter. Empty: 26,750 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.92.
 
 | Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
 |---|---|---|---|---|---|---|---|
@@ -323,7 +323,7 @@ ID: `ran_f-111n_1995`. Role: Fighter. Empty: 26,750 kg. Internal fuel: 14,897 kg
 
 ### F-111N WaterPig — 2003
 
-ID: `ran_f-111n_2003`. Role: Fighter. Empty: 27,250 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.5; cruise Mach: 0.96.
+ID: `ran_f-111n_2003`. Role: Fighter. Empty: 27,250 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.96.
 
 | Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
 |---|---|---|---|---|---|---|---|
@@ -334,7 +334,7 @@ ID: `ran_f-111n_2003`. Role: Fighter. Empty: 27,250 kg. Internal fuel: 14,897 kg
 
 ### FB-111N MudPig — 1980
 
-ID: `ran_fb-111n`. Role: Bomber. Empty: 24,940 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.6; cruise Mach: 0.84.
+ID: `ran_fb-111n`. Role: Bomber. Empty: 24,940 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.84.
 
 | Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
 |---|---|---|---|---|---|---|---|
@@ -374,7 +374,7 @@ ID: `ran_fb-111n`. Role: Bomber. Empty: 24,940 kg. Internal fuel: 14,897 kg. Gun
 
 ### FB-111N MudPig — 1985
 
-ID: `ran_fb-111n_1985`. Role: Bomber. Empty: 25,200 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.6; cruise Mach: 0.88.
+ID: `ran_fb-111n_1985`. Role: Bomber. Empty: 25,200 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.88.
 
 | Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
 |---|---|---|---|---|---|---|---|
@@ -415,7 +415,7 @@ ID: `ran_fb-111n_1985`. Role: Bomber. Empty: 25,200 kg. Internal fuel: 14,897 kg
 
 ### FB-111N MudPig — 1995
 
-ID: `ran_fb-111n_1995`. Role: Bomber. Empty: 26,460 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.6; cruise Mach: 0.92.
+ID: `ran_fb-111n_1995`. Role: Bomber. Empty: 26,460 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.92.
 
 | Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
 |---|---|---|---|---|---|---|---|
@@ -458,7 +458,7 @@ ID: `ran_fb-111n_1995`. Role: Bomber. Empty: 26,460 kg. Internal fuel: 14,897 kg
 
 ### FB-111N MudPig — 2003
 
-ID: `ran_fb-111n_2003`. Role: Bomber. Empty: 26,975 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.6; cruise Mach: 0.96.
+ID: `ran_fb-111n_2003`. Role: Bomber. Empty: 26,975 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.96.
 
 | Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
 |---|---|---|---|---|---|---|---|
@@ -509,7 +509,7 @@ ID: `ran_fb-111n_2003`. Role: Bomber. Empty: 26,975 kg. Internal fuel: 14,897 kg
 
 ### RF-111N SprintPig — 1980
 
-ID: `ran_rf-111n`. Role: Recon,ESM. Empty: 25,350 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 3.0; cruise Mach: 2.52.
+ID: `ran_rf-111n`. Role: Recon,ESM. Empty: 25,350 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.84.
 
 | Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
 |---|---|---|---|---|---|---|---|
@@ -522,7 +522,7 @@ ID: `ran_rf-111n`. Role: Recon,ESM. Empty: 25,350 kg. Internal fuel: 14,897 kg. 
 
 ### RF-111N SprintPig — 1985
 
-ID: `ran_rf-111n_1985`. Role: Recon,ESM. Empty: 25,650 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 3.0; cruise Mach: 2.52.
+ID: `ran_rf-111n_1985`. Role: Recon,ESM. Empty: 25,650 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.88.
 
 | Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
 |---|---|---|---|---|---|---|---|
@@ -535,7 +535,7 @@ ID: `ran_rf-111n_1985`. Role: Recon,ESM. Empty: 25,650 kg. Internal fuel: 14,897
 
 ### RF-111N SprintPig — 1995
 
-ID: `ran_rf-111n_1995`. Role: Recon,ESM. Empty: 27,000 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 3.0; cruise Mach: 2.52.
+ID: `ran_rf-111n_1995`. Role: Recon,ESM. Empty: 27,000 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.92.
 
 | Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
 |---|---|---|---|---|---|---|---|
@@ -548,7 +548,7 @@ ID: `ran_rf-111n_1995`. Role: Recon,ESM. Empty: 27,000 kg. Internal fuel: 14,897
 
 ### RF-111N SprintPig — 2003
 
-ID: `ran_rf-111n_2003`. Role: Recon,ESM. Empty: 27,600 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 3.0; cruise Mach: 2.52.
+ID: `ran_rf-111n_2003`. Role: Recon,ESM. Empty: 27,600 kg. Internal fuel: 14,897 kg. Gun ammunition: 544 kg / 2,000 rounds. Max Mach: 2.875; cruise Mach: 0.96.
 
 | Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
 |---|---|---|---|---|---|---|---|
@@ -561,7 +561,7 @@ ID: `ran_rf-111n_2003`. Role: Recon,ESM. Empty: 27,600 kg. Internal fuel: 14,897
 
 ### EF-111N ScreamPig — 1980
 
-ID: `ran_ef-111n`. Role: EW,ESM. Empty: 28,250 kg. Internal fuel: 14,897 kg. Gun ammunition: none. Max Mach: 2.2; cruise Mach: 0.84.
+ID: `ran_ef-111n`. Role: EW,ESM. Empty: 28,250 kg. Internal fuel: 14,897 kg. Gun ammunition: none. Max Mach: 2.875; cruise Mach: 0.84.
 
 | Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
 |---|---|---|---|---|---|---|---|
@@ -574,7 +574,7 @@ ID: `ran_ef-111n`. Role: EW,ESM. Empty: 28,250 kg. Internal fuel: 14,897 kg. Gun
 
 ### EF-111N ScreamPig — 1985
 
-ID: `ran_ef-111n_1985`. Role: EW,ESM. Empty: 28,500 kg. Internal fuel: 14,897 kg. Gun ammunition: none. Max Mach: 2.2; cruise Mach: 0.88.
+ID: `ran_ef-111n_1985`. Role: EW,ESM. Empty: 28,500 kg. Internal fuel: 14,897 kg. Gun ammunition: none. Max Mach: 2.875; cruise Mach: 0.88.
 
 | Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
 |---|---|---|---|---|---|---|---|
@@ -587,7 +587,7 @@ ID: `ran_ef-111n_1985`. Role: EW,ESM. Empty: 28,500 kg. Internal fuel: 14,897 kg
 
 ### EF-111N ScreamPig — 1995
 
-ID: `ran_ef-111n_1995`. Role: EW,ESM. Empty: 29,750 kg. Internal fuel: 14,897 kg. Gun ammunition: none. Max Mach: 2.2; cruise Mach: 0.92.
+ID: `ran_ef-111n_1995`. Role: EW,ESM. Empty: 29,750 kg. Internal fuel: 14,897 kg. Gun ammunition: none. Max Mach: 2.875; cruise Mach: 0.92.
 
 | Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
 |---|---|---|---|---|---|---|---|
@@ -600,7 +600,7 @@ ID: `ran_ef-111n_1995`. Role: EW,ESM. Empty: 29,750 kg. Internal fuel: 14,897 kg
 
 ### EF-111N ScreamPig — 2003
 
-ID: `ran_ef-111n_2003`. Role: EW,ESM. Empty: 30,250 kg. Internal fuel: 14,897 kg. Gun ammunition: none. Max Mach: 2.2; cruise Mach: 0.96.
+ID: `ran_ef-111n_2003`. Role: EW,ESM. Empty: 30,250 kg. Internal fuel: 14,897 kg. Gun ammunition: none. Max Mach: 2.875; cruise Mach: 0.96.
 
 | Preset | Wing stores | Auxiliary external | Internal bay | Dry stores kg | Total fuel kg | Takeoff kg | Margin kg |
 |---|---|---|---|---|---|---|---|
@@ -687,4 +687,4 @@ EF retains two physical pylon ECM pods and two offensive sensors. FB only carrie
 
 Native modern-weapon approximations: AMRAAM lacks platform midcourse correction; ASRAAM lacks helmet sight/LOAL; EO weapons lack manual man-in-the-loop retargeting; Block II Harpoon models radar-homing ship attack; JDAM/JSOW use CEP/ballistic/glide settings instead of full GPS/INS. Period choices assume funded Australian integration, including accelerated early procurement.
 
-Static checks do not prove gun fire, release trajectories, AI Mach 3 behaviour, ECM display, date filtering or carrier landings. These still need Sea Power runtime testing. [References](../HISTORICAL_REFERENCES.md) · [Aircraft comparison](AIRCRAFT_COMPARISON.md) · [Investment](INVESTMENT_PROGRAMME.md)
+Static checks do not prove gun fire, release trajectories, AI maximum-speed behaviour, ECM display, date filtering or carrier landings. These still need Sea Power runtime testing. [References](../HISTORICAL_REFERENCES.md) · [Aircraft comparison](AIRCRAFT_COMPARISON.md) · [Investment](INVESTMENT_PROGRAMME.md)

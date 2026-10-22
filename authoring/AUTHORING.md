@@ -23,6 +23,8 @@ Refresh hashes after any mod data/asset change. Aircraft validation checks dates
 
 `build_docs.py` derives all sixteen comparisons, every loadout budget, CSV, investment JSON and release notes from actual manifests and completed validation reports. `package_release.py` requires PASS reports and matching current mod hashes, skips caches/download/Git trees, checks ZIP integrity and writes a SHA-256 sidecar.
 
-Native guidance, gun fire, ECM display, service-date filtering, AI Mach 3 orders and actual landings still require Sea Power runtime testing. Historical facts and fictional estimates are separated in the root reference and manifest files.
+Native guidance, gun fire, ECM display, service-date filtering, AI maximum-speed orders and actual landings still require Sea Power runtime testing. Historical facts and fictional estimates are separated in the root reference and manifest files.
 
 `bay_loadouts.py` adds dated MudPig multistore fits without adding physical stations. `bay_docs.py` derives the bay guide and combined breakdown from current manifests. Bay checks cover counts, targeting, attack modes, adapter mass/readiness and coarse closed-door horizontal footprints. Full packing, release separation and armed recovery remain runtime tests; follow `docs/INTERNAL_BAY_V8.md`.
+
+`investment_programme.py` also owns the shared speed policy: maximum Mach 2.5 × 1.15 = 2.875, dry Mach 1.2 × 1.15 = 1.38, and native sea-level cap 780 × 1.15 = 897 knots. All roles use matching-year cruise/thrust and the fighter baseline response; the former RF overrides are superseded. Validation checks effective INIs, manifests and preserved landing/loiter/stall values.

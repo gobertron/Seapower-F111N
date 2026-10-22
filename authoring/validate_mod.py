@@ -6,7 +6,7 @@ import re,json,hashlib,sys
 from era_upgrade import read_ini,MOD,ROOT,BASE,NATIVE,YEARS,ROLES,unit_id,inventory,CATALOG
 from paint_textures import load_obj,matrix
 import numpy as np
-from investment_programme import BLOCKS,pod_id,sensor_id
+from investment_programme import BLOCKS,SPEED_PROFILE,pod_id,sensor_id
 from usn_liveries import protected_pixels
 from PIL import Image
 from bay_loadouts import BAY_UPGRADE_MASS
@@ -69,9 +69,17 @@ def main():
         check(int(d['Performance']['EmptyMass'])==spec['empty_mass_kg']==sum(spec['empty_mass_components_kg'].values()),uid+': empty mass budget')
         check(int(d['Performance']['MaxFuel'])==14897,uid+': real internal fuel')
         check(spec['investment_programme']['name']==b['name'],uid+': investment block')
-        if role!='rf':
-            check(float(d['Performance']['PerEngineMaxThrust'])==b['dry_n'] and float(d['Performance']['PerEngineMaxAfterburnerThrust'])==b['afterburner_n'],uid+': dated propulsion')
+        check(float(d['Performance']['PerEngineMaxThrust'])==b['dry_n'] and float(d['Performance']['PerEngineMaxAfterburnerThrust'])==b['afterburner_n'],uid+': dated propulsion')
+        check(float(d['Performance']['MachLimit'])==spec['mach_limit']==2.875,uid+': F-111 maximum Mach 2.5 plus 15%')
+        check(float(d['Performance']['MaxSpeedAtSeaLevel'])==897,uid+': common native sea-level maximum plus 15%')
+        check(float(d['Performance']['SpeedAndRange_Max'].split(',')[0])==1.38,uid+': common maximum dry throttle speed')
+        check(float(d['Performance']['SpeedAndRange_Afterburner'].split(',')[0])==2.875,uid+': common afterburner speed')
+        check(float(d['Performance']['SpeedAndRange_Cruise'].split(',')[0])==spec['cruise_mach']==b['cruise'],uid+': common dated cruise')
+        check(spec['speed_profile']==spec['investment_programme']['speed_profile']==SPEED_PROFILE,uid+': speed policy metadata')
+        for key in ('StallSpeed','SpeedAndRange_Landing','SpeedAndRange_Loiter'):
+            check(d['Performance'][key]==baseline['Performance'][key],uid+': retained approach/low-speed setting '+key)
         for key,value in baseline['FlightModel'].items():
+            if key in ('VelocityGain','ThrustGain'):value=read_ini(BASE/'aircraft/ran_f-111n.ini')['FlightModel'][key]
             factor=b['acceleration'] if key in ('VelocityGain','ThrustGain') else b['controls'] if key in ('PitchGain','HeadingGain','BankGain') else 1
             check(abs(float(d['FlightModel'][key])-float(value)*factor)<1e-6,uid+': native flight response '+key)
         check(spec['nominal_cruise_range_miles']==int(d['Performance']['SpeedAndRange_Cruise'].split(',')[1]),uid+': actual range manifest')
@@ -215,10 +223,8 @@ def main():
                 top=(pod@transform[:3,:3].T+transform[:3,3])[:,:,1].max()
                 check(abs(top-bottom)<.0003,uid+': ECM attached to '+parent)
         if role=='rf':
-            check(float(d['Performance']['MachLimit'])==3 and d['Performance']['SpeedAndRange_Cruise'].startswith('2.52,'),uid+': Mach 3 and triple cruise retained')
-            check(float(d['Performance']['PerEngineMaxAfterburnerThrust'])==round(480000*b['acceleration']),uid+': fictional dated sprint propulsion')
             fighter=read_ini(MOD/'aircraft'/(unit_id('f',year)+'.ini'))
-            for key in ('VelocityGain','ThrustGain'):check(abs(float(d['FlightModel'][key])-3*float(fighter['FlightModel'][key]))<1e-6,uid+': triple fighter response '+key)
+            for key in ('VelocityGain','ThrustGain'):check(abs(float(d['FlightModel'][key])-float(fighter['FlightModel'][key]))<1e-6,uid+': common fighter response '+key)
             check('ReconFast' in presets and not any(n in presets for n in ('Strike','AntiShip','EW')),uid+': reconnaissance role')
             check(any(s['SystemName']==sensor_id('ELINT',year) for s in sensors),uid+': ELINT')
         if role=='ef':
@@ -251,7 +257,7 @@ def main():
         check(hashlib.sha256(a.read_bytes()).digest()!=hashlib.sha256(b.read_bytes()).digest(),role+': distinct late-edition materials')
     for line in (ROOT/'MOD_SHA256.txt').read_text().splitlines():
         digest,name=line.split('  ',1);check(hashlib.sha256((MOD/name).read_bytes()).hexdigest()==digest,'checksum '+name)
-    result={'status':'FAIL' if failures else 'PASS','checks':checks,'failures':failures,'aircraft':len(manifest),'loadouts':sum(len(x['loadouts']) for x in manifest.values()),'loaded_bay_presets':sum(bool(v['internal_bay_stores']) for s in manifest.values() for v in s['loadouts'].values()),'runtime_tested':False,'scope':'Dated weapon selection, increasing native investment, eight tactical atlases, all-rounder union, M61 magazines, retained bay/model/landing geometry, three-station bay capacity and targeting, internal inventory and attack modes, explicit bay upgrade mass, mass arithmetic, takeoff reference budget, store and sensor resolution, pod attachment, original assets and checksums'}
+    result={'status':'FAIL' if failures else 'PASS','checks':checks,'failures':failures,'aircraft':len(manifest),'loadouts':sum(len(x['loadouts']) for x in manifest.values()),'loaded_bay_presets':sum(bool(v['internal_bay_stores']) for s in manifest.values() for v in s['loadouts'].values()),'runtime_tested':False,'scope':'Common F-111 maximum plus 15%, common dated cruise/propulsion/response, retained landing/loiter/stall settings, dated weapon selection, increasing native investment, eight tactical atlases, all-rounder union, M61 magazines, retained bay/model/landing geometry, three-station bay capacity and targeting, internal inventory and attack modes, explicit bay upgrade mass, mass arithmetic, takeoff reference budget, store and sensor resolution, pod attachment, original assets and checksums'}
     (ROOT/'VALIDATION.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2))
     return bool(failures)
 

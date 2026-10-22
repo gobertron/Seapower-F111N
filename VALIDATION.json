@@ -1,10 +1,10 @@
 {
   "status": "PASS",
-  "checks": 35186,
+  "checks": 35326,
   "failures": [],
   "aircraft": 16,
   "loadouts": 211,
   "loaded_bay_presets": 100,
   "runtime_tested": false,
-  "scope": "Dated weapon selection, increasing native investment, eight tactical atlases, all-rounder union, M61 magazines, retained bay/model/landing geometry, three-station bay capacity and targeting, internal inventory and attack modes, explicit bay upgrade mass, mass arithmetic, takeoff reference budget, store and sensor resolution, pod attachment, original assets and checksums"
+  "scope": "Common F-111 maximum plus 15%, common dated cruise/propulsion/response, retained landing/loiter/stall settings, dated weapon selection, increasing native investment, eight tactical atlases, all-rounder union, M61 magazines, retained bay/model/landing geometry, three-station bay capacity and targeting, internal inventory and attack modes, explicit bay upgrade mass, mass arithmetic, takeoff reference budget, store and sensor resolution, pod attachment, original assets and checksums"
 }

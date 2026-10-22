@@ -1,3 +1,14 @@
+[h1]Version 8 — Speed Correction, 22 October 2026[/h1]
+
+[list]
+[*]Set all sixteen aircraft to the same maximum Mach 2.875: F-111 Mach 2.5 plus 15%.
+[*]Aligned dry maximum to Mach 1.38 and native sea-level maximum to 897 knots.
+[*]Applied matching-year cruise, thrust and response settings to all four families. Supersedes SprintPig's former Mach 3, Mach 2.52 cruise and triple-response overrides.
+[*]Retained original landing, loiter and stall settings, aircraft roles, weapons and bay configurations.
+[/list]
+
+Maximum-speed flight remains unverified in Sea Power and depends on altitude, payload and orders. Earlier release notes below describe their original settings; this correction supersedes their speed and RF-propulsion claims.
+
 [h1]Version 8 — Internal-Bay Update, 2 October 2026[/h1]
 
 [list]
@@ -49,7 +60,7 @@ V8 rebuilds the Naval Wing from the verified V6 base, retaining four aircraft fa
 [/list]
 
 [h2]Validation and installation[/h2]
-[b]Passed: 35,186 mod checks, 2,243 carrier/installer checks and eight late texture audits.[/b]
+[b]Passed: 35,326 mod checks, 2,243 carrier/installer checks and eight late texture audits.[/b]
 Also passed: 18 replacement/recovery tests and six lift-repair tests. Majestic cases use representative native layouts; exact installed RAN source definitions were unavailable.
 
 Actual gun fire, guidance/release, Mach 3 flight, ECM display, dates and carrier landings still need Sea Power runtime testing. Native modern-weapon approximations and fictional naval engineering are documented.

@@ -10,7 +10,7 @@ from pathlib import Path
 from collections import OrderedDict, Counter
 from copy import deepcopy
 import re, json, math, hashlib, shutil
-from investment_programme import BLOCKS,mass_allowances,build_systems,apply as apply_investment,describe as describe_investment
+from investment_programme import BLOCKS,SPEED_PROFILE,mass_allowances,build_systems,apply as apply_investment,describe as describe_investment
 from bay_loadouts import BAY_UPGRADE_MASS, expand as expand_bay, qualification as bay_qualification
 
 ROOT=Path(__file__).resolve().parent.parent
@@ -284,15 +284,16 @@ def mass_budget(role,year):
 def build_aircraft():
     names=OrderedDict();lds=read_ini(BASE/'language_en/loadout_names.ini');ldnames=lds.setdefault('LoadoutNames',{})
     manifest={}
+    common_response=read_ini(BASE/'aircraft/ran_f-111n.ini')['FlightModel']
     for role,(model,nickname,ai,squadrons) in ROLES.items():
       for yi,year in enumerate(YEARS):
         uid=unit_id(role,year);d=read_ini(BASE/f'aircraft/ran_{role}-111n.ini');remove_loadouts(d)
         period=PERIOD[year];ir=aid(period['ir']);bvr=aid(period['bvr']);phoenix=aid(period['phoenix']);ship=aid(period['ship']);arm=aid(period['arm']);mav=aid(period['mav'])
         tank='ran_tank_600_'+role+'111n';wing=d['WeaponSystem1'];components,mass=mass_budget(role,year)
         d['AI']['Role']=ai;d['Performance'].update(EmptyMass=str(mass),MaxFuel=str(FUEL))
-        # Keep RF's requested fictional propulsion/speed. Other engines start with the
-        # TF30 reference before the dated programme applies hypothetical retrofits.
-        if role!='rf':d['Performance'].update(PerEngineMaxThrust='43600',PerEngineMaxAfterburnerThrust='82300')
+        # Share the fighter response before applying each year's funded upgrades.
+        # This removes the former RF-only triple response and oversized engines.
+        for key in ('VelocityGain','ThrustGain'):d['FlightModel'][key]=common_response[key]
         d['SensorSystem5']['SystemName']='AircraftDECM_Med' if year<1995 else 'AircraftDECM_Late'
         for section in list(d):
             if re.fullmatch(r'SensorSystem\d+',section) and d[section].get('Type')=='LaserDesignator':
@@ -407,8 +408,8 @@ def build_aircraft():
           'DefaultDescription':f'{year} edition of the fictional RAN-RAAF Naval Wing. '+{
             'f':'Fleet defence fighter with period Sidewinder or ASRAAM, Sparrow or AMRAAM, Phoenix and M61 Vulcan.',
             'fb':'All-round maritime and land strike aircraft; period weapons, M61 Vulcan and expanded three-station internal bay fits for anti-ship, bombing, precision strike and fleet interception.',
-            'rf':'Fast reconnaissance and ELINT; defensive period IR missiles, M61 Vulcan, four tanks or clean sprint. Fictional Mach 3 performance retained.',
-            'ef':'Electronic attack and SEAD escort with two physical ECM pods and two offensive ECM sensors; period defensive missiles and anti-radiation weapons.'}[role]+f' {BLOCKS[year]["name"]}. Empty mass {mass:,} kg; internal fuel {FUEL:,} kg. Naval weights are documented engineering estimates.',
+            'rf':'Reconnaissance and ELINT; defensive period IR missiles, M61 Vulcan, four tanks or clean sprint.',
+            'ef':'Electronic attack and SEAD escort with two physical ECM pods and two offensive ECM sensors; period defensive missiles and anti-radiation weapons.'}[role]+f' Common maximum Mach {SPEED_PROFILE["maximum_mach"]}: F-111 Mach 2.5 plus 15%. {BLOCKS[year]["name"]}. Empty mass {mass:,} kg; internal fuel {FUEL:,} kg. Naval weights are documented engineering estimates.',
           'Squadron1':f'{model} {year} - {squadrons[0]} Squadron heritage,{squadrons[0]} Sqn',
           'Squadron2':f'{model} {year} - {squadrons[1]} Squadron heritage,{squadrons[1]} Sqn',
           'Callsigns':'Squadron1,Pig,Boar,Tusk|Squadron2,Razor,Grunt,Hog'}
@@ -426,6 +427,7 @@ def build_aircraft():
            'empty_mass_kg':mass,'empty_mass_components_kg':components,'internal_fuel_kg':FUEL,
            'gun':{'system':'M61','rounds':GUN_ROUNDS,'position':'Separate fixed fuselage installation; does not consume bomb-bay stations','installation_mass_status':'Engineering allowance'} if role!='ef' else None,
            'mach_limit':float(d['Performance']['MachLimit']),'cruise_mach':float(d['Performance']['SpeedAndRange_Cruise'].split(',')[0]),
+           'speed_profile':dict(SPEED_PROFILE),
            'nominal_cruise_range_miles':int(d['Performance']['SpeedAndRange_Cruise'].split(',')[1]),
            'flight_response':{k:float(d['FlightModel'][k]) for k in ('VelocityGain','ThrustGain','PitchGain','HeadingGain','BankGain')},
            'propulsion':{'engine_count':int(d['Performance']['EngineCount']),'dry_thrust_n_per_engine':int(d['Performance']['PerEngineMaxThrust']),'afterburner_thrust_n_per_engine':int(d['Performance']['PerEngineMaxAfterburnerThrust'])},

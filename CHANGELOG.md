@@ -1,5 +1,13 @@
 # V8 changes from V6
 
+## Version 8 speed correction — 22 October 2026
+
+- Applied common maximum Mach 2.875 (F-111 Mach 2.5 × 1.15) to all sixteen aircraft and afterburner schedules.
+- Set maximum dry speed to Mach 1.38 and native sea-level cap to 897 knots, each 15% above the native fighter baseline.
+- Normalised RF cruise, propulsion and velocity/thrust response to its matching-year fighter. The former RF Mach 3, Mach 2.52 cruise and triple response are superseded.
+- Retained original approach, stall and loiter settings, dated equipment, roles, all 211 presets and bay configurations.
+- Regenerated source-driven aircraft, comparisons, manifests, checksums and verified replacement preparation. Maximum-speed flight still requires in-game testing.
+
 ## Version 8 internal-bay update — 2 October 2026
 
 - Expanded the 167-preset baseline to 211 presets, with 44 new MudPig bay mission fits across the four editions.

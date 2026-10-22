@@ -27,8 +27,19 @@
       "position": "Separate fixed fuselage installation; does not consume bomb-bay stations",
       "installation_mass_status": "Engineering allowance"
     },
-    "mach_limit": 2.5,
+    "mach_limit": 2.875,
     "cruise_mach": 0.84,
+    "speed_profile": {
+      "reference_maximum_mach": 2.5,
+      "speed_multiplier": 1.15,
+      "maximum_mach": 2.875,
+      "baseline_maximum_dry_mach": 1.2,
+      "maximum_dry_mach": 1.38,
+      "baseline_maximum_sea_level_knots": 780,
+      "maximum_sea_level_knots": 897,
+      "reference_url": "https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf",
+      "status": "Published Mach 2.5 reference plus requested fictional 15% increase; dry/sea-level settings scale the native fighter baseline. Actual flight is untested."
+    },
     "nominal_cruise_range_miles": 1450,
     "flight_response": {
       "VelocityGain": 0.1136,
@@ -75,7 +86,18 @@
       "cooldown": 60,
       "status": "Hypothetical investment; controls, installed thrust, sensor ratings and retrofit masses are estimates",
       "radar_description": "AWG-9-class",
-      "cockpit_visuals": "Original mesh retained; no new interactive cockpit or MFDs"
+      "cockpit_visuals": "Original mesh retained; no new interactive cockpit or MFDs",
+      "speed_profile": {
+        "reference_maximum_mach": 2.5,
+        "speed_multiplier": 1.15,
+        "maximum_mach": 2.875,
+        "baseline_maximum_dry_mach": 1.2,
+        "maximum_dry_mach": 1.38,
+        "baseline_maximum_sea_level_knots": 780,
+        "maximum_sea_level_knots": 897,
+        "reference_url": "https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf",
+        "status": "Published Mach 2.5 reference plus requested fictional 15% increase; dry/sea-level settings scale the native fighter baseline. Actual flight is untested."
+      }
     },
     "loadouts": {
       "Default": {
@@ -186,8 +208,19 @@
       "position": "Separate fixed fuselage installation; does not consume bomb-bay stations",
       "installation_mass_status": "Engineering allowance"
     },
-    "mach_limit": 2.5,
+    "mach_limit": 2.875,
     "cruise_mach": 0.88,
+    "speed_profile": {
+      "reference_maximum_mach": 2.5,
+      "speed_multiplier": 1.15,
+      "maximum_mach": 2.875,
+      "baseline_maximum_dry_mach": 1.2,
+      "maximum_dry_mach": 1.38,
+      "baseline_maximum_sea_level_knots": 780,
+      "maximum_sea_level_knots": 897,
+      "reference_url": "https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf",
+      "status": "Published Mach 2.5 reference plus requested fictional 15% increase; dry/sea-level settings scale the native fighter baseline. Actual flight is untested."
+    },
     "nominal_cruise_range_miles": 1537,
     "flight_response": {
       "VelocityGain": 0.12496,
@@ -234,7 +267,18 @@
       "cooldown": 55,
       "status": "Hypothetical investment; controls, installed thrust, sensor ratings and retrofit masses are estimates",
       "radar_description": "AWG-9-class",
-      "cockpit_visuals": "Original mesh retained; no new interactive cockpit or MFDs"
+      "cockpit_visuals": "Original mesh retained; no new interactive cockpit or MFDs",
+      "speed_profile": {
+        "reference_maximum_mach": 2.5,
+        "speed_multiplier": 1.15,
+        "maximum_mach": 2.875,
+        "baseline_maximum_dry_mach": 1.2,
+        "maximum_dry_mach": 1.38,
+        "baseline_maximum_sea_level_knots": 780,
+        "maximum_sea_level_knots": 897,
+        "reference_url": "https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf",
+        "status": "Published Mach 2.5 reference plus requested fictional 15% increase; dry/sea-level settings scale the native fighter baseline. Actual flight is untested."
+      }
     },
     "loadouts": {
       "Default": {
@@ -345,8 +389,19 @@
       "position": "Separate fixed fuselage installation; does not consume bomb-bay stations",
       "installation_mass_status": "Engineering allowance"
     },
-    "mach_limit": 2.5,
+    "mach_limit": 2.875,
     "cruise_mach": 0.92,
+    "speed_profile": {
+      "reference_maximum_mach": 2.5,
+      "speed_multiplier": 1.15,
+      "maximum_mach": 2.875,
+      "baseline_maximum_dry_mach": 1.2,
+      "maximum_dry_mach": 1.38,
+      "baseline_maximum_sea_level_knots": 780,
+      "maximum_sea_level_knots": 897,
+      "reference_url": "https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf",
+      "status": "Published Mach 2.5 reference plus requested fictional 15% increase; dry/sea-level settings scale the native fighter baseline. Actual flight is untested."
+    },
     "nominal_cruise_range_miles": 1653,
     "flight_response": {
       "VelocityGain": 0.142,
@@ -393,7 +448,18 @@
       "cooldown": 45,
       "status": "Hypothetical investment; controls, installed thrust, sensor ratings and retrofit masses are estimates",
       "radar_description": "APG-71-class digital adaptation",
-      "cockpit_visuals": "Original mesh retained; no new interactive cockpit or MFDs"
+      "cockpit_visuals": "Original mesh retained; no new interactive cockpit or MFDs",
+      "speed_profile": {
+        "reference_maximum_mach": 2.5,
+        "speed_multiplier": 1.15,
+        "maximum_mach": 2.875,
+        "baseline_maximum_dry_mach": 1.2,
+        "maximum_dry_mach": 1.38,
+        "baseline_maximum_sea_level_knots": 780,
+        "maximum_sea_level_knots": 897,
+        "reference_url": "https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf",
+        "status": "Published Mach 2.5 reference plus requested fictional 15% increase; dry/sea-level settings scale the native fighter baseline. Actual flight is untested."
+      }
     },
     "loadouts": {
       "Default": {
@@ -504,8 +570,19 @@
       "position": "Separate fixed fuselage installation; does not consume bomb-bay stations",
       "installation_mass_status": "Engineering allowance"
     },
-    "mach_limit": 2.5,
+    "mach_limit": 2.875,
     "cruise_mach": 0.96,
+    "speed_profile": {
+      "reference_maximum_mach": 2.5,
+      "speed_multiplier": 1.15,
+      "maximum_mach": 2.875,
+      "baseline_maximum_dry_mach": 1.2,
+      "maximum_dry_mach": 1.38,
+      "baseline_maximum_sea_level_knots": 780,
+      "maximum_sea_level_knots": 897,
+      "reference_url": "https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf",
+      "status": "Published Mach 2.5 reference plus requested fictional 15% increase; dry/sea-level settings scale the native fighter baseline. Actual flight is untested."
+    },
     "nominal_cruise_range_miles": 1769,
     "flight_response": {
       "VelocityGain": 0.15904,
@@ -552,7 +629,18 @@
       "cooldown": 40,
       "status": "Hypothetical investment; controls, installed thrust, sensor ratings and retrofit masses are estimates",
       "radar_description": "APG-71-class digital adaptation",
-      "cockpit_visuals": "Original mesh retained; no new interactive cockpit or MFDs"
+      "cockpit_visuals": "Original mesh retained; no new interactive cockpit or MFDs",
+      "speed_profile": {
+        "reference_maximum_mach": 2.5,
+        "speed_multiplier": 1.15,
+        "maximum_mach": 2.875,
+        "baseline_maximum_dry_mach": 1.2,
+        "maximum_dry_mach": 1.38,
+        "baseline_maximum_sea_level_knots": 780,
+        "maximum_sea_level_knots": 897,
+        "reference_url": "https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf",
+        "status": "Published Mach 2.5 reference plus requested fictional 15% increase; dry/sea-level settings scale the native fighter baseline. Actual flight is untested."
+      }
     },
     "loadouts": {
       "Default": {
@@ -663,8 +751,19 @@
       "position": "Separate fixed fuselage installation; does not consume bomb-bay stations",
       "installation_mass_status": "Engineering allowance"
     },
-    "mach_limit": 2.6,
+    "mach_limit": 2.875,
     "cruise_mach": 0.84,
+    "speed_profile": {
+      "reference_maximum_mach": 2.5,
+      "speed_multiplier": 1.15,
+      "maximum_mach": 2.875,
+      "baseline_maximum_dry_mach": 1.2,
+      "maximum_dry_mach": 1.38,
+      "baseline_maximum_sea_level_knots": 780,
+      "maximum_sea_level_knots": 897,
+      "reference_url": "https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf",
+      "status": "Published Mach 2.5 reference plus requested fictional 15% increase; dry/sea-level settings scale the native fighter baseline. Actual flight is untested."
+    },
     "nominal_cruise_range_miles": 1550,
     "flight_response": {
       "VelocityGain": 0.1136,
@@ -711,7 +810,18 @@
       "cooldown": 60,
       "status": "Hypothetical investment; controls, installed thrust, sensor ratings and retrofit masses are estimates",
       "radar_description": "Naval multimode radar and mission computer",
-      "cockpit_visuals": "Original mesh retained; no new interactive cockpit or MFDs"
+      "cockpit_visuals": "Original mesh retained; no new interactive cockpit or MFDs",
+      "speed_profile": {
+        "reference_maximum_mach": 2.5,
+        "speed_multiplier": 1.15,
+        "maximum_mach": 2.875,
+        "baseline_maximum_dry_mach": 1.2,
+        "maximum_dry_mach": 1.38,
+        "baseline_maximum_sea_level_knots": 780,
+        "maximum_sea_level_knots": 897,
+        "reference_url": "https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf",
+        "status": "Published Mach 2.5 reference plus requested fictional 15% increase; dry/sea-level settings scale the native fighter baseline. Actual flight is untested."
+      }
     },
     "loadouts": {
       "Default": {
@@ -1472,8 +1582,19 @@
       "position": "Separate fixed fuselage installation; does not consume bomb-bay stations",
       "installation_mass_status": "Engineering allowance"
     },
-    "mach_limit": 2.6,
+    "mach_limit": 2.875,
     "cruise_mach": 0.88,
+    "speed_profile": {
+      "reference_maximum_mach": 2.5,
+      "speed_multiplier": 1.15,
+      "maximum_mach": 2.875,
+      "baseline_maximum_dry_mach": 1.2,
+      "maximum_dry_mach": 1.38,
+      "baseline_maximum_sea_level_knots": 780,
+      "maximum_sea_level_knots": 897,
+      "reference_url": "https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf",
+      "status": "Published Mach 2.5 reference plus requested fictional 15% increase; dry/sea-level settings scale the native fighter baseline. Actual flight is untested."
+    },
     "nominal_cruise_range_miles": 1643,
     "flight_response": {
       "VelocityGain": 0.12496,
@@ -1520,7 +1641,18 @@
       "cooldown": 55,
       "status": "Hypothetical investment; controls, installed thrust, sensor ratings and retrofit masses are estimates",
       "radar_description": "Naval multimode radar and mission computer",
-      "cockpit_visuals": "Original mesh retained; no new interactive cockpit or MFDs"
+      "cockpit_visuals": "Original mesh retained; no new interactive cockpit or MFDs",
+      "speed_profile": {
+        "reference_maximum_mach": 2.5,
+        "speed_multiplier": 1.15,
+        "maximum_mach": 2.875,
+        "baseline_maximum_dry_mach": 1.2,
+        "maximum_dry_mach": 1.38,
+        "baseline_maximum_sea_level_knots": 780,
+        "maximum_sea_level_knots": 897,
+        "reference_url": "https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf",
+        "status": "Published Mach 2.5 reference plus requested fictional 15% increase; dry/sea-level settings scale the native fighter baseline. Actual flight is untested."
+      }
     },
     "loadouts": {
       "Default": {
@@ -2304,8 +2436,19 @@
       "position": "Separate fixed fuselage installation; does not consume bomb-bay stations",
       "installation_mass_status": "Engineering allowance"
     },
-    "mach_limit": 2.6,
+    "mach_limit": 2.875,
     "cruise_mach": 0.92,
+    "speed_profile": {
+      "reference_maximum_mach": 2.5,
+      "speed_multiplier": 1.15,
+      "maximum_mach": 2.875,
+      "baseline_maximum_dry_mach": 1.2,
+      "maximum_dry_mach": 1.38,
+      "baseline_maximum_sea_level_knots": 780,
+      "maximum_sea_level_knots": 897,
+      "reference_url": "https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf",
+      "status": "Published Mach 2.5 reference plus requested fictional 15% increase; dry/sea-level settings scale the native fighter baseline. Actual flight is untested."
+    },
     "nominal_cruise_range_miles": 1767,
     "flight_response": {
       "VelocityGain": 0.142,
@@ -2352,7 +2495,18 @@
       "cooldown": 45,
       "status": "Hypothetical investment; controls, installed thrust, sensor ratings and retrofit masses are estimates",
       "radar_description": "Naval multimode radar and mission computer",
-      "cockpit_visuals": "Original mesh retained; no new interactive cockpit or MFDs"
+      "cockpit_visuals": "Original mesh retained; no new interactive cockpit or MFDs",
+      "speed_profile": {
+        "reference_maximum_mach": 2.5,
+        "speed_multiplier": 1.15,
+        "maximum_mach": 2.875,
+        "baseline_maximum_dry_mach": 1.2,
+        "maximum_dry_mach": 1.38,
+        "baseline_maximum_sea_level_knots": 780,
+        "maximum_sea_level_knots": 897,
+        "reference_url": "https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf",
+        "status": "Published Mach 2.5 reference plus requested fictional 15% increase; dry/sea-level settings scale the native fighter baseline. Actual flight is untested."
+      }
     },
     "loadouts": {
       "Default": {
@@ -3178,8 +3332,19 @@
       "position": "Separate fixed fuselage installation; does not consume bomb-bay stations",
       "installation_mass_status": "Engineering allowance"
     },
-    "mach_limit": 2.6,
+    "mach_limit": 2.875,
     "cruise_mach": 0.96,
+    "speed_profile": {
+      "reference_maximum_mach": 2.5,
+      "speed_multiplier": 1.15,
+      "maximum_mach": 2.875,
+      "baseline_maximum_dry_mach": 1.2,
+      "maximum_dry_mach": 1.38,
+      "baseline_maximum_sea_level_knots": 780,
+      "maximum_sea_level_knots": 897,
+      "reference_url": "https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf",
+      "status": "Published Mach 2.5 reference plus requested fictional 15% increase; dry/sea-level settings scale the native fighter baseline. Actual flight is untested."
+    },
     "nominal_cruise_range_miles": 1891,
     "flight_response": {
       "VelocityGain": 0.15904,
@@ -3226,7 +3391,18 @@
       "cooldown": 40,
       "status": "Hypothetical investment; controls, installed thrust, sensor ratings and retrofit masses are estimates",
       "radar_description": "Naval multimode radar and mission computer",
-      "cockpit_visuals": "Original mesh retained; no new interactive cockpit or MFDs"
+      "cockpit_visuals": "Original mesh retained; no new interactive cockpit or MFDs",
+      "speed_profile": {
+        "reference_maximum_mach": 2.5,
+        "speed_multiplier": 1.15,
+        "maximum_mach": 2.875,
+        "baseline_maximum_dry_mach": 1.2,
+        "maximum_dry_mach": 1.38,
+        "baseline_maximum_sea_level_knots": 780,
+        "maximum_sea_level_knots": 897,
+        "reference_url": "https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf",
+        "status": "Published Mach 2.5 reference plus requested fictional 15% increase; dry/sea-level settings scale the native fighter baseline. Actual flight is untested."
+      }
     },
     "loadouts": {
       "Default": {
@@ -4210,31 +4386,42 @@
       "position": "Separate fixed fuselage installation; does not consume bomb-bay stations",
       "installation_mass_status": "Engineering allowance"
     },
-    "mach_limit": 3.0,
-    "cruise_mach": 2.52,
+    "mach_limit": 2.875,
+    "cruise_mach": 0.84,
+    "speed_profile": {
+      "reference_maximum_mach": 2.5,
+      "speed_multiplier": 1.15,
+      "maximum_mach": 2.875,
+      "baseline_maximum_dry_mach": 1.2,
+      "maximum_dry_mach": 1.38,
+      "baseline_maximum_sea_level_knots": 780,
+      "maximum_sea_level_knots": 897,
+      "reference_url": "https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf",
+      "status": "Published Mach 2.5 reference plus requested fictional 15% increase; dry/sea-level settings scale the native fighter baseline. Actual flight is untested."
+    },
     "nominal_cruise_range_miles": 2300,
     "flight_response": {
-      "VelocityGain": 0.3408,
-      "ThrustGain": 0.975,
+      "VelocityGain": 0.1136,
+      "ThrustGain": 0.325,
       "PitchGain": 0.8,
       "HeadingGain": 2.8,
       "BankGain": 0.8
     },
     "propulsion": {
       "engine_count": 2,
-      "dry_thrust_n_per_engine": 320000,
-      "afterburner_thrust_n_per_engine": 480000
+      "dry_thrust_n_per_engine": 43600,
+      "afterburner_thrust_n_per_engine": 82300
     },
     "carrier_capable": true,
     "investment_programme": {
       "name": "Block I: naval programme",
-      "engine": "Fictional Australian Mach 3 propulsion package",
-      "dry_n": 320000,
-      "afterburner_n": 480000,
+      "engine": "TF30-P-109 reference",
+      "dry_n": 43600,
+      "afterburner_n": 82300,
       "acceleration": 1,
       "controls": 1,
       "range_factor": 1,
-      "cruise": 2.52,
+      "cruise": 0.84,
       "climb_factor": 1,
       "systems_mass": 0,
       "engine_mass": 0,
@@ -4258,7 +4445,18 @@
       "cooldown": 60,
       "status": "Hypothetical investment; controls, installed thrust, sensor ratings and retrofit masses are estimates",
       "radar_description": "Naval multimode radar and mission computer",
-      "cockpit_visuals": "Original mesh retained; no new interactive cockpit or MFDs"
+      "cockpit_visuals": "Original mesh retained; no new interactive cockpit or MFDs",
+      "speed_profile": {
+        "reference_maximum_mach": 2.5,
+        "speed_multiplier": 1.15,
+        "maximum_mach": 2.875,
+        "baseline_maximum_dry_mach": 1.2,
+        "maximum_dry_mach": 1.38,
+        "baseline_maximum_sea_level_knots": 780,
+        "maximum_sea_level_knots": 897,
+        "reference_url": "https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf",
+        "status": "Published Mach 2.5 reference plus requested fictional 15% increase; dry/sea-level settings scale the native fighter baseline. Actual flight is untested."
+      }
     },
     "loadouts": {
       "Default": {
@@ -4397,31 +4595,42 @@
       "position": "Separate fixed fuselage installation; does not consume bomb-bay stations",
       "installation_mass_status": "Engineering allowance"
     },
-    "mach_limit": 3.0,
-    "cruise_mach": 2.52,
+    "mach_limit": 2.875,
+    "cruise_mach": 0.88,
+    "speed_profile": {
+      "reference_maximum_mach": 2.5,
+      "speed_multiplier": 1.15,
+      "maximum_mach": 2.875,
+      "baseline_maximum_dry_mach": 1.2,
+      "maximum_dry_mach": 1.38,
+      "baseline_maximum_sea_level_knots": 780,
+      "maximum_sea_level_knots": 897,
+      "reference_url": "https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf",
+      "status": "Published Mach 2.5 reference plus requested fictional 15% increase; dry/sea-level settings scale the native fighter baseline. Actual flight is untested."
+    },
     "nominal_cruise_range_miles": 2438,
     "flight_response": {
-      "VelocityGain": 0.37488,
-      "ThrustGain": 1.0725,
+      "VelocityGain": 0.12496,
+      "ThrustGain": 0.3575,
       "PitchGain": 0.84,
       "HeadingGain": 2.94,
       "BankGain": 0.84
     },
     "propulsion": {
       "engine_count": 2,
-      "dry_thrust_n_per_engine": 352000,
-      "afterburner_thrust_n_per_engine": 528000
+      "dry_thrust_n_per_engine": 47960,
+      "afterburner_thrust_n_per_engine": 90530
     },
     "carrier_capable": true,
     "investment_programme": {
       "name": "Block II: propulsion and digital weapons",
-      "engine": "Fictional Australian Mach 3 propulsion package",
-      "dry_n": 352000,
-      "afterburner_n": 528000,
+      "engine": "TF30 naval uprating (fictional)",
+      "dry_n": 47960,
+      "afterburner_n": 90530,
       "acceleration": 1.1,
       "controls": 1.05,
       "range_factor": 1.06,
-      "cruise": 2.52,
+      "cruise": 0.88,
       "climb_factor": 1.05,
       "systems_mass": 150,
       "engine_mass": 0,
@@ -4445,7 +4654,18 @@
       "cooldown": 55,
       "status": "Hypothetical investment; controls, installed thrust, sensor ratings and retrofit masses are estimates",
       "radar_description": "Naval multimode radar and mission computer",
-      "cockpit_visuals": "Original mesh retained; no new interactive cockpit or MFDs"
+      "cockpit_visuals": "Original mesh retained; no new interactive cockpit or MFDs",
+      "speed_profile": {
+        "reference_maximum_mach": 2.5,
+        "speed_multiplier": 1.15,
+        "maximum_mach": 2.875,
+        "baseline_maximum_dry_mach": 1.2,
+        "maximum_dry_mach": 1.38,
+        "baseline_maximum_sea_level_knots": 780,
+        "maximum_sea_level_knots": 897,
+        "reference_url": "https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf",
+        "status": "Published Mach 2.5 reference plus requested fictional 15% increase; dry/sea-level settings scale the native fighter baseline. Actual flight is untested."
+      }
     },
     "loadouts": {
       "Default": {
@@ -4584,31 +4804,42 @@
       "position": "Separate fixed fuselage installation; does not consume bomb-bay stations",
       "installation_mass_status": "Engineering allowance"
     },
-    "mach_limit": 3.0,
-    "cruise_mach": 2.52,
+    "mach_limit": 2.875,
+    "cruise_mach": 0.92,
+    "speed_profile": {
+      "reference_maximum_mach": 2.5,
+      "speed_multiplier": 1.15,
+      "maximum_mach": 2.875,
+      "baseline_maximum_dry_mach": 1.2,
+      "maximum_dry_mach": 1.38,
+      "baseline_maximum_sea_level_knots": 780,
+      "maximum_sea_level_knots": 897,
+      "reference_url": "https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf",
+      "status": "Published Mach 2.5 reference plus requested fictional 15% increase; dry/sea-level settings scale the native fighter baseline. Actual flight is untested."
+    },
     "nominal_cruise_range_miles": 2622,
     "flight_response": {
-      "VelocityGain": 0.426,
-      "ThrustGain": 1.21875,
+      "VelocityGain": 0.142,
+      "ThrustGain": 0.40625,
       "PitchGain": 0.88,
       "HeadingGain": 3.08,
       "BankGain": 0.88
     },
     "propulsion": {
       "engine_count": 2,
-      "dry_thrust_n_per_engine": 400000,
-      "afterburner_thrust_n_per_engine": 600000
+      "dry_thrust_n_per_engine": 60000,
+      "afterburner_thrust_n_per_engine": 120000
     },
     "carrier_capable": true,
     "investment_programme": {
       "name": "Block III: major re-engine and digital mission suite",
-      "engine": "Fictional Australian Mach 3 propulsion package",
-      "dry_n": 400000,
-      "afterburner_n": 600000,
+      "engine": "F110-GE-400-class naval adaptation",
+      "dry_n": 60000,
+      "afterburner_n": 120000,
       "acceleration": 1.25,
       "controls": 1.1,
       "range_factor": 1.14,
-      "cruise": 2.52,
+      "cruise": 0.92,
       "climb_factor": 1.15,
       "systems_mass": 650,
       "engine_mass": 600,
@@ -4632,7 +4863,18 @@
       "cooldown": 45,
       "status": "Hypothetical investment; controls, installed thrust, sensor ratings and retrofit masses are estimates",
       "radar_description": "Naval multimode radar and mission computer",
-      "cockpit_visuals": "Original mesh retained; no new interactive cockpit or MFDs"
+      "cockpit_visuals": "Original mesh retained; no new interactive cockpit or MFDs",
+      "speed_profile": {
+        "reference_maximum_mach": 2.5,
+        "speed_multiplier": 1.15,
+        "maximum_mach": 2.875,
+        "baseline_maximum_dry_mach": 1.2,
+        "maximum_dry_mach": 1.38,
+        "baseline_maximum_sea_level_knots": 780,
+        "maximum_sea_level_knots": 897,
+        "reference_url": "https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf",
+        "status": "Published Mach 2.5 reference plus requested fictional 15% increase; dry/sea-level settings scale the native fighter baseline. Actual flight is untested."
+      }
     },
     "loadouts": {
       "Default": {
@@ -4771,31 +5013,42 @@
       "position": "Separate fixed fuselage installation; does not consume bomb-bay stations",
       "installation_mass_status": "Engineering allowance"
     },
-    "mach_limit": 3.0,
-    "cruise_mach": 2.52,
+    "mach_limit": 2.875,
+    "cruise_mach": 0.96,
+    "speed_profile": {
+      "reference_maximum_mach": 2.5,
+      "speed_multiplier": 1.15,
+      "maximum_mach": 2.875,
+      "baseline_maximum_dry_mach": 1.2,
+      "maximum_dry_mach": 1.38,
+      "baseline_maximum_sea_level_knots": 780,
+      "maximum_sea_level_knots": 897,
+      "reference_url": "https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf",
+      "status": "Published Mach 2.5 reference plus requested fictional 15% increase; dry/sea-level settings scale the native fighter baseline. Actual flight is untested."
+    },
     "nominal_cruise_range_miles": 2806,
     "flight_response": {
-      "VelocityGain": 0.47712,
-      "ThrustGain": 1.365,
+      "VelocityGain": 0.15904,
+      "ThrustGain": 0.455,
       "PitchGain": 0.92,
       "HeadingGain": 3.22,
       "BankGain": 0.92
     },
     "propulsion": {
       "engine_count": 2,
-      "dry_thrust_n_per_engine": 448000,
-      "afterburner_thrust_n_per_engine": 672000
+      "dry_thrust_n_per_engine": 65000,
+      "afterburner_thrust_n_per_engine": 129000
     },
     "carrier_capable": true,
     "investment_programme": {
       "name": "Block IV: networked precision and propulsion growth",
-      "engine": "Fictional Australian Mach 3 propulsion package",
-      "dry_n": 448000,
-      "afterburner_n": 672000,
+      "engine": "F110-GE-129-class naval adaptation",
+      "dry_n": 65000,
+      "afterburner_n": 129000,
       "acceleration": 1.4,
       "controls": 1.15,
       "range_factor": 1.22,
-      "cruise": 2.52,
+      "cruise": 0.96,
       "climb_factor": 1.25,
       "systems_mass": 850,
       "engine_mass": 750,
@@ -4819,7 +5072,18 @@
       "cooldown": 40,
       "status": "Hypothetical investment; controls, installed thrust, sensor ratings and retrofit masses are estimates",
       "radar_description": "Naval multimode radar and mission computer",
-      "cockpit_visuals": "Original mesh retained; no new interactive cockpit or MFDs"
+      "cockpit_visuals": "Original mesh retained; no new interactive cockpit or MFDs",
+      "speed_profile": {
+        "reference_maximum_mach": 2.5,
+        "speed_multiplier": 1.15,
+        "maximum_mach": 2.875,
+        "baseline_maximum_dry_mach": 1.2,
+        "maximum_dry_mach": 1.38,
+        "baseline_maximum_sea_level_knots": 780,
+        "maximum_sea_level_knots": 897,
+        "reference_url": "https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf",
+        "status": "Published Mach 2.5 reference plus requested fictional 15% increase; dry/sea-level settings scale the native fighter baseline. Actual flight is untested."
+      }
     },
     "loadouts": {
       "Default": {
@@ -4953,8 +5217,19 @@
     },
     "internal_fuel_kg": 14897,
     "gun": null,
-    "mach_limit": 2.2,
+    "mach_limit": 2.875,
     "cruise_mach": 0.84,
+    "speed_profile": {
+      "reference_maximum_mach": 2.5,
+      "speed_multiplier": 1.15,
+      "maximum_mach": 2.875,
+      "baseline_maximum_dry_mach": 1.2,
+      "maximum_dry_mach": 1.38,
+      "baseline_maximum_sea_level_knots": 780,
+      "maximum_sea_level_knots": 897,
+      "reference_url": "https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf",
+      "status": "Published Mach 2.5 reference plus requested fictional 15% increase; dry/sea-level settings scale the native fighter baseline. Actual flight is untested."
+    },
     "nominal_cruise_range_miles": 1700,
     "flight_response": {
       "VelocityGain": 0.1136,
@@ -5001,7 +5276,18 @@
       "cooldown": 60,
       "status": "Hypothetical investment; controls, installed thrust, sensor ratings and retrofit masses are estimates",
       "radar_description": "Naval multimode radar and mission computer",
-      "cockpit_visuals": "Original mesh retained; no new interactive cockpit or MFDs"
+      "cockpit_visuals": "Original mesh retained; no new interactive cockpit or MFDs",
+      "speed_profile": {
+        "reference_maximum_mach": 2.5,
+        "speed_multiplier": 1.15,
+        "maximum_mach": 2.875,
+        "baseline_maximum_dry_mach": 1.2,
+        "maximum_dry_mach": 1.38,
+        "baseline_maximum_sea_level_knots": 780,
+        "maximum_sea_level_knots": 897,
+        "reference_url": "https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf",
+        "status": "Published Mach 2.5 reference plus requested fictional 15% increase; dry/sea-level settings scale the native fighter baseline. Actual flight is untested."
+      }
     },
     "loadouts": {
       "Default": {
@@ -5161,8 +5447,19 @@
     },
     "internal_fuel_kg": 14897,
     "gun": null,
-    "mach_limit": 2.2,
+    "mach_limit": 2.875,
     "cruise_mach": 0.88,
+    "speed_profile": {
+      "reference_maximum_mach": 2.5,
+      "speed_multiplier": 1.15,
+      "maximum_mach": 2.875,
+      "baseline_maximum_dry_mach": 1.2,
+      "maximum_dry_mach": 1.38,
+      "baseline_maximum_sea_level_knots": 780,
+      "maximum_sea_level_knots": 897,
+      "reference_url": "https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf",
+      "status": "Published Mach 2.5 reference plus requested fictional 15% increase; dry/sea-level settings scale the native fighter baseline. Actual flight is untested."
+    },
     "nominal_cruise_range_miles": 1802,
     "flight_response": {
       "VelocityGain": 0.12496,
@@ -5209,7 +5506,18 @@
       "cooldown": 55,
       "status": "Hypothetical investment; controls, installed thrust, sensor ratings and retrofit masses are estimates",
       "radar_description": "Naval multimode radar and mission computer",
-      "cockpit_visuals": "Original mesh retained; no new interactive cockpit or MFDs"
+      "cockpit_visuals": "Original mesh retained; no new interactive cockpit or MFDs",
+      "speed_profile": {
+        "reference_maximum_mach": 2.5,
+        "speed_multiplier": 1.15,
+        "maximum_mach": 2.875,
+        "baseline_maximum_dry_mach": 1.2,
+        "maximum_dry_mach": 1.38,
+        "baseline_maximum_sea_level_knots": 780,
+        "maximum_sea_level_knots": 897,
+        "reference_url": "https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf",
+        "status": "Published Mach 2.5 reference plus requested fictional 15% increase; dry/sea-level settings scale the native fighter baseline. Actual flight is untested."
+      }
     },
     "loadouts": {
       "Default": {
@@ -5369,8 +5677,19 @@
     },
     "internal_fuel_kg": 14897,
     "gun": null,
-    "mach_limit": 2.2,
+    "mach_limit": 2.875,
     "cruise_mach": 0.92,
+    "speed_profile": {
+      "reference_maximum_mach": 2.5,
+      "speed_multiplier": 1.15,
+      "maximum_mach": 2.875,
+      "baseline_maximum_dry_mach": 1.2,
+      "maximum_dry_mach": 1.38,
+      "baseline_maximum_sea_level_knots": 780,
+      "maximum_sea_level_knots": 897,
+      "reference_url": "https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf",
+      "status": "Published Mach 2.5 reference plus requested fictional 15% increase; dry/sea-level settings scale the native fighter baseline. Actual flight is untested."
+    },
     "nominal_cruise_range_miles": 1938,
     "flight_response": {
       "VelocityGain": 0.142,
@@ -5417,7 +5736,18 @@
       "cooldown": 45,
       "status": "Hypothetical investment; controls, installed thrust, sensor ratings and retrofit masses are estimates",
       "radar_description": "Naval multimode radar and mission computer",
-      "cockpit_visuals": "Original mesh retained; no new interactive cockpit or MFDs"
+      "cockpit_visuals": "Original mesh retained; no new interactive cockpit or MFDs",
+      "speed_profile": {
+        "reference_maximum_mach": 2.5,
+        "speed_multiplier": 1.15,
+        "maximum_mach": 2.875,
+        "baseline_maximum_dry_mach": 1.2,
+        "maximum_dry_mach": 1.38,
+        "baseline_maximum_sea_level_knots": 780,
+        "maximum_sea_level_knots": 897,
+        "reference_url": "https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf",
+        "status": "Published Mach 2.5 reference plus requested fictional 15% increase; dry/sea-level settings scale the native fighter baseline. Actual flight is untested."
+      }
     },
     "loadouts": {
       "Default": {
@@ -5577,8 +5907,19 @@
     },
     "internal_fuel_kg": 14897,
     "gun": null,
-    "mach_limit": 2.2,
+    "mach_limit": 2.875,
     "cruise_mach": 0.96,
+    "speed_profile": {
+      "reference_maximum_mach": 2.5,
+      "speed_multiplier": 1.15,
+      "maximum_mach": 2.875,
+      "baseline_maximum_dry_mach": 1.2,
+      "maximum_dry_mach": 1.38,
+      "baseline_maximum_sea_level_knots": 780,
+      "maximum_sea_level_knots": 897,
+      "reference_url": "https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf",
+      "status": "Published Mach 2.5 reference plus requested fictional 15% increase; dry/sea-level settings scale the native fighter baseline. Actual flight is untested."
+    },
     "nominal_cruise_range_miles": 2074,
     "flight_response": {
       "VelocityGain": 0.15904,
@@ -5625,7 +5966,18 @@
       "cooldown": 40,
       "status": "Hypothetical investment; controls, installed thrust, sensor ratings and retrofit masses are estimates",
       "radar_description": "Naval multimode radar and mission computer",
-      "cockpit_visuals": "Original mesh retained; no new interactive cockpit or MFDs"
+      "cockpit_visuals": "Original mesh retained; no new interactive cockpit or MFDs",
+      "speed_profile": {
+        "reference_maximum_mach": 2.5,
+        "speed_multiplier": 1.15,
+        "maximum_mach": 2.875,
+        "baseline_maximum_dry_mach": 1.2,
+        "maximum_dry_mach": 1.38,
+        "baseline_maximum_sea_level_knots": 780,
+        "maximum_sea_level_knots": 897,
+        "reference_url": "https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf",
+        "status": "Published Mach 2.5 reference plus requested fictional 15% increase; dry/sea-level settings scale the native fighter baseline. Actual flight is untested."
+      }
     },
     "loadouts": {
       "Default": {

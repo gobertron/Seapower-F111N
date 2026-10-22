@@ -1,5 +1,7 @@
 # RAN F-111N Naval Wing V8
 
+**Version 8 speed correction — 22 October 2026.** All sixteen aircraft now share maximum Mach **2.875**, using the published F-111 Mach 2.5 reference plus 15%. The dry maximum is Mach 1.38 and the native sea-level cap is 897 knots. All roles share dated cruise, thrust and response settings; original landing/loiter/stall values remain.
+
 **Version 8 internal-bay update — 2 October 2026.** MudPig gains 44 bay mission fits and extra internal stores on existing bombing, precision, Maverick, Shrike, SLAM and JDAM presets. The release now has 211 presets. Original bay stations, doors and carrier/landing geometry are retained; armed launch/recovery still requires in-game testing.
 
 **Version 8.** All release labels, filenames, installer messages, previews and Workshop text now use V8. This release carries the existing verified aircraft and installation fixes: four aircraft families in 1980, 1985, 1995 and 2003 editions; 16 aircraft and 211 selectable presets.
@@ -17,7 +19,7 @@
 
 The repository includes the complete aircraft assets, native configuration, installers, authoring source, previews and validation reports. The GitHub ZIP includes the complete mod tree, expanded publication breakdown and Workshop text. Game assets match the validated standalone V8 release.
 
-**Verification:** 35,186 mod checks, 2,243 carrier/installer checks and eight late texture audits passed. In-game gun fire, guidance/release, flight performance, ECM display, date filtering and carrier landings remain untested. This is an alternate-history programme with documented native simulation limits.
+**Verification:** 35,326 mod checks, 2,243 carrier/installer checks and eight late texture audits passed. In-game gun fire, guidance/release, flight performance, ECM display, date filtering and carrier landings remain untested. This is an alternate-history programme with documented native simulation limits.
 
 An alternate-history Australian carrier F-111 programme for **Sea Power**: four original roles in **1980, 1985, 1995 and 2003** editions. This fresh V8 is built from the saved V6 base and contains **16 aircraft and 211 loadout presets**, progressive propulsion/mission-system investment, period weapons and eight dedicated late-edition grey liveries.
 
@@ -27,16 +29,16 @@ An alternate-history Australian carrier F-111 programme for **Sea Power**: four 
 
 | Aircraft | Primary role | Main equipment | Configured maximum |
 |---|---|---|---:|
-| F-111N WaterPig | Fleet defence/interception | IR/BVR/Phoenix missiles, M61 and long-range tanks | Mach 2.5 |
-| FB-111N MudPig | Maritime/land-strike all-rounder | Other families' period weapon types, Harpoon, bombs, stand-off weapons, EW/SEAD/recon fits and M61 | Mach 2.6 |
-| RF-111N SprintPig | Fast reconnaissance/ELINT | Defensive IR missiles, M61, four tanks or clean sprint | Mach 3.0 |
-| EF-111N ScreamPig | Dedicated electronic attack/SEAD | Two physical pylon ECM pods, two offensive ECM systems, defensive missiles and tanks/ARMs | Mach 2.2 |
+| F-111N WaterPig | Fleet defence/interception | IR/BVR/Phoenix missiles, M61 and long-range tanks | Mach 2.875 |
+| FB-111N MudPig | Maritime/land-strike all-rounder | Other families' period weapon types, Harpoon, bombs, stand-off weapons, EW/SEAD/recon fits and M61 | Mach 2.875 |
+| RF-111N SprintPig | Fast reconnaissance/ELINT | Defensive IR missiles, M61, four tanks or clean sprint | Mach 2.875 |
+| EF-111N ScreamPig | Dedicated electronic attack/SEAD | Two physical pylon ECM pods, two offensive ECM systems, defensive missiles and tanks/ARMs | Mach 2.875 |
 
-F/FB/RF each have a fixed forward M61 with 2,000 rounds. EF retains its dedicated EW fit without a gun. RF has Mach 2.52 cruise and three times WaterPig's velocity/thrust response gains for the same edition. That does not mean three times the other aircraft's maximum airspeed; its high-thrust Mach 3 package is fictional.
+F/FB/RF each have a fixed forward M61 with 2,000 rounds. EF retains its dedicated EW fit without a gun. All roles use the same matching-year cruise schedule (Mach 0.84 / 0.88 / 0.92 / 0.96), thrust and response gains. This supersedes the old RF Mach 3, Mach 2.52 cruise and triple response. The requested 15% maximum-speed increase is fictional; [NASA report](https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf) supplies the Mach 2.5 reference. The sea-level/dry settings scale the native fighter baseline.
 
 ## Australian investment
 
-| Edition | Upgrade | Non-RF afterburning thrust per engine | Response versus 1980 | Control gains versus 1980 |
+| Edition | Upgrade | All-role afterburning thrust per engine | Response versus 1980 | Control gains versus 1980 |
 |---|---|---:|---:|---:|
 | 1980 | Block I: initial naval programme | 82.30 kN | 1.00× | 1.00× |
 | 1985 | Block II: TF30 uprating/digital weapons | 90.53 kN | 1.10× | 1.05× |
@@ -102,4 +104,4 @@ Unsuffixed IDs are 1980; later IDs end `_1985`, `_1995`, `_2003`. Service gates 
 
 Native modern-weapon approximations remain: AMRAAM has no platform midcourse correction; ASRAAM adds no helmet sight/LOAL; EO weapons add no manual retargeting; Block II Harpoon models ship attack; **JDAM/JSOW use native CEP/ballistic/glide approximations, not full GPS/INS guidance**. AWG-9/APQ-161 donors represent the fictional radar programme; a digital radar label is not a new simulation engine.
 
-Static aircraft, texture and carrier/installer checks are supplied. **Sea Power is not installed in this build environment:** gun fire, guidance/release, Mach 3 flight, ECM display, date filtering and actual landings remain untested in-game. Third-party assets retain their original rights; no new blanket licence is assigned to them.
+Static aircraft, texture and carrier/installer checks are supplied. **Sea Power is not installed in this build environment:** gun fire, guidance/release, maximum-speed flight, ECM display, date filtering and actual landings remain untested in-game. Third-party assets retain their original rights; no new blanket licence is assigned to them.

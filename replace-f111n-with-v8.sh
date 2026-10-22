@@ -29,10 +29,10 @@ import urllib.error
 import urllib.request
 import zipfile
 
-RELEASE_COMMIT = "9aecb3d9feb97977a07af043bbdc6d6e82b13671"
+RELEASE_COMMIT = "refs/heads/main"
 DOWNLOAD = "https://codeload.github.com/gobertron/Seapower-F111N/zip/" + RELEASE_COMMIT
 MOD_NAME = "RAN-F111N-Naval-Wing"
-MANIFEST_SHA256 = "8f9644493653acc1ff1f2959568921f73954fb0e31aa31e6c753b64861c1894a"
+MANIFEST_SHA256 = "5a210d1da7a9db5a6ae76daea3791e62b1faf549f2b686dd10abf7cb4da1626a"
 CARRIER_SHA256 = "7ab5f7acffbae0c6a1b7abf73d6673ce0c4ca70f9db91bbfdc214b12badd7c41"
 AIRCRAFT_IDS = ("ran_f-111n", "ran_fb-111n", "ran_rf-111n", "ran_ef-111n")
 MAX_ARCHIVE_BYTES = 220 * 1024 * 1024
@@ -44,13 +44,13 @@ WORKSHOP_TITLE = "RAN F-111N Naval Wing V8"
 WORKSHOP_DESCRIPTION_MAX_BYTES = 8000
 WORKSHOP_ASSETS = {
     "RAN-F111N-preview.png": "9ba4795b87f7c18958a93af7f89458de23e9096e38a1b69334b96c9b1a4fc752",
-    "WORKSHOP_DESCRIPTION.txt": "97ea1b45701827d2f77342edae041fa94b0e1dd1b8fa686c7ae049e2a77b7369",
-    "WORKSHOP_UPDATE_NOTES_V8.txt": "654e51f94a8ad29860bca778af7cb8630a7c51b92e321dbeb5e71abc3b527a2e",
+    "WORKSHOP_DESCRIPTION.txt": "a017e2231b82cbc7c8893e11b2a2c0ac2d59fa5833141bcc2ea72b8c7499bb83",
+    "WORKSHOP_UPDATE_NOTES_V8.txt": "bb6f139abbf34a95123c70a1cad185f1553e3658a038e6a9cea72e1dfa29b386",
 }
 UPLOAD_NOTE = (
-    "V8 internal-bay update: 16 aircraft and 211 presets, including 44 new MudPig bay fits. "
-    "Additional internal bombing, precision, Maverick, Phoenix, SLAM and dated JDAM stores; "
-    "three physical stations retained, with updated mass budgets and validation. Armed recovery remains untested."
+    "V8 speed correction: all 16 aircraft use maximum Mach 2.875 (F-111 Mach 2.5 plus 15%). "
+    "Common dry maximum Mach 1.38, native sea-level cap 897 knots and dated cruise/thrust/response. "
+    "Original landing/loiter/stall settings and all 211 loadouts retained. Runtime flight remains untested."
 )
 
 

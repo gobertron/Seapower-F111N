@@ -4,13 +4,13 @@ Every edition assumes heavy Australian funding for naval conversion, propulsion,
 
 | Setting | 1980 | 1985 | 1995 | 2003 |
 |---|---|---|---|---|
-| Engine for F/FB/EF | TF30-P-109 reference | TF30 naval uprating (fictional) | F110-GE-400-class naval adaptation | F110-GE-129-class naval adaptation |
-| Dry thrust N/engine for F/FB/EF | 43600 | 47960 | 60000 | 65000 |
-| Afterburning thrust N/engine for F/FB/EF | 82300 | 90530 | 120000 | 129000 |
+| Engine for all roles | TF30-P-109 reference | TF30 naval uprating (fictional) | F110-GE-400-class naval adaptation | F110-GE-129-class naval adaptation |
+| Dry thrust N/engine for all roles | 43600 | 47960 | 60000 | 65000 |
+| Afterburning thrust N/engine for all roles | 82300 | 90530 | 120000 | 129000 |
 | Velocity/thrust response multiplier | 1 | 1.1 | 1.25 | 1.4 |
 | Pitch/heading/bank gain multiplier | 1 | 1.05 | 1.1 | 1.15 |
 | Nominal cruise-range factor | 1 | 1.06 | 1.14 | 1.22 |
-| Cruise Mach for F/FB/EF | 0.84 | 0.88 | 0.92 | 0.96 |
+| Cruise Mach for all roles | 0.84 | 0.88 | 0.92 | 0.96 |
 | Climb-setting multiplier | 1 | 1.05 | 1.15 | 1.25 |
 | Additional systems/control mass kg | 0 | 150 | 650 | 850 |
 | Propulsion-retrofit allowance kg | 0 | 0 | 600 | 750 |
@@ -39,11 +39,11 @@ F uses AWG-9 donor geometry/settings, labelled as a hypothetical APG-71-class di
 
 | RF propulsion setting | 1980 | 1985 | 1995 | 2003 |
 |---|---|---|---|---|
-| Dry N per engine | 320000 | 352000 | 400000 | 448000 |
-| Afterburning N per engine | 480000 | 528000 | 600000 | 672000 |
+| Dry N per engine | 43600 | 47960 | 60000 | 65000 |
+| Afterburning N per engine | 82300 | 90530 | 120000 | 129000 |
 
-RF keeps Mach 2.52 cruise and Mach 3 maximum throughout. VelocityGain and ThrustGain stay three times WaterPig's matching edition, with the same dated improvement factor. This is not triple maximum airspeed. Use ReconFast, independent orders and appropriate altitude for a sprint; actual AI flight needs runtime testing.
+The speed correction supersedes the former RF-only Mach 3, Mach 2.52 cruise, oversized thrust and triple response. All roles now use the same dated propulsion and cruise schedules, maximum Mach 2.875, maximum dry Mach 1.38 and 897-knot native sea-level cap. Landing, loiter and stall settings retain the original values. Use independent orders and suitable altitude to assess maximum speed; actual AI flight needs runtime testing.
 
-GE's historical status report supplies the 120 kN F110-GE-400 and 129 kN F110-GE-129 afterburning classes, available before the assigned editions. F-111 adaptation, installed dry thrust, TF30 uprating, mass allowances, thermal upgrades and control/sensor ratings are estimates. [GE reference](https://www.geaerospace.com/news/press-releases/defense-engines/ge-aircraft-engines-military-engine-status-report). The RF package is entirely fictional.
+GE's historical status report supplies the 120 kN F110-GE-400 and 129 kN F110-GE-129 afterburning classes, available before the assigned editions. F-111 adaptation, installed dry thrust, TF30 uprating, mass allowances, thermal upgrades and control/sensor ratings are estimates. [GE reference](https://www.geaerospace.com/news/press-releases/defense-engines/ge-aircraft-engines-military-engine-status-report). The 15% speed increase is a requested fictional gameplay rating. NASA describes Mach 2.5 capability for the F-111A: [technical report](https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf). The dry and sea-level fields scale the native fighter baseline, not a new historical measurement.
 
 [Aircraft comparison](AIRCRAFT_COMPARISON.md) · [Full mass/loadout breakdown](../COMPLETE_BREAKDOWN_V8.md)

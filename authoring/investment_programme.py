@@ -1,6 +1,6 @@
 """Fictional Australian investment blocks expressed through native game fields.
 F110 afterburning classes are supplier references; adaptations and other ratings
-are hypothetical. RF propulsion is intentionally fictional for Mach 3.
+are hypothetical. All roles share the requested F-111 maximum plus 15%.
 """
 from copy import deepcopy
 import re
@@ -13,6 +13,16 @@ ROWS={
 2003:('Block IV: networked precision and propulsion growth','F110-GE-129-class naval adaptation',65000,129000,1.40,1.15,1.22,.96,1.25,850,750,250,4,1.22,6,8,1,2.7,7.5,12,4,.72,2200,340,7.5,4,15,12,40)}
 assert all(len(row)==len(FIELDS) for row in ROWS.values())
 BLOCKS={year:dict(zip(FIELDS,row)) for year,row in ROWS.items()}
+SPEED_PROFILE={
+    'reference_maximum_mach':2.5,
+    'speed_multiplier':1.15,
+    'maximum_mach':round(2.5*1.15,3),
+    'baseline_maximum_dry_mach':1.2,
+    'maximum_dry_mach':round(1.2*1.15,3),
+    'baseline_maximum_sea_level_knots':780,
+    'maximum_sea_level_knots':round(780*1.15),
+    'reference_url':'https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf',
+    'status':'Published Mach 2.5 reference plus requested fictional 15% increase; dry/sea-level settings scale the native fighter baseline. Actual flight is untested.'}
 
 def sensor_id(kind,year):return f'RAN_NW_{kind}_{year}'
 def pod_id(role,n,year):return ('ran_alq-131n_' if role=='ef' else 'ran_nw_ecmpod_')+str(n)+'_'+str(year)
@@ -50,11 +60,13 @@ def mass_allowances(role,year):
 
 def apply(d,role,year):
     b=BLOCKS[year];p=d['Performance'];fm=d['FlightModel']
-    if role=='rf':
-        p.update(PerEngineMaxThrust=str(round(320000*b['acceleration'])),PerEngineMaxAfterburnerThrust=str(round(480000*b['acceleration'])))
-        cruise=2.52
-    else:
-        p.update(PerEngineMaxThrust=str(b['dry_n']),PerEngineMaxAfterburnerThrust=str(b['afterburner_n']));cruise=b['cruise']
+    p.update(PerEngineMaxThrust=str(b['dry_n']),PerEngineMaxAfterburnerThrust=str(b['afterburner_n']),
+             MachLimit=f'{SPEED_PROFILE["maximum_mach"]:g}',
+             MaxSpeedAtSeaLevel=str(SPEED_PROFILE['maximum_sea_level_knots']))
+    for key,speed in (('SpeedAndRange_Max',SPEED_PROFILE['maximum_dry_mach']),
+                      ('SpeedAndRange_Afterburner',SPEED_PROFILE['maximum_mach'])):
+        _,rng=p[key].split(',');p[key]=f'{speed:g},{rng}'
+    cruise=b['cruise']
     _,rng=p['SpeedAndRange_Cruise'].split(',')
     p['SpeedAndRange_Cruise']=f'{cruise},{round(float(rng)*b["range_factor"])}'
     p['MaxClimbRate']=str(round(float(p['MaxClimbRate'])*b['climb_factor']))
@@ -73,6 +85,5 @@ def apply(d,role,year):
 
 def describe(role,year):
     b=BLOCKS[year]
-    result={**b,'engine':'Fictional Australian Mach 3 propulsion package' if role=='rf' else b['engine'],'status':'Hypothetical investment; controls, installed thrust, sensor ratings and retrofit masses are estimates','radar_description':('AWG-9-class' if year<1995 else 'APG-71-class digital adaptation') if role=='f' else 'Naval multimode radar and mission computer','cockpit_visuals':'Original mesh retained; no new interactive cockpit or MFDs'}
-    if role=='rf':result.update(dry_n=round(320000*b['acceleration']),afterburner_n=round(480000*b['acceleration']),cruise=2.52)
+    result={**b,'status':'Hypothetical investment; controls, installed thrust, sensor ratings and retrofit masses are estimates','radar_description':('AWG-9-class' if year<1995 else 'APG-71-class digital adaptation') if role=='f' else 'Naval multimode radar and mission computer','cockpit_visuals':'Original mesh retained; no new interactive cockpit or MFDs','speed_profile':dict(SPEED_PROFILE)}
     return result
