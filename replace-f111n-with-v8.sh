@@ -29,7 +29,7 @@ import urllib.error
 import urllib.request
 import zipfile
 
-RELEASE_COMMIT = "refs/heads/main"
+RELEASE_COMMIT = "271996943f47ad7085f44f1c8c1b2005857449bf"
 DOWNLOAD = "https://codeload.github.com/gobertron/Seapower-F111N/zip/" + RELEASE_COMMIT
 MOD_NAME = "RAN-F111N-Naval-Wing"
 MANIFEST_SHA256 = "79d1812ac2800635012895104d2a0a8379a48fcc4979295119bee20ed0c0e1c0"
