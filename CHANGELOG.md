@@ -1,5 +1,13 @@
 # V8 changes from V6
 
+## Version 8 weight verification — 22 October 2026
+
+- Added an optional read-only in-game weight monitor, standalone install/remove command and result collector for the existing Anchor Chain/BepInEx setup.
+- Recorded live aircraft/controller mass and fuel fields, ammunition counts, available store masses and field/type layouts. The report checks weapon-release and fuel-only mass changes separately, including small fuel burns accumulated across samples.
+- Unknown layouts, missing inventory/masses, fixed mass values, rearming and refuelling do not produce a successful release result. Raw observations are retained for review.
+- Passed 24 report/installer tests, 31 simulated reflection checks, compilation and a standalone install/reinstall/removal fixture. Actual Sea Power execution remains pending.
+- Retained all native aircraft/store settings and the existing Workshop payload. This optional diagnostic does not add payload mass to `EmptyMass` or patch the flight model.
+
 ## Version 8 sourced speed-profile correction — 22 October 2026
 
 - Retained common fastest-reference maximum Mach 2.875 (published Mach 2.5 plus 15%).

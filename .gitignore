@@ -5,3 +5,5 @@ authoring/sources/
 dist/
 *.zip
 *.tar.gz
+diagnostics/weight-v8/bin/
+diagnostics/weight-v8/obj/

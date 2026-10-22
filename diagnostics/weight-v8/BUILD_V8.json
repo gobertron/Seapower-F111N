@@ -1,0 +1,13 @@
+{
+  "version": "Version 8",
+  "plugin_sha256": "03589138f925f1c955bc74142d3334b3823600f259e74d8e3f34c66fd83d2f46",
+  "plugin_bytes": 12288,
+  "source_sha256": {
+    "Plugin.cs": "c918e24c260a98b33fd3975c4bd575005935a6dd78748cb636058426b0fd867e",
+    "WeightProbe.cs": "27ec7bb875912b5fd3bd89b096d82445ddce564c54242272e394c2b15fd452cd",
+    "weight_check.py": "52064a94ddd1f377b065c48455003d8801caec7a8c20d75d0483259962485d99"
+  },
+  "runtime_tested_in_seapower": false,
+  "external_dependencies_shipped": false,
+  "build": "Mono C# compiler 6.8.0.105; NETStandard.Library.Ref 2.1.0 reference assemblies; BepInEx/Unity assemblies supplied by AnchorChain 28d225be917533fcc25e19cf8f25ac44010f8abd"
+}

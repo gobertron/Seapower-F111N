@@ -12,6 +12,7 @@
 - [Complete breakdown: all aircraft, presets, weights and references](docs/V8-Complete-Breakdown.md)
 - [Sortable list of every loadout](ALL_LOADOUTS_V8.csv)
 - [Expanded internal bay, capacity and armed recovery test](docs/INTERNAL_BAY_V8.md)
+- [Optional Version 8 in-game weight monitor and test](docs/WEIGHT_TEST_V8.md)
 - [Steam Workshop description](WORKSHOP_DESCRIPTION.txt) and [V8 update notes](WORKSHOP_UPDATE_NOTES_V8.txt)
 - [All sixteen aircraft compared](docs/AIRCRAFT_COMPARISON.md) and [investment/system upgrades](docs/INVESTMENT_PROGRAMME.md)
 
