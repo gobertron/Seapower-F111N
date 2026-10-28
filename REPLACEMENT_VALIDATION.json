@@ -27,5 +27,8 @@
   "skipped_test_reason": "Original standalone V8 ZIP is unavailable; stale/corrupt extracted packages are tested separately.",
   "common_speed_mod_checks": 35358,
   "sourced_speed_mod_checks": 35358,
-  "radar_reference_mod_checks": 35490
+  "radar_reference_mod_checks": 35490,
+  "pinned_release_commit": "8c54d550c656527218bd96478da33cbf274993d9",
+  "fresh_pinned_archive_install_fixture": "PASS",
+  "fresh_pinned_archive_scope": "Downloaded the immutable GitHub source archive, verified all 174 game files, installed over a disposable prior V8 copy, checked expanded radar sectors and sixteen complete descriptions, backup record and Workshop payload. Normal-user guard simulated because the authoring container runs as root. No real game runtime or Steam upload."
 }

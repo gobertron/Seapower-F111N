@@ -29,10 +29,10 @@ import urllib.error
 import urllib.request
 import zipfile
 
-RELEASE_COMMIT = "271996943f47ad7085f44f1c8c1b2005857449bf"
+RELEASE_COMMIT = "8c54d550c656527218bd96478da33cbf274993d9"
 DOWNLOAD = "https://codeload.github.com/gobertron/Seapower-F111N/zip/" + RELEASE_COMMIT
 MOD_NAME = "RAN-F111N-Naval-Wing"
-MANIFEST_SHA256 = "79d1812ac2800635012895104d2a0a8379a48fcc4979295119bee20ed0c0e1c0"
+MANIFEST_SHA256 = "d372e4ab20aa9e336dbcb88c503ffb7b3361e7849135629c29eca160ae6b005f"
 CARRIER_SHA256 = "7ab5f7acffbae0c6a1b7abf73d6673ce0c4ca70f9db91bbfdc214b12badd7c41"
 AIRCRAFT_IDS = ("ran_f-111n", "ran_fb-111n", "ran_rf-111n", "ran_ef-111n")
 MAX_ARCHIVE_BYTES = 220 * 1024 * 1024
@@ -44,13 +44,14 @@ WORKSHOP_TITLE = "RAN F-111N Naval Wing V8"
 WORKSHOP_DESCRIPTION_MAX_BYTES = 8000
 WORKSHOP_ASSETS = {
     "RAN-F111N-preview.png": "9ba4795b87f7c18958a93af7f89458de23e9096e38a1b69334b96c9b1a4fc752",
-    "WORKSHOP_DESCRIPTION.txt": "34041af0710fd4192fc48eab99ec830094f7be506ed6e90bad50ce58ea09288b",
-    "WORKSHOP_UPDATE_NOTES_V8.txt": "2957568e92586f734d1e5839c04661ccf4cdf8e32b2edcccc04548e94fe45d87",
+    "WORKSHOP_DESCRIPTION.txt": "d2f4451882c7702b69a2208f92844b4723b8bad57aefe56c117df4a2eea3c12f",
+    "WORKSHOP_UPDATE_NOTES_V8.txt": "89d1bf05649e98ffeb9d7e27bd0ad59b7686c38e80faa408fc22bcd0fa649942",
 }
 UPLOAD_NOTE = (
-    "V8 sourced speeds: common maximum Mach 2.875; RAAF sea-level 1345 km/h plus 15% = 1546.75 km/h; "
-    "RAAF cruise 778 km/h plus 15% = 894.7 km/h. Normal power uses sourced cruise, without claiming "
-    "a historical dry-thrust maximum. Original approach settings and all 211 presets retained; runtime flight untested."
+    "V8 progressive radar coverage: Fleet/Phoenix forward sectors 130/140/160/170 degrees; "
+    "strike sectors 90/110/130/150 degrees. Expanded sixteen Unit Reference stories and "
+    "capability descriptions, without semicolon separators. All 211 presets, flight, mass "
+    "and carrier settings retained. Runtime radar tracking and card layout require in-game verification."
 )
 
 
