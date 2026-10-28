@@ -97,7 +97,10 @@
         "sea_level_and_cruise_reference_url": "https://www.airforce.gov.au/sites/default/files/2023-07/F111%20A8-142.pdf",
         "status": "Published F-111 speed references plus requested 15%: fastest-reference maximum Mach 2.5, RAAF sea-level 1345 km/h and cruise 778 km/h. Normal-power command uses the sourced cruise target, not a claimed maximum dry-thrust speed. ISA translation and actual game flight require verification.",
         "normal_power_command_mach": 0.842269
-      }
+      },
+      "radar_horizontal_half_angle_degrees": 65,
+      "radar_horizontal_sector_degrees": 130,
+      "phoenix_horizontal_sector_degrees": 130
     }
   },
   "ran_f-111n_1985": {
@@ -198,7 +201,10 @@
         "sea_level_and_cruise_reference_url": "https://www.airforce.gov.au/sites/default/files/2023-07/F111%20A8-142.pdf",
         "status": "Published F-111 speed references plus requested 15%: fastest-reference maximum Mach 2.5, RAAF sea-level 1345 km/h and cruise 778 km/h. Normal-power command uses the sourced cruise target, not a claimed maximum dry-thrust speed. ISA translation and actual game flight require verification.",
         "normal_power_command_mach": 0.842269
-      }
+      },
+      "radar_horizontal_half_angle_degrees": 70,
+      "radar_horizontal_sector_degrees": 140,
+      "phoenix_horizontal_sector_degrees": 140
     }
   },
   "ran_f-111n_1995": {
@@ -299,7 +305,10 @@
         "sea_level_and_cruise_reference_url": "https://www.airforce.gov.au/sites/default/files/2023-07/F111%20A8-142.pdf",
         "status": "Published F-111 speed references plus requested 15%: fastest-reference maximum Mach 2.5, RAAF sea-level 1345 km/h and cruise 778 km/h. Normal-power command uses the sourced cruise target, not a claimed maximum dry-thrust speed. ISA translation and actual game flight require verification.",
         "normal_power_command_mach": 0.842269
-      }
+      },
+      "radar_horizontal_half_angle_degrees": 80,
+      "radar_horizontal_sector_degrees": 160,
+      "phoenix_horizontal_sector_degrees": 160
     }
   },
   "ran_f-111n_2003": {
@@ -400,7 +409,10 @@
         "sea_level_and_cruise_reference_url": "https://www.airforce.gov.au/sites/default/files/2023-07/F111%20A8-142.pdf",
         "status": "Published F-111 speed references plus requested 15%: fastest-reference maximum Mach 2.5, RAAF sea-level 1345 km/h and cruise 778 km/h. Normal-power command uses the sourced cruise target, not a claimed maximum dry-thrust speed. ISA translation and actual game flight require verification.",
         "normal_power_command_mach": 0.842269
-      }
+      },
+      "radar_horizontal_half_angle_degrees": 85,
+      "radar_horizontal_sector_degrees": 170,
+      "phoenix_horizontal_sector_degrees": 170
     }
   },
   "ran_fb-111n": {
@@ -501,7 +513,10 @@
         "sea_level_and_cruise_reference_url": "https://www.airforce.gov.au/sites/default/files/2023-07/F111%20A8-142.pdf",
         "status": "Published F-111 speed references plus requested 15%: fastest-reference maximum Mach 2.5, RAAF sea-level 1345 km/h and cruise 778 km/h. Normal-power command uses the sourced cruise target, not a claimed maximum dry-thrust speed. ISA translation and actual game flight require verification.",
         "normal_power_command_mach": 0.842269
-      }
+      },
+      "radar_horizontal_half_angle_degrees": 45,
+      "radar_horizontal_sector_degrees": 90,
+      "phoenix_horizontal_sector_degrees": 130
     }
   },
   "ran_fb-111n_1985": {
@@ -602,7 +617,10 @@
         "sea_level_and_cruise_reference_url": "https://www.airforce.gov.au/sites/default/files/2023-07/F111%20A8-142.pdf",
         "status": "Published F-111 speed references plus requested 15%: fastest-reference maximum Mach 2.5, RAAF sea-level 1345 km/h and cruise 778 km/h. Normal-power command uses the sourced cruise target, not a claimed maximum dry-thrust speed. ISA translation and actual game flight require verification.",
         "normal_power_command_mach": 0.842269
-      }
+      },
+      "radar_horizontal_half_angle_degrees": 55,
+      "radar_horizontal_sector_degrees": 110,
+      "phoenix_horizontal_sector_degrees": 140
     }
   },
   "ran_fb-111n_1995": {
@@ -703,7 +721,10 @@
         "sea_level_and_cruise_reference_url": "https://www.airforce.gov.au/sites/default/files/2023-07/F111%20A8-142.pdf",
         "status": "Published F-111 speed references plus requested 15%: fastest-reference maximum Mach 2.5, RAAF sea-level 1345 km/h and cruise 778 km/h. Normal-power command uses the sourced cruise target, not a claimed maximum dry-thrust speed. ISA translation and actual game flight require verification.",
         "normal_power_command_mach": 0.842269
-      }
+      },
+      "radar_horizontal_half_angle_degrees": 65,
+      "radar_horizontal_sector_degrees": 130,
+      "phoenix_horizontal_sector_degrees": 160
     }
   },
   "ran_fb-111n_2003": {
@@ -804,7 +825,10 @@
         "sea_level_and_cruise_reference_url": "https://www.airforce.gov.au/sites/default/files/2023-07/F111%20A8-142.pdf",
         "status": "Published F-111 speed references plus requested 15%: fastest-reference maximum Mach 2.5, RAAF sea-level 1345 km/h and cruise 778 km/h. Normal-power command uses the sourced cruise target, not a claimed maximum dry-thrust speed. ISA translation and actual game flight require verification.",
         "normal_power_command_mach": 0.842269
-      }
+      },
+      "radar_horizontal_half_angle_degrees": 75,
+      "radar_horizontal_sector_degrees": 150,
+      "phoenix_horizontal_sector_degrees": 170
     }
   },
   "ran_rf-111n": {
@@ -905,7 +929,9 @@
         "sea_level_and_cruise_reference_url": "https://www.airforce.gov.au/sites/default/files/2023-07/F111%20A8-142.pdf",
         "status": "Published F-111 speed references plus requested 15%: fastest-reference maximum Mach 2.5, RAAF sea-level 1345 km/h and cruise 778 km/h. Normal-power command uses the sourced cruise target, not a claimed maximum dry-thrust speed. ISA translation and actual game flight require verification.",
         "normal_power_command_mach": 0.842269
-      }
+      },
+      "radar_horizontal_half_angle_degrees": 45,
+      "radar_horizontal_sector_degrees": 90
     }
   },
   "ran_rf-111n_1985": {
@@ -1006,7 +1032,9 @@
         "sea_level_and_cruise_reference_url": "https://www.airforce.gov.au/sites/default/files/2023-07/F111%20A8-142.pdf",
         "status": "Published F-111 speed references plus requested 15%: fastest-reference maximum Mach 2.5, RAAF sea-level 1345 km/h and cruise 778 km/h. Normal-power command uses the sourced cruise target, not a claimed maximum dry-thrust speed. ISA translation and actual game flight require verification.",
         "normal_power_command_mach": 0.842269
-      }
+      },
+      "radar_horizontal_half_angle_degrees": 55,
+      "radar_horizontal_sector_degrees": 110
     }
   },
   "ran_rf-111n_1995": {
@@ -1107,7 +1135,9 @@
         "sea_level_and_cruise_reference_url": "https://www.airforce.gov.au/sites/default/files/2023-07/F111%20A8-142.pdf",
         "status": "Published F-111 speed references plus requested 15%: fastest-reference maximum Mach 2.5, RAAF sea-level 1345 km/h and cruise 778 km/h. Normal-power command uses the sourced cruise target, not a claimed maximum dry-thrust speed. ISA translation and actual game flight require verification.",
         "normal_power_command_mach": 0.842269
-      }
+      },
+      "radar_horizontal_half_angle_degrees": 65,
+      "radar_horizontal_sector_degrees": 130
     }
   },
   "ran_rf-111n_2003": {
@@ -1208,7 +1238,9 @@
         "sea_level_and_cruise_reference_url": "https://www.airforce.gov.au/sites/default/files/2023-07/F111%20A8-142.pdf",
         "status": "Published F-111 speed references plus requested 15%: fastest-reference maximum Mach 2.5, RAAF sea-level 1345 km/h and cruise 778 km/h. Normal-power command uses the sourced cruise target, not a claimed maximum dry-thrust speed. ISA translation and actual game flight require verification.",
         "normal_power_command_mach": 0.842269
-      }
+      },
+      "radar_horizontal_half_angle_degrees": 75,
+      "radar_horizontal_sector_degrees": 150
     }
   },
   "ran_ef-111n": {
@@ -1309,7 +1341,9 @@
         "sea_level_and_cruise_reference_url": "https://www.airforce.gov.au/sites/default/files/2023-07/F111%20A8-142.pdf",
         "status": "Published F-111 speed references plus requested 15%: fastest-reference maximum Mach 2.5, RAAF sea-level 1345 km/h and cruise 778 km/h. Normal-power command uses the sourced cruise target, not a claimed maximum dry-thrust speed. ISA translation and actual game flight require verification.",
         "normal_power_command_mach": 0.842269
-      }
+      },
+      "radar_horizontal_half_angle_degrees": 45,
+      "radar_horizontal_sector_degrees": 90
     }
   },
   "ran_ef-111n_1985": {
@@ -1410,7 +1444,9 @@
         "sea_level_and_cruise_reference_url": "https://www.airforce.gov.au/sites/default/files/2023-07/F111%20A8-142.pdf",
         "status": "Published F-111 speed references plus requested 15%: fastest-reference maximum Mach 2.5, RAAF sea-level 1345 km/h and cruise 778 km/h. Normal-power command uses the sourced cruise target, not a claimed maximum dry-thrust speed. ISA translation and actual game flight require verification.",
         "normal_power_command_mach": 0.842269
-      }
+      },
+      "radar_horizontal_half_angle_degrees": 55,
+      "radar_horizontal_sector_degrees": 110
     }
   },
   "ran_ef-111n_1995": {
@@ -1511,7 +1547,9 @@
         "sea_level_and_cruise_reference_url": "https://www.airforce.gov.au/sites/default/files/2023-07/F111%20A8-142.pdf",
         "status": "Published F-111 speed references plus requested 15%: fastest-reference maximum Mach 2.5, RAAF sea-level 1345 km/h and cruise 778 km/h. Normal-power command uses the sourced cruise target, not a claimed maximum dry-thrust speed. ISA translation and actual game flight require verification.",
         "normal_power_command_mach": 0.842269
-      }
+      },
+      "radar_horizontal_half_angle_degrees": 65,
+      "radar_horizontal_sector_degrees": 130
     }
   },
   "ran_ef-111n_2003": {
@@ -1612,7 +1650,9 @@
         "sea_level_and_cruise_reference_url": "https://www.airforce.gov.au/sites/default/files/2023-07/F111%20A8-142.pdf",
         "status": "Published F-111 speed references plus requested 15%: fastest-reference maximum Mach 2.5, RAAF sea-level 1345 km/h and cruise 778 km/h. Normal-power command uses the sourced cruise target, not a claimed maximum dry-thrust speed. ISA translation and actual game flight require verification.",
         "normal_power_command_mach": 0.842269
-      }
+      },
+      "radar_horizontal_half_angle_degrees": 75,
+      "radar_horizontal_sector_degrees": 150
     }
   }
 }

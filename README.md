@@ -1,5 +1,7 @@
 # RAN F-111N Naval Wing V8
 
+**Version 8 radar and Unit Reference update — 29 October 2026.** Forward radar sectors now widen with each equipment generation. WaterPig and Phoenix controllers progress through **130° / 140° / 160° / 170°**, while MudPig, SprintPig and ScreamPig search sectors progress through **90° / 110° / 130° / 150°**. All sixteen Unit Reference cards now have individual programme stories, dated equipment and practical role information. Descriptions avoid the semicolon separators that appeared to truncate the text in game. [Coverage, card details and test procedure](docs/RADAR_REFERENCE_V8.md).
+
 **Version 8 sourced speed profile — 22 October 2026.** All sixteen aircraft share maximum Mach **2.875** (fastest published Mach 2.5 reference plus 15%). RAAF sea-level speed 1,345 km/h and cruise 778 km/h become **1,546.75 km/h** and **894.7 km/h**. Cruise is represented by Mach **0.842269** at the retained 37,000-ft ISA reference; the native sea-level cap is **835.178186 knots**. Normal power uses the cruise target because a verified dry-thrust maximum is unavailable. Original landing/loiter/stall values remain.
 
 **Version 8 internal-bay update — 2 October 2026.** MudPig gains 44 bay mission fits and extra internal stores on existing bombing, precision, Maverick, Shrike, SLAM and JDAM presets. The release now has 211 presets. Original bay stations, doors and carrier/landing geometry are retained; armed launch/recovery still requires in-game testing.
@@ -20,7 +22,7 @@
 
 The repository includes the complete aircraft assets, native configuration, installers, authoring source, previews and validation reports. The GitHub ZIP includes the complete mod tree, expanded publication breakdown and Workshop text. Game assets match the validated standalone V8 release.
 
-**Verification:** 35,358 mod checks, 2,243 carrier/installer checks and eight late texture audits passed. In-game gun fire, guidance/release, flight performance, ECM display, date filtering and carrier landings remain untested. This is an alternate-history programme with documented native simulation limits.
+**Verification:** 35,490 mod checks, 2,243 carrier/installer checks and eight late texture audits passed. In-game radar tracking, Unit Reference layout, gun fire, guidance/release, flight performance, ECM display, date filtering and carrier landings remain untested. This is an alternate-history programme with documented native simulation limits.
 
 An alternate-history Australian carrier F-111 programme for **Sea Power**: four original roles in **1980, 1985, 1995 and 2003** editions. This fresh V8 is built from the saved V6 base and contains **16 aircraft and 211 loadout presets**, progressive propulsion/mission-system investment, period weapons and eight dedicated late-edition grey liveries.
 

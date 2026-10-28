@@ -25,6 +25,9 @@ All sixteen aircraft use published speed references plus 15%: fastest-reference 
 [/list]
 Later editions retain earlier bombing options. All-role afterburning thrust is configured at 82.30/90.53/120/129 kN per engine. Controls, radar/FLIR, RWR/ELINT, ECM, climb, nominal range and weapon readiness improve by edition. These are game settings and estimated integrations, not historical N-family performance.
 
+[h2]Radar coverage and reference stories[/h2]
+Forward sectors improve by year: WaterPig and Phoenix control use 130/140/160/170 degrees, while MudPig, SprintPig and ScreamPig search use 90/110/130/150 degrees. These fictional antenna/processing upgrades retain directed search and existing vertical limits. All sixteen Unit Reference cards now explain their role, dated equipment and Australian development story.
+
 [h2]Expanded MudPig internal bay[/h2]
 [list]
 [*]Three Mk 82 bombs or three edition-specific Harpoons.
@@ -50,7 +53,7 @@ Enable [b]RAN F-111N Naval Wing V8[/b], disable older Naval Wing copies, give V8
 Service gates are 1980–1984, 1985–1994, 1995–2002 and 2003–2050. Unsuffixed IDs select 1980; later IDs use _1985/_1995/_2003. Existing missions need the later aircraft selected to receive newer equipment. RF ReconFast needs independent orders and suitable altitude; formation orders can limit speed.
 
 [h2]Validation and documentation[/h2]
-[b]35,358 mod checks, 2,243 carrier/installer checks and eight late texture audits passed.[/b] Actual gun fire, guidance/release, armed carrier recovery, maximum-speed flight, ECM display and date filtering remain untested in Sea Power.
+[b]35,490 mod checks, 2,243 carrier/installer checks and eight late texture audits passed.[/b] Actual gun fire, guidance/release, armed carrier recovery, maximum-speed flight, ECM display and date filtering remain untested in Sea Power.
 
 Full comparisons, every preset and mass budget, CSV/JSON, 61 local store definitions, references, credits, authoring sources and validation reports are included in the [url=https://github.com/gobertron/Seapower-F111N]release repository[/url]. The naval conversion, three-Harpoon bay, F110 adaptations and 15% speed uplift are fictional. Native JDAM/JSOW, EO, AMRAAM, ASRAAM and Block II Harpoon simulation approximations remain documented.
 

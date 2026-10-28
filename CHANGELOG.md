@@ -1,5 +1,14 @@
 # V8 changes from V6
 
+## Version 8 radar coverage and Unit Reference — 29 October 2026
+
+- Widened FleetRadar and PhoenixControl horizontal sectors from 130 degrees in 1980 to 140 in 1985, 160 in 1995 and 170 in 2003.
+- Widened StrikeRadar horizontal sectors from 90 degrees in 1980 to 110 in 1985, 130 in 1995 and 150 in 2003. Applies to MudPig, SprintPig and ScreamPig search radar.
+- Kept Phoenix guidance coverage aligned with the dated fleet radar, including MudPig wing and internal-bay controllers. Retained native vertical arcs, altitude limits and sensor roles.
+- Added sixteen distinct Unit Reference descriptions covering the alternate-history programme, role development, dated equipment, radar coverage, weapons and operating considerations.
+- Removed semicolon separators from card descriptions after the supplied screenshot showed text ending at the first semicolon. Used one physical INI line with plain sentences and native UI wrapping.
+- Added coverage and card validation. All 211 presets, speed targets, masses, models and carrier settings are retained. Live display and radar tracking require in-game verification.
+
 ## Version 8 weight verification — 22 October 2026
 
 - Added an optional read-only in-game weight monitor, standalone install/remove command and result collector for the existing Anchor Chain/BepInEx setup.

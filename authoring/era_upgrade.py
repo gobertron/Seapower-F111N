@@ -12,6 +12,7 @@ from copy import deepcopy
 import re, json, math, hashlib, shutil
 from investment_programme import BLOCKS,SPEED_PROFILE,mass_allowances,build_systems,apply as apply_investment,describe as describe_investment
 from bay_loadouts import BAY_UPGRADE_MASS, expand as expand_bay, qualification as bay_qualification
+from unit_reference import description as reference_description
 
 ROOT=Path(__file__).resolve().parent.parent
 MOD=ROOT/'RAN-F111N-Naval-Wing'
@@ -283,6 +284,7 @@ def mass_budget(role,year):
 
 def build_aircraft():
     names=OrderedDict();lds=read_ini(BASE/'language_en/loadout_names.ini');ldnames=lds.setdefault('LoadoutNames',{})
+    sensors=read_ini(MOD/'systems/sensors.ini')
     manifest={}
     common_response=read_ini(BASE/'aircraft/ran_f-111n.ini')['FlightModel']
     for role,(model,nickname,ai,squadrons) in ROLES.items():
@@ -405,11 +407,7 @@ def build_aircraft():
         write_ini(MOD/'aircraft'/(uid+'_squadrons.ini'),squad)
         names[uid]={'Type':{'f':'Fighter','fb':'Bomber','rf':'Recon','ef':'EW'}[role],
           'Default':f'{model} {nickname} ({year}),{model} {year}',
-          'DefaultDescription':f'{year} edition of the fictional RAN-RAAF Naval Wing. '+{
-            'f':'Fleet defence fighter with period Sidewinder or ASRAAM, Sparrow or AMRAAM, Phoenix and M61 Vulcan.',
-            'fb':'All-round maritime and land strike aircraft; period weapons, M61 Vulcan and expanded three-station internal bay fits for anti-ship, bombing, precision strike and fleet interception.',
-            'rf':'Reconnaissance and ELINT; defensive period IR missiles, M61 Vulcan, four tanks or clean sprint.',
-            'ef':'Electronic attack and SEAD escort with two physical ECM pods and two offensive ECM sensors; period defensive missiles and anti-radiation weapons.'}[role]+f' Common maximum Mach {SPEED_PROFILE["maximum_mach"]}: F-111 Mach 2.5 plus 15%. {BLOCKS[year]["name"]}. Empty mass {mass:,} kg; internal fuel {FUEL:,} kg. Naval weights are documented engineering estimates.',
+          'DefaultDescription':reference_description(role,year,d,presets,CATALOG,sensors),
           'Squadron1':f'{model} {year} - {squadrons[0]} Squadron heritage,{squadrons[0]} Sqn',
           'Squadron2':f'{model} {year} - {squadrons[1]} Squadron heritage,{squadrons[1]} Sqn',
           'Callsigns':'Squadron1,Pig,Boar,Tusk|Squadron2,Razor,Grunt,Hog'}

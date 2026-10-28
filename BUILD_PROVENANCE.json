@@ -1,13 +1,13 @@
 {
-  "build": "Version 8 sourced speed profile",
+  "build": "Version 8 progressive radar and Unit Reference",
   "base_name": "RAN-F111N-Naval-Wing-V6.zip",
   "base_bytes": 54787481,
   "base_sha256": "40469c032fb4869f655a7a3b6abf21ced1928783cf468c6eabb84bb76f606305",
   "base_zip_integrity": "PASS",
   "base_mod_checksums_sha256": "72354a62ea8d5a214c9139d72d8596b6db7a34702eb7663e679d00502dea94b9",
-  "built_from": "Verified Version 8 common-speed release. Retained fastest-reference Mach 2.875 and sourced RAAF sea-level/cruise TAS plus 15%; normal-power command uses sourced cruise without claiming a historical dry-thrust maximum. Original approach/loiter/stall settings and all 211 loadouts retained. Regenerated manifests, documentation and installer verification.",
+  "built_from": "Verified V8 sourced-speed and weight-monitor release. Added dated forward radar sectors and sixteen individual Unit Reference descriptions. Preserved all 211 loadouts, speed and mass settings, assets and carrier contracts. Static radar and card validation added. In-game radar behaviour and description layout remain unverified.",
   "base_release": "V6",
   "release_version": "V8",
-  "derived_from_commit": "e8ca6e99fcae82964b7d79facaf8c723fc2fbbeb",
-  "release_revision": "sourced-speed-profile-2026-10-22"
+  "derived_from_commit": "0c5c87e5ab63d309465080c502291b0f92b39733",
+  "release_revision": "radar-unit-reference-2026-10-29"
 }

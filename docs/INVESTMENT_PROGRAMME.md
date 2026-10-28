@@ -35,6 +35,17 @@ Every edition assumes heavy Australian funding for naval conversion, propulsion,
 
 The main radar values above apply to the fleet/strike donor. Separate Phoenix targeting retains six target and six weapon channels. Radar RangeResolution is 30 / 25 / 18 / 12; HasDataLink is False / False / True / True. Offensive ECM has two separate systems, each with the dated channel setting; system count remains two. Native power/range fields are not independently calibrated engineering ratings.
 
+## Forward radar coverage
+
+| Edition | WaterPig / Phoenix azimuth | Total degrees | MudPig / SprintPig / ScreamPig azimuth | Total degrees |
+|---|---|---|---|---|
+| 1980 | -65,65 | 130 | -45,45 | 90 |
+| 1985 | -70,70 | 140 | -55,55 | 110 |
+| 1995 | -80,80 | 160 | -65,65 | 130 |
+| 2003 | -85,85 | 170 | -75,75 | 150 |
+
+Coverage widens with funded antenna and processing upgrades in the alternate timeline. These are fictional gameplay ratings, not historical F-111 scan limits. Phoenix control follows the fleet radar sector in every edition, including MudPig's wing and bay controllers. Native vertical arcs, target altitude limits, radar roles and datalink policy are retained. [Unit Reference details and test](RADAR_REFERENCE_V8.md).
+
 F uses AWG-9 donor geometry/settings, labelled as a hypothetical APG-71-class digital adaptation from 1995. The other roles use APQ-161 native settings to represent naval multimode radar. No new radar/flight simulation engine, interactive digital cockpit or MFD mesh is introduced. The nominal range factor does not guarantee an equivalent increase in combat radius.
 
 | RF propulsion setting | 1980 | 1985 | 1995 | 2003 |

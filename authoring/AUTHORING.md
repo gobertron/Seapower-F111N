@@ -21,6 +21,8 @@ python3 authoring/package_release.py
 
 Refresh hashes after any mod data/asset change. Aircraft validation checks dates, actual inventories, mass/fuel, M61 magazines, preserved role/bay/model/landing contracts, progressive native investment, pod attachment, original assets and new atlas alpha/protected regions. Carrier tests use temporary native and representative RAN/custom fixtures to check compatibility, staging, backups, idempotence and source preservation. They do not modify a real game installation.
 
+`investment_programme.py` also owns dated horizontal radar half angles. Fleet/Phoenix use 65/70/80/85 degrees and strike radar uses 45/55/65/75 degrees. The generator retains native vertical arcs. `unit_reference.py` generates sixteen role/edition stories and actual capability details from the final aircraft/sensor/store data. Keep description values on one physical line without semicolons, comment markers or unverified markup. The supplied Unit Reference screenshot appeared to stop at the old description's first semicolon. `validate_mod.py` checks the actual shipped sectors, metadata and parser-safe card text after every rebuild.
+
 `build_docs.py` derives all sixteen comparisons, every loadout budget, CSV, investment JSON and release notes from actual manifests and completed validation reports. `package_release.py` requires PASS reports and matching current mod hashes, skips caches/download/Git trees, checks ZIP integrity and writes a SHA-256 sidecar.
 
 Native guidance, gun fire, ECM display, service-date filtering, AI maximum-speed orders and actual landings still require Sea Power runtime testing. Historical facts and fictional estimates are separated in the root reference and manifest files.

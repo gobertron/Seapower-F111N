@@ -70,6 +70,17 @@ Every edition assumes heavy Australian funding for naval conversion, propulsion,
 
 The main radar values above apply to the fleet/strike donor. Separate Phoenix targeting retains six target and six weapon channels. Radar RangeResolution is 30 / 25 / 18 / 12; HasDataLink is False / False / True / True. Offensive ECM has two separate systems, each with the dated channel setting; system count remains two. Native power/range fields are not independently calibrated engineering ratings.
 
+### Forward radar coverage
+
+| Edition | WaterPig / Phoenix azimuth | Total degrees | MudPig / SprintPig / ScreamPig azimuth | Total degrees |
+|---|---|---|---|---|
+| 1980 | -65,65 | 130 | -45,45 | 90 |
+| 1985 | -70,70 | 140 | -55,55 | 110 |
+| 1995 | -80,80 | 160 | -65,65 | 130 |
+| 2003 | -85,85 | 170 | -75,75 | 150 |
+
+Coverage widens with funded antenna and processing upgrades in the alternate timeline. These are fictional gameplay ratings, not historical F-111 scan limits. Phoenix control follows the fleet radar sector in every edition, including MudPig's wing and bay controllers. Native vertical arcs, target altitude limits, radar roles and datalink policy are retained. [Unit Reference details and test](RADAR_REFERENCE_V8.md).
+
 F uses AWG-9 donor geometry/settings, labelled as a hypothetical APG-71-class digital adaptation from 1995. The other roles use APQ-161 native settings to represent naval multimode radar. No new radar/flight simulation engine, interactive digital cockpit or MFD mesh is introduced. The nominal range factor does not guarantee an equivalent increase in combat radius.
 
 | RF propulsion setting | 1980 | 1985 | 1995 | 2003 |
@@ -237,11 +248,11 @@ All budgets include full internal fuel, every carried store, external tank fuel 
 
 ## V8 release notes
 
-Version 8 speed correction: common maximum Mach 2.875 (F-111 Mach 2.5 plus 15%) across sixteen aircraft and 211 selectable presets, including 44 new MudPig bay mission fits. Existing bombing/precision/Maverick/SLAM/JDAM fits receive additional internal stores. Dated Australian investment and eight USN-inspired late liveries are retained. Original role/model/bay-station/landing contracts and M61/ECM/carrier arrangements remain. Native modern-weapon approximations and explicit hypothetical naval masses are documented.
+Version 8 radar and Unit Reference update: progressive forward coverage across all sixteen aircraft, with sixteen expanded role- and edition-specific stories and capability descriptions. Fleet/Phoenix horizontal sectors progress through 130/140/160/170 degrees and strike sectors through 90/110/130/150 degrees. Plain single-line descriptions avoid semicolons that appeared to truncate the in-game card. Common maximum Mach 2.875, all 211 presets, dated weapons, original models and carrier/landing arrangements are retained. Coverage growth and the naval development story belong to the alternate-history programme. [Coverage and reference-card details](RADAR_REFERENCE_V8.md).
 
 | Verification | Status | Checks/maps |
 |---|---|---|
-| VALIDATION.json | PASS | 35358 |
+| VALIDATION.json | PASS | 35490 |
 | CARRIER_VALIDATION.json | PASS | 2243 |
 | USN_TEXTURE_VALIDATION.json | PASS | 8 |
 
