@@ -1,3 +1,5 @@
+> Archived V8 document. See the [current Version 9.0 document](V9.0-Complete-Breakdown.md).
+
 # RAN F-111N Naval Wing V8 — Complete Breakdown
 
 Version 8 internal-bay update, 2 October 2026. Four families in four editions: 16 aircraft, 211 selectable presets and 61 local store definitions. The 167-preset V6 baseline is expanded with 44 new MudPig bay fits. Station geometry, concealment, door actions, original models and carrier/landing settings are retained. Targeting and estimated bay-upgrade mass are updated.

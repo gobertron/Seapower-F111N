@@ -1,3 +1,5 @@
+> Archived V8 document. See the [current Version 9.0 document](REPLACE_WITH_V9_0.md).
+
 # Replace an older F-111N installation with V8
 
 Close Sea Power. Save **replace-f111n-with-v8.sh** in Downloads and run this from your terminal, including fish:

@@ -1,4 +1,4 @@
-# V8 Australian investment programme
+# V9.0 Australian investment programme
 
 Every edition assumes heavy Australian funding for naval conversion, propulsion, flight controls, weapons integration, targeting and EW. Native settings improve by year. They are hypothetical programme ratings, not measured historical N-family performance.
 
@@ -44,7 +44,7 @@ The main radar values above apply to the fleet/strike donor. Separate Phoenix ta
 | 1995 | -80,80 | 160 | -65,65 | 130 |
 | 2003 | -85,85 | 170 | -75,75 | 150 |
 
-Coverage widens with funded antenna and processing upgrades in the alternate timeline. These are fictional gameplay ratings, not historical F-111 scan limits. Phoenix control follows the fleet radar sector in every edition, including MudPig's wing and bay controllers. Native vertical arcs, target altitude limits, radar roles and datalink policy are retained. [Unit Reference details and test](RADAR_REFERENCE_V8.md).
+Coverage widens with funded antenna and processing upgrades in the alternate timeline. These are fictional gameplay ratings, not historical F-111 scan limits. Phoenix control follows the fleet radar sector in every edition, including MudPig's wing and bay controllers. Native vertical arcs, target altitude limits, radar roles and datalink policy are retained. [Unit Reference details and test](RADAR_REFERENCE_V9_0.md).
 
 F uses AWG-9 donor geometry/settings, labelled as a hypothetical APG-71-class digital adaptation from 1995. The other roles use APQ-161 native settings to represent naval multimode radar. No new radar/flight simulation engine, interactive digital cockpit or MFD mesh is introduced. The nominal range factor does not guarantee an equivalent increase in combat radius.
 
@@ -57,4 +57,4 @@ The speed correction supersedes the former RF-only Mach 3, Mach 2.52 cruise, ove
 
 GE's historical status report supplies the 120 kN F110-GE-400 and 129 kN F110-GE-129 afterburning classes, available before the assigned editions. F-111 adaptation, installed dry thrust, TF30 uprating, mass allowances, thermal upgrades and control/sensor ratings are estimates. [GE reference](https://www.geaerospace.com/news/press-releases/defense-engines/ge-aircraft-engines-military-engine-status-report). The 15% speed increase is a requested fictional gameplay rating. NASA describes Mach 2.5 capability for the F-111A: [technical report](https://ntrs.nasa.gov/api/citations/19730021074/downloads/19730021074.pdf). RAAF reference sea-level 1,345 km/h and cruise 778 km/h are boosted to 1,546.75 and 894.7 km/h. The cruise Mach conversion assumes ISA at 37,000 ft; [RAAF reference](https://www.airforce.gov.au/sites/default/files/2023-07/F111%20A8-142.pdf). The source does not establish a maximum dry-thrust speed; the normal-power command is conservatively set to the sourced cruise target. These speed targets do not turn the estimated propulsion, fuel/range or flight model into a certified real-world envelope.
 
-[Aircraft comparison](AIRCRAFT_COMPARISON.md) · [Full mass/loadout breakdown](../COMPLETE_BREAKDOWN_V8.md)
+[Aircraft comparison](AIRCRAFT_COMPARISON.md) · [Full mass/loadout breakdown](../COMPLETE_BREAKDOWN_V9_0.md)

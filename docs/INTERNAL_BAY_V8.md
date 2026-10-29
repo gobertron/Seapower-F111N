@@ -1,3 +1,5 @@
+> Archived V8 document. See the [current Version 9.0 document](INTERNAL_BAY_V9_0.md).
+
 # V8 MudPig internal bay and armed carrier recovery
 
 Version 8 retains three physical stations, original concealment and the Bay_Open/Bay_Close door actions. Bay targeting now includes the dedicated Phoenix controller. Single-store suspension adapters offset Phoenix 10 cm rearward and Shrike 50 cm rearward to accommodate their native origin/collider envelopes. The supplied carrier configuration has no condition requiring an empty bay for launch or recovery. Actual armed recovery has not been runtime-tested.

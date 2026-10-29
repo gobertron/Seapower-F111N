@@ -18,6 +18,10 @@ def main():
         checks+=1
         if not ok:failures.append(message)
     manifest=json.loads((ROOT/'loadout_manifest.json').read_text())
+    info=read_ini(MOD/'_info.ini')
+    check('Naval Wing V9.0' in info['Language_en']['Name'],'current release title is V9.0')
+    check(info['Compatibility']['ApproximateVersion']=='0.8.0','Sea Power compatibility is not the mod release version')
+    check(json.loads((ROOT/'BUILD_PROVENANCE.json').read_text())['release_version']=='9.0','release provenance is Version 9.0')
     catalog=json.loads((ROOT/'weapon_catalog.json').read_text())
     names=read_ini(MOD/'language_en/aircraft_names.ini')
     systems=read_ini(MOD/'systems/sensors.ini')

@@ -1,3 +1,5 @@
+> Archived V8 document. See the [current Version 9.0 document](RELEASE_NOTES_V9_0.md).
+
 # V8 release notes
 
 Version 8 radar and Unit Reference update: progressive forward coverage across all sixteen aircraft, with sixteen expanded role- and edition-specific stories and capability descriptions. Fleet/Phoenix horizontal sectors progress through 130/140/160/170 degrees and strike sectors through 90/110/130/150 degrees. Plain single-line descriptions avoid semicolons that appeared to truncate the in-game card. Common maximum Mach 2.875, all 211 presets, dated weapons, original models and carrier/landing arrangements are retained. Coverage growth and the naval development story belong to the alternate-history programme. [Coverage and reference-card details](docs/RADAR_REFERENCE_V8.md).

@@ -438,8 +438,10 @@ def build_aircraft():
     return manifest
 
 def finish(manifest):
-    info=read_ini(MOD/'_info.ini');info['Language_en'].update(Name='RAN F-111N Naval Wing V8 - 1980 / 1985 / 1995 / 2003',Description='Sixteen dated Australian naval aircraft with increasing engine, flight-control, targeting and EW investment. Expanded MudPig internal-bay strike and interceptor loadouts, period weapons, explicit mass budgets, M61 guns and carrier support. USN-inspired 1995/2003 tactical greys retain Australian markings.')
+    info=read_ini(MOD/'_info.ini');info['Language_en'].update(Name='RAN F-111N Naval Wing V9.0 - 1980 / 1985 / 1995 / 2003',Description='Sixteen dated Australian naval aircraft with increasing engine, flight-control, targeting and EW investment. Expanded MudPig internal-bay strike and interceptor loadouts, period weapons, explicit mass budgets, M61 guns and carrier support. USN-inspired 1995/2003 tactical greys retain Australian markings.')
     write_ini(MOD/'_info.ini',info)
+    # Preserve older download commands as an identical, verified 9.0 entry point.
+    shutil.copyfile(ROOT/'replace-f111n-with-v9.0.sh',ROOT/'replace-f111n-with-v8.sh')
     # All carrier allowlists must include every new unit ID, not only the four
     # compatibility IDs inherited from V5.2.1.
     ids=list(manifest)
@@ -452,7 +454,7 @@ def finish(manifest):
             deck['AircraftSupported']=','.join(allowed+[u for u in ids if u not in allowed])
             write_ini(p,d)
     for f in ('install-ran-f111n.py','install-ran-f111n.sh'):
-        p=ROOT/f;p.write_text(p.read_text().replace('V5.2.1','V8').replace('Naval Wing V6','Naval Wing V8'))
+        p=ROOT/f;p.write_text(p.read_text().replace('V5.2.1','V9.0').replace('Naval Wing V6','Naval Wing V9.0'))
     # Profile artwork is reused without altering the four models/liveries.
     for uid in ids:
         original=uid.rsplit('_',1)[0] if uid[-4:].isdigit() else uid

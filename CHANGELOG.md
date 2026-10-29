@@ -1,4 +1,11 @@
-# V8 changes from V6
+# Naval Wing release history
+
+## Version 9.0 — release naming, 29 October 2026
+
+- Renamed the prepared radar/reference release to Version 9.0 across mod metadata, preview branding, current documents, Workshop text and the verified replacement installer.
+- Added the canonical `replace-f111n-with-v9.0.sh` installer. The old installer filename remains a compatible entry point for existing commands.
+- Preserved all sixteen aircraft IDs, 211 presets, dated radar sectors, flight/mass settings, assets and carrier arrangements.
+- Kept the optional V8 weight diagnostic identity and recording paths compatible. Historical V8 records remain labelled as history.
 
 ## Version 8 radar coverage and Unit Reference — 29 October 2026
 

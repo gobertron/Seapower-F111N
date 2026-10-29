@@ -1,3 +1,5 @@
+> Archived V8 document. See the [current Version 9.0 document](RADAR_REFERENCE_V9_0.md).
+
 # V8 radar coverage and Unit Reference
 
 29 October 2026. Applies to all sixteen aircraft in the 1980, 1985, 1995 and 2003 editions.

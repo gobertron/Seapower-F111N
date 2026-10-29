@@ -1,3 +1,5 @@
+> Archived V8 document. See the [current Version 9.0 document](COMPLETE_BREAKDOWN_V9_0.md).
+
 # V8 complete aircraft, loadout and mass breakdown
 
 Generated from the shipped INIs and manifests. All 16 aircraft, all 211 selectable presets and all 61 local store definitions are listed. Compatible aliases may carry identical stores. Values are rounded carried-mass budgets; fictional naval equipment and retrofit allowances are explicit.

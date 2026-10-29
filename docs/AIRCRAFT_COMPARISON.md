@@ -1,4 +1,4 @@
-# V8: all sixteen aircraft compared
+# V9.0: all sixteen aircraft compared
 
 Four original roles, each in four funded editions. Values below come from the shipped configuration and manifests. Empty masses and naval upgrades are estimates. Maximum/cruise Mach values are settings, not verified flight results. Range is the nominal native Miles field, not combat radius.
 
@@ -25,4 +25,4 @@ All sixteen aircraft use maximum Mach 2.875 (published F-111 Mach 2.5 reference 
 
 The 211 selectable preset names include compatible Default/mission aliases with repeated inventories. Counts by year are 49 / 50 / 52 / 60. Service gates are 1980–1984, 1985–1994, 1995–2002 and 2003–2050. Unsuffixed aircraft IDs select 1980.
 
-[Complete loadouts and weight budgets](../COMPLETE_BREAKDOWN_V8.md) · [Internal bay](INTERNAL_BAY_V8.md) · [Investment details](INVESTMENT_PROGRAMME.md) · [Release notes](../RELEASE_NOTES_V8.md)
+[Complete loadouts and weight budgets](../COMPLETE_BREAKDOWN_V9_0.md) · [Internal bay](INTERNAL_BAY_V9_0.md) · [Investment details](INVESTMENT_PROGRAMME.md) · [Release notes](../RELEASE_NOTES_V9_0.md)
