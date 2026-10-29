@@ -290,6 +290,13 @@ def build_aircraft():
     for role,(model,nickname,ai,squadrons) in ROLES.items():
       for yi,year in enumerate(YEARS):
         uid=unit_id(role,year);d=read_ini(BASE/f'aircraft/ran_{role}-111n.ini');remove_loadouts(d)
+        if role in ('f', 'fb', 'rf'):
+            # Aircraft submodels use numbered General_N keys; the source's
+            # free-form bay keys may not be instantiated by the game loader.
+            sub=d['Submodels']
+            for number, name in ((12, 'bay_l'), (13, 'bay_r'), (14, 'pave_body')):
+                assert sub.pop(name) == name
+                sub['General_'+str(number)] = name
         period=PERIOD[year];ir=aid(period['ir']);bvr=aid(period['bvr']);phoenix=aid(period['phoenix']);ship=aid(period['ship']);arm=aid(period['arm']);mav=aid(period['mav'])
         tank='ran_tank_600_'+role+'111n';wing=d['WeaponSystem1'];components,mass=mass_budget(role,year)
         d['AI']['Role']=ai;d['Performance'].update(EmptyMass=str(mass),MaxFuel=str(FUEL))
