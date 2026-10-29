@@ -28,5 +28,8 @@
   "common_speed_mod_checks": 35358,
   "sourced_speed_mod_checks": 35358,
   "radar_reference_mod_checks": 35490,
-  "version_9_mod_checks": 35493
+  "version_9_mod_checks": 35493,
+  "pinned_release_commit": "2a9af95758a8e2b7f5773ef70a8e1fd238c3a2eb",
+  "fresh_pinned_archive_install_fixture": "PASS",
+  "fresh_pinned_archive_scope": "Fresh immutable Version 9.0 GitHub archive installed in a disposable V8-folder fixture. Verified complete game files, backup, version title, sixteen cards, updated radar and 9.0 Workshop payload. Normal-user guard simulated in root authoring container. Actual game runtime and Steam upload remain untested."
 }
