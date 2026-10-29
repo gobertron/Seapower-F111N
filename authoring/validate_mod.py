@@ -30,6 +30,7 @@ def main():
     ammo_table=ammunition_names.get('AmmunitionNames',{})
     check(set(ammunition_names)=={'AmmunitionNames'},'native flat ammunition language table')
     check(set(ammo_table)==set(catalog),'all custom ammunition IDs have display names')
+    f111_mesh_groups=set(re.findall(r'^o (.+)$', (MOD/'assets/ran_f111n/models/f-111f/f-111f.obj').read_text(), re.MULTILINE))
     local_weapons=read_ini(MOD/'systems/weapons.ini')
     chaff_system=local_weapons.get('RAN_NW_AIR_CHAFF_DISP',{})
     check(chaff_system.get('ReloadTime')=='0','Naval Wing chaff reload is zero')
@@ -67,8 +68,36 @@ def main():
         role=next(r for r in ROLES if uid.startswith('ran_'+r+'-111n'))
         year=spec['edition'];b=BLOCKS[year];d=read_ini(MOD/'aircraft'/(uid+'.ini'));baseline=read_ini(BASE/f'aircraft/ran_{role}-111n.ini')
         check(d['General']['CarrierCapable']=='True',uid+': carrier flag')
-        for section in ('General','Models','Submodels','FlightControls','WingSweep','Animations'):
+        for section in ('General','Models','FlightControls','WingSweep','Animations'):
             check(d[section]==baseline[section],uid+': changed original model/landing contract '+section)
+        expected_submodels=baseline['Submodels'].copy()
+        if role in ('f','fb','rf'):
+            for number, name in ((12,'bay_l'),(13,'bay_r'),(14,'pave_body')):
+                check(expected_submodels.pop(name, None)==name,uid+': source bay part '+name)
+                expected_submodels['General_'+str(number)]=name
+        check(d['Submodels']==expected_submodels,uid+': numbered bay parts and preserved submodels')
+        if role in ('f','fb','rf'):
+            # Validate actual registered door names, mesh groups and animation
+            # links in the shipped aircraft. The game still needs runtime QA.
+            sub=d['Submodels']
+            for number, name in ((12,'bay_l'),(13,'bay_r'),(14,'pave_body')):
+                check(sub.get('General_'+str(number))==name,uid+': registered '+name)
+                check(d[name].get('Mesh')==name and name in f111_mesh_groups,uid+': door/pod mesh '+name)
+            animation=read_ini(MOD/'animations'/(d['Animations']['AnimationFile_1']+'.ini'))
+            for action in ('Bay_Open','Bay_Close'):
+                seqs=animation[action]
+                targets=[seqs.get('Sequence'+str(i)+'_Model') for i in range(1,int(seqs['NumberOfSequencesToPlay'])+1)]
+                check(targets.count('bay_l')==1 and targets.count('bay_r')==1,uid+': '+action+' targets both registered doors')
+                for i in range(1,int(seqs['NumberOfSequencesToPlay'])+1):
+                    check(seqs['Sequence'+str(i)] in animation,uid+': '+action+' sequence exists')
+            if role=='fb':
+                bay=d['WeaponSystem3']
+                check(bay.get('OpenSystemAnimation')=='Bay_Open' and bay.get('CloseSystemAnimation')=='Bay_Close',uid+': bay release actions')
+                for side, angle in (('l','90'),('r','-90')):
+                    opened=animation['MudPig_Bay_Open_'+side]
+                    closed=animation['MudPig_Bay_Close_'+side]
+                    check(opened['Step1'].split('|')[2]=='x,y,0' and opened['Step2'].split('|')[2]=='x,y,'+angle,uid+': closed-to-open door '+side)
+                    check(closed['Step1'].split('|')[2]=='x,y,'+angle and closed['Step2'].split('|')[2]=='x,y,0',uid+': open-to-closed door '+side)
         check(d['AI']['Role']==ROLES[role][2],uid+': original role')
         check(int(d['Performance']['EmptyMass'])==spec['empty_mass_kg']==sum(spec['empty_mass_components_kg'].values()),uid+': empty mass budget')
         check(int(d['Performance']['MaxFuel'])==14897,uid+': real internal fuel')
