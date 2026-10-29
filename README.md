@@ -1,28 +1,30 @@
-# RAN F-111N Naval Wing V8
+# RAN F-111N Naval Wing V9.0
 
-**Version 8 sourced speed profile — 22 October 2026.** All sixteen aircraft share maximum Mach **2.875** (fastest published Mach 2.5 reference plus 15%). RAAF sea-level speed 1,345 km/h and cruise 778 km/h become **1,546.75 km/h** and **894.7 km/h**. Cruise is represented by Mach **0.842269** at the retained 37,000-ft ISA reference; the native sea-level cap is **835.178186 knots**. Normal power uses the cruise target because a verified dry-thrust maximum is unavailable. Original landing/loiter/stall values remain.
+**Version 9.0 radar and Unit Reference update — 29 October 2026.** Forward radar sectors now widen with each equipment generation. WaterPig and Phoenix controllers progress through **130° / 140° / 160° / 170°**, while MudPig, SprintPig and ScreamPig search sectors progress through **90° / 110° / 130° / 150°**. All sixteen Unit Reference cards now have individual programme stories, dated equipment and practical role information. Descriptions avoid the semicolon separators that appeared to truncate the text in game. [Coverage, card details and test procedure](docs/RADAR_REFERENCE_V9_0.md).
 
-**Version 8 internal-bay update — 2 October 2026.** MudPig gains 44 bay mission fits and extra internal stores on existing bombing, precision, Maverick, Shrike, SLAM and JDAM presets. The release now has 211 presets. Original bay stations, doors and carrier/landing geometry are retained; armed launch/recovery still requires in-game testing.
+**Inherited V8 sourced speed profile — 22 October 2026.** All sixteen aircraft share maximum Mach **2.875** (fastest published Mach 2.5 reference plus 15%). RAAF sea-level speed 1,345 km/h and cruise 778 km/h become **1,546.75 km/h** and **894.7 km/h**. Cruise is represented by Mach **0.842269** at the retained 37,000-ft ISA reference; the native sea-level cap is **835.178186 knots**. Normal power uses the cruise target because a verified dry-thrust maximum is unavailable. Original landing/loiter/stall values remain.
 
-**Version 8.** All release labels, filenames, installer messages, previews and Workshop text now use V8. This release carries the existing verified aircraft and installation fixes: four aircraft families in 1980, 1985, 1995 and 2003 editions; 16 aircraft and 211 selectable presets.
+**Inherited V8 internal-bay update — 2 October 2026.** MudPig gains 44 bay mission fits and extra internal stores on existing bombing, precision, Maverick, Shrike, SLAM and JDAM presets. The release now has 211 presets. Original bay stations, doors and carrier/landing geometry are retained; armed launch/recovery still requires in-game testing.
 
-- [Download the complete V8 mod and source ZIP](https://github.com/gobertron/Seapower-F111N/archive/refs/heads/main.zip)
-- [Standalone replacement and Workshop preparation script](replace-f111n-with-v8.sh) · [Replacement instructions](docs/REPLACE_WITH_V8.md) · [Steam upload instructions](docs/STEAM_WORKSHOP_UPLOAD.md)
+**Version 9.0.** The prepared radar/reference release is now named 9.0 throughout the mod, preview, package, installer and current documentation. Aircraft IDs and the stable mod folder are preserved. This release carries the existing verified aircraft and installation fixes: four aircraft families in 1980, 1985, 1995 and 2003 editions; 16 aircraft and 211 selectable presets.
+
+- [Download the complete V9.0 mod and source ZIP](https://github.com/gobertron/Seapower-F111N/archive/refs/heads/codex/v8-radar-reference.zip)
+- [Standalone replacement and Workshop preparation script](replace-f111n-with-v9.0.sh) · [Replacement instructions](docs/REPLACE_WITH_V9_0.md) · [Steam upload instructions](docs/STEAM_WORKSHOP_UPLOAD.md)
 - [Checksums for every game file](MOD_SHA256.txt)
-- [Complete breakdown: all aircraft, presets, weights and references](docs/V8-Complete-Breakdown.md)
-- [Sortable list of every loadout](ALL_LOADOUTS_V8.csv)
-- [Expanded internal bay, capacity and armed recovery test](docs/INTERNAL_BAY_V8.md)
-- [Optional Version 8 in-game weight monitor and test](docs/WEIGHT_TEST_V8.md)
-- [Steam Workshop description](WORKSHOP_DESCRIPTION.txt) and [V8 update notes](WORKSHOP_UPDATE_NOTES_V8.txt)
+- [Complete breakdown: all aircraft, presets, weights and references](docs/V9.0-Complete-Breakdown.md)
+- [Sortable list of every loadout](ALL_LOADOUTS_V9_0.csv)
+- [Expanded internal bay, capacity and armed recovery test](docs/INTERNAL_BAY_V9_0.md)
+- [Optional compatible Version 8 in-game weight monitor and test](docs/WEIGHT_TEST_V8.md)
+- [Steam Workshop description](WORKSHOP_DESCRIPTION.txt) and [V9.0 update notes](WORKSHOP_UPDATE_NOTES_V9_0.txt)
 - [All sixteen aircraft compared](docs/AIRCRAFT_COMPARISON.md) and [investment/system upgrades](docs/INVESTMENT_PROGRAMME.md)
 
-**V8 corrections (1 October 2026):** all 61 custom weapon/store names use the native ammunition table; all 16 aircraft use zero-reload chaff; the carrier installer accepts Windows-encoded source INIs and repairs stale lift/taxi references using existing carrier geometry. The standalone replacement script keeps dated backups. All 18 replacement/recovery tests and six lift-repair tests passed, including representative Majestic Elevator3/Elevator4 failures.
+**Inherited V8 corrections (1 October 2026):** all 61 custom weapon/store names use the native ammunition table; all 16 aircraft use zero-reload chaff; the carrier installer accepts Windows-encoded source INIs and repairs stale lift/taxi references using existing carrier geometry. The standalone replacement script keeps dated backups. All 18 replacement/recovery tests and six lift-repair tests passed, including representative Majestic Elevator3/Elevator4 failures.
 
-The repository includes the complete aircraft assets, native configuration, installers, authoring source, previews and validation reports. The GitHub ZIP includes the complete mod tree, expanded publication breakdown and Workshop text. Game assets match the validated standalone V8 release.
+The repository includes the complete aircraft assets, native configuration, installers, authoring source, previews and validation reports. The GitHub ZIP includes the complete mod tree, expanded publication breakdown and Workshop text. Game assets match the validated standalone V9.0 release.
 
-**Verification:** 35,358 mod checks, 2,243 carrier/installer checks and eight late texture audits passed. In-game gun fire, guidance/release, flight performance, ECM display, date filtering and carrier landings remain untested. This is an alternate-history programme with documented native simulation limits.
+**Verification:** 35,493 mod checks, 2,243 carrier/installer checks and eight late texture audits passed. In-game radar tracking, Unit Reference layout, gun fire, guidance/release, flight performance, ECM display, date filtering and carrier landings remain untested. This is an alternate-history programme with documented native simulation limits.
 
-An alternate-history Australian carrier F-111 programme for **Sea Power**: four original roles in **1980, 1985, 1995 and 2003** editions. This fresh V8 is built from the saved V6 base and contains **16 aircraft and 211 loadout presets**, progressive propulsion/mission-system investment, period weapons and eight dedicated late-edition grey liveries.
+An alternate-history Australian carrier F-111 programme for **Sea Power**: four original roles in **1980, 1985, 1995 and 2003** editions. Version 9.0 continues the prepared V8 radar/reference update, originally built from the saved V6 base and contains **16 aircraft and 211 loadout presets**, progressive propulsion/mission-system investment, period weapons and eight dedicated late-edition grey liveries.
 
 ![1995 and 2003 comparison](RAN-F111N-USN-1995-2003-preview.png)
 
@@ -71,24 +73,24 @@ Missile variants follow the edition. The bay's three stations, concealment and d
 
 The expanded bay also carries three Mk 82s, or two Mk 83/Mk 84/GBU-12 bombs, Mavericks, Phoenix missiles, later SLAMs or 2003 GBU-31/32 JDAMs. New `AntiShipBay`, `StrikeBay`, `StrikeHeavyBay`, `StrikePrecisionBay` and `FleetInterceptBay` fits each have a two-tank `LongRange` companion; 2003 also adds `JDAMBay` and `JDAMHeavyBay` pairs. Phoenix uses the dedicated air-targeting controller. Single-store suspension offsets accommodate Phoenix/Shrike native geometry without adding stations.
 
-Estimated bay adapters and interfaces add 40/50/60/75 kg to MudPig empty mass across the four editions, alongside existing propulsion and mission-system investment. Coarse stowage, counts, targeting, attack modes and full-fuel mass budgets are checked. The takeoff reference does not certify a carrier landing weight or armed recovery. See the [bay guide](docs/INTERNAL_BAY_V8.md) for every loaded-bay fit and the runtime test sequence.
+Estimated bay adapters and interfaces add 40/50/60/75 kg to MudPig empty mass across the four editions, alongside existing propulsion and mission-system investment. Coarse stowage, counts, targeting, attack modes and full-fuel mass budgets are checked. The takeoff reference does not certify a carrier landing weight or armed recovery. See the [bay guide](docs/INTERNAL_BAY_V9_0.md) for every loaded-bay fit and the runtime test sequence.
 
 ## Weights and paint
 
 All aircraft use 14,897 kg internal fuel. Each 600-US-gallon tank adds 1,770 kg fuel and an estimated 150 kg shell; gun ammunition adds 544 kg. Naval, gun, role, systems, propulsion and RF thermal allowances are explicit estimates above the basic F-111C reference. The heaviest full-fuel fit is RF 2003 with four tanks at **50,897 kg**, 948 kg below the 51,845 kg takeoff reference. This mass budget does not certify carrier suitability.
 
-All eight 1995/2003 models have USN-inspired darker-upper/intermediate-side/light-under tactical greys approximating FS35237/36320/36375. Australian roundels, NAVY text, A8 serials, badges and subdued checks remain. Tanks and UI profiles match; 2003 has modest extra wear. Original UVs, alpha, protected cockpit/mechanical areas, normal/specular maps, earlier liveries, meshes and landing animations are preserved. See [texture notes](TEXTURE_AUTHORING_NOTES.md) and [both-side lettering](lettering_both_sides_V8.png).
+All eight 1995/2003 models have USN-inspired darker-upper/intermediate-side/light-under tactical greys approximating FS35237/36320/36375. Australian roundels, NAVY text, A8 serials, badges and subdued checks remain. Tanks and UI profiles match; 2003 has modest extra wear. Original UVs, alpha, protected cockpit/mechanical areas, normal/specular maps, earlier liveries, meshes and landing animations are preserved. See [texture notes](TEXTURE_AUTHORING_NOTES.md) and [both-side lettering](lettering_both_sides_V9_0.png).
 
 ## Install and use
 
 1. Close Sea Power and extract the complete ZIP.
 2. From the extracted folder containing the installer, run `bash install-ran-f111n.sh`.
-3. Enable **RAN F-111N Naval Wing V8**, disable older Naval Wing copies and give V8 priority over carrier mods. Keep source carrier mods enabled for assets.
+3. Enable **RAN F-111N Naval Wing V9.0**, disable older Naval Wing copies and give V9.0 priority over carrier mods. Keep source carrier mods enabled for assets.
 4. Restart and add your chosen dated aircraft to the carrier air group in the mission editor.
 
 For a specific Steam install: `bash install-ran-f111n.sh "/full/path/to/steamapps/common/Sea Power"`. An optional second argument selects a preferred carrier mod folder. The installer stages/verifies the update, backs up recognised earlier local versions outside StreamingAssets and creates carrier overrides without editing source/Workshop files. It works through bash from fish; an existing Anchor Chain setup can remain enabled. Rerun after carrier-mod updates.
 
-Windows/manual: run `python carrier_compatibility.py "C:\path\to\Sea Power"`, then copy `RAN-F111N-Naval-Wing` into `Sea Power_Data/StreamingAssets/user/` and enable V8 with carrier priority.
+Windows/manual: run `python carrier_compatibility.py "C:\path\to\Sea Power"`, then copy `RAN-F111N-Naval-Wing` into `Sea Power_Data/StreamingAssets/user/` and enable V9.0 with carrier priority.
 
 All 16 IDs retain carrier capability. Stock, RAN and custom decks are discovered, including nonstandard carrier names and the existing fictional helicopter-deck arrested recovery conversion. Existing air groups and helicopter/VTOL approaches are preserved. Actual installed landings still need checking in-game.
 
@@ -98,9 +100,9 @@ Unsuffixed IDs are 1980; later IDs end `_1985`, `_1995`, `_2003`. Service gates 
 
 - [All sixteen aircraft comparison](docs/AIRCRAFT_COMPARISON.md)
 - [Full investment/system settings](docs/INVESTMENT_PROGRAMME.md)
-- [Every loadout, store and mass budget](COMPLETE_BREAKDOWN_V8.md), plus [sortable CSV](ALL_LOADOUTS_V8.csv)
+- [Every loadout, store and mass budget](COMPLETE_BREAKDOWN_V9_0.md), plus [sortable CSV](ALL_LOADOUTS_V9_0.csv)
 - [Aircraft/loadout JSON](loadout_manifest.json), [investment JSON](investment_manifest.json), [61 local store definitions](weapon_catalog.json)
-- [Release notes/test results](RELEASE_NOTES_V8.md), [changelog](CHANGELOG.md), [Steam BBCode description](WORKSHOP_DESCRIPTION.txt)
+- [Release notes/test results](RELEASE_NOTES_V9_0.md), [changelog](CHANGELOG.md), [Steam BBCode description](WORKSHOP_DESCRIPTION.txt)
 - [Historical references](HISTORICAL_REFERENCES.md), [authoring commands](authoring/AUTHORING.md), [credits/rights](THIRD_PARTY_CREDITS.md), [V6 build provenance](BUILD_PROVENANCE.json)
 
 Native modern-weapon approximations remain: AMRAAM has no platform midcourse correction; ASRAAM adds no helmet sight/LOAL; EO weapons add no manual retargeting; Block II Harpoon models ship attack; **JDAM/JSOW use native CEP/ballistic/glide approximations, not full GPS/INS guidance**. AWG-9/APQ-161 donors represent the fictional radar programme; a digital radar label is not a new simulation engine.

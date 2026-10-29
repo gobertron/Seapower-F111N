@@ -1,4 +1,4 @@
-# V8 native texture authoring
+# V9.0 native texture authoring
 
 Eight 3072 × 2048 RGBA maps cover F/FB/RF/EF in 1995 and 2003. Squadron entries, external fuel tanks and selection profiles point to their matching edition maps.
 

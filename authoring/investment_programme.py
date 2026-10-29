@@ -36,6 +36,19 @@ ROWS={
 assert all(len(row)==len(FIELDS) for row in ROWS.values())
 BLOCKS={year:dict(zip(FIELDS,row)) for year,row in ROWS.items()}
 
+# Fictional funded antenna/processing upgrades. Values are horizontal half
+# angles about the nose. Keep the native vertical limits and directed-search
+# behaviour. Phoenix control follows the fleet radar's widening field of regard.
+RADAR_HALF_ANGLES={
+    'FleetRadar':{1980:65,1985:70,1995:80,2003:85},
+    'PhoenixControl':{1980:65,1985:70,1995:80,2003:85},
+    'StrikeRadar':{1980:45,1985:55,1995:65,2003:75},
+}
+
+def radar_view_arcs(kind,year,native_arcs):
+    half=RADAR_HALF_ANGLES[kind][year]
+    return f'-{half},{half}|{native_arcs.split("|",1)[1]}'
+
 def sensor_id(kind,year):return f'RAN_NW_{kind}_{year}'
 def pod_id(role,n,year):return ('ran_alq-131n_' if role=='ef' else 'ran_nw_ecmpod_')+str(n)+'_'+str(year)
 
@@ -46,6 +59,7 @@ def build_systems(mod,root,catalog,read_ini,write_ini):
         for kind,donor in [('FleetRadar','AN/AWG-9'),('PhoenixControl','AN/AWG-9_Phoenix'),('StrikeRadar','AN/APQ-161')]:
             s=deepcopy(native[donor])
             s.update(Gain=str(float(s['Gain'])+b['radar_gain']),MaxRange=str(round(float(s['MaxRange'])*b['radar_range_factor'],2)),LookDownMultiplier=str(b['lookdown']),HasDataLink='True' if year>=1995 else 'False',RangeResolution=str({1980:30,1985:25,1995:18,2003:12}[year]))
+            s['ViewArcs']=radar_view_arcs(kind,year,s['ViewArcs'])
             if kind!='PhoenixControl':s.update(TargetChannels=str(b['radar_targets']),WeaponChannels=str(b['radar_weapons']))
             systems[sensor_id(kind,year)]=s
         for kind,donor in [('FLIR','2nd_Gen_FLIR'),('RWR','AircraftRWR'),('ELINT','AircraftELINT'),('DECM','AircraftDECM_Late')]:
@@ -99,4 +113,9 @@ def apply(d,role,year):
 def describe(role,year):
     b=BLOCKS[year]
     result={**b,'status':'Hypothetical investment; controls, installed thrust, sensor ratings and retrofit masses are estimates','radar_description':('AWG-9-class' if year<1995 else 'APG-71-class digital adaptation') if role=='f' else 'Naval multimode radar and mission computer','cockpit_visuals':'Original mesh retained; no new interactive cockpit or MFDs','speed_profile':dict(SPEED_PROFILE)}
+    kind='FleetRadar' if role=='f' else 'StrikeRadar'
+    result['radar_horizontal_half_angle_degrees']=RADAR_HALF_ANGLES[kind][year]
+    result['radar_horizontal_sector_degrees']=2*RADAR_HALF_ANGLES[kind][year]
+    if role in ('f','fb'):
+        result['phoenix_horizontal_sector_degrees']=2*RADAR_HALF_ANGLES['PhoenixControl'][year]
     return result

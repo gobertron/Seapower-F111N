@@ -18,6 +18,10 @@ def main():
         checks+=1
         if not ok:failures.append(message)
     manifest=json.loads((ROOT/'loadout_manifest.json').read_text())
+    info=read_ini(MOD/'_info.ini')
+    check('Naval Wing V9.0' in info['Language_en']['Name'],'current release title is V9.0')
+    check(info['Compatibility']['ApproximateVersion']=='0.8.0','Sea Power compatibility is not the mod release version')
+    check(json.loads((ROOT/'BUILD_PROVENANCE.json').read_text())['release_version']=='9.0','release provenance is Version 9.0')
     catalog=json.loads((ROOT/'weapon_catalog.json').read_text())
     names=read_ini(MOD/'language_en/aircraft_names.ini')
     systems=read_ini(MOD/'systems/sensors.ini')
@@ -101,6 +105,25 @@ def main():
         sensors=[v for s,v in d.items() if re.fullmatch(r'SensorSystem\d+',s)]
         check(len(sensors)==int(d['SensorSystems']['NumberOfSensorSystems']),uid+': sensor count')
         for sn in sensors:check(sn['SystemName'] in native_sensors or sn['SystemName'] in systems,uid+': unknown sensor '+sn['SystemName'])
+        # Read the shipped INIs, independently of the authoring policy, so a
+        # rebuild cannot silently restore the original fixed coverage angles.
+        expected_fleet={1980:65,1985:70,1995:80,2003:85}[year]
+        expected_strike={1980:45,1985:55,1995:65,2003:75}[year]
+        for sn in sensors:
+            if sn.get('Type')!='Radar':continue
+            radar=systems[sn['SystemName']]
+            fleet='FleetRadar' in sn['SystemName'] or 'PhoenixControl' in sn['SystemName']
+            half=expected_fleet if fleet else expected_strike
+            check(radar['ViewArcs']==f'-{half},{half}|'+('-60,60' if fleet else '-70,60'),uid+': dated forward radar arc and retained vertical coverage')
+            check(radar['Type']==('Targeting' if 'PhoenixControl' in sn['SystemName'] else 'DirectedSearch'),uid+': search/targeting radar mode')
+        expected_half=expected_fleet if role=='f' else expected_strike
+        investment=spec['investment_programme']
+        check(investment['radar_horizontal_half_angle_degrees']==expected_half and investment['radar_horizontal_sector_degrees']==2*expected_half,uid+': actual radar coverage metadata')
+        card=names[uid]['DefaultDescription']
+        check(len(card.split())>=170 and str(year) in card and spec['nickname'] in card,uid+': detailed dated Unit Reference story')
+        check('alternate-history' in card.lower(),uid+': Unit Reference identifies fictional timeline')
+        check(not any(token in card for token in (';','//','\n','\r','\\n','<','>')),uid+': Unit Reference has no inline comments or unverified formatting')
+        check(f'{2*expected_half}-degree' in card,uid+': Unit Reference matches radar sector')
         ws=[s for s in d if re.fullmatch(r'WeaponSystem\d+',s)]
         check(len(ws)==int(d['WeaponSystems']['NumberOfWeaponSystems']),uid+': weapon count')
         chaff=[d[s] for s in ws if d[s].get('Type')=='Chaff']
@@ -254,12 +277,14 @@ def main():
         series=[float(v['Performance']['SpeedAndRange_Cruise'].split(',')[1]) for v in values];check(all(a<b for a,b in zip(series,series[1:])),role+': increasing range field')
         for kind,key in [('FleetRadar' if role=='f' else 'StrikeRadar','TargetChannels'),('DECM','JamChance'),('FLIR','MaxRangeMultiplier'),('OffensiveECM1','JamChannels')]:
             series=[float(systems[sensor_id(kind,y)][key]) for y in YEARS];check(all(a<b for a,b in zip(series,series[1:])),role+': increasing '+kind+'/'+key)
+        descriptions=[names[unit_id(role,y)]['DefaultDescription'] for y in YEARS]
+        check(len(set(descriptions))==4,role+': four distinct dated Unit Reference cards')
         a=MOD/'assets/textures/ran_f111n'/f'ran_{role}-111n_1995_usn_tps.png'
         b=MOD/'assets/textures/ran_f111n'/f'ran_{role}-111n_2003_usn_tps.png'
         check(hashlib.sha256(a.read_bytes()).digest()!=hashlib.sha256(b.read_bytes()).digest(),role+': distinct late-edition materials')
     for line in (ROOT/'MOD_SHA256.txt').read_text().splitlines():
         digest,name=line.split('  ',1);check(hashlib.sha256((MOD/name).read_bytes()).hexdigest()==digest,'checksum '+name)
-    result={'status':'FAIL' if failures else 'PASS','checks':checks,'failures':failures,'aircraft':len(manifest),'loadouts':sum(len(x['loadouts']) for x in manifest.values()),'loaded_bay_presets':sum(bool(v['internal_bay_stores']) for s in manifest.values() for v in s['loadouts'].values()),'runtime_tested':False,'scope':'Common F-111 maximum plus 15%, sourced cruise and sea-level TAS conversions, estimated dated propulsion/response, retained landing/loiter/stall settings, dated weapon selection, increasing native investment, eight tactical atlases, all-rounder union, M61 magazines, retained bay/model/landing geometry, three-station bay capacity and targeting, internal inventory and attack modes, explicit bay upgrade mass, mass arithmetic, takeoff reference budget, store and sensor resolution, pod attachment, original assets and checksums'}
+    result={'status':'FAIL' if failures else 'PASS','checks':checks,'failures':failures,'aircraft':len(manifest),'loadouts':sum(len(x['loadouts']) for x in manifest.values()),'loaded_bay_presets':sum(bool(v['internal_bay_stores']) for s in manifest.values() for v in s['loadouts'].values()),'runtime_tested':False,'scope':'Common F-111 maximum plus 15%, sourced cruise and sea-level TAS conversions, estimated dated propulsion/response, retained landing/loiter/stall settings, dated weapon selection, increasing native investment, eight tactical atlases, all-rounder union, M61 magazines, retained bay/model/landing geometry, three-station bay capacity and targeting, internal inventory and attack modes, explicit bay upgrade mass, mass arithmetic, takeoff reference budget, store and sensor resolution, progressive forward radar sectors, sixteen detailed parser-safe Unit Reference cards, pod attachment, original assets and checksums'}
     (ROOT/'VALIDATION.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2))
     return bool(failures)
 

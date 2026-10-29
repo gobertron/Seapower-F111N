@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 # Standalone replacement and Workshop preparation for CachyOS/Linux.
-# Close Sea Power, then run: bash replace-f111n-with-v8.sh
-# Optional: bash replace-f111n-with-v8.sh "/full/path/to/Sea Power"
+# Close Sea Power, then run: bash replace-f111n-with-v9.0.sh
+# Optional: bash replace-f111n-with-v9.0.sh "/full/path/to/Sea Power"
 # Optional SteamCMD upload: append --upload (Steam handles login itself).
 set -euo pipefail
 if ! command -v python3 >/dev/null 2>&1; then
     printf '%s\n' "Python 3 is required. On CachyOS: sudo pacman -S python"
     exit 1
 fi
-exec python3 - "$@" <<'V8_REPLACEMENT_PY'
-"""Install verified V8 after backing up recognised older local Naval Wing folders."""
+exec python3 - "$@" <<'V9_REPLACEMENT_PY'
+"""Install verified V9.0 after backing up recognised older local Naval Wing folders."""
 import argparse
 import datetime
 import fcntl
@@ -29,28 +29,29 @@ import urllib.error
 import urllib.request
 import zipfile
 
-RELEASE_COMMIT = "271996943f47ad7085f44f1c8c1b2005857449bf"
+RELEASE_COMMIT = "2a9af95758a8e2b7f5773ef70a8e1fd238c3a2eb"
 DOWNLOAD = "https://codeload.github.com/gobertron/Seapower-F111N/zip/" + RELEASE_COMMIT
 MOD_NAME = "RAN-F111N-Naval-Wing"
-MANIFEST_SHA256 = "79d1812ac2800635012895104d2a0a8379a48fcc4979295119bee20ed0c0e1c0"
+MANIFEST_SHA256 = "9528d0caba632cb9e5ef914454a4a1cfa5944afdf391ba7046cfb6a296b4509e"
 CARRIER_SHA256 = "7ab5f7acffbae0c6a1b7abf73d6673ce0c4ca70f9db91bbfdc214b12badd7c41"
 AIRCRAFT_IDS = ("ran_f-111n", "ran_fb-111n", "ran_rf-111n", "ran_ef-111n")
 MAX_ARCHIVE_BYTES = 220 * 1024 * 1024
 MAX_EXTRACTED_BYTES = 400 * 1024 * 1024
 WORKSHOP_ID = "3810606011"
 APP_ID = "1286220"
-RELEASE_VERSION = "V8"
-WORKSHOP_TITLE = "RAN F-111N Naval Wing V8"
+RELEASE_VERSION = "V9.0"
+WORKSHOP_TITLE = "RAN F-111N Naval Wing V9.0"
 WORKSHOP_DESCRIPTION_MAX_BYTES = 8000
 WORKSHOP_ASSETS = {
-    "RAN-F111N-preview.png": "9ba4795b87f7c18958a93af7f89458de23e9096e38a1b69334b96c9b1a4fc752",
-    "WORKSHOP_DESCRIPTION.txt": "34041af0710fd4192fc48eab99ec830094f7be506ed6e90bad50ce58ea09288b",
-    "WORKSHOP_UPDATE_NOTES_V8.txt": "2957568e92586f734d1e5839c04661ccf4cdf8e32b2edcccc04548e94fe45d87",
+    "RAN-F111N-preview.png": "cd8bb0b725b4edad6cfe348ba28a3a1f7aa1120f50becd943ac7784023c45453",
+    "WORKSHOP_DESCRIPTION.txt": "496f7db3f633ae9e6e2bd94a91b5af71f65270273a60cd9657655e838c55e779",
+    "WORKSHOP_UPDATE_NOTES_V9_0.txt": "b50241fee5273f10f23e864926aa73fe78799dbe2786439e7e8a101bec6be882",
 }
 UPLOAD_NOTE = (
-    "V8 sourced speeds: common maximum Mach 2.875; RAAF sea-level 1345 km/h plus 15% = 1546.75 km/h; "
-    "RAAF cruise 778 km/h plus 15% = 894.7 km/h. Normal power uses sourced cruise, without claiming "
-    "a historical dry-thrust maximum. Original approach settings and all 211 presets retained; runtime flight untested."
+    "V9.0 progressive radar coverage: Fleet/Phoenix forward sectors 130/140/160/170 degrees; "
+    "strike sectors 90/110/130/150 degrees. Expanded sixteen Unit Reference stories and "
+    "capability descriptions, without semicolon separators. All 211 presets, flight, mass "
+    "and carrier settings retained. Runtime radar tracking and card layout require in-game verification."
 )
 
 
@@ -170,8 +171,8 @@ def check_target(streaming):
 
 
 def fetch_archive(path):
-    request = urllib.request.Request(DOWNLOAD, headers={"User-Agent": "RAN-F111N-V8-installer"})
-    print("Downloading verified V8 from GitHub...", flush=True)
+    request = urllib.request.Request(DOWNLOAD, headers={"User-Agent": "RAN-F111N-V9.0-installer"})
+    print("Downloading verified V9.0 from GitHub...", flush=True)
     with urllib.request.urlopen(request, timeout=45) as response, path.open("wb") as output:
         size = last_notice = 0
         while True:
@@ -180,7 +181,7 @@ def fetch_archive(path):
                 break
             size += len(data)
             if size > MAX_ARCHIVE_BYTES:
-                raise RuntimeError("The download exceeds the expected V8 archive size.")
+                raise RuntimeError("The download exceeds the expected V9.0 archive size.")
             output.write(data)
             if size - last_notice >= 20 * 1024 * 1024:
                 print("  Downloaded", size // (1024 * 1024), "MiB", flush=True)
@@ -191,7 +192,7 @@ def extract_archive(archive, destination):
     with zipfile.ZipFile(archive) as bundle:
         members = bundle.infolist()
         if len(members) > 3000 or sum(m.file_size for m in members) > MAX_EXTRACTED_BYTES:
-            raise RuntimeError("Archive size or file count is outside the V8 limits.")
+            raise RuntimeError("Archive size or file count is outside the V9.0 limits.")
         seen = set()
         for member in members:
             path = PurePosixPath(member.filename)
@@ -214,7 +215,7 @@ def package_root(folder):
         if p.is_dir() and (p / MOD_NAME).is_dir() and (p / "MOD_SHA256.txt").is_file()
     ]
     if len(candidates) != 1:
-        raise RuntimeError("Cannot find the complete V8 package. Use the full ZIP or extracted package.")
+        raise RuntimeError("Cannot find the complete V9.0 package. Use the full ZIP or extracted package.")
     return candidates[0]
 
 
@@ -222,9 +223,9 @@ def verify_package(package):
     manifest = package / "MOD_SHA256.txt"
     carrier = package / "carrier_compatibility.py"
     if not manifest.is_file() or digest(manifest) != MANIFEST_SHA256:
-        raise RuntimeError("Package is not the corrected V8 release: manifest checksum failed. Use a current GitHub ZIP or run without --package.")
+        raise RuntimeError("Package is not the corrected V9.0 release: manifest checksum failed. Use a current GitHub ZIP or run without --package.")
     if not carrier.is_file() or digest(carrier) != CARRIER_SHA256:
-        raise RuntimeError("The package's carrier installer checksum failed. Run without --package to download V8 with the elevator repair.")
+        raise RuntimeError("The package's carrier installer checksum failed. Run without --package to download V9.0 with the elevator repair.")
     entries = []
     for line in manifest.read_text().splitlines():
         checksum, name = line.split("  ", 1)
@@ -241,11 +242,11 @@ def verify_package(package):
         if path.is_file():
             actual.add(path.relative_to(source).as_posix())
     if actual != expected or len(entries) != 174:
-        raise RuntimeError("Corrected V8 must contain exactly the 174 verified game files.")
+        raise RuntimeError("Corrected V9.0 must contain exactly the 174 verified game files.")
     for checksum, name in entries:
         if digest(source / name) != checksum:
-            raise RuntimeError("V8 game-file checksum failed: " + name)
-    print("Verified all 174 corrected V8 game files and the carrier installer.", flush=True)
+            raise RuntimeError("V9.0 game-file checksum failed: " + name)
+    print("Verified all 174 corrected V9.0 game files and the carrier installer.", flush=True)
     return entries
 
 
@@ -325,7 +326,7 @@ def prepare_workshop(package, mod, staged_bundle, final_bundle, report):
     for source, destination in [
         ("RAN-F111N-preview.png", "preview.png"),
         ("WORKSHOP_DESCRIPTION.txt", "description.txt"),
-        ("WORKSHOP_UPDATE_NOTES_V8.txt", "update-notes.txt"),
+        ("WORKSHOP_UPDATE_NOTES_V9_0.txt", "update-notes.txt"),
     ]:
         shutil.copy2(package / source, staged_bundle / destination)
     (staged_bundle / "carrier-report.local.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
@@ -339,7 +340,7 @@ def prepare_workshop(package, mod, staged_bundle, final_bundle, report):
     }
     (staged_bundle / "workshop-sha256.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     instructions = (
-        "V8 is installed and this Workshop payload is ready. It has not been uploaded.\n\n"
+        "V9.0 is installed and this Workshop payload is ready. It has not been uploaded.\n\n"
         "IN-GAME UPLOAD\n"
         "Launch Sea Power with Steam. Mod Manager > Upload Mod > Update Existing.\n"
         "Select your existing item " + WORKSHOP_ID + ".\n"
@@ -349,12 +350,12 @@ def prepare_workshop(package, mod, staged_bundle, final_bundle, report):
         "Submit the update while signed into the Steam account that owns the item.\n\n"
         "OPTIONAL TERMINAL UPLOAD\n"
         "With SteamCMD installed, run:\n"
-        "bash ~/Downloads/replace-f111n-with-v8.sh --upload-prepared " + shlex.quote(str(final_bundle)) + "\n"
+        "bash ~/Downloads/replace-f111n-with-v9.0.sh --upload-prepared " + shlex.quote(str(final_bundle)) + "\n"
         "Enter your Steam account name when prompted. SteamCMD handles password and Steam Guard.\n"
         "No password or API key is stored by this script.\n"
-        "SteamCMD sends content/ and preview.png, and updates the title and description to Version 8. Visibility is preserved.\n"
+        "SteamCMD sends content/ and preview.png, and updates the title and description to Version 9.0. Visibility is preserved.\n"
         "The complete description and notes above are supplied for the in-game uploader.\n\n"
-        "Enable V8, disable older Naval Wing copies, give V8 priority over carrier mods,\n"
+        "Enable V9.0, disable older Naval Wing copies, give V9.0 priority over carrier mods,\n"
         "and retain carrier/source mods and Anchor Chain. Restart after mod-list changes.\n"
         "Carrier overrides still rely on their original carrier mods for those models/assets.\n"
         "Flight behaviour and landings remain untested in Sea Power.\n"
@@ -368,7 +369,7 @@ def verify_workshop_bundle(bundle, expected_location=None):
     bundle = Path(bundle).expanduser().resolve()
     marker = bundle / "workshop-sha256.json"
     if not marker.is_file() or marker.is_symlink():
-        raise RuntimeError("Not a prepared V8 Workshop bundle: " + str(bundle))
+        raise RuntimeError("Not a prepared V9.0 Workshop bundle: " + str(bundle))
     manifest = json.loads(marker.read_text(encoding="utf-8"))
     if (manifest.get("appid"), manifest.get("publishedfileid"), manifest.get("release_commit"), manifest.get("version")) != (APP_ID, WORKSHOP_ID, RELEASE_COMMIT, RELEASE_VERSION):
         raise RuntimeError("This bundle does not target the existing Sea Power Workshop item " + WORKSHOP_ID)
@@ -421,7 +422,7 @@ def upload_workshop(bundle, username=None, executable=None):
         username = input("Steam account name that owns item " + WORKSHOP_ID + ": ").strip()
     if not re.fullmatch(r"[A-Za-z0-9_][A-Za-z0-9_.@-]{0,63}", username):
         raise RuntimeError("Invalid Steam account name. Supply the login name, without a password.")
-    print("Uploading V8 to existing Workshop item " + WORKSHOP_ID + ".", flush=True)
+    print("Uploading V9.0 to existing Workshop item " + WORKSHOP_ID + ".", flush=True)
     print("SteamCMD will handle password and Steam Guard prompts directly.", flush=True)
     command = [executable, "+login", username, "+workshop_build_item", vdf_quote(bundle / "upload.vdf"), "+quit"]
     output = bytearray()
@@ -451,7 +452,7 @@ def upload_workshop(bundle, username=None, executable=None):
     if status != 0 or not success:
         raise RuntimeError(
             "SteamCMD did not confirm a successful update of item " + WORKSHOP_ID
-            + ". The installed V8 and prepared payload remain available at " + str(bundle)
+            + ". The installed V9.0 and prepared payload remain available at " + str(bundle)
             + ". Retry with the owning account or use Sea Power's in-game uploader."
         )
     print("STEAM WORKSHOP UPDATED: https://steamcommunity.com/sharedfiles/filedetails/?id=" + WORKSHOP_ID)
@@ -463,7 +464,7 @@ def carrier_overrides(package, game, staged, sources):
     if checksum != CARRIER_SHA256:
         raise RuntimeError("Carrier installer changed after verification.")
     code = helper.read_text(encoding="utf-8")
-    module = types.ModuleType("v8_carrier_compatibility")
+    module = types.ModuleType("v9_carrier_compatibility")
     module.__file__ = str(helper)
     exec(compile(code, str(helper), "exec"), module.__dict__)
     module.read_source_text = read_source_text
@@ -488,7 +489,7 @@ def install(package, game, sources=(), dry_run=False, prepare_upload=False):
     for old in existing:
         print("Replace old local copy:", old)
     if dry_run:
-        with tempfile.TemporaryDirectory(prefix="ran-f111n-v8-check-") as temporary:
+        with tempfile.TemporaryDirectory(prefix="ran-f111n-v9-check-") as temporary:
             staged = Path(temporary) / MOD_NAME
             shutil.copytree(source, staged)
             report = carrier_overrides(package, game, staged, sources)
@@ -501,7 +502,7 @@ def install(package, game, sources=(), dry_run=False, prepare_upload=False):
         raise RuntimeError("Close Sea Power before replacing the mod.")
     required = sum((source / name).stat().st_size for _, name in entries) * (2 if prepare_upload else 1) + 20 * 1024 * 1024
     if shutil.disk_usage(game).free < required:
-        raise RuntimeError("Not enough free space to stage V8 before replacing the old mod.")
+        raise RuntimeError("Not enough free space to stage V9.0 before replacing the old mod.")
     backup_parent = game / "RAN-F111N-backups"
     backup_parent.mkdir(exist_ok=True)
     with (backup_parent / ".replacement.lock").open("a") as lock:
@@ -514,12 +515,12 @@ def install(package, game, sources=(), dry_run=False, prepare_upload=False):
         device = game.stat().st_dev
         if target.parent.stat().st_dev != device or any(p.stat().st_dev != device for p in existing):
             raise RuntimeError("Mod and backup directories must share a filesystem for safe replacement.")
-        with tempfile.TemporaryDirectory(prefix="ran-f111n-v8-stage-", dir=game) as temporary:
+        with tempfile.TemporaryDirectory(prefix="ran-f111n-v9-stage-", dir=game) as temporary:
             staged = Path(temporary) / MOD_NAME
             shutil.copytree(source, staged)
             for checksum, name in entries:
                 if digest(staged / name) != checksum:
-                    raise RuntimeError("Staged V8 checksum failed: " + name)
+                    raise RuntimeError("Staged V9.0 checksum failed: " + name)
             report = carrier_overrides(package, game, staged, sources)
             stamp = datetime.datetime.now().strftime("%Y%m%d-%H%M%S-%f")
             workshop_bundle = game / "RAN-F111N-workshop" / WORKSHOP_ID / stamp if prepare_upload else None
@@ -587,14 +588,14 @@ def install(package, game, sources=(), dry_run=False, prepare_upload=False):
                         + ": " + "; ".join(recovery_errors)
                     ) from failure
                 raise RuntimeError("Replacement stopped; previous local folders were restored.") from failure
-    print("\nV8 INSTALLED:", target)
+    print("\nV9.0 INSTALLED:", target)
     print("Dated backup and replacement record:", backup)
     print("Carrier definitions prepared:", len(report["carriers"]))
     for carrier in report["carriers"]:
         if carrier.get("elevator_repairs"):
             print("Repaired existing lift routes:", carrier["file"])
-    print("\nOpen Sea Power Mod Manager: enable RAN F-111N Naval Wing V8.")
-    print("Disable older Naval Wing copies. Give V8 priority over carrier mods.")
+    print("\nOpen Sea Power Mod Manager: enable RAN F-111N Naval Wing V9.0.")
+    print("Disable older Naval Wing copies. Give V9.0 priority over carrier mods.")
     print("Keep carrier/source asset mods and your existing Anchor Chain setup enabled.")
     print("Restart Sea Power after changing the mod list.")
     print("\nFor your existing Workshop item 3810606011, use Update Existing,")
@@ -606,17 +607,17 @@ def install(package, game, sources=(), dry_run=False, prepare_upload=False):
         print("Description:", workshop_bundle / "description.txt")
         print("Change log:", workshop_bundle / "update-notes.txt")
         print("Upload instructions:", workshop_bundle / "UPLOAD_INSTRUCTIONS.txt")
-        print("Optional terminal upload: bash ~/Downloads/replace-f111n-with-v8.sh --upload-prepared", shlex.quote(str(workshop_bundle)))
+        print("Optional terminal upload: bash ~/Downloads/replace-f111n-with-v9.0.sh --upload-prepared", shlex.quote(str(workshop_bundle)))
     print("Local preparation is complete. Steam has not been updated yet.")
     return backup
 
 
 def main(argv=None):
     parser = argparse.ArgumentParser(
-        description="Replace older local RAN F-111N folders with verified V8, keep backups and prepare an update for Steam Workshop item 3810606011."
+        description="Replace older local RAN F-111N folders with verified V9.0, keep backups and prepare an update for Steam Workshop item 3810606011."
     )
     parser.add_argument("game", nargs="?", help="Sea Power installation folder (auto-detected if omitted)")
-    parser.add_argument("--package", type=Path, help="complete local V8 ZIP or extracted folder instead of downloading")
+    parser.add_argument("--package", type=Path, help="complete local V9.0 ZIP or extracted folder instead of downloading")
     parser.add_argument("--carrier-source", action="append", default=[], help="preferred carrier-mod folder; may be repeated")
     parser.add_argument("--dry-run", action="store_true", help="verify and preview without changing installed mod files")
     parser.add_argument("--upload", action="store_true", help="after replacement, upload to existing item 3810606011 through SteamCMD")
@@ -644,7 +645,7 @@ def main(argv=None):
             print(" ", candidate)
         if not games:
             print("No installation was found in your Steam library configuration.")
-        print('Usage: bash replace-f111n-with-v8.sh "/full/path/to/steamapps/common/Sea Power"')
+        print('Usage: bash replace-f111n-with-v9.0.sh "/full/path/to/steamapps/common/Sea Power"')
         return 2
     game = games[0]
     if not (game / "Sea Power_Data/StreamingAssets").is_dir():
@@ -654,7 +655,7 @@ def main(argv=None):
     for source in sources:
         if not (source / "vessels").is_dir():
             raise RuntimeError("Carrier source has no vessels folder: " + str(source))
-    with tempfile.TemporaryDirectory(prefix="ran-f111n-v8-download-") as temporary:
+    with tempfile.TemporaryDirectory(prefix="ran-f111n-v9-download-") as temporary:
         temporary = Path(temporary)
         if args.package:
             supplied = args.package.expanduser().resolve()
@@ -667,7 +668,7 @@ def main(argv=None):
             else:
                 raise RuntimeError("Local package does not exist: " + str(supplied))
         else:
-            archive = temporary / "V8.zip"
+            archive = temporary / "V9.0.zip"
             fetch_archive(archive)
             unpacked = temporary / "extracted"
             extract_archive(archive, unpacked)
@@ -687,9 +688,9 @@ if __name__ == "__main__":
         raise SystemExit(130)
     except urllib.error.URLError as error:
         print("Replacement stopped: GitHub download failed:", error, file=sys.stderr)
-        print("Use --package with the complete current V8 ZIP, or retry the download.", file=sys.stderr)
+        print("Use --package with the complete current V9.0 ZIP, or retry the download.", file=sys.stderr)
         raise SystemExit(1)
     except (OSError, RuntimeError, ValueError, zipfile.BadZipFile) as error:
         print("Replacement stopped:", error, file=sys.stderr)
         raise SystemExit(1)
-V8_REPLACEMENT_PY
+V9_REPLACEMENT_PY

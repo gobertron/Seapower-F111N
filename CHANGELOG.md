@@ -1,4 +1,20 @@
-# V8 changes from V6
+# Naval Wing release history
+
+## Version 9.0 — release naming, 29 October 2026
+
+- Renamed the prepared radar/reference release to Version 9.0 across mod metadata, preview branding, current documents, Workshop text and the verified replacement installer.
+- Added the canonical `replace-f111n-with-v9.0.sh` installer. The old installer filename remains a compatible entry point for existing commands.
+- Preserved all sixteen aircraft IDs, 211 presets, dated radar sectors, flight/mass settings, assets and carrier arrangements.
+- Kept the optional V8 weight diagnostic identity and recording paths compatible. Historical V8 records remain labelled as history.
+
+## Version 8 radar coverage and Unit Reference — 29 October 2026
+
+- Widened FleetRadar and PhoenixControl horizontal sectors from 130 degrees in 1980 to 140 in 1985, 160 in 1995 and 170 in 2003.
+- Widened StrikeRadar horizontal sectors from 90 degrees in 1980 to 110 in 1985, 130 in 1995 and 150 in 2003. Applies to MudPig, SprintPig and ScreamPig search radar.
+- Kept Phoenix guidance coverage aligned with the dated fleet radar, including MudPig wing and internal-bay controllers. Retained native vertical arcs, altitude limits and sensor roles.
+- Added sixteen distinct Unit Reference descriptions covering the alternate-history programme, role development, dated equipment, radar coverage, weapons and operating considerations.
+- Removed semicolon separators from card descriptions after the supplied screenshot showed text ending at the first semicolon. Used one physical INI line with plain sentences and native UI wrapping.
+- Added coverage and card validation. All 211 presets, speed targets, masses, models and carrier settings are retained. Live display and radar tracking require in-game verification.
 
 ## Version 8 weight verification — 22 October 2026
 

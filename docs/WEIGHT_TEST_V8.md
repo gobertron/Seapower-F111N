@@ -1,3 +1,5 @@
+> This separately versioned V8 diagnostic is compatible with Naval Wing 9.0. Its plugin identity and recording paths remain unchanged.
+
 # Version 8 aircraft weight test
 
 Version 8 already gives aircraft an empty mass and gives missiles, bombs, pods and tank shells separate native `Mass` values. Tank fuel is separate. This diagnostic records what the running game actually exposes, so configuration checks are not mistaken for a successful flight test.

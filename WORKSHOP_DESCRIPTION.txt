@@ -1,4 +1,4 @@
-[h1]RAN F-111N Naval Wing — V8[/h1]
+[h1]RAN F-111N Naval Wing — V9.0[/h1]
 
 An alternate-history Australian naval F-111 family for Sea Power: Naval Combat in the Missile Age. Australia retains fixed-wing carrier aviation and heavily funds a joint RAN/RAAF programme, with successive propulsion, flight-control, radar, EW and weapons upgrades.
 
@@ -25,6 +25,9 @@ All sixteen aircraft use published speed references plus 15%: fastest-reference 
 [/list]
 Later editions retain earlier bombing options. All-role afterburning thrust is configured at 82.30/90.53/120/129 kN per engine. Controls, radar/FLIR, RWR/ELINT, ECM, climb, nominal range and weapon readiness improve by edition. These are game settings and estimated integrations, not historical N-family performance.
 
+[h2]Radar coverage and reference stories[/h2]
+Forward sectors improve by year: WaterPig and Phoenix control use 130/140/160/170 degrees, while MudPig, SprintPig and ScreamPig search use 90/110/130/150 degrees. These fictional antenna/processing upgrades retain directed search and existing vertical limits. All sixteen Unit Reference cards now explain their role, dated equipment and Australian development story.
+
 [h2]Expanded MudPig internal bay[/h2]
 [list]
 [*]Three Mk 82 bombs or three edition-specific Harpoons.
@@ -45,16 +48,16 @@ Budgets combine F-111C reference data, rounded weapon masses and explicit naval/
 
 All sixteen aircraft retain carrier capability. The complete installer creates compatibility overrides for discovered stock, RAN and custom carriers while preserving source files and existing air groups. It also supports the existing fictional small-deck arrested-recovery conversion. Add dated aircraft to the carrier air group in the mission editor.
 
-Enable [b]RAN F-111N Naval Wing V8[/b], disable older Naval Wing copies, give V8 priority over carrier mods and keep carrier/source asset mods and the existing Anchor Chain setup enabled. Rerun the complete installer after carrier-mod updates; restart after changing enabled mods.
+Enable [b]RAN F-111N Naval Wing V9.0[/b], disable older Naval Wing copies, give V9.0 priority over carrier mods and keep carrier/source asset mods and the existing Anchor Chain setup enabled. Rerun the complete installer after carrier-mod updates; restart after changing enabled mods.
 
 Service gates are 1980–1984, 1985–1994, 1995–2002 and 2003–2050. Unsuffixed IDs select 1980; later IDs use _1985/_1995/_2003. Existing missions need the later aircraft selected to receive newer equipment. RF ReconFast needs independent orders and suitable altitude; formation orders can limit speed.
 
 [h2]Validation and documentation[/h2]
-[b]35,358 mod checks, 2,243 carrier/installer checks and eight late texture audits passed.[/b] Actual gun fire, guidance/release, armed carrier recovery, maximum-speed flight, ECM display and date filtering remain untested in Sea Power.
+[b]35,493 mod checks, 2,243 carrier/installer checks and eight late texture audits passed.[/b] Actual gun fire, guidance/release, armed carrier recovery, maximum-speed flight, ECM display and date filtering remain untested in Sea Power.
 
 Full comparisons, every preset and mass budget, CSV/JSON, 61 local store definitions, references, credits, authoring sources and validation reports are included in the [url=https://github.com/gobertron/Seapower-F111N]release repository[/url]. The naval conversion, three-Harpoon bay, F110 adaptations and 15% speed uplift are fictional. Native JDAM/JSOW, EO, AMRAAM, ASRAAM and Block II Harpoon simulation approximations remain documented.
 
-V8 also includes native store display names, zero-reload chaff, Windows-encoding support, elevator/taxi repairs using existing geometry, and a replacement script with dated backups. Local installation and Steam publication are separate steps; use Update Existing for item 3810606011.
+V9.0 also includes native store display names, zero-reload chaff, Windows-encoding support, elevator/taxi repairs using existing geometry, and a replacement script with dated backups. Local installation and Steam publication are separate steps; use Update Existing for item 3810606011.
 
 [h2]Credits[/h2]
 Source models/materials: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3587484531]Workshop 3587484531[/url], [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3689650533]Workshop 3689650533[/url] and earlier Naval Wing releases. See THIRD_PARTY_CREDITS.md and HISTORICAL_REFERENCES.md. Third-party asset rights remain with their owners.

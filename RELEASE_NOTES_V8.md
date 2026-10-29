@@ -1,10 +1,12 @@
+> Archived V8 document. See the [current Version 9.0 document](RELEASE_NOTES_V9_0.md).
+
 # V8 release notes
 
-Version 8 speed correction: common maximum Mach 2.875 (F-111 Mach 2.5 plus 15%) across sixteen aircraft and 211 selectable presets, including 44 new MudPig bay mission fits. Existing bombing/precision/Maverick/SLAM/JDAM fits receive additional internal stores. Dated Australian investment and eight USN-inspired late liveries are retained. Original role/model/bay-station/landing contracts and M61/ECM/carrier arrangements remain. Native modern-weapon approximations and explicit hypothetical naval masses are documented.
+Version 8 radar and Unit Reference update: progressive forward coverage across all sixteen aircraft, with sixteen expanded role- and edition-specific stories and capability descriptions. Fleet/Phoenix horizontal sectors progress through 130/140/160/170 degrees and strike sectors through 90/110/130/150 degrees. Plain single-line descriptions avoid semicolons that appeared to truncate the in-game card. Common maximum Mach 2.875, all 211 presets, dated weapons, original models and carrier/landing arrangements are retained. Coverage growth and the naval development story belong to the alternate-history programme. [Coverage and reference-card details](docs/RADAR_REFERENCE_V8.md).
 
 | Verification | Status | Checks/maps |
 |---|---|---|
-| VALIDATION.json | PASS | 35358 |
+| VALIDATION.json | PASS | 35490 |
 | CARRIER_VALIDATION.json | PASS | 2243 |
 | USN_TEXTURE_VALIDATION.json | PASS | 8 |
 

@@ -1,3 +1,14 @@
+[h1]Version 8 — Radar Coverage and Unit Reference, 29 October 2026[/h1]
+
+[list]
+[*]Wider forward radar sectors with each upgrade year. WaterPig and Phoenix control: 130/140/160/170 degrees. MudPig, SprintPig and ScreamPig search: 90/110/130/150 degrees.
+[*]Expanded all sixteen Unit Reference cards with individual development stories, roles, dated weapons, radar coverage and equipment details.
+[*]Removed semicolon separators where the supplied screenshot showed the old card description ending.
+[*]Retained all 211 presets, speed settings, weights, original models and carrier arrangements.
+[/list]
+
+Coverage growth is part of the alternate-history programme. Radar tracking and reference-card layout require in-game verification.
+
 [h1]Version 8 — Sourced Speed Profile, 22 October 2026[/h1]
 
 [list]
@@ -72,7 +83,7 @@ V8 rebuilds the Naval Wing from the verified V6 base, retaining four aircraft fa
 [/list]
 
 [h2]Validation and installation[/h2]
-[b]Passed: 35,358 mod checks, 2,243 carrier/installer checks and eight late texture audits.[/b]
+[b]Passed: 35,490 mod checks, 2,243 carrier/installer checks and eight late texture audits.[/b]
 Also passed: 18 replacement/recovery tests and six lift-repair tests. Majestic cases use representative native layouts; exact installed RAN source definitions were unavailable.
 
 Actual gun fire, guidance/release, Mach 3 flight, ECM display, dates and carrier landings still need Sea Power runtime testing. Native modern-weapon approximations and fictional naval engineering are documented.
