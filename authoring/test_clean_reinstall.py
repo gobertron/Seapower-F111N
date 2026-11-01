@@ -84,4 +84,49 @@ class Tests(unittest.TestCase):
         mixed=self.user/'mixed';seed(mixed,'f');(mixed/'aircraft/other.ini').write_text('other')
         before=snapshot(mixed);self.call();self.assertEqual(snapshot(mixed),before)
 
+    def test_actual_full_f111_mod_and_sr_at_user_root_can_reinstall_twice(self):
+        # Match the reported layout and real multi-family aircraft INI names.
+        # The older one-file fixture missed FB-111N (normalized "fb111n").
+        shutil.rmtree(self.wrapper)
+        old=self.user/'RAN-F111N-Naval-Wing'
+        sr=self.user/'SR71-Blackbird-Prototype-1'
+        shutil.copytree(ROOT/'RAN-F111N-Naval-Wing',old)
+        seed(sr,'sr')
+        self.assertEqual(mod.aircraft_kind(old),'f111')
+        self.assertEqual(mod.aircraft_kind(sr),'sr71')
+        before_sr=snapshot(sr)
+        backup=self.call(prepare_upload=True)
+        target=self.streaming/'RAN-F111N-Naval-Wing'
+        restored=self.streaming/'SR71-Blackbird-Prototype-1'
+        self.assertFalse(old.exists())
+        self.assertFalse(sr.exists())
+        self.assertTrue((backup/'user/RAN-F111N-Naval-Wing/_info.ini').is_file())
+        self.assertEqual(snapshot(restored),before_sr)
+        self.assertEqual(mod.aircraft_kind(target),'f111')
+        backup_again=self.call(prepare_upload=True)
+        self.assertTrue((backup_again/'RAN-F111N-Naval-Wing/_info.ini').is_file())
+        self.assertTrue((target/'_info.ini').is_file())
+        self.assertEqual(snapshot(restored),before_sr)
+        self.assertEqual((self.user/'missions/keep.ini').read_text(),'save')
+
+    def test_real_multi_family_mod_with_unrelated_aircraft_is_preserved(self):
+        mixed=self.user/'mixed_f111'
+        shutil.copytree(ROOT/'RAN-F111N-Naval-Wing',mixed)
+        (mixed/'aircraft/other.ini').write_text('other')
+        self.assertIsNone(mod.aircraft_kind(mixed))
+        before=snapshot(mixed)
+        self.call()
+        self.assertEqual(snapshot(mixed),before)
+
+    def test_explicit_streamingassets_path_resolves_to_game(self):
+        self.assertEqual(mod.normalise_game_path(self.streaming),self.game)
+        with mock.patch.object(mod.os,'geteuid',return_value=1000), contextlib.redirect_stdout(io.StringIO()):
+            self.assertEqual(mod.main([str(self.streaming),'--package',str(ROOT),'--dry-run']),0)
+
+    def test_explicit_streamingassets_requires_original_game_folder(self):
+        invalid=Path(self.tmp.name)/'incorrect/Sea Power_Data/StreamingAssets'
+        invalid.mkdir(parents=True)
+        with self.assertRaisesRegex(RuntimeError,'no original game folder'):
+            mod.normalise_game_path(invalid)
+
 if __name__=='__main__':unittest.main()

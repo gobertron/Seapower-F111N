@@ -103,6 +103,16 @@ def discover_games(home=None):
     return sorted(games)
 
 
+def normalise_game_path(path):
+    """Accept the Sea Power folder or its actual StreamingAssets directory."""
+    selected = Path(path).expanduser().resolve()
+    if selected.name == "StreamingAssets" and selected.parent.name == "Sea Power_Data":
+        if not (selected / "original").is_dir():
+            raise RuntimeError("StreamingAssets has no original game folder: " + str(selected))
+        return selected.parent.parent
+    return selected
+
+
 def game_is_running():
     proc = Path("/proc")
     if not proc.is_dir():
@@ -136,7 +146,8 @@ def aircraft_kind(folder):
         return None
     def family(name):
         key = re.sub(r"[^a-z0-9]", "", name.casefold())
-        if "f111" in key:
+        # FB-111 normalizes to "fb111", unlike F-, RF- and EF-111.
+        if re.search(r"f(?:b)?111", key):
             return "f111"
         if "sr71" in key or "blackbird" in key:
             return "sr71"
@@ -755,7 +766,7 @@ def main(argv=None):
     parser = argparse.ArgumentParser(
         description="Clean recognised F-111/SR-71 mods, back them up, install verified F-111N V9.0 and restore SR-71 separately."
     )
-    parser.add_argument("game", nargs="?", help="Sea Power installation folder (auto-detected if omitted)")
+    parser.add_argument("game", nargs="?", help="Sea Power installation or StreamingAssets folder (auto-detected if omitted)")
     parser.add_argument("--package", type=Path, help="complete local V9.0 ZIP or extracted folder instead of downloading")
     parser.add_argument("--carrier-source", action="append", default=[], help="preferred carrier-mod folder; may be repeated")
     parser.add_argument("--dry-run", action="store_true", help="verify and preview without changing installed mod files")
@@ -777,7 +788,7 @@ def main(argv=None):
         parser.error("use --upload or --upload-prepared with SteamCMD options")
     if game_is_running() and not args.dry_run:
         raise RuntimeError("Close Sea Power, then run this script again.")
-    games = [Path(args.game).expanduser().resolve()] if args.game else discover_games()
+    games = [normalise_game_path(args.game)] if args.game else discover_games()
     if len(games) != 1:
         print("Specify the Sea Power installation you want to update:")
         for candidate in games:
