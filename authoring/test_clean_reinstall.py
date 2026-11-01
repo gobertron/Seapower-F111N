@@ -2,6 +2,7 @@
 """Exercise clean reinstall against isolated Sea Power fixtures only."""
 import contextlib
 import io
+import json
 from pathlib import Path
 import shutil
 import tempfile
@@ -27,7 +28,7 @@ def snapshot(folder):
 class Tests(unittest.TestCase):
     def setUp(self):
         self.tmp=tempfile.TemporaryDirectory();self.addCleanup(self.tmp.cleanup)
-        self.game=Path(self.tmp.name)/'Sea Power';self.streaming=self.game/'Sea Power_Data/StreamingAssets'
+        self.game=Path(self.tmp.name)/'steamapps/common/Sea Power';self.streaming=self.game/'Sea Power_Data/StreamingAssets'
         (self.streaming/'original').mkdir(parents=True)
         self.user=self.streaming/'user'; self.user.mkdir()
         self.wrapper=self.user/'userdata'; self.f=self.wrapper/'RAN-F111N-Naval-Wing';self.sr=self.wrapper/'SR71-Blackbird-Prototype-1'
@@ -117,6 +118,55 @@ class Tests(unittest.TestCase):
         before=snapshot(mixed)
         self.call()
         self.assertEqual(snapshot(mixed),before)
+
+    def test_broken_moskva_is_skipped_and_top_level_carrier_is_discovered(self):
+        # Reproduce the reported missing-coordinate condition without assuming
+        # the user's private Workshop file's full contents.
+        shutil.rmtree(self.wrapper)
+        old=self.user/'RAN-F111N-Naval-Wing'
+        sr=self.user/'SR71-Blackbird-Prototype-1'
+        shutil.copytree(ROOT/'RAN-F111N-Naval-Wing',old)
+        seed(sr,'sr')
+        sr_before=snapshot(sr)
+        broken=self.game.parents[1]/'workshop/content/1286220/3373960386/vessels/wp_pkr_moskva.ini'
+        broken.parent.mkdir(parents=True)
+        moskva=(ROOT/'authoring/reference_carriers/wp_pkr_moskva.ini').read_text()
+        moskva=moskva.replace('AssociatedElevators=1','AssociatedElevators=5',1)
+        moskva+='\n[Elevator5]\nMesh=lift_with_no_coordinates\n'
+        broken.write_text(moskva)
+        good=self.streaming/'RAN-Carrier-Australis-2030/vessels/ran_cv_example.ini'
+        good.parent.mkdir(parents=True)
+        good.write_text((ROOT/'authoring/reference_carriers/usn_cvn_nimitz.ini').read_text()+'\n[FixtureMarker]\nSource=local_top_level\n')
+        with contextlib.redirect_stdout(io.StringIO()) as capture:
+            backup=mod.install(ROOT,self.game,prepare_upload=True)
+        output=capture.getvalue()
+        target=self.streaming/'RAN-F111N-Naval-Wing'
+        restored=self.streaming/'SR71-Blackbird-Prototype-1'
+        self.assertIn('Carrier compatibility skipped: wp_pkr_moskva.ini',output)
+        self.assertIn('missing taxi coordinate Elevator5',output)
+        self.assertIn('Carrier definitions skipped: 1',output)
+        self.assertEqual(broken.read_text(),moskva)
+        self.assertIn('Source=local_top_level',good.read_text())
+        self.assertIn('Source=local_top_level',(target/'vessels/ran_cv_example.ini').read_text())
+        self.assertFalse((target/'vessels/wp_pkr_moskva.ini').exists())
+        self.assertEqual(snapshot(restored),sr_before)
+        self.assertTrue((backup/'user/RAN-F111N-Naval-Wing/_info.ini').is_file())
+        self.assertTrue((backup/'user/SR71-Blackbird-Prototype-1/_info.ini').is_file())
+        self.assertEqual((self.user/'missions/keep.ini').read_text(),'save')
+        report=json.loads((target/'CARRIER_COMPATIBILITY.json').read_text())
+        self.assertEqual(report['errors'][0]['file'],'wp_pkr_moskva.ini')
+        self.assertEqual(report['errors'][0]['status'],'skipped')
+        self.assertNotIn('source',report['errors'][0])
+        self.assertNotIn(str(self.game),(target/'CARRIER_COMPATIBILITY.json').read_text())
+        bundle=next((self.game/'RAN-F111N-workshop/3810606011').iterdir())
+        self.assertFalse((bundle/'content/vessels/wp_pkr_moskva.ini').exists())
+        self.assertEqual(json.loads((bundle/'carrier-report.local.json').read_text())['errors'][0]['source'],str(broken))
+        # The skip remains stable on a second install; no old root reappears.
+        with contextlib.redirect_stdout(io.StringIO()):
+            mod.install(ROOT,self.game,prepare_upload=True)
+        self.assertEqual(snapshot(restored),sr_before)
+        self.assertFalse((target/'vessels/wp_pkr_moskva.ini').exists())
+        self.assertFalse(old.exists())
 
     def test_explicit_streamingassets_path_resolves_to_game(self):
         self.assertEqual(mod.normalise_game_path(self.streaming),self.game)

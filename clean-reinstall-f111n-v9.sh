@@ -431,17 +431,26 @@ def workshop_vdf(bundle, description=None):
     ) + "}\n"
 
 
-def prepare_workshop(package, mod, staged_bundle, final_bundle, report):
-    """Create a flat native payload and metadata outside the game's mod scan."""
-    verify_workshop_assets(package)
+def portable_carrier_report(report):
     portable = json.loads(json.dumps(report))
     for item in portable.get("carriers", []):
         source = item.pop("source", "")
         if source:
             item["source_label"] = "/".join(Path(source).parts[-3:])
         item.pop("other_source_candidates", None)
+    for item in portable.get("errors", []):
+        source = item.pop("source", "")
+        if source:
+            item["source_label"] = Path(source).name
+        item.pop("other_source_candidates", None)
+    return portable
+
+
+def prepare_workshop(package, mod, staged_bundle, final_bundle, report):
+    """Create a flat native payload and metadata outside the game's mod scan."""
+    verify_workshop_assets(package)
     # Keep personal absolute paths only in the local bundle, outside contentfolder.
-    (mod / "CARRIER_COMPATIBILITY.json").write_text(json.dumps(portable, indent=2) + "\n", encoding="utf-8")
+    (mod / "CARRIER_COMPATIBILITY.json").write_text(json.dumps(portable_carrier_report(report), indent=2) + "\n", encoding="utf-8")
     shutil.copy2(package / "RAN-F111N-preview.png", mod / "preview.png")
     staged_bundle.mkdir()
     shutil.copytree(mod, staged_bundle / "content")
@@ -594,10 +603,35 @@ def carrier_overrides(package, game, staged, sources):
     module.__file__ = str(helper)
     exec(compile(code, str(helper), "exec"), module.__dict__)
     module.read_source_text = read_source_text
-    report = module.generate(game, staged, sources)
-    if report["errors"]:
-        details = "; ".join(item.get("source", item["file"]) + ": " + item["reason"] for item in report["errors"])
-        raise RuntimeError("Carrier preparation failed; old installation kept intact. " + details)
+    # Standalone local mods are siblings of user/original in StreamingAssets.
+    # The helper discovers nested and Workshop mods itself; supply these roots
+    # before explicit sources so user-specified sources retain top priority.
+    streaming = game / "Sea Power_Data/StreamingAssets"
+    local = [path for path in sorted(streaming.iterdir())
+             if path.name.casefold() not in {"original", "user"}
+             and not path.name.casefold().startswith("ran-f111n-naval-wing")
+             and path.is_dir() and not path.is_symlink()
+             and aircraft_kind(path) != "f111"
+             and (path / "vessels").is_dir() and not (path / "vessels").is_symlink()]
+    report = module.generate(game, staged, [*local, *sources])
+    report["source_precedence"] = "Explicit source > standalone local mods > user mods > Workshop > original"
+    # The helper reports only per-carrier ValueError/KeyError failures here.
+    # Remove any bundled override of the same vessel from the staged mod so
+    # it cannot mask a third-party carrier that could not be safely converted.
+    # Never edit the original carrier or infer missing deck geometry.
+    for item in report["errors"]:
+        name = item.get("file")
+        if not isinstance(name, str) or Path(name).name != name or "\\" in name or not name.lower().endswith(".ini"):
+            raise RuntimeError("Unsafe carrier filename in compatibility report; installation stopped.")
+        override = staged / "vessels" / name
+        if override.is_symlink() or (override.exists() and not override.is_file()):
+            raise RuntimeError("Unsafe staged carrier override: " + str(override))
+        if override.exists():
+            override.unlink()
+        item["status"] = "skipped"
+        print("WARNING: Carrier compatibility skipped:", name, "-", item.get("reason", "unknown error"))
+        print("  Its source mod is unchanged; F-111N carrier support was not added for this vessel.")
+    (staged / "CARRIER_COMPATIBILITY.json").write_text(json.dumps(portable_carrier_report(report), indent=2) + "\n", encoding="utf-8")
     return report
 
 
@@ -738,6 +772,7 @@ def install(package, game, sources=(), dry_run=False, prepare_upload=False):
     print("\nV9.0 INSTALLED:", target)
     print("Dated backup and replacement record:", backup)
     print("Carrier definitions prepared:", len(report["carriers"]))
+    print("Carrier definitions skipped:", len(report["errors"]))
     print("SR-71 copies restored separately:", len(sr_restores))
     for _, dest in sr_restores:
         print("SR-71 restored:", dest)
